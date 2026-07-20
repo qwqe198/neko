@@ -1,3 +1,4 @@
+if(!window.__GAME_START) throw new Error("Init failed");
 var events_c12a15a8_c380_4b28_8144_256cba95f760 = 
 {
 	"commonEvent": {
@@ -45,3520 +46,1431 @@ var events_c12a15a8_c380_4b28_8144_256cba95f760 =
 				]
 			}
 		],
-		"回收钥匙商店": [
+		"割草事件": [
 			{
-				"type": "comment",
-				"text": "此事件在全局商店中被引用了(全局商店keyShop)"
-			},
-			{
-				"type": "comment",
-				"text": "解除引用前勿删除此事件"
-			},
-			{
-				"type": "comment",
-				"text": "玩家在快捷列表（V键）中可以使用本公共事件"
-			},
-			{
-				"type": "while",
-				"condition": "1",
-				"data": [
+				"type": "if",
+				"condition": "(flag:gcjgdj===10)",
+				"_collapsed": true,
+				"true": [
 					{
-						"type": "choices",
-						"text": "\t[商人,trader]你有多余的钥匙想要出售吗？",
-						"choices": [
+						"type": "sleep",
+						"time": 50,
+						"noSkip": true
+					},
+					{
+						"type": "setBlock",
+						"number": "greenSlime",
+						"loc": [
+							[
+								6,
+								12
+							]
+						],
+						"floorId": "Start"
+					}
+				],
+				"false": [
+					{
+						"type": "if",
+						"condition": "(flag:gcjgdj===9)",
+						"true": [
 							{
-								"text": "黄钥匙（10金币）",
-								"color": [
-									255,
-									255,
-									0,
-									1
+								"type": "sleep",
+								"time": 75,
+								"noSkip": true
+							},
+							{
+								"type": "setBlock",
+								"number": "greenSlime",
+								"loc": [
+									[
+										6,
+										12
+									]
 								],
-								"action": [
+								"floorId": "Start"
+							}
+						],
+						"false": [
+							{
+								"type": "if",
+								"condition": "(flag:gcjgdj===8)",
+								"true": [
+									{
+										"type": "sleep",
+										"time": 100,
+										"noSkip": true
+									},
+									{
+										"type": "setBlock",
+										"number": "greenSlime",
+										"loc": [
+											[
+												6,
+												12
+											]
+										],
+										"floorId": "Start"
+									}
+								],
+								"false": [
 									{
 										"type": "if",
-										"condition": "item:yellowKey >= 1",
+										"condition": "(flag:gcjgdj===7)",
 										"true": [
 											{
-												"type": "setValue",
-												"name": "item:yellowKey",
-												"operator": "-=",
-												"value": "1"
+												"type": "sleep",
+												"time": 125,
+												"noSkip": true
 											},
 											{
-												"type": "setValue",
-												"name": "status:money",
-												"operator": "+=",
-												"value": "10"
+												"type": "setBlock",
+												"number": "greenSlime",
+												"loc": [
+													[
+														6,
+														12
+													]
+												],
+												"floorId": "Start"
 											}
 										],
 										"false": [
-											"\t[商人,trader]你没有黄钥匙！"
+											{
+												"type": "if",
+												"condition": "(flag:gcjgdj===6)",
+												"true": [
+													{
+														"type": "sleep",
+														"time": 150,
+														"noSkip": true
+													},
+													{
+														"type": "setBlock",
+														"number": "greenSlime",
+														"loc": [
+															[
+																6,
+																12
+															]
+														],
+														"floorId": "Start"
+													}
+												],
+												"false": [
+													{
+														"type": "if",
+														"condition": "(flag:gcjgdj===5)",
+														"true": [
+															{
+																"type": "sleep",
+																"time": 175,
+																"noSkip": true
+															},
+															{
+																"type": "setBlock",
+																"number": "greenSlime",
+																"loc": [
+																	[
+																		6,
+																		12
+																	]
+																],
+																"floorId": "Start"
+															}
+														],
+														"false": [
+															{
+																"type": "if",
+																"condition": "(flag:gcjgdj===4)",
+																"true": [
+																	{
+																		"type": "sleep",
+																		"time": 200,
+																		"noSkip": true
+																	},
+																	{
+																		"type": "setBlock",
+																		"number": "greenSlime",
+																		"loc": [
+																			[
+																				6,
+																				12
+																			]
+																		],
+																		"floorId": "Start"
+																	}
+																],
+																"false": [
+																	{
+																		"type": "if",
+																		"condition": "(flag:gcjgdj===3)",
+																		"true": [
+																			{
+																				"type": "sleep",
+																				"time": 400,
+																				"noSkip": true
+																			},
+																			{
+																				"type": "setBlock",
+																				"number": "greenSlime",
+																				"loc": [
+																					[
+																						6,
+																						12
+																					]
+																				],
+																				"floorId": "Start"
+																			}
+																		],
+																		"false": [
+																			{
+																				"type": "if",
+																				"condition": "(flag:gcjgdj===2)",
+																				"true": [
+																					{
+																						"type": "sleep",
+																						"time": 600,
+																						"noSkip": true
+																					},
+																					{
+																						"type": "setBlock",
+																						"number": "greenSlime",
+																						"loc": [
+																							[
+																								6,
+																								12
+																							]
+																						],
+																						"floorId": "Start"
+																					}
+																				],
+																				"false": [
+																					{
+																						"type": "if",
+																						"condition": "(flag:gcjgdj===1)",
+																						"true": [
+																							{
+																								"type": "sleep",
+																								"time": 800,
+																								"noSkip": true
+																							},
+																							{
+																								"type": "setBlock",
+																								"number": "greenSlime",
+																								"loc": [
+																									[
+																										6,
+																										12
+																									]
+																								],
+																								"floorId": "Start"
+																							}
+																						],
+																						"false": [
+																							{
+																								"type": "sleep",
+																								"time": 1000,
+																								"noSkip": true
+																							},
+																							{
+																								"type": "setBlock",
+																								"number": "greenSlime",
+																								"loc": [
+																									[
+																										6,
+																										12
+																									]
+																								],
+																								"floorId": "Start"
+																							}
+																						]
+																					}
+																				]
+																			}
+																		]
+																	}
+																]
+															}
+														]
+													}
+												]
+											}
 										]
 									}
 								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"type": "if",
+				"condition": "(flag:jd>=2)",
+				"true": [
+					{
+						"type": "setValue",
+						"name": "flag:jcjy",
+						"operator": "-=",
+						"value": "flag:zjczy"
+					},
+					{
+						"type": "while",
+						"condition": "(flag:jcjy<=0)",
+						"data": [
+							{
+								"type": "setValue",
+								"name": "flag:jc",
+								"operator": "+=",
+								"value": "1"
 							},
 							{
-								"text": "蓝钥匙（50金币）",
-								"color": [
-									0,
-									0,
-									255,
-									1
-								],
-								"action": [
-									{
-										"type": "if",
-										"condition": "item:blueKey >= 1",
-										"true": [
-											{
-												"type": "setValue",
-												"name": "item:blueKey",
-												"operator": "-=",
-												"value": "1"
-											},
-											{
-												"type": "setValue",
-												"name": "status:money",
-												"operator": "+=",
-												"value": "50"
-											}
-										],
-										"false": [
-											"\t[商人,trader]你没有蓝钥匙！"
-										]
-									}
-								]
+								"type": "setValue",
+								"name": "flag:jcjy",
+								"operator": "+=",
+								"value": "(Math.floor(((Math.pow(10,(Math.pow(flag:jc,flag:jczs)))))))"
+							}
+						]
+					}
+				]
+			},
+			{
+				"type": "if",
+				"condition": "(item:I848>=1)",
+				"true": [
+					{
+						"type": "setValue",
+						"name": "status:mana",
+						"operator": "+=",
+						"value": "(Math.ceil((flag:zbjzy/100)))"
+					}
+				],
+				"false": [
+					{
+						"type": "if",
+						"condition": "(flag:jd>=1)",
+						"true": [
+							{
+								"type": "setValue",
+								"name": "flag:bj",
+								"value": "core.rand(100)"
 							},
 							{
-								"text": "离开",
-								"action": [
+								"type": "if",
+								"condition": "(flag:bj<=1)",
+								"true": [
 									{
-										"type": "exit"
+										"type": "setValue",
+										"name": "status:mana",
+										"operator": "+=",
+										"value": "(Math.max(flag:zbjzy,1))"
 									}
 								]
 							}
 						]
 					}
 				]
-			}
-		],
-		"超越 - 初阶": [
+			},
 			{
-				"type": "choices",
-				"text": "准备好将自身的领悟臻至极致了吗？\n请选择要进行【超越】的领悟！\n\r[gold]初阶领悟可以进行3次超越，前两次提升基础效力的1/4，第三次提升基础效力的1/2。\r",
-				"choices": [
+				"type": "if",
+				"condition": "(flag:gcjd>=5)",
+				"true": [
 					{
-						"text": "${Math.pow(2,flag:liuli)*15} 琉璃【当前为${flag:liuli}次超越】",
-						"icon": "I601",
-						"color": [
-							117,
-							144,
-							122,
-							1
-						],
-						"condition": "flag:liuli<3",
-						"action": [
-							{
-								"type": "if",
-								"condition": "(item:I601==1)",
-								"true": [
-									{
-										"type": "confirm",
-										"default": true,
-										"text": "确认要超越当前领悟吗？",
-										"yes": [
-											{
-												"type": "if",
-												"condition": "(status:money>=Math.pow(2,flag:liuli)*15)",
-												"true": [
-													{
-														"type": "setValue",
-														"name": "status:money",
-														"operator": "-=",
-														"value": "Math.pow(2,flag:liuli)*15"
-													},
-													{
-														"type": "setValue",
-														"name": "item:I752",
-														"operator": "+=",
-														"value": "1"
-													},
-													{
-														"type": "setValue",
-														"name": "item:I601",
-														"operator": "-=",
-														"value": "1"
-													},
-													{
-														"type": "setValue",
-														"name": "flag:liuli",
-														"operator": "+=",
-														"value": "1"
-													},
-													"超越成功！"
-												],
-												"false": [
-													"领悟点数不足。"
-												]
-											}
-										],
-										"no": []
-									}
-								],
-								"false": [
-									{
-										"type": "switch",
-										"condition": "flag:liuli",
-										"caseList": [
-											{
-												"case": "0",
-												"action": [
-													"未获得该领悟。",
-													{
-														"type": "comment",
-														"text": "当判别值是值的场合执行此事件"
-													}
-												]
-											},
-											{
-												"case": "1",
-												"action": [
-													{
-														"type": "confirm",
-														"default": true,
-														"text": "确认要超越当前领悟吗？",
-														"yes": [
-															{
-																"type": "if",
-																"condition": "(status:money>=Math.pow(2,flag:liuli)*15)",
-																"true": [
-																	{
-																		"type": "setValue",
-																		"name": "status:money",
-																		"operator": "-=",
-																		"value": "Math.pow(2,flag:liuli)*15"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I753",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I752",
-																		"operator": "-=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "flag:liuli",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	"超越成功！"
-																],
-																"false": [
-																	"领悟点数不足。"
-																]
-															}
-														],
-														"no": []
-													}
-												]
-											},
-											{
-												"case": "2",
-												"action": [
-													{
-														"type": "confirm",
-														"default": true,
-														"text": "确认要超越当前领悟吗？",
-														"yes": [
-															{
-																"type": "if",
-																"condition": "(status:money>=Math.pow(2,flag:liuli)*15)",
-																"true": [
-																	{
-																		"type": "setValue",
-																		"name": "status:money",
-																		"operator": "-=",
-																		"value": "Math.pow(2,flag:liuli)*15"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I754",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I753",
-																		"operator": "-=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "flag:liuli",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	"超越成功！",
-																	"该领悟至此达到最大等级！\n之后将不再显示在超越事件中。"
-																],
-																"false": [
-																	"领悟点数不足。"
-																]
-															}
-														],
-														"no": []
-													}
-												]
-											}
-										]
-									}
-								]
-							}
-						]
+						"type": "setValue",
+						"name": "flag:fc",
+						"operator": "+=",
+						"value": "flag:zfczy"
 					},
 					{
-						"text": "${Math.pow(2,flag:miguo)*20} 秘果【当前为${flag:miguo}次超越】",
-						"icon": "I602",
-						"color": [
-							216,
-							209,
-							145,
-							1
-						],
-						"condition": "flag:miguo<3",
-						"action": [
-							{
-								"type": "if",
-								"condition": "(item:I602==1)",
-								"true": [
-									{
-										"type": "confirm",
-										"default": true,
-										"text": "确认要超越当前领悟吗？",
-										"yes": [
-											{
-												"type": "if",
-												"condition": "(status:money>=Math.pow(2,flag:miguo)*20)",
-												"true": [
-													{
-														"type": "setValue",
-														"name": "status:money",
-														"operator": "-=",
-														"value": "Math.pow(2,flag:miguo)*20"
-													},
-													{
-														"type": "setValue",
-														"name": "item:I755",
-														"operator": "+=",
-														"value": "1"
-													},
-													{
-														"type": "setValue",
-														"name": "item:I602",
-														"operator": "-=",
-														"value": "1"
-													},
-													{
-														"type": "setValue",
-														"name": "flag:miguo",
-														"operator": "+=",
-														"value": "1"
-													},
-													"超越成功！"
-												],
-												"false": [
-													"领悟点数不足。"
-												]
-											}
-										],
-										"no": []
-									}
-								],
-								"false": [
-									{
-										"type": "switch",
-										"condition": "flag:miguo",
-										"caseList": [
-											{
-												"case": "0",
-												"action": [
-													"未获得该领悟。",
-													{
-														"type": "comment",
-														"text": "当判别值是值的场合执行此事件"
-													}
-												]
-											},
-											{
-												"case": "1",
-												"action": [
-													{
-														"type": "confirm",
-														"default": true,
-														"text": "确认要超越当前领悟吗？",
-														"yes": [
-															{
-																"type": "if",
-																"condition": "(status:money>=Math.pow(2,flag:miguo)*20)",
-																"true": [
-																	{
-																		"type": "setValue",
-																		"name": "status:money",
-																		"operator": "-=",
-																		"value": "Math.pow(2,flag:miguo)*20"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I756",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I755",
-																		"operator": "-=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "flag:miguo",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	"超越成功！"
-																],
-																"false": [
-																	"领悟点数不足。"
-																]
-															}
-														],
-														"no": []
-													}
-												]
-											},
-											{
-												"case": "2",
-												"action": [
-													{
-														"type": "confirm",
-														"default": true,
-														"text": "确认要超越当前领悟吗？",
-														"yes": [
-															{
-																"type": "if",
-																"condition": "(status:money>=Math.pow(2,flag:miguo)*20)",
-																"true": [
-																	{
-																		"type": "setValue",
-																		"name": "status:money",
-																		"operator": "-=",
-																		"value": "Math.pow(2,flag:miguo)*20"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I757",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I756",
-																		"operator": "-=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "flag:miguo",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	"超越成功！",
-																	"该领悟至此达到最大等级！\n之后将不再显示在超越事件中。"
-																],
-																"false": [
-																	"领悟点数不足。"
-																]
-															}
-														],
-														"no": []
-													}
-												]
-											}
-										]
-									}
-								]
-							}
-						]
-					},
-					{
-						"text": "${Math.pow(2,flag:qingling)*25} 清灵【当前为${flag:qingling}次超越】",
-						"icon": "I588",
-						"color": [
-							141,
-							228,
-							144,
-							1
-						],
-						"condition": "flag:qingling<3",
-						"action": [
-							{
-								"type": "if",
-								"condition": "(item:I588==1)",
-								"true": [
-									{
-										"type": "confirm",
-										"default": true,
-										"text": "确认要超越当前领悟吗？",
-										"yes": [
-											{
-												"type": "if",
-												"condition": "(status:money>=Math.pow(2,flag:qingling)*25)",
-												"true": [
-													{
-														"type": "setValue",
-														"name": "status:money",
-														"operator": "-=",
-														"value": "Math.pow(2,flag:qingling)*25"
-													},
-													{
-														"type": "setValue",
-														"name": "item:I743",
-														"operator": "+=",
-														"value": "1"
-													},
-													{
-														"type": "setValue",
-														"name": "item:I588",
-														"operator": "-=",
-														"value": "1"
-													},
-													{
-														"type": "setValue",
-														"name": "flag:qingling",
-														"operator": "+=",
-														"value": "1"
-													},
-													"超越成功！"
-												],
-												"false": [
-													"领悟点数不足。"
-												]
-											}
-										],
-										"no": []
-									}
-								],
-								"false": [
-									{
-										"type": "switch",
-										"condition": "flag:qingling",
-										"caseList": [
-											{
-												"case": "0",
-												"action": [
-													"未获得该领悟。",
-													{
-														"type": "comment",
-														"text": "当判别值是值的场合执行此事件"
-													}
-												]
-											},
-											{
-												"case": "1",
-												"action": [
-													{
-														"type": "confirm",
-														"default": true,
-														"text": "确认要超越当前领悟吗？",
-														"yes": [
-															{
-																"type": "if",
-																"condition": "(status:money>=Math.pow(2,flag:qingling)*25)",
-																"true": [
-																	{
-																		"type": "setValue",
-																		"name": "status:money",
-																		"operator": "-=",
-																		"value": "Math.pow(2,flag:qingling)*25"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I744",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I743",
-																		"operator": "-=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "flag:qingling",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	"超越成功！"
-																],
-																"false": [
-																	"领悟点数不足。"
-																]
-															}
-														],
-														"no": []
-													}
-												]
-											},
-											{
-												"case": "2",
-												"action": [
-													{
-														"type": "confirm",
-														"default": true,
-														"text": "确认要超越当前领悟吗？",
-														"yes": [
-															{
-																"type": "if",
-																"condition": "(status:money>=Math.pow(2,flag:qingling)*25)",
-																"true": [
-																	{
-																		"type": "setValue",
-																		"name": "status:money",
-																		"operator": "-=",
-																		"value": "Math.pow(2,flag:qingling)*25"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I745",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I744",
-																		"operator": "-=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "flag:qingling",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	"超越成功！",
-																	"该领悟至此达到最大等级！\n之后将不再显示在超越事件中。"
-																],
-																"false": [
-																	"领悟点数不足。"
-																]
-															}
-														],
-														"no": []
-													}
-												]
-											}
-										]
-									}
-								]
-							}
-						]
-					},
-					{
-						"text": "${Math.pow(2,flag:xueyu)*30} 血雨【当前为${flag:xueyu}次超越】",
-						"icon": "I590",
-						"color": [
-							228,
-							141,
-							175,
-							1
-						],
-						"condition": "flag:xueyu<3",
-						"action": [
-							{
-								"type": "if",
-								"condition": "(item:I590==1)",
-								"true": [
-									{
-										"type": "confirm",
-										"default": true,
-										"text": "确认要超越当前领悟吗？",
-										"yes": [
-											{
-												"type": "if",
-												"condition": "(status:money>=Math.pow(2,flag:xueyu)*30)",
-												"true": [
-													{
-														"type": "setValue",
-														"name": "status:money",
-														"operator": "-=",
-														"value": "Math.pow(2,flag:xueyu)*30"
-													},
-													{
-														"type": "setValue",
-														"name": "item:I749",
-														"operator": "+=",
-														"value": "1"
-													},
-													{
-														"type": "setValue",
-														"name": "item:I590",
-														"operator": "-=",
-														"value": "1"
-													},
-													{
-														"type": "setValue",
-														"name": "flag:xueyu",
-														"operator": "+=",
-														"value": "1"
-													},
-													"超越成功！"
-												],
-												"false": [
-													"领悟点数不足。"
-												]
-											}
-										],
-										"no": []
-									}
-								],
-								"false": [
-									{
-										"type": "switch",
-										"condition": "flag:xueyu",
-										"caseList": [
-											{
-												"case": "0",
-												"action": [
-													"未获得该领悟。",
-													{
-														"type": "comment",
-														"text": "当判别值是值的场合执行此事件"
-													}
-												]
-											},
-											{
-												"case": "1",
-												"action": [
-													{
-														"type": "confirm",
-														"default": true,
-														"text": "确认要超越当前领悟吗？",
-														"yes": [
-															{
-																"type": "if",
-																"condition": "(status:money>=Math.pow(2,flag:xueyu)*30)",
-																"true": [
-																	{
-																		"type": "setValue",
-																		"name": "status:money",
-																		"operator": "-=",
-																		"value": "Math.pow(2,flag:xueyu)*30"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I750",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I749",
-																		"operator": "-=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "flag:xueyu",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	"超越成功！"
-																],
-																"false": [
-																	"领悟点数不足。"
-																]
-															}
-														],
-														"no": []
-													}
-												]
-											},
-											{
-												"case": "2",
-												"action": [
-													{
-														"type": "confirm",
-														"default": true,
-														"text": "确认要超越当前领悟吗？",
-														"yes": [
-															{
-																"type": "if",
-																"condition": "(status:money>=Math.pow(2,flag:xueyu)*30)",
-																"true": [
-																	{
-																		"type": "setValue",
-																		"name": "status:money",
-																		"operator": "-=",
-																		"value": "Math.pow(2,flag:xueyu)*30"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I751",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I750",
-																		"operator": "-=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "flag:xueyu",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	"超越成功！",
-																	"该领悟至此达到最大等级！\n之后将不再显示在超越事件中。"
-																],
-																"false": [
-																	"领悟点数不足。"
-																]
-															}
-														],
-														"no": []
-													}
-												]
-											}
-										]
-									}
-								]
-							}
-						]
-					},
-					{
-						"text": "${Math.pow(2,flag:leicai)*40} 雷裁【当前为${flag:leicai}次超越】",
-						"icon": "I589",
-						"color": [
-							187,
-							141,
-							228,
-							1
-						],
-						"condition": "flag:leicai<3",
-						"action": [
-							{
-								"type": "if",
-								"condition": "(item:I589==1)",
-								"true": [
-									{
-										"type": "confirm",
-										"default": true,
-										"text": "确认要超越当前领悟吗？",
-										"yes": [
-											{
-												"type": "if",
-												"condition": "(status:money>=Math.pow(2,flag:leicai)*40)",
-												"true": [
-													{
-														"type": "setValue",
-														"name": "status:money",
-														"operator": "-=",
-														"value": "Math.pow(2,flag:leicai)*40"
-													},
-													{
-														"type": "setValue",
-														"name": "item:I746",
-														"operator": "+=",
-														"value": "1"
-													},
-													{
-														"type": "setValue",
-														"name": "item:I589",
-														"operator": "-=",
-														"value": "1"
-													},
-													{
-														"type": "setValue",
-														"name": "flag:leicai",
-														"operator": "+=",
-														"value": "1"
-													},
-													"超越成功！"
-												],
-												"false": [
-													"领悟点数不足。"
-												]
-											}
-										],
-										"no": []
-									}
-								],
-								"false": [
-									{
-										"type": "switch",
-										"condition": "flag:leicai",
-										"caseList": [
-											{
-												"case": "0",
-												"action": [
-													"未获得该领悟。",
-													{
-														"type": "comment",
-														"text": "当判别值是值的场合执行此事件"
-													}
-												]
-											},
-											{
-												"case": "1",
-												"action": [
-													{
-														"type": "confirm",
-														"default": true,
-														"text": "确认要超越当前领悟吗？",
-														"yes": [
-															{
-																"type": "if",
-																"condition": "(status:money>=Math.pow(2,flag:leicai)*40)",
-																"true": [
-																	{
-																		"type": "setValue",
-																		"name": "status:money",
-																		"operator": "-=",
-																		"value": "Math.pow(2,flag:leicai)*40"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I747",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I746",
-																		"operator": "-=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "flag:leicai",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	"超越成功！"
-																],
-																"false": [
-																	"领悟点数不足。"
-																]
-															}
-														],
-														"no": []
-													}
-												]
-											},
-											{
-												"case": "2",
-												"action": [
-													{
-														"type": "confirm",
-														"default": true,
-														"text": "确认要超越当前领悟吗？",
-														"yes": [
-															{
-																"type": "if",
-																"condition": "(status:money>=Math.pow(2,flag:leicai)*40)",
-																"true": [
-																	{
-																		"type": "setValue",
-																		"name": "status:money",
-																		"operator": "-=",
-																		"value": "Math.pow(2,flag:leicai)*40"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I748",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I747",
-																		"operator": "-=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "flag:leicai",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	"超越成功！",
-																	"该领悟至此达到最大等级！\n之后将不再显示在超越事件中。"
-																],
-																"false": [
-																	"领悟点数不足。"
-																]
-															}
-														],
-														"no": []
-													}
-												]
-											}
-										]
-									}
-								]
-							}
-						]
-					},
-					{
-						"text": "离去…",
-						"condition": "EvalString_default",
-						"action": []
+						"type": "setValue",
+						"name": "flag:flvjy",
+						"operator": "-=",
+						"value": "flag:zfjyzy"
 					}
 				]
 			}
 		],
-		"升华 - 初阶": [
+		"声望重置": [
 			{
-				"type": "choices",
-				"text": "可以在此进行初阶领悟升华。\n每进行一次初阶升华，\n\r[gold]你的三围属性都将得到一个0.1倍的加成。\r",
-				"choices": [
+				"type": "if",
+				"condition": "(flag:blgcjg===0)",
+				"true": [
 					{
-						"text": "清灵、琉璃、秘果 - 琉璃灵果",
-						"color": [
-							74,
-							178,
-							130,
-							1
-						],
-						"condition": "flag:chujie1==0",
-						"action": [
-							{
-								"type": "choices",
-								"text": "琉璃灵果：\n进阶层次的战复术，能够进行战地急救。\n战前恢复相当于对手攻防之和8倍的生命，并使每点护盾的效力提升为3倍。\n升华后，用于升华的低阶技能都将消失。\n确定要升华为该技能吗？",
-								"choices": [
-									{
-										"text": "是",
-										"color": [
-											255,
-											215,
-											0,
-											1
-										],
-										"action": [
-											{
-												"type": "setValue",
-												"name": "item:I745",
-												"value": "0"
-											},
-											{
-												"type": "setValue",
-												"name": "item:I754",
-												"value": "0"
-											},
-											{
-												"type": "setValue",
-												"name": "item:I757",
-												"value": "0"
-											},
-											{
-												"type": "setValue",
-												"name": "item:I591",
-												"value": "1"
-											},
-											{
-												"type": "setValue",
-												"name": "flag:chujie1",
-												"value": "1"
-											},
-											{
-												"type": "setValue",
-												"name": "flag:chujieshenghua",
-												"operator": "+=",
-												"value": "1"
-											},
-											{
-												"type": "setValue",
-												"name": "item:I821",
-												"operator": "+=",
-												"value": "0.1"
-											},
-											"升华成功！\n此后该项将不再显示在升华面板中。"
-										]
-									},
-									{
-										"text": "否",
-										"color": [
-											255,
-											0,
-											47,
-											1
-										],
-										"action": []
-									}
-								]
-							}
-						]
+						"type": "setValue",
+						"name": "flag:gcjg",
+						"value": "1000"
 					},
 					{
-						"text": "雷裁、血雨 - 唤雨雷暴",
-						"color": [
-							154,
-							59,
-							160,
-							1
-						],
-						"condition": "flag:chujie2==0",
-						"action": [
-							{
-								"type": "choices",
-								"text": "唤雨雷暴：\n技艺纯熟的魔导士的领悟，能影响一定范围内的天气。\n每回合以50%的伤害发动三次攻击（不受超越影响），并使对方每回合损失最大生命的千分之2，生命损失持续100回合。\n升华后，用于升华的低阶技能都将消失。\n确定要升华为该技能吗？",
-								"choices": [
-									{
-										"text": "是",
-										"color": [
-											255,
-											215,
-											0,
-											1
-										],
-										"action": [
-											{
-												"type": "setValue",
-												"name": "item:I748",
-												"value": "0"
-											},
-											{
-												"type": "setValue",
-												"name": "item:I751",
-												"value": "0"
-											},
-											{
-												"type": "setValue",
-												"name": "item:I592",
-												"value": "1"
-											},
-											{
-												"type": "setValue",
-												"name": "flag:chujie2",
-												"value": "1"
-											},
-											{
-												"type": "setValue",
-												"name": "flag:chujieshenghua",
-												"operator": "+=",
-												"value": "1"
-											},
-											{
-												"type": "setValue",
-												"name": "item:I821",
-												"operator": "+=",
-												"value": "0.1"
-											},
-											"升华成功！\n此后该项将不再显示在升华面板中。"
-										]
-									},
-									{
-										"text": "否",
-										"color": [
-											255,
-											0,
-											47,
-											1
-										],
-										"action": []
-									}
-								]
-							}
-						]
-					},
-					{
-						"text": "离去…",
-						"color": [
-							255,
-							255,
-							255,
-							1
-						],
-						"action": []
+						"type": "setValue",
+						"name": "flag:gcjgdj",
+						"value": "0"
 					}
 				]
-			}
-		],
-		"进入心之境界": [
+			},
 			{
 				"type": "setValue",
-				"name": "item:I1182",
+				"name": "flag:gu1c",
 				"value": "1"
 			},
 			{
 				"type": "setValue",
-				"name": "item:I1187",
+				"name": "flag:gu2c",
 				"value": "5"
-			}
-		],
-		"超越 - 中阶": [
-			{
-				"type": "choices",
-				"text": "请选择要进行【超越】的领悟！\n\r[gold]中阶领悟可以进行5次超越，前两次提升基础效力的1/5，后三次提升基础效力的1/4。\n如果是包含上限值的领悟，则第1、2、5次提升基础效力，第3、4次提升上限。\r",
-				"choices": [
-					{
-						"text": "${Math.pow(2,flag:yuyanzhe)*1000} 预言者【当前为${flag:yuyanzhe}次超越】",
-						"icon": "I596",
-						"color": [
-							141,
-							210,
-							228,
-							1
-						],
-						"condition": "flag:yuyanzhe<5",
-						"action": [
-							{
-								"type": "if",
-								"condition": "(item:I596==1)",
-								"true": [
-									{
-										"type": "confirm",
-										"default": true,
-										"text": "确认要超越当前领悟吗？",
-										"yes": [
-											{
-												"type": "if",
-												"condition": "(status:money>=Math.pow(2,flag:yuyanzhe)*1000)",
-												"true": [
-													{
-														"type": "setValue",
-														"name": "status:money",
-														"operator": "-=",
-														"value": "Math.pow(2,flag:yuyanzhe)*1000"
-													},
-													{
-														"type": "setValue",
-														"name": "item:I832",
-														"operator": "+=",
-														"value": "1"
-													},
-													{
-														"type": "setValue",
-														"name": "item:I596",
-														"operator": "-=",
-														"value": "1"
-													},
-													{
-														"type": "setValue",
-														"name": "flag:yuyanzhe",
-														"operator": "+=",
-														"value": "1"
-													},
-													"超越成功！"
-												],
-												"false": [
-													"领悟点数不足。"
-												]
-											}
-										],
-										"no": []
-									}
-								],
-								"false": [
-									{
-										"type": "switch",
-										"condition": "flag:yuyanzhe",
-										"caseList": [
-											{
-												"case": "0",
-												"action": [
-													"未获得该领悟。",
-													{
-														"type": "comment",
-														"text": "当判别值是值的场合执行此事件"
-													}
-												]
-											},
-											{
-												"case": "1",
-												"action": [
-													{
-														"type": "confirm",
-														"default": true,
-														"text": "确认要超越当前领悟吗？",
-														"yes": [
-															{
-																"type": "if",
-																"condition": "(status:money>=Math.pow(2,flag:yuyanzhe)*1000)",
-																"true": [
-																	{
-																		"type": "setValue",
-																		"name": "status:money",
-																		"operator": "-=",
-																		"value": "Math.pow(2,flag:yuyanzhe)*1000"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I833",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I832",
-																		"operator": "-=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "flag:yuyanzhe",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	"超越成功！"
-																],
-																"false": [
-																	"领悟点数不足。"
-																]
-															}
-														],
-														"no": []
-													}
-												]
-											},
-											{
-												"case": "2",
-												"action": [
-													{
-														"type": "confirm",
-														"default": true,
-														"text": "确认要超越当前领悟吗？",
-														"yes": [
-															{
-																"type": "if",
-																"condition": "(status:money>=Math.pow(2,flag:yuyanzhe)*1000)",
-																"true": [
-																	{
-																		"type": "setValue",
-																		"name": "status:money",
-																		"operator": "-=",
-																		"value": "Math.pow(2,flag:yuyanzhe)*1000"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I834",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I833",
-																		"operator": "-=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "flag:yuyanzhe",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	"超越成功！"
-																],
-																"false": [
-																	"领悟点数不足。"
-																]
-															}
-														],
-														"no": []
-													}
-												]
-											},
-											{
-												"case": "3",
-												"action": [
-													{
-														"type": "confirm",
-														"default": true,
-														"text": "确认要超越当前领悟吗？",
-														"yes": [
-															{
-																"type": "if",
-																"condition": "(status:money>=Math.pow(2,flag:yuyanzhe)*1000)",
-																"true": [
-																	{
-																		"type": "setValue",
-																		"name": "status:money",
-																		"operator": "-=",
-																		"value": "Math.pow(2,flag:yuyanzhe)*1000"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I835",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I834",
-																		"operator": "-=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "flag:yuyanzhe",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	"超越成功！"
-																],
-																"false": [
-																	"领悟点数不足。"
-																]
-															}
-														],
-														"no": []
-													}
-												]
-											},
-											{
-												"case": "4",
-												"action": [
-													{
-														"type": "confirm",
-														"default": true,
-														"text": "确认要超越当前领悟吗？",
-														"yes": [
-															{
-																"type": "if",
-																"condition": "(status:money>=Math.pow(2,flag:yuyanzhe)*1000)",
-																"true": [
-																	{
-																		"type": "setValue",
-																		"name": "status:money",
-																		"operator": "-=",
-																		"value": "Math.pow(2,flag:yuyanzhe)*1000"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I836",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I835",
-																		"operator": "-=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "flag:yuyanzhe",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	"超越成功！",
-																	"该领悟至此达到最大等级！\n之后将不再显示在超越事件中。"
-																],
-																"false": [
-																	"领悟点数不足。"
-																]
-															}
-														],
-														"no": []
-													}
-												]
-											}
-										]
-									}
-								]
-							}
-						]
-					},
-					{
-						"text": "${Math.pow(2,flag:tunshizhe)*2000} 吞食者【当前为${flag:tunshizhe}次超越】",
-						"icon": "I597",
-						"color": [
-							236,
-							126,
-							101,
-							1
-						],
-						"condition": "flag:tunshizhe<5",
-						"action": [
-							{
-								"type": "if",
-								"condition": "(item:I597==1)",
-								"true": [
-									{
-										"type": "confirm",
-										"default": true,
-										"text": "确认要超越当前领悟吗？",
-										"yes": [
-											{
-												"type": "if",
-												"condition": "(status:money>=Math.pow(2,flag:tunshizhe)*2000)",
-												"true": [
-													{
-														"type": "setValue",
-														"name": "status:money",
-														"operator": "-=",
-														"value": "Math.pow(2,flag:tunshizhe)*2000"
-													},
-													{
-														"type": "setValue",
-														"name": "item:I837",
-														"operator": "+=",
-														"value": "1"
-													},
-													{
-														"type": "setValue",
-														"name": "item:I597",
-														"operator": "-=",
-														"value": "1"
-													},
-													{
-														"type": "setValue",
-														"name": "flag:tunshizhe",
-														"operator": "+=",
-														"value": "1"
-													},
-													"超越成功！"
-												],
-												"false": [
-													"领悟点数不足。"
-												]
-											}
-										],
-										"no": []
-									}
-								],
-								"false": [
-									{
-										"type": "switch",
-										"condition": "flag:tunshizhe",
-										"caseList": [
-											{
-												"case": "0",
-												"action": [
-													"未获得该领悟。",
-													{
-														"type": "comment",
-														"text": "当判别值是值的场合执行此事件"
-													}
-												]
-											},
-											{
-												"case": "1",
-												"action": [
-													{
-														"type": "confirm",
-														"default": true,
-														"text": "确认要超越当前领悟吗？",
-														"yes": [
-															{
-																"type": "if",
-																"condition": "(status:money>=Math.pow(2,flag:tunshizhe)*2000)",
-																"true": [
-																	{
-																		"type": "setValue",
-																		"name": "status:money",
-																		"operator": "-=",
-																		"value": "Math.pow(2,flag:tunshizhe)*2000"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I838",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I837",
-																		"operator": "-=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "flag:tunshizhe",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	"超越成功！"
-																],
-																"false": [
-																	"领悟点数不足。"
-																]
-															}
-														],
-														"no": []
-													}
-												]
-											},
-											{
-												"case": "2",
-												"action": [
-													{
-														"type": "confirm",
-														"default": true,
-														"text": "确认要超越当前领悟吗？",
-														"yes": [
-															{
-																"type": "if",
-																"condition": "(status:money>=Math.pow(2,flag:tunshizhe)*2000)",
-																"true": [
-																	{
-																		"type": "setValue",
-																		"name": "status:money",
-																		"operator": "-=",
-																		"value": "Math.pow(2,flag:tunshizhe)*2000"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I839",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I838",
-																		"operator": "-=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "flag:tunshizhe",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	"超越成功！"
-																],
-																"false": [
-																	"领悟点数不足。"
-																]
-															}
-														],
-														"no": []
-													}
-												]
-											},
-											{
-												"case": "3",
-												"action": [
-													{
-														"type": "confirm",
-														"default": true,
-														"text": "确认要超越当前领悟吗？",
-														"yes": [
-															{
-																"type": "if",
-																"condition": "(status:money>=Math.pow(2,flag:tunshizhe)*2000)",
-																"true": [
-																	{
-																		"type": "setValue",
-																		"name": "status:money",
-																		"operator": "-=",
-																		"value": "Math.pow(2,flag:tunshizhe)*2000"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I840",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I839",
-																		"operator": "-=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "flag:tunshizhe",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	"超越成功！"
-																],
-																"false": [
-																	"领悟点数不足。"
-																]
-															}
-														],
-														"no": []
-													}
-												]
-											},
-											{
-												"case": "4",
-												"action": [
-													{
-														"type": "confirm",
-														"default": true,
-														"text": "确认要超越当前领悟吗？",
-														"yes": [
-															{
-																"type": "if",
-																"condition": "(status:money>=Math.pow(2,flag:tunshizhe)*2000)",
-																"true": [
-																	{
-																		"type": "setValue",
-																		"name": "status:money",
-																		"operator": "-=",
-																		"value": "Math.pow(2,flag:tunshizhe)*2000"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I841",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I840",
-																		"operator": "-=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "flag:tunshizhe",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	"超越成功！",
-																	"该领悟至此达到最大等级！\n之后将不再显示在超越事件中。"
-																],
-																"false": [
-																	"领悟点数不足。"
-																]
-															}
-														],
-														"no": []
-													}
-												]
-											}
-										]
-									}
-								]
-							}
-						]
-					},
-					{
-						"text": "${Math.pow(2,flag:kanshui)*2500} 坎水【当前为${flag:kanshui}次超越】",
-						"icon": "I595",
-						"color": [
-							141,
-							152,
-							228,
-							1
-						],
-						"condition": "flag:kanshui<5",
-						"action": [
-							{
-								"type": "if",
-								"condition": "(item:I595==1)",
-								"true": [
-									{
-										"type": "confirm",
-										"default": true,
-										"text": "确认要超越当前领悟吗？",
-										"yes": [
-											{
-												"type": "if",
-												"condition": "(status:money>=Math.pow(2,flag:kanshui)*2500)",
-												"true": [
-													{
-														"type": "setValue",
-														"name": "status:money",
-														"operator": "-=",
-														"value": "Math.pow(2,flag:kanshui)*2500"
-													},
-													{
-														"type": "setValue",
-														"name": "item:I827",
-														"operator": "+=",
-														"value": "1"
-													},
-													{
-														"type": "setValue",
-														"name": "item:I595",
-														"operator": "-=",
-														"value": "1"
-													},
-													{
-														"type": "setValue",
-														"name": "flag:kanshui",
-														"operator": "+=",
-														"value": "1"
-													},
-													"超越成功！"
-												],
-												"false": [
-													"领悟点数不足。"
-												]
-											}
-										],
-										"no": []
-									}
-								],
-								"false": [
-									{
-										"type": "switch",
-										"condition": "flag:kanshui",
-										"caseList": [
-											{
-												"case": "0",
-												"action": [
-													"未获得该领悟。",
-													{
-														"type": "comment",
-														"text": "当判别值是值的场合执行此事件"
-													}
-												]
-											},
-											{
-												"case": "1",
-												"action": [
-													{
-														"type": "confirm",
-														"default": true,
-														"text": "确认要超越当前领悟吗？",
-														"yes": [
-															{
-																"type": "if",
-																"condition": "(status:money>=Math.pow(2,flag:kanshui)*2500)",
-																"true": [
-																	{
-																		"type": "setValue",
-																		"name": "status:money",
-																		"operator": "-=",
-																		"value": "Math.pow(2,flag:kanshui)*2500"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I828",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I827",
-																		"operator": "-=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "flag:kanshui",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	"超越成功！"
-																],
-																"false": [
-																	"领悟点数不足。"
-																]
-															}
-														],
-														"no": []
-													}
-												]
-											},
-											{
-												"case": "2",
-												"action": [
-													{
-														"type": "confirm",
-														"default": true,
-														"text": "确认要超越当前领悟吗？",
-														"yes": [
-															{
-																"type": "if",
-																"condition": "(status:money>=Math.pow(2,flag:kanshui)*2500)",
-																"true": [
-																	{
-																		"type": "setValue",
-																		"name": "status:money",
-																		"operator": "-=",
-																		"value": "Math.pow(2,flag:kanshui)*2500"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I829",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I828",
-																		"operator": "-=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "flag:kanshui",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	"超越成功！"
-																],
-																"false": [
-																	"领悟点数不足。"
-																]
-															}
-														],
-														"no": []
-													}
-												]
-											},
-											{
-												"case": "3",
-												"action": [
-													{
-														"type": "confirm",
-														"default": true,
-														"text": "确认要超越当前领悟吗？",
-														"yes": [
-															{
-																"type": "if",
-																"condition": "(status:money>=Math.pow(2,flag:kanshui)*2500)",
-																"true": [
-																	{
-																		"type": "setValue",
-																		"name": "status:money",
-																		"operator": "-=",
-																		"value": "Math.pow(2,flag:kanshui)*2500"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I830",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I829",
-																		"operator": "-=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "flag:kanshui",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	"超越成功！"
-																],
-																"false": [
-																	"领悟点数不足。"
-																]
-															}
-														],
-														"no": []
-													}
-												]
-											},
-											{
-												"case": "4",
-												"action": [
-													{
-														"type": "confirm",
-														"default": true,
-														"text": "确认要超越当前领悟吗？",
-														"yes": [
-															{
-																"type": "if",
-																"condition": "(status:money>=Math.pow(2,flag:kanshui)*2500)",
-																"true": [
-																	{
-																		"type": "setValue",
-																		"name": "status:money",
-																		"operator": "-=",
-																		"value": "Math.pow(2,flag:kanshui)*2500"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I831",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I830",
-																		"operator": "-=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "flag:kanshui",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	"超越成功！",
-																	"该领悟至此达到最大等级！\n之后将不再显示在超越事件中。"
-																],
-																"false": [
-																	"领悟点数不足。"
-																]
-															}
-														],
-														"no": []
-													}
-												]
-											}
-										]
-									}
-								]
-							}
-						]
-					},
-					{
-						"text": "${Math.pow(2,flag:liulilingguo)*2500} 琉璃灵果【当前为${flag:liulilingguo}次超越】",
-						"icon": "I591",
-						"color": [
-							66,
-							239,
-							46,
-							1
-						],
-						"condition": "flag:liulilingguo<5",
-						"action": [
-							{
-								"type": "if",
-								"condition": "(item:I591==1)",
-								"true": [
-									{
-										"type": "confirm",
-										"default": true,
-										"text": "确认要超越当前领悟吗？",
-										"yes": [
-											{
-												"type": "if",
-												"condition": "(status:money>=Math.pow(2,flag:liulilingguo)*2500)",
-												"true": [
-													{
-														"type": "setValue",
-														"name": "status:money",
-														"operator": "-=",
-														"value": "Math.pow(2,flag:liulilingguo)*2500"
-													},
-													{
-														"type": "setValue",
-														"name": "item:I842",
-														"operator": "+=",
-														"value": "1"
-													},
-													{
-														"type": "setValue",
-														"name": "item:I591",
-														"operator": "-=",
-														"value": "1"
-													},
-													{
-														"type": "setValue",
-														"name": "flag:liulilingguo",
-														"operator": "+=",
-														"value": "1"
-													},
-													"超越成功！"
-												],
-												"false": [
-													"领悟点数不足。"
-												]
-											}
-										],
-										"no": []
-									}
-								],
-								"false": [
-									{
-										"type": "switch",
-										"condition": "flag:liulilingguo",
-										"caseList": [
-											{
-												"case": "0",
-												"action": [
-													"未获得该领悟。",
-													{
-														"type": "comment",
-														"text": "当判别值是值的场合执行此事件"
-													}
-												]
-											},
-											{
-												"case": "1",
-												"action": [
-													{
-														"type": "confirm",
-														"default": true,
-														"text": "确认要超越当前领悟吗？",
-														"yes": [
-															{
-																"type": "if",
-																"condition": "(status:money>=Math.pow(2,flag:liulilingguo)*2500)",
-																"true": [
-																	{
-																		"type": "setValue",
-																		"name": "status:money",
-																		"operator": "-=",
-																		"value": "Math.pow(2,flag:liulilingguo)*2500"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I843",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I842",
-																		"operator": "-=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "flag:liulilingguo",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	"超越成功！"
-																],
-																"false": [
-																	"领悟点数不足。"
-																]
-															}
-														],
-														"no": []
-													}
-												]
-											},
-											{
-												"case": "2",
-												"action": [
-													{
-														"type": "confirm",
-														"default": true,
-														"text": "确认要超越当前领悟吗？",
-														"yes": [
-															{
-																"type": "if",
-																"condition": "(status:money>=Math.pow(2,flag:liulilingguo)*2500)",
-																"true": [
-																	{
-																		"type": "setValue",
-																		"name": "status:money",
-																		"operator": "-=",
-																		"value": "Math.pow(2,flag:liulilingguo)*2500"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I844",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I843",
-																		"operator": "-=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "flag:liulilingguo",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	"超越成功！"
-																],
-																"false": [
-																	"领悟点数不足。"
-																]
-															}
-														],
-														"no": []
-													}
-												]
-											},
-											{
-												"case": "3",
-												"action": [
-													{
-														"type": "confirm",
-														"default": true,
-														"text": "确认要超越当前领悟吗？",
-														"yes": [
-															{
-																"type": "if",
-																"condition": "(status:money>=Math.pow(2,flag:liulilingguo)*2500)",
-																"true": [
-																	{
-																		"type": "setValue",
-																		"name": "status:money",
-																		"operator": "-=",
-																		"value": "Math.pow(2,flag:liulilingguo)*2500"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I845",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I844",
-																		"operator": "-=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "flag:liulilingguo",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	"超越成功！"
-																],
-																"false": [
-																	"领悟点数不足。"
-																]
-															}
-														],
-														"no": []
-													}
-												]
-											},
-											{
-												"case": "4",
-												"action": [
-													{
-														"type": "confirm",
-														"default": true,
-														"text": "确认要超越当前领悟吗？",
-														"yes": [
-															{
-																"type": "if",
-																"condition": "(status:money>=Math.pow(2,flag:liulilingguo)*2500)",
-																"true": [
-																	{
-																		"type": "setValue",
-																		"name": "status:money",
-																		"operator": "-=",
-																		"value": "Math.pow(2,flag:liulilingguo)*2500"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I846",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I845",
-																		"operator": "-=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "flag:liulilingguo",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	"超越成功！",
-																	"该领悟至此达到最大等级！\n之后将不再显示在超越事件中。"
-																],
-																"false": [
-																	"领悟点数不足。"
-																]
-															}
-														],
-														"no": []
-													}
-												]
-											}
-										]
-									}
-								]
-							}
-						]
-					},
-					{
-						"text": "${Math.pow(2,flag:lihuo)*3500} 离火【当前为${flag:lihuo}次超越】",
-						"icon": "I594",
-						"color": [
-							234,
-							52,
-							89,
-							1
-						],
-						"condition": "flag:lihuo<5",
-						"action": [
-							{
-								"type": "if",
-								"condition": "(item:I594==1)",
-								"true": [
-									{
-										"type": "confirm",
-										"default": true,
-										"text": "确认要超越当前领悟吗？",
-										"yes": [
-											{
-												"type": "if",
-												"condition": "(status:money>=Math.pow(2,flag:lihuo)*3500)",
-												"true": [
-													{
-														"type": "setValue",
-														"name": "status:money",
-														"operator": "-=",
-														"value": "Math.pow(2,flag:lihuo)*3500"
-													},
-													{
-														"type": "setValue",
-														"name": "item:I822",
-														"operator": "+=",
-														"value": "1"
-													},
-													{
-														"type": "setValue",
-														"name": "item:I594",
-														"operator": "-=",
-														"value": "1"
-													},
-													{
-														"type": "setValue",
-														"name": "flag:lihuo",
-														"operator": "+=",
-														"value": "1"
-													},
-													"超越成功！"
-												],
-												"false": [
-													"领悟点数不足。"
-												]
-											}
-										],
-										"no": []
-									}
-								],
-								"false": [
-									{
-										"type": "switch",
-										"condition": "flag:lihuo",
-										"caseList": [
-											{
-												"case": "0",
-												"action": [
-													"未获得该领悟。",
-													{
-														"type": "comment",
-														"text": "当判别值是值的场合执行此事件"
-													}
-												]
-											},
-											{
-												"case": "1",
-												"action": [
-													{
-														"type": "confirm",
-														"default": true,
-														"text": "确认要超越当前领悟吗？",
-														"yes": [
-															{
-																"type": "if",
-																"condition": "(status:money>=Math.pow(2,flag:lihuo)*3500)",
-																"true": [
-																	{
-																		"type": "setValue",
-																		"name": "status:money",
-																		"operator": "-=",
-																		"value": "Math.pow(2,flag:lihuo)*3500"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I823",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I822",
-																		"operator": "-=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "flag:lihuo",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	"超越成功！"
-																],
-																"false": [
-																	"领悟点数不足。"
-																]
-															}
-														],
-														"no": []
-													}
-												]
-											},
-											{
-												"case": "2",
-												"action": [
-													{
-														"type": "confirm",
-														"default": true,
-														"text": "确认要超越当前领悟吗？",
-														"yes": [
-															{
-																"type": "if",
-																"condition": "(status:money>=Math.pow(2,flag:lihuo)*3500)",
-																"true": [
-																	{
-																		"type": "setValue",
-																		"name": "status:money",
-																		"operator": "-=",
-																		"value": "Math.pow(2,flag:lihuo)*3500"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I824",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I823",
-																		"operator": "-=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "flag:lihuo",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	"超越成功！"
-																],
-																"false": [
-																	"领悟点数不足。"
-																]
-															}
-														],
-														"no": []
-													}
-												]
-											},
-											{
-												"case": "3",
-												"action": [
-													{
-														"type": "confirm",
-														"default": true,
-														"text": "确认要超越当前领悟吗？",
-														"yes": [
-															{
-																"type": "if",
-																"condition": "(status:money>=Math.pow(2,flag:lihuo)*3500)",
-																"true": [
-																	{
-																		"type": "setValue",
-																		"name": "status:money",
-																		"operator": "-=",
-																		"value": "Math.pow(2,flag:lihuo)*3500"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I825",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I824",
-																		"operator": "-=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "flag:lihuo",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	"超越成功！"
-																],
-																"false": [
-																	"领悟点数不足。"
-																]
-															}
-														],
-														"no": []
-													}
-												]
-											},
-											{
-												"case": "4",
-												"action": [
-													{
-														"type": "confirm",
-														"default": true,
-														"text": "确认要超越当前领悟吗？",
-														"yes": [
-															{
-																"type": "if",
-																"condition": "(status:money>=Math.pow(2,flag:lihuo)*3500)",
-																"true": [
-																	{
-																		"type": "setValue",
-																		"name": "status:money",
-																		"operator": "-=",
-																		"value": "Math.pow(2,flag:lihuo)*3500"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I826",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I825",
-																		"operator": "-=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "flag:lihuo",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	"超越成功！",
-																	"该领悟至此达到最大等级！\n之后将不再显示在超越事件中。"
-																],
-																"false": [
-																	"领悟点数不足。"
-																]
-															}
-														],
-														"no": []
-													}
-												]
-											}
-										]
-									}
-								]
-							}
-						]
-					},
-					{
-						"text": "${Math.pow(2,flag:xueyuleibao)*3500} 唤雨雷暴【当前为${flag:xueyuleibao}次超越】",
-						"icon": "I592",
-						"color": [
-							197,
-							97,
-							243,
-							1
-						],
-						"condition": "flag:xueyuleibao<5",
-						"action": [
-							{
-								"type": "if",
-								"condition": "(item:I592==1)",
-								"true": [
-									{
-										"type": "confirm",
-										"default": true,
-										"text": "确认要超越当前领悟吗？",
-										"yes": [
-											{
-												"type": "if",
-												"condition": "(status:money>=Math.pow(2,flag:xueyuleibao)*3500)",
-												"true": [
-													{
-														"type": "setValue",
-														"name": "status:money",
-														"operator": "-=",
-														"value": "Math.pow(2,flag:xueyuleibao)*3500"
-													},
-													{
-														"type": "setValue",
-														"name": "item:I847",
-														"operator": "+=",
-														"value": "1"
-													},
-													{
-														"type": "setValue",
-														"name": "item:I592",
-														"operator": "-=",
-														"value": "1"
-													},
-													{
-														"type": "setValue",
-														"name": "flag:xueyuleibao",
-														"operator": "+=",
-														"value": "1"
-													},
-													"超越成功！"
-												],
-												"false": [
-													"领悟点数不足。"
-												]
-											}
-										],
-										"no": []
-									}
-								],
-								"false": [
-									{
-										"type": "switch",
-										"condition": "flag:xueyuleibao",
-										"caseList": [
-											{
-												"case": "0",
-												"action": [
-													"未获得该领悟。",
-													{
-														"type": "comment",
-														"text": "当判别值是值的场合执行此事件"
-													}
-												]
-											},
-											{
-												"case": "1",
-												"action": [
-													{
-														"type": "confirm",
-														"default": true,
-														"text": "确认要超越当前领悟吗？",
-														"yes": [
-															{
-																"type": "if",
-																"condition": "(status:money>=Math.pow(2,flag:xueyuleibao)*3500)",
-																"true": [
-																	{
-																		"type": "setValue",
-																		"name": "status:money",
-																		"operator": "-=",
-																		"value": "Math.pow(2,flag:xueyuleibao)*3500"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I848",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I847",
-																		"operator": "-=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "flag:xueyuleibao",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	"超越成功！"
-																],
-																"false": [
-																	"领悟点数不足。"
-																]
-															}
-														],
-														"no": []
-													}
-												]
-											},
-											{
-												"case": "2",
-												"action": [
-													{
-														"type": "confirm",
-														"default": true,
-														"text": "确认要超越当前领悟吗？",
-														"yes": [
-															{
-																"type": "if",
-																"condition": "(status:money>=Math.pow(2,flag:xueyuleibao)*3500)",
-																"true": [
-																	{
-																		"type": "setValue",
-																		"name": "status:money",
-																		"operator": "-=",
-																		"value": "Math.pow(2,flag:xueyuleibao)*3500"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I849",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I848",
-																		"operator": "-=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "flag:xueyuleibao",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	"超越成功！"
-																],
-																"false": [
-																	"领悟点数不足。"
-																]
-															}
-														],
-														"no": []
-													}
-												]
-											},
-											{
-												"case": "3",
-												"action": [
-													{
-														"type": "confirm",
-														"default": true,
-														"text": "确认要超越当前领悟吗？",
-														"yes": [
-															{
-																"type": "if",
-																"condition": "(status:money>=Math.pow(2,flag:xueyuleibao)*3500)",
-																"true": [
-																	{
-																		"type": "setValue",
-																		"name": "status:money",
-																		"operator": "-=",
-																		"value": "Math.pow(2,flag:xueyuleibao)*3500"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I850",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I849",
-																		"operator": "-=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "flag:xueyuleibao",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	"超越成功！"
-																],
-																"false": [
-																	"领悟点数不足。"
-																]
-															}
-														],
-														"no": []
-													}
-												]
-											},
-											{
-												"case": "4",
-												"action": [
-													{
-														"type": "confirm",
-														"default": true,
-														"text": "确认要超越当前领悟吗？",
-														"yes": [
-															{
-																"type": "if",
-																"condition": "(status:money>=Math.pow(2,flag:xueyuleibao)*3500)",
-																"true": [
-																	{
-																		"type": "setValue",
-																		"name": "status:money",
-																		"operator": "-=",
-																		"value": "Math.pow(2,flag:xueyuleibao)*3500"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I851",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "item:I850",
-																		"operator": "-=",
-																		"value": "1"
-																	},
-																	{
-																		"type": "setValue",
-																		"name": "flag:xueyuleibao",
-																		"operator": "+=",
-																		"value": "1"
-																	},
-																	"超越成功！",
-																	"该领悟至此达到最大等级！\n之后将不再显示在超越事件中。"
-																],
-																"false": [
-																	"领悟点数不足。"
-																]
-															}
-														],
-														"no": []
-													}
-												]
-											}
-										]
-									}
-								]
-							}
-						]
-					},
-					{
-						"text": "离去…",
-						"condition": "EvalString_default",
-						"action": []
-					}
-				]
-			}
-		],
-		"清空状态": [
-			{
-				"type": "function",
-				"function": "function(){\ncore.setFlag(\"__visited__\", {});\n}"
-			},
-			{
-				"type": "unfollow",
-				"name": "nanami.png"
-			},
-			{
-				"type": "unloadEquip",
-				"pos": 0
-			},
-			{
-				"type": "unloadEquip",
-				"pos": 1
-			},
-			{
-				"type": "unloadEquip",
-				"pos": 2
-			},
-			{
-				"type": "unloadEquip",
-				"pos": 3
-			},
-			{
-				"type": "unloadEquip",
-				"pos": 4
-			},
-			{
-				"type": "unloadEquip",
-				"pos": 5
 			},
 			{
 				"type": "setValue",
-				"name": "item:I893",
-				"value": "0"
+				"name": "flag:gu3c",
+				"value": "5"
 			},
 			{
 				"type": "setValue",
-				"name": "item:I894",
-				"value": "0"
+				"name": "flag:gu4c",
+				"value": "100"
 			},
 			{
 				"type": "setValue",
-				"name": "item:I895",
-				"value": "0"
+				"name": "flag:gczy",
+				"value": "1"
 			},
 			{
 				"type": "setValue",
-				"name": "item:I896",
-				"value": "0"
+				"name": "flag:gjyzy",
+				"value": "1"
 			},
 			{
 				"type": "setValue",
-				"name": "item:I897",
-				"value": "0"
+				"name": "flag:gcfw",
+				"value": "1"
 			},
 			{
 				"type": "setValue",
-				"name": "item:I898",
-				"value": "0"
+				"name": "status:hp",
+				"value": "1"
 			},
 			{
 				"type": "setValue",
-				"name": "item:I899",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I900",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I901",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I920",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I921",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I922",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I923",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I924",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I925",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I926",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I927",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I928",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I929",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I930",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I931",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I932",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I933",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I934",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I935",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I936",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I937",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I938",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I939",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I940",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I941",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I942",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I943",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I944",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I945",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I946",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I947",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I948",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I949",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I977",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I978",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I979",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I980",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I981",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I982",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I983",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I1124",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I1125",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I1126",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I1127",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:I821",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:superPotion",
-				"value": "0"
-			},
-			{
-				"type": "setValue",
-				"name": "item:superWine",
-				"value": "0"
+				"name": "status:exp",
+				"value": "10"
 			},
 			{
 				"type": "setValue",
 				"name": "status:money",
 				"value": "0"
+			}
+		],
+		"水晶重置": [
+			{
+				"type": "insert",
+				"name": "声望重置"
+			},
+			{
+				"type": "if",
+				"condition": "(flag:jrsjtz1===1)",
+				"true": [
+					{
+						"type": "setValue",
+						"name": "flag:lvzs",
+						"value": "0.45"
+					}
+				]
 			},
 			{
 				"type": "setValue",
-				"name": "item:bigKey",
+				"name": "flag:jrsjtz1",
 				"value": "0"
 			},
 			{
 				"type": "setValue",
-				"name": "item:I600",
+				"name": "flag:jrsjtz2",
+				"value": "0"
+			},
+			{
+				"type": "setValue",
+				"name": "flag:jrsjtz3",
+				"value": "0"
+			},
+			{
+				"type": "setValue",
+				"name": "status:def",
+				"value": "0"
+			},
+			{
+				"type": "setValue",
+				"name": "flag:pu1c",
 				"value": "1"
 			},
 			{
 				"type": "setValue",
-				"name": "flag:sq99",
+				"name": "flag:pu2c",
+				"value": "1"
+			},
+			{
+				"type": "setValue",
+				"name": "flag:pu3c",
+				"value": "3"
+			},
+			{
+				"type": "setValue",
+				"name": "flag:pu4c",
+				"value": "100"
+			},
+			{
+				"type": "setValue",
+				"name": "flag:pu5c",
+				"value": "1000"
+			},
+			{
+				"type": "setValue",
+				"name": "flag:gu5c",
+				"value": "1e+10"
+			},
+			{
+				"type": "setValue",
+				"name": "flag:pczy",
+				"value": "1"
+			},
+			{
+				"type": "setValue",
+				"name": "flag:pjyzy",
+				"value": "1"
+			},
+			{
+				"type": "setValue",
+				"name": "flag:ppzy",
+				"value": "1"
+			},
+			{
+				"type": "setValue",
+				"name": "flag:pbjzy",
+				"value": "1"
+			},
+			{
+				"type": "setValue",
+				"name": "flag:pjczy",
+				"value": "1"
+			}
+		],
+		"草场重置": [
+			{
+				"type": "if",
+				"condition": "(item:I848===7)",
+				"true": [
+					{
+						"type": "setValue",
+						"name": "flag:jceffexp",
+						"value": "2"
+					}
+				]
+			},
+			{
+				"type": "insert",
+				"name": "水晶重置"
+			},
+			{
+				"type": "if",
+				"condition": "(item:I848===18)",
+				"true": [
+					{
+						"type": "setValue",
+						"name": "flag:cnll",
+						"value": "1.08"
+					}
+				]
+			},
+			{
+				"type": "if",
+				"condition": "(item:I848===20)",
+				"true": [
+					{
+						"type": "setValue",
+						"name": "flag:cnll",
+						"value": "1.16"
+					}
+				]
+			},
+			{
+				"type": "if",
+				"condition": "(item:I848>=24)",
+				"true": [
+					{
+						"type": "setValue",
+						"name": "flag:cnll",
+						"value": "((item:I848*0.08)-0.68)"
+					}
+				]
+			},
+			{
+				"type": "if",
+				"condition": "(flag:cnll>=3)",
+				"true": [
+					{
+						"type": "setValue",
+						"name": "flag:cnll",
+						"value": "((Math.pow(flag:cnll,0.2))*(Math.pow(3,0.8)))"
+					}
+				]
+			},
+			{
+				"type": "comment",
+				"text": "水晶解锁的升级"
+			},
+			{
+				"type": "setValue",
+				"name": "status:mdef",
 				"value": "0"
 			},
 			{
 				"type": "setValue",
-				"name": "flag:sq100",
+				"name": "flag:sju1c",
+				"value": "1"
+			},
+			{
+				"type": "setValue",
+				"name": "flag:sju2c",
+				"value": "1"
+			},
+			{
+				"type": "setValue",
+				"name": "flag:sju3c",
+				"value": "2"
+			},
+			{
+				"type": "setValue",
+				"name": "flag:sju4c",
+				"value": "3"
+			},
+			{
+				"type": "setValue",
+				"name": "flag:sju5c",
+				"value": "5"
+			},
+			{
+				"type": "setValue",
+				"name": "flag:gu5c",
+				"value": "1e+10"
+			},
+			{
+				"type": "setValue",
+				"name": "flag:pu5c",
+				"value": "1000"
+			},
+			{
+				"type": "setValue",
+				"name": "flag:sjczy",
+				"value": "1"
+			},
+			{
+				"type": "setValue",
+				"name": "flag:sjjyzy",
+				"value": "1"
+			},
+			{
+				"type": "setValue",
+				"name": "flag:sjbjzy",
+				"value": "1"
+			},
+			{
+				"type": "setValue",
+				"name": "flag:sjjczy",
+				"value": "1"
+			},
+			{
+				"type": "setValue",
+				"name": "flag:sjpzy",
+				"value": "1"
+			},
+			{
+				"type": "setValue",
+				"name": "flag:sjsjzy",
+				"value": "1"
+			},
+			{
+				"type": "setValue",
+				"name": "flag:jc",
 				"value": "0"
-			}
-		],
-		"进入秘宝世界": [
+			},
 			{
-				"type": "changeFloor",
-				"floorId": "World",
-				"loc": [
-					6,
-					6
-				],
-				"direction": "down"
-			}
-		],
-		"云霄功法": [
+				"type": "setValue",
+				"name": "flag:jcjy",
+				"value": "10"
+			},
 			{
-				"type": "choices",
-				"text": "你需要拥有这本功法才能晋升它。\n首先\r[gold]卸下功法，将它放在背包内\r，\n再消耗\r[#75E97E]10把绿钥匙\r：",
-				"choices": [
+				"type": "comment",
+				"text": "自动化和白金"
+			},
+			{
+				"type": "setValue",
+				"name": "status:mana",
+				"value": "0"
+			},
+			{
+				"type": "if",
+				"condition": "(item:I848>=10)",
+				"true": [],
+				"false": [
 					{
-						"text": "白尘贯天 → 兽神残卷（三阶小成）",
-						"need": "item:I926==1",
-						"action": [
-							{
-								"type": "if",
-								"condition": "(item:greenKey<10)",
-								"true": [
-									"你好像没有准备好足够的绿钥匙。\n这真的太咸了！！！"
-								],
-								"false": [
-									{
-										"type": "setValue",
-										"name": "item:I926",
-										"value": "0"
-									},
-									{
-										"type": "setValue",
-										"name": "item:I1700",
-										"value": "1"
-									},
-									{
-										"type": "setValue",
-										"name": "item:greenKey",
-										"operator": "-=",
-										"value": "10"
-									},
-									{
-										"type": "setValue",
-										"name": "flag:saltygreen",
-										"operator": "+=",
-										"value": "10"
-									},
-									{
-										"type": "loadEquip",
-										"id": "I1700"
-									},
-									"晋升成功！已自动装备新的功法。"
-								]
-							}
-						]
+						"type": "setValue",
+						"name": "flag:bjczy",
+						"value": "1"
 					},
 					{
-						"text": "虚空之塔（三层）→ 兽神残卷（三阶大成）",
-						"need": "item:I927==1",
-						"action": [
-							{
-								"type": "if",
-								"condition": "(item:greenKey<10)",
-								"true": [
-									"你好像没有准备好足够的绿钥匙。\n这真的太咸了！！！"
-								],
-								"false": [
-									{
-										"type": "setValue",
-										"name": "item:I927",
-										"value": "0"
-									},
-									{
-										"type": "setValue",
-										"name": "item:I1701",
-										"value": "1"
-									},
-									{
-										"type": "setValue",
-										"name": "item:greenKey",
-										"operator": "-=",
-										"value": "10"
-									},
-									{
-										"type": "setValue",
-										"name": "flag:saltygreen",
-										"operator": "+=",
-										"value": "10"
-									},
-									{
-										"type": "loadEquip",
-										"id": "I1701"
-									},
-									"晋升成功！已自动装备新的功法。"
-								]
-							}
-						]
+						"type": "setValue",
+						"name": "flag:bjjyzy",
+						"value": "1"
 					},
 					{
-						"text": "九线流 → 兽神残卷（三阶圆满）",
-						"need": "item:I1699==1",
-						"action": [
-							{
-								"type": "if",
-								"condition": "(item:greenKey<10)",
-								"true": [
-									"你好像没有准备好足够的绿钥匙。\n这真的太咸了！！！"
-								],
-								"false": [
-									{
-										"type": "setValue",
-										"name": "item:I1699",
-										"value": "0"
-									},
-									{
-										"type": "setValue",
-										"name": "item:I1702",
-										"value": "1"
-									},
-									{
-										"type": "setValue",
-										"name": "item:greenKey",
-										"operator": "-=",
-										"value": "10"
-									},
-									{
-										"type": "setValue",
-										"name": "flag:saltygreen",
-										"operator": "+=",
-										"value": "10"
-									},
-									{
-										"type": "loadEquip",
-										"id": "I1702"
-									},
-									"晋升成功！已自动装备新的功法。"
-								]
-							}
-						]
+						"type": "setValue",
+						"name": "flag:bjjczy",
+						"value": "1"
 					},
 					{
-						"text": "离开",
-						"action": []
+						"type": "setValue",
+						"name": "flag:bjpzy",
+						"value": "1"
+					},
+					{
+						"type": "setValue",
+						"name": "flag:bjsjzy",
+						"value": "1"
+					}
+				]
+			},
+			{
+				"type": "if",
+				"condition": "(flag:blzd1>=1)",
+				"true": [],
+				"false": [
+					{
+						"type": "setValue",
+						"name": "flag:zd1",
+						"value": "1"
+					},
+					{
+						"type": "setValue",
+						"name": "flag:zdgu2",
+						"value": "0"
+					},
+					{
+						"type": "setValue",
+						"name": "flag:zdgu3",
+						"value": "0"
+					},
+					{
+						"type": "setValue",
+						"name": "flag:zdgu4",
+						"value": "0"
+					},
+					{
+						"type": "setValue",
+						"name": "flag:gp",
+						"value": "0"
+					},
+					{
+						"type": "setValue",
+						"name": "flag:expp",
+						"value": "0"
+					}
+				]
+			},
+			{
+				"type": "if",
+				"condition": "(flag:blzd2>=1)",
+				"true": [],
+				"false": [
+					{
+						"type": "setValue",
+						"name": "flag:zd2",
+						"value": "0"
+					},
+					{
+						"type": "setValue",
+						"name": "flag:zdgu5",
+						"value": "0"
+					},
+					{
+						"type": "setValue",
+						"name": "flag:zdpu1",
+						"value": "0"
+					},
+					{
+						"type": "setValue",
+						"name": "flag:zdpu2",
+						"value": "0"
+					},
+					{
+						"type": "setValue",
+						"name": "flag:zdpu3",
+						"value": "0"
+					},
+					{
+						"type": "setValue",
+						"name": "flag:zdpu4",
+						"value": "0"
+					},
+					{
+						"type": "setValue",
+						"name": "flag:zdpu5",
+						"value": "0"
+					},
+					{
+						"type": "setValue",
+						"name": "flag:pp",
+						"value": "0"
+					}
+				]
+			},
+			{
+				"type": "comment",
+				"text": "水晶挑战"
+			},
+			{
+				"type": "if",
+				"condition": "(item:I848>=5)",
+				"true": [],
+				"false": [
+					{
+						"type": "setValue",
+						"name": "flag:sjtz1",
+						"value": "0"
+					},
+					{
+						"type": "setValue",
+						"name": "flag:sjtz2",
+						"value": "0"
+					},
+					{
+						"type": "setValue",
+						"name": "flag:sjtz3",
+						"value": "0"
+					},
+					{
+						"type": "setValue",
+						"name": "flag:pexp",
+						"value": "1"
 					}
 				]
 			}
 		],
-		"领域功法": [
+		"显示资源": [
 			{
-				"type": "choices",
-				"text": "你需要拥有这本功法才能晋升它。\n首先\r[gold]卸下功法，将它放在背包内\r，\n再消耗\r[#75E97E]10把绿钥匙\r：",
-				"choices": [
+				"type": "switch",
+				"condition": "flag:xsls",
+				"caseList": [
 					{
-						"text": "虚空之塔（四层） → 兽神残卷（四阶初成）",
-						"need": "item:I1709==1",
+						"case": "1",
 						"action": [
 							{
-								"type": "if",
-								"condition": "(item:greenKey<10)",
-								"true": [
-									"你好像没有准备好足够的绿钥匙。\n这真的太咸了！！！"
-								],
-								"false": [
+								"type": "choices",
+								"text": "点击在页面上显示/隐藏已解锁资源",
+								"choices": [
 									{
-										"type": "setValue",
-										"name": "item:I1709",
-										"value": "0"
+										"text": "返回",
+										"action": []
 									},
 									{
-										"type": "setValue",
-										"name": "item:I1703",
-										"value": "1"
-									},
-									{
-										"type": "setValue",
-										"name": "item:greenKey",
-										"operator": "-=",
-										"value": "10"
-									},
-									{
-										"type": "setValue",
-										"name": "flag:saltygreen",
-										"operator": "+=",
-										"value": "10"
-									},
-									{
-										"type": "loadEquip",
-										"id": "I1703"
-									},
-									"晋升成功！已自动装备新的功法。"
+										"text": "上一列",
+										"action": [
+											{
+												"type": "setValue",
+												"name": "flag:xsls",
+												"operator": "-=",
+												"value": "1"
+											},
+											{
+												"type": "insert",
+												"name": "显示资源"
+											}
+										]
+									}
 								]
 							}
 						]
 					},
 					{
-						"text": "二色灵诀 → 兽神残卷（四阶小成）",
-						"need": "item:I1708==1",
+						"case": "0",
 						"action": [
 							{
-								"type": "if",
-								"condition": "(item:greenKey<10)",
-								"true": [
-									"你好像没有准备好足够的绿钥匙。\n这真的太咸了！！！"
-								],
-								"false": [
+								"type": "choices",
+								"text": "点击在页面上显示/隐藏已解锁资源",
+								"choices": [
 									{
-										"type": "setValue",
-										"name": "item:I1708",
-										"value": "0"
+										"text": "返回",
+										"action": []
 									},
 									{
-										"type": "setValue",
-										"name": "item:I1704",
-										"value": "1"
+										"text": "隐藏所有",
+										"action": [
+											{
+												"type": "setValue",
+												"name": "flag:xsgt",
+												"value": "0"
+											},
+											{
+												"type": "setValue",
+												"name": "flag:xscn",
+												"value": "0"
+											},
+											{
+												"type": "setValue",
+												"name": "flag:xsfc",
+												"value": "0"
+											},
+											{
+												"type": "setValue",
+												"name": "flag:xsflv",
+												"value": "0"
+											},
+											{
+												"type": "setValue",
+												"name": "flag:xsyn",
+												"value": "0"
+											},
+											{
+												"type": "setValue",
+												"name": "flag:xssy",
+												"value": "0"
+											},
+											{
+												"type": "setValue",
+												"name": "flag:xshjrl",
+												"value": "0"
+											},
+											{
+												"type": "setValue",
+												"name": "flag:xshjlj",
+												"value": "0"
+											},
+											{
+												"type": "setValue",
+												"name": "flag:xsdl",
+												"value": "0"
+											}
+										]
 									},
 									{
-										"type": "setValue",
-										"name": "item:greenKey",
-										"operator": "-=",
-										"value": "10"
+										"text": "显示钢铁",
+										"condition": "flag:xsgt==0&&flag:jd>=3",
+										"action": [
+											{
+												"type": "setValue",
+												"name": "flag:xsgt",
+												"value": "1"
+											}
+										]
 									},
 									{
-										"type": "setValue",
-										"name": "flag:saltygreen",
-										"operator": "+=",
-										"value": "10"
+										"text": "隐藏钢铁",
+										"condition": "flag:xsgt==1",
+										"action": [
+											{
+												"type": "setValue",
+												"name": "flag:xsgt",
+												"value": "0"
+											}
+										]
 									},
 									{
-										"type": "loadEquip",
-										"id": "I1704"
+										"text": "显示充能",
+										"condition": "flag:xscn==0&&flag:gcjd>=3",
+										"action": [
+											{
+												"type": "setValue",
+												"name": "flag:xscn",
+												"value": "1"
+											}
+										]
 									},
-									"晋升成功！已自动装备新的功法。"
+									{
+										"text": "隐藏充能",
+										"condition": "flag:xscn==1",
+										"action": [
+											{
+												"type": "setValue",
+												"name": "flag:xscn",
+												"value": "0"
+											}
+										]
+									},
+									{
+										"text": "显示反草",
+										"condition": "flag:xsfc==0&&flag:gcjd>=5",
+										"action": [
+											{
+												"type": "setValue",
+												"name": "flag:xsfc",
+												"value": "1"
+											}
+										]
+									},
+									{
+										"text": "隐藏反草",
+										"condition": "flag:xsfc==1",
+										"action": [
+											{
+												"type": "setValue",
+												"name": "flag:xsfc",
+												"value": "0"
+											}
+										]
+									},
+									{
+										"text": "显示反等级",
+										"condition": "flag:xsflv==0&&flag:gcjd>=5",
+										"action": [
+											{
+												"type": "setValue",
+												"name": "flag:xsflv",
+												"value": "1"
+											}
+										]
+									},
+									{
+										"text": "隐藏反等级",
+										"condition": "flag:xsflv==1",
+										"action": [
+											{
+												"type": "setValue",
+												"name": "flag:xsflv",
+												"value": "0"
+											}
+										]
+									},
+									{
+										"text": "显示隐匿",
+										"condition": "flag:xsyn==0&&flag:gcjd>=5",
+										"action": [
+											{
+												"type": "setValue",
+												"name": "flag:xsyn",
+												"value": "1"
+											}
+										]
+									},
+									{
+										"text": "隐藏隐匿",
+										"condition": "flag:xsyn==1",
+										"action": [
+											{
+												"type": "setValue",
+												"name": "flag:xsyn",
+												"value": "0"
+											}
+										]
+									},
+									{
+										"text": "显示石油",
+										"condition": "flag:xssy==0&&flag:gcjd>=5",
+										"action": [
+											{
+												"type": "setValue",
+												"name": "flag:xssy",
+												"value": "1"
+											}
+										]
+									},
+									{
+										"text": "隐藏石油",
+										"condition": "flag:xssy==1",
+										"action": [
+											{
+												"type": "setValue",
+												"name": "flag:xssy",
+												"value": "0"
+											}
+										]
+									},
+									{
+										"text": "显示火箭燃料",
+										"condition": "flag:xshjrl==0&&flag:gcjd>=5",
+										"action": [
+											{
+												"type": "setValue",
+												"name": "flag:xshjrl",
+												"value": "1"
+											}
+										]
+									},
+									{
+										"text": "隐藏火箭燃料",
+										"condition": "flag:xshjrl==1",
+										"action": [
+											{
+												"type": "setValue",
+												"name": "flag:xshjrl",
+												"value": "0"
+											}
+										]
+									},
+									{
+										"text": "显示火箭零件",
+										"condition": "flag:xshjlj==0&&flag:gcjd>=5",
+										"action": [
+											{
+												"type": "setValue",
+												"name": "flag:xshjlj",
+												"value": "1"
+											}
+										]
+									},
+									{
+										"text": "隐藏火箭零件",
+										"condition": "flag:xshjlj==1",
+										"action": [
+											{
+												"type": "setValue",
+												"name": "flag:xshjlj",
+												"value": "0"
+											}
+										]
+									},
+									{
+										"text": "显示动量",
+										"condition": "flag:xsdl==0&&flag:gcjd>=5",
+										"action": [
+											{
+												"type": "setValue",
+												"name": "flag:xsdl",
+												"value": "1"
+											}
+										]
+									},
+									{
+										"text": "隐藏动量",
+										"condition": "flag:xsdl==1",
+										"action": [
+											{
+												"type": "setValue",
+												"name": "flag:xsdl",
+												"value": "0"
+											}
+										]
+									},
+									{
+										"text": "下一列",
+										"condition": "flag:xsls==0",
+										"action": [
+											{
+												"type": "setValue",
+												"name": "flag:xsls",
+												"operator": "+=",
+												"value": "1"
+											},
+											{
+												"type": "insert",
+												"name": "显示资源"
+											}
+										]
+									}
 								]
 							}
 						]
-					},
-					{
-						"text": "百线流 → 兽神残卷（四阶大成）",
-						"need": "item:I1711==1",
-						"action": [
-							{
-								"type": "if",
-								"condition": "(item:greenKey<10)",
-								"true": [
-									"你好像没有准备好足够的绿钥匙。\n这真的太咸了！！！"
-								],
-								"false": [
-									{
-										"type": "setValue",
-										"name": "item:I1711",
-										"value": "0"
-									},
-									{
-										"type": "setValue",
-										"name": "item:I1705",
-										"value": "1"
-									},
-									{
-										"type": "setValue",
-										"name": "item:greenKey",
-										"operator": "-=",
-										"value": "10"
-									},
-									{
-										"type": "setValue",
-										"name": "flag:saltygreen",
-										"operator": "+=",
-										"value": "10"
-									},
-									{
-										"type": "loadEquip",
-										"id": "I1705"
-									},
-									"晋升成功！已自动装备新的功法。"
-								]
-							}
-						]
-					},
-					{
-						"text": "洛神九变 → 兽神残卷（四阶圆满）",
-						"need": "item:I1712==1",
-						"action": [
-							{
-								"type": "if",
-								"condition": "(item:greenKey<10)",
-								"true": [
-									"你好像没有准备好足够的绿钥匙。\n这真的太咸了！！！"
-								],
-								"false": [
-									{
-										"type": "setValue",
-										"name": "item:I1712",
-										"value": "0"
-									},
-									{
-										"type": "setValue",
-										"name": "item:I1706",
-										"value": "1"
-									},
-									{
-										"type": "setValue",
-										"name": "item:greenKey",
-										"operator": "-=",
-										"value": "10"
-									},
-									{
-										"type": "setValue",
-										"name": "flag:saltygreen",
-										"operator": "+=",
-										"value": "10"
-									},
-									{
-										"type": "loadEquip",
-										"id": "I1706"
-									},
-									"晋升成功！已自动装备新的功法。"
-								]
-							}
-						]
-					},
-					{
-						"text": "虚空之塔（五层） → 兽神残卷（四阶极致）",
-						"need": "item:I1710==1",
-						"action": [
-							{
-								"type": "if",
-								"condition": "(item:greenKey<10)",
-								"true": [
-									"你好像没有准备好足够的绿钥匙。\n这真的太咸了！！！"
-								],
-								"false": [
-									{
-										"type": "setValue",
-										"name": "item:I1710",
-										"value": "0"
-									},
-									{
-										"type": "setValue",
-										"name": "item:I1707",
-										"value": "1"
-									},
-									{
-										"type": "setValue",
-										"name": "item:greenKey",
-										"operator": "-=",
-										"value": "10"
-									},
-									{
-										"type": "setValue",
-										"name": "flag:saltygreen",
-										"operator": "+=",
-										"value": "10"
-									},
-									{
-										"type": "loadEquip",
-										"id": "I1707"
-									},
-									"晋升成功！已自动装备新的功法。"
-								]
-							}
-						]
-					},
-					{
-						"text": "晋升法则（需要\r[yellow]50万\r领悟点数）",
-						"color": [
-							240,
-							229,
-							170,
-							1
-						],
-						"condition": "item:I1492==1",
-						"action": [
-							{
-								"type": "if",
-								"condition": "(status:money<500000)",
-								"true": [
-									"你好像没有准备好足够的领悟点数呢。\n这真的太正常了！"
-								],
-								"false": [
-									{
-										"type": "setValue",
-										"name": "item:I1492",
-										"value": "0"
-									},
-									{
-										"type": "setValue",
-										"name": "item:I1493",
-										"value": "1"
-									},
-									{
-										"type": "setValue",
-										"name": "status:money",
-										"operator": "-=",
-										"value": "500000"
-									},
-									"晋升成功！"
-								]
-							}
-						]
-					},
-					{
-						"text": "离开",
-						"action": []
 					}
 				]
 			}
 		],
-		"反物质维度": null
+		"计分": [
+			{
+				"type": "autoSave"
+			},
+			{
+				"type": "switch",
+				"condition": "flag:jfls",
+				"caseList": [
+					{
+						"case": "0",
+						"action": [
+							{
+								"type": "choices",
+								"text": "lg(资源)^8计分,等级/草场等计本身",
+								"choices": [
+									{
+										"text": "返回",
+										"action": []
+									},
+									{
+										"text": "等级",
+										"action": [
+											{
+												"type": "win",
+												"reason": "等级计分"
+											}
+										]
+									},
+									{
+										"text": "阶层",
+										"condition": "flag:jc>0",
+										"action": [
+											{
+												"type": "function",
+												"function": "function(){\ncore.status.hero.hp =core.getFlag('jc')\n}"
+											},
+											{
+												"type": "win",
+												"reason": "阶层计分"
+											}
+										]
+									},
+									{
+										"text": "草场",
+										"condition": "item:I848>0",
+										"action": [
+											{
+												"type": "function",
+												"function": "function(){\ncore.status.hero.hp =core.itemCount(\"I848\")\n}"
+											},
+											{
+												"type": "win",
+												"reason": "草场计分"
+											}
+										]
+									},
+									{
+										"text": "草",
+										"condition": "status:money>0",
+										"action": [
+											{
+												"type": "function",
+												"function": "function(){\ncore.status.hero.hp =Math.floor(Math.pow(Math.log10(core.status.hero.money) ,8))\n}"
+											},
+											{
+												"type": "win",
+												"reason": "草计分"
+											}
+										]
+									},
+									{
+										"text": "经验",
+										"condition": "status:exp>0",
+										"action": [
+											{
+												"type": "function",
+												"function": "function(){\ncore.status.hero.hp =Math.floor(Math.pow(Math.log10(core.status.hero.exp) ,8))\n}"
+											},
+											{
+												"type": "win",
+												"reason": "经验计分"
+											}
+										]
+									},
+									{
+										"text": "声望",
+										"condition": "status:def>0",
+										"action": [
+											{
+												"type": "function",
+												"function": "function(){\ncore.status.hero.hp =Math.floor(Math.pow(Math.log10(core.status.hero.def) ,8))\n}"
+											},
+											{
+												"type": "win",
+												"reason": "声望计分"
+											}
+										]
+									},
+									{
+										"text": "白金",
+										"condition": "status:mana>0",
+										"action": [
+											{
+												"type": "function",
+												"function": "function(){\ncore.status.hero.hp =Math.floor(Math.pow(Math.log10(core.status.hero.mana) ,8))\n}"
+											},
+											{
+												"type": "win",
+												"reason": "白金计分"
+											}
+										]
+									},
+									{
+										"text": "水晶",
+										"condition": "status:mdef>0",
+										"action": [
+											{
+												"type": "function",
+												"function": "function(){\ncore.status.hero.hp =Math.floor(Math.pow(Math.log10(core.status.hero.mdef) ,8))\n}"
+											},
+											{
+												"type": "win",
+												"reason": "水晶计分"
+											}
+										]
+									},
+									{
+										"text": "钢铁",
+										"condition": "flag:gt>0",
+										"action": [
+											{
+												"type": "function",
+												"function": "function(){\ncore.status.hero.hp =Math.floor(Math.pow(Math.log10(core.getFlag('gt')) ,8))\n}"
+											},
+											{
+												"type": "win",
+												"reason": "钢铁计分"
+											}
+										]
+									},
+									{
+										"text": "下一列",
+										"action": [
+											{
+												"type": "setValue",
+												"name": "flag:jfls",
+												"operator": "+=",
+												"value": "1"
+											},
+											{
+												"type": "insert",
+												"name": "计分"
+											}
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"case": "1",
+						"action": [
+							{
+								"type": "choices",
+								"text": "lg(资源)^8计分,等级/草场等计本身",
+								"choices": [
+									{
+										"text": "返回",
+										"action": []
+									},
+									{
+										"text": "反等级",
+										"condition": "flag:flv>0",
+										"action": [
+											{
+												"type": "function",
+												"function": "function(){\ncore.status.hero.hp =core.getFlag('flv')\n}"
+											},
+											{
+												"type": "win",
+												"reason": "反等级计分"
+											}
+										]
+									},
+									{
+										"text": "充能",
+										"condition": "flag:cn>0",
+										"action": [
+											{
+												"type": "function",
+												"function": "function(){\ncore.status.hero.hp =Math.floor(Math.pow(Math.log10(core.getFlag('cn')) ,8))\n}"
+											},
+											{
+												"type": "win",
+												"reason": "充能计分"
+											}
+										]
+									},
+									{
+										"text": "反草",
+										"condition": "flag:fc>0",
+										"action": [
+											{
+												"type": "function",
+												"function": "function(){\ncore.status.hero.hp =Math.floor(Math.pow(Math.log10(core.getFlag('fc')) ,8))\n}"
+											},
+											{
+												"type": "win",
+												"reason": "反草计分"
+											}
+										]
+									},
+									{
+										"text": "隐匿",
+										"condition": "flag:yn>0",
+										"action": [
+											{
+												"type": "function",
+												"function": "function(){\ncore.status.hero.hp =Math.floor(Math.pow(Math.log10(core.getFlag('yn')) ,8))\n}"
+											},
+											{
+												"type": "win",
+												"reason": "隐匿计分"
+											}
+										]
+									},
+									{
+										"text": "石油",
+										"condition": "flag:sy>0",
+										"action": [
+											{
+												"type": "function",
+												"function": "function(){\ncore.status.hero.hp =Math.floor(Math.pow(Math.log10(core.getFlag('sy')) ,8))\n}"
+											},
+											{
+												"type": "win",
+												"reason": "石油计分"
+											}
+										]
+									},
+									{
+										"text": "火箭燃料",
+										"condition": "flag:hjrl>0",
+										"action": [
+											{
+												"type": "function",
+												"function": "function(){\ncore.status.hero.hp =Math.floor(Math.pow(Math.log10(core.getFlag('hjrl')) ,8))\n}"
+											},
+											{
+												"type": "win",
+												"reason": "火箭燃料计分"
+											}
+										]
+									},
+									{
+										"text": "火箭零件",
+										"condition": "flag:hjlj>0",
+										"action": [
+											{
+												"type": "function",
+												"function": "function(){\ncore.status.hero.hp =Math.floor(Math.pow(Math.log10(core.getFlag('hjlj')) ,8))\n}"
+											},
+											{
+												"type": "win",
+												"reason": "火箭零件计分"
+											}
+										]
+									},
+									{
+										"text": "动量",
+										"condition": "flag:dl>0",
+										"action": [
+											{
+												"type": "function",
+												"function": "function(){\ncore.status.hero.hp =Math.floor(Math.pow(Math.log10(core.getFlag('dl')) ,8))\n}"
+											},
+											{
+												"type": "win",
+												"reason": "动量计分"
+											}
+										]
+									},
+									{
+										"text": "上一列",
+										"action": [
+											{
+												"type": "setValue",
+												"name": "flag:jfls",
+												"operator": "-=",
+												"value": "1"
+											},
+											{
+												"type": "insert",
+												"name": "计分"
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		]
 	}
 }

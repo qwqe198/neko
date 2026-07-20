@@ -1,3 +1,4 @@
+if(!window.__GAME_START) throw new Error("Init failed");
 var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a = 
 {
 	"yellowKey": {
@@ -21,27 +22,27 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 	"redGem": {
 		"cls": "items",
 		"name": "初始红宝石",
-		"text": "红色的晶体，可以强化自己的力量。\n攻击+${core.formatBigNumber(core.values.redGem * core.status.thisMap.ratio)}。",
-		"itemEffect": "core.status.hero.atk += core.values.redGem * core.status.thisMap.ratio",
-		"itemEffectTip": "，攻击+${core.formatBigNumber(core.values.redGem * core.status.thisMap.ratio)}",
+		"text": "红色的晶体，可以强化自己的力量。\n攻击+${core.values.redGem * core.status.thisMap.ratio}。",
+		"itemEffect": "core.status.hero.atk += Math.floor(core.values.redGem * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I605\") + core.itemCount(\"I606\")))",
+		"itemEffectTip": "，攻击+${Math.floor(core.values.redGem * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I605\") + core.itemCount(\"I606\")))}",
 		"useItemEffect": "core.status.hero.atk += core.values.redGem",
 		"canUseItemEffect": "true"
 	},
 	"blueGem": {
 		"cls": "items",
 		"name": "初始蓝宝石",
-		"text": "蓝色的晶体，可以使自己更加灵巧。\n防御+${core.formatBigNumber(core.values.blueGem * core.status.thisMap.ratio)}。",
-		"itemEffect": "core.status.hero.def += core.values.blueGem * core.status.thisMap.ratio",
-		"itemEffectTip": "，防御+${core.formatBigNumber(core.values.blueGem * core.status.thisMap.ratio)}",
+		"text": "蓝色的晶体，可以使自己更加灵巧。\n防御+${core.values.blueGem * core.status.thisMap.ratio}。",
+		"itemEffect": "core.status.hero.def += Math.floor(core.values.blueGem * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I605\") + core.itemCount(\"I606\")))",
+		"itemEffectTip": "，防御+${Math.floor(core.values.blueGem * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I605\") + core.itemCount(\"I606\")))}",
 		"useItemEffect": "core.status.hero.def += core.values.blueGem",
 		"canUseItemEffect": "true"
 	},
 	"greenGem": {
 		"cls": "items",
 		"name": "初始绿宝石",
-		"text": "绿色的晶体，可以吸收受到的伤害。\n护盾+${core.formatBigNumber(core.values.greenGem * core.status.thisMap.ratio)}。",
-		"itemEffect": "core.status.hero.mdef += core.values.greenGem * core.status.thisMap.ratio",
-		"itemEffectTip": "，护盾+${core.formatBigNumber(core.values.greenGem * core.status.thisMap.ratio)}",
+		"text": "绿色的晶体，可以吸收受到的伤害。\n护盾+${core.values.greenGem * core.status.thisMap.ratio}。",
+		"itemEffect": "core.status.hero.mdef += Math.floor(core.values.greenGem * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I605\") + core.itemCount(\"I606\")))",
+		"itemEffectTip": "，护盾+${Math.floor(core.values.greenGem * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I605\") + core.itemCount(\"I606\")))}",
 		"useItemEffect": "core.status.hero.mdef += core.values.greenGem",
 		"canUseItemEffect": "true"
 	},
@@ -49,7 +50,7 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 		"cls": "items",
 		"name": "初始黄宝石",
 		"text": "黄色的晶体，似乎非常稀有，蕴含不可思议的能量。\n角色的攻击、防御、护盾同时增加1颗宝石的数值，同时获得相当于黄色血瓶的血量。",
-		"itemEffect": "core.status.hero.atk += core.values.redGem * core.status.thisMap.ratio;\ncore.status.hero.def += core.values.blueGem * core.status.thisMap.ratio;\ncore.status.hero.mdef += core.values.greenGem * core.status.thisMap.ratio;\ncore.status.hero.hp += core.values.yellowPotion * core.status.thisMap.ratio;",
+		"itemEffect": "core.status.hero.atk += Math.floor(core.values.redGem * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I605\") + core.itemCount(\"I606\")))\ncore.status.hero.def += Math.floor(core.values.blueGem * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I605\") + core.itemCount(\"I606\")))\ncore.status.hero.mdef += Math.floor(core.values.greenGem * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I605\") + core.itemCount(\"I606\")))\ncore.status.hero.hp += Math.floor(core.values.yellowPotion * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I607\") + core.itemCount(\"I608\")))",
 		"itemEffectTip": "，全属性提升",
 		"useItemEvent": null,
 		"canUseItemEffect": "true"
@@ -57,36 +58,36 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 	"redPotion": {
 		"cls": "items",
 		"name": "红色补给品",
-		"text": "飘散在空气中的活泼能量的具现化，能够恢复生命。\n生命+${core.formatBigNumber(core.values.redPotion)}。",
-		"itemEffect": "core.status.hero.hp += core.values.redPotion * core.status.thisMap.ratio",
-		"itemEffectTip": "，生命+${core.formatBigNumber(core.values.redPotion * core.status.thisMap.ratio)}",
+		"text": "飘散在空气中的活泼能量的具现化，能够恢复生命。\n生命+${core.values.redPotion}。",
+		"itemEffect": "core.status.hero.hp += Math.floor(core.values.redPotion * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I607\") + core.itemCount(\"I608\")))",
+		"itemEffectTip": "，生命+${Math.floor(core.values.redPotion * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I607\") + core.itemCount(\"I608\")))}",
 		"useItemEffect": "core.status.hero.hp += core.values.redPotion",
 		"canUseItemEffect": "true"
 	},
 	"bluePotion": {
 		"cls": "items",
 		"name": "蓝色补给品",
-		"text": "飘散在空气中的活泼能量的具现化，能够恢复生命。\n生命+${core.formatBigNumber(core.values.bluePotion)}。",
-		"itemEffect": "core.status.hero.hp += core.values.bluePotion * core.status.thisMap.ratio",
-		"itemEffectTip": "，生命+${core.formatBigNumber(core.values.bluePotion * core.status.thisMap.ratio)}",
+		"text": "飘散在空气中的活泼能量的具现化，能够恢复生命。\n生命+${core.values.bluePotion}。",
+		"itemEffect": "core.status.hero.hp += Math.floor(core.values.bluePotion * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I607\") + core.itemCount(\"I608\")))",
+		"itemEffectTip": "，生命+${Math.floor(core.values.bluePotion * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I607\") + core.itemCount(\"I608\")))}",
 		"useItemEffect": "core.status.hero.hp += core.values.bluePotion",
 		"canUseItemEffect": "true"
 	},
 	"yellowPotion": {
 		"cls": "items",
 		"name": "黄色补给品",
-		"text": "飘散在空气中的活泼能量的具现化，能够恢复生命。\n生命+${core.formatBigNumber(core.values.yellowPotion)}。",
-		"itemEffect": "core.status.hero.hp += core.values.yellowPotion * core.status.thisMap.ratio",
-		"itemEffectTip": "，生命+${core.formatBigNumber(core.values.yellowPotion * core.status.thisMap.ratio)}",
+		"text": "飘散在空气中的活泼能量的具现化，能够恢复生命。\n生命+${core.values.yellowPotion}。",
+		"itemEffect": "core.status.hero.hp += Math.floor(core.values.yellowPotion * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I607\") + core.itemCount(\"I608\")))",
+		"itemEffectTip": "，生命+${ Math.floor(core.values.yellowPotion * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I607\") + core.itemCount(\"I608\")))}",
 		"useItemEffect": "core.status.hero.hp += core.values.yellowPotion",
 		"canUseItemEffect": "true"
 	},
 	"greenPotion": {
 		"cls": "items",
 		"name": "绿色补给品",
-		"text": "飘散在空气中的活泼能量的具现化，能够恢复生命。\n生命+${core.formatBigNumber(core.values.greenPotion)}。",
-		"itemEffect": "core.status.hero.hp += core.values.greenPotion * core.status.thisMap.ratio",
-		"itemEffectTip": "，生命+${core.formatBigNumber(core.values.greenPotion * core.status.thisMap.ratio)}",
+		"text": "飘散在空气中的活泼能量的具现化，能够恢复生命。\n生命+${core.values.greenPotion}。",
+		"itemEffect": "core.status.hero.hp += Math.floor(core.values.greenPotion * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I607\") + core.itemCount(\"I608\")))",
+		"itemEffectTip": "，生命+${Math.floor(core.values.greenPotion * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I607\") + core.itemCount(\"I608\")))}",
 		"useItemEffect": "core.status.hero.hp += core.values.greenPotion",
 		"canUseItemEffect": "true"
 	},
@@ -141,8 +142,7 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 			"animate": "sword",
 			"value": {
 				"atk": 40
-			},
-			"percentage": {}
+			}
 		},
 		"itemEffect": "core.status.hero.atk += 40",
 		"itemEffectTip": "，攻击+40"
@@ -259,9 +259,9 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 		"name": "圣水",
 		"itemEffect": "core.status.hero.hp *= 2",
 		"itemEffectTip": "，生命值翻倍",
-		"useItemEffect": "core.status.hero.hp *= 2;\ncore.playSound('回血');",
+		"useItemEffect": "core.status.hero.hp *= 2;core.playSound('回血');",
 		"canUseItemEffect": "true",
-		"text": "永远不会消失的生命之水。\n使角色生命值翻倍。（点击生效）"
+		"text": "永远不会消失的生命之水。\n使角色生命值翻倍。（直接生效）"
 	},
 	"book": {
 		"cls": "constants",
@@ -278,12 +278,13 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 		"hideInReplay": true,
 		"hideInToolbox": true,
 		"useItemEffect": "core.ui.drawFly(core.floorIds.indexOf(core.status.floorId));",
-		"canUseItemEffect": "(function () {\n\tif (core.flags.flyNearStair && !core.nearStair()) return false;\n\tif (core.hasEnemyLeft('E1649')) return false;\n\treturn core.status.maps[core.status.floorId].canFlyFrom;\n})();"
+		"canUseItemEffect": "(function () {\n\tif (core.flags.flyNearStair && !core.nearStair()) return false;\n\treturn core.status.maps[core.status.floorId].canFlyFrom;\n})();"
 	},
 	"coin": {
 		"cls": "tools",
-		"name": "幸运金币",
-		"text": "持有时打败对手可得双倍金币"
+		"name": "获得反物质的速率",
+		"text": "持有时打败对手可得双倍金币",
+		"hideInToolbox": true
 	},
 	"freezeBadge": {
 		"cls": "constants",
@@ -310,7 +311,7 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 	"bigKey": {
 		"cls": "tools",
 		"name": "大黄门钥匙",
-		"text": "可以开启当前层所有普通黄门。",
+		"text": "可以开启当前层所有黄门",
 		"itemEffect": "core.addItem('yellowKey', 1);\ncore.addItem('blueKey', 1);\ncore.addItem('redKey', 1);",
 		"itemEffectTip": "，全钥匙+1",
 		"useItemEffect": "(function () {\n\tvar actions = core.searchBlock(\"yellowDoor\").map(function (block) {\n\t\treturn { \"type\": \"openDoor\", \"loc\": [block.x, block.y], \"async\": true };\n\t});\n\tactions.push({ \"type\": \"waitAsync\" });\n\tactions.push({ \"type\": \"tip\", \"text\": core.material.items[itemId].name + \"使用成功\" });\n\tcore.insertAction(actions);\n})();",
@@ -318,8 +319,11 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 	},
 	"greenKey": {
 		"cls": "tools",
-		"name": "绿钥匙",
-		"text": "可以打开一扇绿门"
+		"name": "永恒之匙",
+		"text": "钥匙上用宇宙通用语镌刻着〖永恒〗两个小字。",
+		"itemEffectTip": null,
+		"itemEffect": "core.addItem('greenKey', 5000)",
+		"useItemEvent": null
 	},
 	"steelKey": {
 		"cls": "tools",
@@ -329,10 +333,9 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 	"pickaxe": {
 		"cls": "tools",
 		"name": "破墙镐",
-		"text": "破坏面前的小型障碍物。",
+		"text": "可以破坏面前的小型障碍物",
 		"useItemEffect": "(function () {\n\tvar canBreak = function (x, y) {\n\t\tvar block = core.getBlock(x, y);\n\t\tif (block == null || block.disable) return false;\n\t\treturn block.event.canBreak;\n\t};\n\n\tvar success = false;\n\tvar pickaxeFourDirections = false; // 是否多方向破；如果是将其改成true\n\tif (pickaxeFourDirections) {\n\t\t// 多方向破\n\t\tfor (var direction in core.utils.scan) { // 多方向破默认四方向，如需改成八方向请将这两个scan改为scan2\n\t\t\tvar delta = core.utils.scan[direction];\n\t\t\tvar nx = core.getHeroLoc('x') + delta.x,\n\t\t\t\tny = core.getHeroLoc('y') + delta.y;\n\t\t\tif (canBreak(nx, ny)) {\n\t\t\t\tcore.removeBlock(nx, ny);\n\t\t\t\tsuccess = true;\n\t\t\t}\n\t\t}\n\t} else {\n\t\t// 仅破当前\n\t\tif (canBreak(core.nextX(), core.nextY())) {\n\t\t\tcore.removeBlock(core.nextX(), core.nextY());\n\t\t\tsuccess = true;\n\t\t}\n\t}\n\n\tif (success) {\n\t\tcore.playSound('破墙镐');\n\t\tcore.drawTip(core.material.items[itemId].name + '使用成功', itemId);\n\t} else {\n\t\t// 无法使用\n\t\tcore.playSound('操作失败');\n\t\tcore.drawTip(\"当前无法使用\" + core.material.items[itemId].name, itemId);\n\t\tcore.addItem(itemId, 1);\n\t\treturn;\n\t}\n})();",
-		"canUseItemEffect": "true",
-		"useItemEvent": []
+		"canUseItemEffect": "true"
 	},
 	"icePickaxe": {
 		"cls": "tools",
@@ -351,7 +354,7 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 	"centerFly": {
 		"cls": "tools",
 		"name": "中心对称飞行器",
-		"text": "飞向当前楼层中心对称的位置。",
+		"text": "可以飞向当前楼层中心对称的位置",
 		"useItemEffect": "core.playSound('centerFly.mp3');\ncore.clearMap('hero');\ncore.setHeroLoc('x', core.bigmap.width - 1 - core.getHeroLoc('x'));\ncore.setHeroLoc('y', core.bigmap.height - 1 - core.getHeroLoc('y'));\ncore.drawHero();\ncore.drawTip(core.material.items[itemId].name + '使用成功');",
 		"canUseItemEffect": "(function () {\n\tvar toX = core.bigmap.width - 1 - core.getHeroLoc('x'),\n\t\ttoY = core.bigmap.height - 1 - core.getHeroLoc('y');\n\tvar id = core.getBlockId(toX, toY);\n\treturn id == null;\n})();"
 	},
@@ -382,8 +385,8 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 		"text": "浓郁的活泼能量，能使伤口快速愈合。\n增加相当于16倍红血瓶的生命。",
 		"useItemEffect": "core.status.hero.hp += core.values.greenPotion * 2",
 		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.hp += core.values.greenPotion * 2 * core.status.thisMap.ratio",
-		"itemEffectTip": "，生命+${core.formatBigNumber(core.values.greenPotion * core.status.thisMap.ratio * 2)}"
+		"itemEffect": "core.status.hero.hp += 2 * Math.floor(core.values.greenPotion * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I607\") + core.itemCount(\"I608\")))",
+		"itemEffectTip": "，生命+${2 * Math.floor(core.values.greenPotion * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I607\") + core.itemCount(\"I608\")))}"
 	},
 	"weakWine": {
 		"cls": "items",
@@ -391,8 +394,8 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 		"text": "浓郁的活泼能量，能使伤口快速愈合。\n增加相当于16倍蓝血瓶的生命。",
 		"useItemEffect": "core.status.hero.hp += core.values.greenPotion * 4",
 		"canUseItemEffect": true,
-		"itemEffect": "core.status.hero.hp += core.values.greenPotion * 4 * core.status.thisMap.ratio",
-		"itemEffectTip": "，生命+${core.formatBigNumber(core.values.greenPotion * core.status.thisMap.ratio * 4)}"
+		"itemEffect": "core.status.hero.hp += 4 * Math.floor(core.values.greenPotion * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I607\") + core.itemCount(\"I608\")))",
+		"itemEffectTip": "，生命+${4 * Math.floor(core.values.greenPotion * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I607\") + core.itemCount(\"I608\")))}"
 	},
 	"curseWine": {
 		"cls": "items",
@@ -400,16 +403,16 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 		"text": "浓郁的活泼能量，能使伤口快速愈合。\n增加相当于16倍绿血瓶的生命。",
 		"useItemEffect": "core.status.hero.hp += core.values.greenPotion * 16",
 		"canUseItemEffect": null,
-		"itemEffect": "core.status.hero.hp += core.values.greenPotion * 16 * core.status.thisMap.ratio",
-		"itemEffectTip": "，生命+${core.formatBigNumber(core.values.greenPotion * core.status.thisMap.ratio * 16)}"
+		"itemEffect": "core.status.hero.hp += 16 * Math.floor(core.values.greenPotion * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I607\") + core.itemCount(\"I608\")))",
+		"itemEffectTip": "，生命+${16 * Math.floor(core.values.greenPotion * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I607\") + core.itemCount(\"I608\")))}"
 	},
 	"superWine": {
 		"cls": "tools",
 		"name": "灵水",
-		"text": "能够自己涌动的奇异活泼水源。\n使角色生命值*1.5。（点击生效）",
+		"text": "能够自己涌动的奇异活泼水源。\n使角色生命值*1.5。（直接生效）",
 		"useItemEffect": "core.status.hero.hp *= 1.5;\ncore.setFlag('challenge2', 1);\ncore.playSound('回血');",
 		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.hp *= 1.5;",
+		"itemEffect": "core.status.hero.hp *= 1.5;\ncore.setFlag('challenge2', 1);",
 		"itemEffectTip": "，生命值增加一半'"
 	},
 	"hammer": {
@@ -495,18 +498,17 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 		"name": "新物品"
 	},
 	"pack": {
-		"cls": "items",
-		"name": "钱袋",
-		"itemEffect": "core.status.hero.money += 500",
-		"itemEffectTip": "，金币+500"
+		"cls": "constants",
+		"name": "首次无限",
+		"itemEffect": null,
+		"itemEffectTip": null,
+		"hideInReplay": true,
+		"hideInToolbox": true
 	},
 	"I570": {
 		"cls": "items",
-		"name": "绿钥匙匣子",
-		"canUseItemEffect": null,
-		"itemEffect": "core.addItem('greenKey', 10)",
-		"itemEffectTip": ",绿钥匙+10",
-		"text": "非常绿的匣子，装有10把绿钥匙。"
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I571": {
 		"cls": "items",
@@ -516,8 +518,8 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 	"I572": {
 		"cls": "items",
 		"name": "大黄补给品",
-		"itemEffect": "core.status.hero.hp += core.values.greenPotion * 8 * core.status.thisMap.ratio",
-		"itemEffectTip": "，生命+${core.formatBigNumber(core.values.greenPotion * core.status.thisMap.ratio * 8)}",
+		"itemEffect": "core.status.hero.hp += 8 * Math.floor(core.values.greenPotion * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I607\") + core.itemCount(\"I608\")))",
+		"itemEffectTip": "，生命+${8 * Math.floor(core.values.greenPotion * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I607\") + core.itemCount(\"I608\")))}",
 		"useItemEffect": "core.status.hero.hp += core.values.greenPotion * 8",
 		"text": "浓郁的活泼能量，能使伤口快速愈合。\n增加相当于16倍黄血瓶的生命"
 	},
@@ -539,22 +541,23 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 	"I576": {
 		"cls": "items",
 		"name": "高阶红宝石",
-		"itemEffect": "core.status.hero.atk += core.values.redGem * core.status.thisMap.ratio * 2",
-		"itemEffectTip": "，攻击+${core.formatBigNumber(core.values.redGem * core.status.thisMap.ratio*2)}",
-		"text": "高阶红色晶体，可以更大化强化自己的力量。\n直接增加2倍于普通红宝石的攻击力。"
+		"itemEffect": "core.status.hero.atk += 5 * Math.floor(core.values.redGem * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I605\") + core.itemCount(\"I606\")))",
+		"itemEffectTip": "，攻击+${5 * Math.floor(core.values.redGem * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I605\") + core.itemCount(\"I606\")))}",
+		"text": "高阶红色晶体，可以更大化强化自己的力量。\n直接增加2倍于普通红宝石的攻击力。",
+		"useItemEffect": "core.status.hero.atk += 5 * core.values.redGem"
 	},
 	"I577": {
 		"cls": "items",
 		"name": "高阶蓝宝石",
-		"itemEffect": "core.status.hero.def += core.values.blueGem * core.status.thisMap.ratio*2",
-		"itemEffectTip": "，防御+${core.formatBigNumber(core.values.blueGem * core.status.thisMap.ratio*2)}",
+		"itemEffect": "core.status.hero.def += 5 * Math.floor(core.values.blueGem * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I605\") + core.itemCount(\"I606\")))",
+		"itemEffectTip": "，防御+${5 * Math.floor(core.values.blueGem * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I605\") + core.itemCount(\"I606\")))}",
 		"text": "高阶蓝色晶体，可以更大化使自己更加灵巧。\n直接增加2倍于普通蓝宝石的防御力。"
 	},
 	"I578": {
 		"cls": "items",
 		"name": "高阶绿宝石",
-		"itemEffect": "core.status.hero.mdef += core.values.greenGem * core.status.thisMap.ratio*2",
-		"itemEffectTip": "，护盾+${core.formatBigNumber(core.values.greenGem * core.status.thisMap.ratio*2)}",
+		"itemEffect": "core.status.hero.mdef += 5 * Math.floor(core.values.greenGem * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I605\") + core.itemCount(\"I606\")))",
+		"itemEffectTip": "，护盾+${5 * core.values.greenGem * core.status.thisMap.ratio*2}",
 		"text": "高阶绿色晶体，可以更大化吸收受到的伤害。\n直接增加2倍于普通绿宝石的护盾。"
 	},
 	"I579": {
@@ -562,7 +565,7 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 		"name": "高阶黄宝石",
 		"itemEffectTip": "，全属性提升",
 		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += core.values.redGem * core.status.thisMap.ratio * 2;\ncore.status.hero.def += core.values.blueGem * core.status.thisMap.ratio * 2;\ncore.status.hero.mdef += core.values.greenGem * core.status.thisMap.ratio * 2;\ncore.status.hero.hp += core.values.yellowPotion * core.status.thisMap.ratio * 2;",
+		"itemEffect": "core.status.hero.atk += 5 * Math.floor(core.values.redGem * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I605\") + core.itemCount(\"I606\")))\ncore.status.hero.def += 5 * Math.floor(core.values.blueGem * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I605\") + core.itemCount(\"I606\")))\ncore.status.hero.mdef += 5 * Math.floor(core.values.greenGem * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I605\") + core.itemCount(\"I606\")))\ncore.status.hero.hp += 5 * Math.floor(core.values.yellowPotion * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I607\") + core.itemCount(\"I608\")))",
 		"text": "高阶黄色晶体，似乎非常稀有，蕴含不可思议的能量。\n直接增加2倍于普通黄宝石的全属性。"
 	},
 	"I580": {
@@ -592,27 +595,27 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 		"cls": "items",
 		"name": "极品红宝石",
 		"itemEffect": "core.status.hero.atk += core.values.redGem * core.status.thisMap.ratio * 5",
-		"itemEffectTip": "，攻击+${core.formatBigNumber(core.values.redGem * core.status.thisMap.ratio*5)}",
+		"itemEffectTip": "，攻击+${core.values.redGem * core.status.thisMap.ratio*5}",
 		"text": "极为珍贵的红色晶体，能够使体质产生不小的变化。\n直接增加5倍于普通红宝石的攻击力。"
 	},
 	"I585": {
 		"cls": "items",
 		"name": "极品蓝宝石",
 		"itemEffect": "core.status.hero.def += core.values.blueGem * core.status.thisMap.ratio*5",
-		"itemEffectTip": "，防御+${core.formatBigNumber(core.values.blueGem * core.status.thisMap.ratio*5)}",
+		"itemEffectTip": "，防御+${core.values.blueGem * core.status.thisMap.ratio*5}",
 		"text": "极为珍贵的蓝色晶体，能够使自身变得轻盈如燕。\n直接增加5倍于普通蓝宝石的防御力。"
 	},
 	"I586": {
 		"cls": "items",
 		"name": "极品绿宝石",
 		"itemEffect": "core.status.hero.mdef += core.values.greenGem * core.status.thisMap.ratio*5",
-		"itemEffectTip": "，护盾+${core.formatBigNumber(core.values.greenGem * core.status.thisMap.ratio*5)}",
+		"itemEffectTip": "，护盾+${core.values.greenGem * core.status.thisMap.ratio*5}",
 		"text": "极为珍贵的绿色晶体，足以吸收致命的伤害。\n直接增加5倍于普通绿宝石的护盾。"
 	},
 	"I587": {
 		"cls": "items",
 		"name": "极品黄宝石",
-		"itemEffect": "core.status.hero.atk += core.values.redGem * core.status.thisMap.ratio * 5;\ncore.status.hero.def += core.values.blueGem * core.status.thisMap.ratio * 5;\ncore.status.hero.mdef += core.values.greenGem * core.status.thisMap.ratio * 5;\ncore.status.hero.hp += core.values.yellowPotion * core.status.thisMap.ratio * 5;",
+		"itemEffect": "core.status.hero.atk += 20 * Math.floor(core.values.redGem * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I605\") + core.itemCount(\"I606\")))\ncore.status.hero.def += 20 * Math.floor(core.values.blueGem * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I605\") + core.itemCount(\"I606\")))\ncore.status.hero.mdef += 20 * Math.floor(core.values.greenGem * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I605\") + core.itemCount(\"I606\")))\ncore.status.hero.hp += 20 * Math.floor(core.values.yellowPotion * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I607\") + core.itemCount(\"I608\")))",
 		"text": "极为珍贵的黄色晶体，蕴含的能量甚至可以产生空间波纹。\n直接增加5倍于普通黄宝石的全属性。",
 		"itemEffectTip": "，全属性提升"
 	},
@@ -659,9 +662,10 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 	},
 	"I595": {
 		"cls": "constants",
-		"name": "坎水Ⅰ",
+		"name": "蓝钥匙加成1",
 		"canUseItemEffect": "true",
-		"text": "水魔法师的拿手技能，控水魔法相对于火更为简单，因为空气中富含水元素。\n携带的每把蓝钥匙都能提供3点水元素能量，每1点水元素能量可提供0.2%防御力，水元素能量上限为90点。"
+		"text": "水魔法师的拿手技能，控水魔法相对于火更为简单，因为空气中富含水元素。\n携带的每把蓝钥匙都能提供3点水元素能量，每1点水元素能量可提供0.2%防御力，水元素能量上限为90点。",
+		"hideInToolbox": true
 	},
 	"I596": {
 		"cls": "constants",
@@ -682,18 +686,332 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 	},
 	"I599": {
 		"cls": "constants",
-		"name": "百无禁忌",
-		"canUseItemEffect": "true"
+		"name": "离开世界",
+		"canUseItemEffect": "true",
+		"text": "当你离开世界时，你剩余的反物质将按1:1转化为正物质。",
+		"useItemEvent": [
+			{
+				"type": "choices",
+				"text": "当你离开世界时，你剩余的反物质将按1:1转化为正物质。\n正物质可以购置你需要的各种资源，\n以让你在下一次重返世界时走得更远。\n你在这个世界中获得的加成也不复存在。\n当然，你也可以选择在此记录成绩。\n当前环绕的星系数量：\n光暗：${flag:w1}\n水火：${flag:w2}\n日夜：${flag:w3}\n时空：${flag:w4}\n正邪：${flag:w5}\n生死：${flag:w6}",
+				"choices": [
+					{
+						"text": "离开世界",
+						"action": [
+							{
+								"type": "if",
+								"condition": "(flag:jiaocheng2==0)",
+								"true": [
+									"你选择了离开世界。\n检测到这是你的第一次探险——\n如果你已经完成了第三次维度提升，那么做得不错！",
+									"注意，你的维度提升是不能带出世界的，\n它将会转化为反物质星系储存。\n每个世界提供的星系数，限制为你在该世界获得的最大维度提升数。",
+									"因此请在获得尽可能多次提升的基础上，\n努力探索更多世界吧。",
+									{
+										"type": "setValue",
+										"name": "flag:jiaocheng2",
+										"value": "1"
+									},
+									{
+										"type": "setValue",
+										"name": "flag:zh1",
+										"value": "1"
+									},
+									{
+										"type": "setValue",
+										"name": "flag:zh2",
+										"value": "1"
+									},
+									{
+										"type": "setValue",
+										"name": "flag:zh3",
+										"value": "1"
+									},
+									{
+										"type": "setValue",
+										"name": "flag:zh4",
+										"value": "1"
+									},
+									{
+										"type": "setValue",
+										"name": "flag:zh5",
+										"value": "1"
+									},
+									{
+										"type": "setValue",
+										"name": "flag:zh6",
+										"value": "1"
+									},
+									{
+										"type": "setValue",
+										"name": "flag:zh7",
+										"value": "1"
+									},
+									{
+										"type": "setValue",
+										"name": "flag:zh8",
+										"value": "1"
+									},
+									{
+										"type": "insert",
+										"loc": [
+											0,
+											0
+										],
+										"floorId": "sample2"
+									}
+								],
+								"false": [
+									{
+										"type": "insert",
+										"loc": [
+											0,
+											0
+										],
+										"floorId": "sample2"
+									}
+								]
+							}
+						]
+					},
+					{
+						"text": "记录成绩",
+						"action": [
+							"计分方式为：\n当前维度提升*1e16+当前永恒之匙数量*1e11+当前生命/x。\n1、2、3世界，x为1。\n4、5、6世界，x为1e3。\n（由于浮点数计算偏差，当前生命较少时，将无法计入）\n若除后生命>9223372036（92.23亿），则超出的部分不计入成绩。",
+							{
+								"type": "switch",
+								"condition": "flag:world",
+								"caseList": [
+									{
+										"case": "1",
+										"action": [
+											{
+												"type": "setValue",
+												"name": "status:hp",
+												"operator": "/=",
+												"value": "1"
+											},
+											{
+												"type": "if",
+												"condition": "(status:hp>=9223372036)",
+												"true": [
+													{
+														"type": "setValue",
+														"name": "status:hp",
+														"value": "9223372036"
+													}
+												],
+												"false": []
+											},
+											{
+												"type": "setValue",
+												"name": "status:hp",
+												"operator": "+=",
+												"value": "item:I729*1e16+item:greenKey*1e11"
+											},
+											{
+												"type": "win",
+												"reason": "光暗",
+												"noexit": 1
+											}
+										]
+									},
+									{
+										"case": "2",
+										"action": [
+											{
+												"type": "setValue",
+												"name": "status:hp",
+												"operator": "/=",
+												"value": "1"
+											},
+											{
+												"type": "if",
+												"condition": "(status:hp>=9223372036)",
+												"true": [
+													{
+														"type": "setValue",
+														"name": "status:hp",
+														"value": "9223372036"
+													}
+												],
+												"false": []
+											},
+											{
+												"type": "setValue",
+												"name": "status:hp",
+												"operator": "+=",
+												"value": "item:I729*1e16+item:greenKey*1e11"
+											},
+											{
+												"type": "win",
+												"reason": "水火",
+												"noexit": 1
+											}
+										]
+									},
+									{
+										"case": "3",
+										"action": [
+											{
+												"type": "setValue",
+												"name": "status:hp",
+												"operator": "/=",
+												"value": "1"
+											},
+											{
+												"type": "if",
+												"condition": "(status:hp>=9223372036)",
+												"true": [
+													{
+														"type": "setValue",
+														"name": "status:hp",
+														"value": "9223372036"
+													}
+												],
+												"false": []
+											},
+											{
+												"type": "setValue",
+												"name": "status:hp",
+												"operator": "+=",
+												"value": "item:I729*1e16+item:greenKey*1e11"
+											},
+											{
+												"type": "win",
+												"reason": "日月",
+												"noexit": 1
+											}
+										]
+									},
+									{
+										"case": "4",
+										"action": [
+											{
+												"type": "setValue",
+												"name": "status:hp",
+												"operator": "/=",
+												"value": "1e3"
+											},
+											{
+												"type": "if",
+												"condition": "(status:hp>=9223372036)",
+												"true": [
+													{
+														"type": "setValue",
+														"name": "status:hp",
+														"value": "9223372036"
+													}
+												],
+												"false": []
+											},
+											{
+												"type": "setValue",
+												"name": "status:hp",
+												"operator": "+=",
+												"value": "item:I729*1e16+item:greenKey*1e11"
+											},
+											{
+												"type": "win",
+												"reason": "时空",
+												"noexit": 1
+											}
+										]
+									},
+									{
+										"case": "5",
+										"action": [
+											{
+												"type": "setValue",
+												"name": "status:hp",
+												"operator": "/=",
+												"value": "1e3"
+											},
+											{
+												"type": "if",
+												"condition": "(status:hp>=9223372036)",
+												"true": [
+													{
+														"type": "setValue",
+														"name": "status:hp",
+														"value": "9223372036"
+													}
+												],
+												"false": []
+											},
+											{
+												"type": "setValue",
+												"name": "status:hp",
+												"operator": "+=",
+												"value": "item:I729*1e16+item:greenKey*1e11"
+											},
+											{
+												"type": "win",
+												"reason": "正邪",
+												"noexit": 1
+											}
+										]
+									},
+									{
+										"case": "6",
+										"action": [
+											{
+												"type": "setValue",
+												"name": "status:hp",
+												"operator": "/=",
+												"value": "1e3"
+											},
+											{
+												"type": "if",
+												"condition": "(status:hp>=9223372036)",
+												"true": [
+													{
+														"type": "setValue",
+														"name": "status:hp",
+														"value": "9223372036"
+													}
+												],
+												"false": []
+											},
+											{
+												"type": "setValue",
+												"name": "status:hp",
+												"operator": "+=",
+												"value": "item:I729*1e16+item:greenKey*1e11"
+											},
+											{
+												"type": "win",
+												"reason": "生死",
+												"noexit": 1
+											}
+										]
+									}
+								]
+							},
+							{
+								"type": "insert",
+								"loc": [
+									6,
+									3
+								],
+								"floorId": "sample0"
+							}
+						]
+					},
+					{
+						"text": "继续游戏",
+						"action": []
+					}
+				]
+			}
+		]
 	},
 	"I600": {
 		"cls": "constants",
-		"name": "自动化开关",
+		"name": "自动拾取开关",
 		"canUseItemEffect": "true",
 		"text": "一个奇怪的标识，好像…可以转动？",
 		"useItemEvent": [
 			{
 				"type": "choices",
-				"text": "这里是自动化开关！\n包含了各项简化游戏流程的自动化设置。\n为了更流畅的游戏体验，\n建议只在少数特殊情况下关闭它们。",
+				"text": "这里是自动拾取开关！\n为了更流畅的体验，\n建议只在少数情况下关闭它。",
 				"choices": [
 					{
 						"text": "开启自动拾取",
@@ -725,40 +1043,6 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 							{
 								"type": "setValue",
 								"name": "flag:shiqu",
-								"value": "false"
-							}
-						]
-					},
-					{
-						"text": "开启自动清怪",
-						"color": [
-							144,
-							191,
-							234,
-							1
-						],
-						"action": [
-							"自动清怪已开启！",
-							{
-								"type": "setValue",
-								"name": "flag:autoBattle",
-								"value": "true"
-							}
-						]
-					},
-					{
-						"text": "关闭自动清怪",
-						"color": [
-							237,
-							185,
-							243,
-							1
-						],
-						"action": [
-							"自动清怪已关闭！",
-							{
-								"type": "setValue",
-								"name": "flag:autoBattle",
 								"value": "false"
 							}
 						]
@@ -797,38 +1081,33 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 		"text": "尽量保证你的绿钥匙数量不减少——并最终获得成为【上帝】的资格。"
 	},
 	"I604": {
-		"cls": "constants",
-		"name": "驱散环（假）",
-		"canUseItemEffect": "true",
-		"text": "祥瑞御免，家宅平安。\n使用后能够驱散身上的所有Buff效果。",
-		"useItemEffect": "core.setFlag('s113', 0);\ncore.setFlag('s114', 0);\ncore.setFlag('s120', 0);\ncore.setFlag('s121', 0);\ncore.setFlag('s141', 0);\ncore.setFlag('s142', 0);\ncore.setFlag('s143', 0);",
-		"useItemEvent": [
-			{
-				"type": "animate",
-				"name": "water",
-				"loc": "hero"
-			}
-		]
+		"cls": "items",
+		"name": "永恒之匙包",
+		"canUseItemEffect": "true"
 	},
 	"I605": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
+		"cls": "tools",
+		"name": "宝石效力",
+		"canUseItemEffect": "true",
+		"hideInToolbox": true
 	},
 	"I606": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
+		"cls": "tools",
+		"name": "宝石效力（永久）",
+		"canUseItemEffect": "true",
+		"hideInToolbox": true
 	},
 	"I607": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
+		"cls": "tools",
+		"name": "血瓶效力",
+		"canUseItemEffect": "true",
+		"hideInToolbox": true
 	},
 	"I608": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
+		"cls": "tools",
+		"name": "血瓶效力（永久）",
+		"canUseItemEffect": "true",
+		"hideInToolbox": true
 	},
 	"I609": {
 		"cls": "items",
@@ -842,7 +1121,7 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 	},
 	"I611": {
 		"cls": "items",
-		"name": "地宫剑",
+		"name": "涟铜匕首",
 		"canUseItemEffect": "true",
 		"text": "青铜材质的匕首，荡漾着金属色泽的涟漪。\n攻击+480000，防御-96000。",
 		"equip": {
@@ -853,33 +1132,33 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 			},
 			"percentage": {}
 		},
-		"itemEffect": "core.status.hero.atk += 200",
-		"itemEffectTip": "，攻击+200"
+		"itemEffect": "core.status.hero.atk += 300000",
+		"itemEffectTip": "，攻击+300000"
 	},
 	"I612": {
 		"cls": "items",
-		"name": "森林剑",
+		"name": "雾影匕首",
 		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += 1500",
-		"itemEffectTip": "，攻击+1500"
+		"itemEffect": "core.status.hero.atk += 900000",
+		"itemEffectTip": "，攻击+900000"
 	},
 	"I613": {
 		"cls": "items",
-		"name": "灰暗剑",
+		"name": "奔雷匕首",
 		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += 500",
-		"itemEffectTip": "，攻击+500"
+		"itemEffect": "core.status.hero.atk += 3000000",
+		"itemEffectTip": "，攻击+3000000"
 	},
 	"I614": {
 		"cls": "items",
-		"name": "家主佩剑（二阶）",
+		"name": "镔铁剑",
 		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += 20",
-		"itemEffectTip": "，攻击+20"
+		"itemEffect": "core.status.hero.atk += 1000",
+		"itemEffectTip": "，攻击+1000"
 	},
 	"I615": {
 		"cls": "items",
-		"name": "家主佩剑",
+		"name": "空石剑",
 		"canUseItemEffect": "true",
 		"text": "天然的空心石块打造的剑。\n攻击+6000。",
 		"equip": {
@@ -889,15 +1168,15 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 			},
 			"percentage": {}
 		},
-		"itemEffect": "core.status.hero.atk += 8",
-		"itemEffectTip": "，攻击+8"
+		"itemEffect": "core.status.hero.atk += 100",
+		"itemEffectTip": "，攻击+100"
 	},
 	"I616": {
 		"cls": "items",
-		"name": "家主佩剑（三阶）",
+		"name": "紫纹剑",
 		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += 100",
-		"itemEffectTip": "，攻击+100"
+		"itemEffect": "core.status.hero.atk += 3000",
+		"itemEffectTip": "，攻击+3000"
 	},
 	"I617": {
 		"cls": "items",
@@ -915,33 +1194,33 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 	},
 	"I619": {
 		"cls": "items",
-		"name": "灵红补给品",
+		"name": "超红补给品",
 		"itemEffect": "core.status.hero.hp += core.values.greenPotion * 32 * core.status.thisMap.ratio",
-		"itemEffectTip": "，生命+${core.formatBigNumber(core.values.greenPotion * core.status.thisMap.ratio * 32)}",
+		"itemEffectTip": "，生命+${core.values.greenPotion * core.status.thisMap.ratio * 32}",
 		"useItemEffect": "core.status.hero.hp += core.values.greenPotion * 32",
 		"text": "极为精纯的活泼能量，甚至有起死回生的功用。\n增加相当于256倍红血瓶的生命。"
 	},
 	"I620": {
 		"cls": "items",
-		"name": "灵蓝补给品",
+		"name": "超蓝补给品",
 		"itemEffect": "core.status.hero.hp += core.values.greenPotion * 64 * core.status.thisMap.ratio",
-		"itemEffectTip": "，生命+${core.formatBigNumber(core.values.greenPotion * core.status.thisMap.ratio * 64)}",
+		"itemEffectTip": "，生命+${core.values.greenPotion * core.status.thisMap.ratio * 64}",
 		"useItemEffect": "core.status.hero.hp += core.values.greenPotion * 64",
 		"text": "极为精纯的活泼能量，甚至有起死回生的功用。\n增加相当于256倍蓝血瓶的生命。"
 	},
 	"I621": {
 		"cls": "items",
-		"name": "灵黄补给品",
+		"name": "超黄补给品",
 		"itemEffect": "core.status.hero.hp += core.values.greenPotion * 128 * core.status.thisMap.ratio",
-		"itemEffectTip": "，生命+${core.formatBigNumber(core.values.greenPotion * core.status.thisMap.ratio * 128)}",
+		"itemEffectTip": "，生命+${core.values.greenPotion * core.status.thisMap.ratio * 128}",
 		"useItemEffect": "core.status.hero.hp += core.values.greenPotion * 128",
 		"text": "极为精纯的活泼能量，甚至有起死回生的功用。\n增加相当于256倍黄血瓶的生命。"
 	},
 	"I622": {
 		"cls": "items",
-		"name": "灵绿补给品",
+		"name": "超绿补给品",
 		"itemEffect": "core.status.hero.hp += core.values.greenPotion * 256 * core.status.thisMap.ratio",
-		"itemEffectTip": "，生命+${core.formatBigNumber(core.values.greenPotion * core.status.thisMap.ratio * 256)}",
+		"itemEffectTip": "，生命+${core.values.greenPotion * core.status.thisMap.ratio * 256}",
 		"useItemEffect": "core.status.hero.hp += core.values.greenPotion * 256",
 		"text": "极为精纯的活泼能量，甚至有起死回生的功用。\n增加相当于256倍绿血瓶的生命。"
 	},
@@ -976,18 +1255,14 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 		"canUseItemEffect": "true"
 	},
 	"I629": {
-		"cls": "items",
-		"name": "残墟剑",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += 35000",
-		"itemEffectTip": "，攻击+35000"
+		"cls": "tools",
+		"name": "连击次数",
+		"canUseItemEffect": "true"
 	},
 	"I630": {
 		"cls": "items",
-		"name": "极夜之剑",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += 2000e8",
-		"itemEffectTip": "，攻击+2000亿"
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I631": {
 		"cls": "items",
@@ -1020,7 +1295,7 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 		"name": "殿堂红宝石",
 		"canUseItemEffect": "true",
 		"itemEffect": "core.status.hero.atk += core.values.redGem * core.status.thisMap.ratio * 10",
-		"itemEffectTip": "，攻击+${core.formatBigNumber(core.values.redGem * core.status.thisMap.ratio*10)}",
+		"itemEffectTip": "，攻击+${core.values.redGem * core.status.thisMap.ratio*10}",
 		"text": "普通人一生难得一见的红色晶体，能够使身体如有神助，神力盖世。\n直接增加10倍于普通红宝石的攻击力。"
 	},
 	"I636": {
@@ -1028,84 +1303,67 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 		"name": "殿堂蓝宝石",
 		"canUseItemEffect": "true",
 		"itemEffect": "core.status.hero.def += core.values.blueGem * core.status.thisMap.ratio * 10",
-		"itemEffectTip": "，防御+${core.formatBigNumber(core.values.blueGem * core.status.thisMap.ratio*10)}",
+		"itemEffectTip": "，防御+${core.values.blueGem * core.status.thisMap.ratio*10}",
 		"text": "普通人一生难得一见的蓝色晶体，能够使人的筋骨产生质的蜕变，脱胎换骨。\n直接增加10倍于普通蓝宝石的防御力。"
 	},
 	"I637": {
 		"cls": "items",
 		"name": "殿堂绿宝石",
-		"itemEffect": "core.status.hero.mdef += core.values.greenGem * core.status.thisMap.ratio * 10",
-		"itemEffectTip": "，护盾+${core.formatBigNumber(core.values.greenGem * core.status.thisMap.ratio*10)}",
+		"itemEffect": "core.status.hero.mdef += core.values.greenGem * core.status.thisMap.ratio*10",
+		"itemEffectTip": "，护盾+${core.values.greenGem * core.status.thisMap.ratio*10}",
 		"text": "普通人一生难得一见的绿色晶体，蕴含足以庇佑万物的神力。\n直接增加10倍于普通绿宝石的护盾。"
 	},
 	"I638": {
 		"cls": "items",
 		"name": "殿堂黄宝石",
-		"itemEffect": "core.status.hero.atk += core.values.redGem * core.status.thisMap.ratio * 10;\ncore.status.hero.def += core.values.blueGem * core.status.thisMap.ratio * 10;\ncore.status.hero.mdef += core.values.greenGem * core.status.thisMap.ratio * 10;\ncore.status.hero.hp += core.values.yellowPotion * core.status.thisMap.ratio * 10;",
+		"itemEffect": "core.status.hero.atk += 100 * Math.floor(core.values.redGem * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I605\") + core.itemCount(\"I606\")))\ncore.status.hero.def += 100 * Math.floor(core.values.blueGem * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I605\") + core.itemCount(\"I606\")))\ncore.status.hero.mdef += 100 * Math.floor(core.values.greenGem * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I605\") + core.itemCount(\"I606\")))\ncore.status.hero.hp += 100 * Math.floor(core.values.yellowPotion * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I607\") + core.itemCount(\"I608\")))",
 		"text": "普通人一生难得一见的黄色晶体，它恐怖的能量波动足以扭曲时空。\n直接增加10倍于普通黄宝石的全属性。",
 		"itemEffectTip": "，全属性提升"
 	},
 	"I639": {
 		"cls": "items",
-		"name": "史诗红宝石",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += core.values.redGem * core.status.thisMap.ratio * 20",
-		"itemEffectTip": "，攻击+${core.formatBigNumber(core.values.redGem * core.status.thisMap.ratio*20)}",
-		"text": "普通人一生难得一见的红色晶体，能够使身体如有神助，神力盖世。\n直接增加20倍于普通红宝石的攻击力。"
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I640": {
 		"cls": "items",
-		"name": "史诗蓝宝石",
+		"name": "传说蓝宝石",
 		"canUseItemEffect": "true",
 		"itemEffect": "core.status.hero.def += core.values.blueGem * core.status.thisMap.ratio * 20",
-		"itemEffectTip": "，防御+${core.formatBigNumber(core.values.blueGem * core.status.thisMap.ratio*20)}"
+		"itemEffectTip": "，防御+${core.values.blueGem * core.status.thisMap.ratio*20}"
 	},
 	"I641": {
 		"cls": "items",
-		"name": "史诗绿宝石",
+		"name": "传说绿宝石",
 		"canUseItemEffect": "true",
 		"text": "世间罕有的绿色晶体，其蓬勃的生命力足以滋养一方小世界。\n直接增加20倍于普通绿宝石的护盾。",
 		"itemEffect": "core.status.hero.mdef += core.values.greenGem * core.status.thisMap.ratio * 20",
-		"itemEffectTip": "，护盾+${core.formatBigNumber(core.values.greenGem * core.status.thisMap.ratio*20)}"
+		"itemEffectTip": "，护盾+${core.values.greenGem * core.status.thisMap.ratio*20}"
 	},
 	"I642": {
 		"cls": "items",
-		"name": "史诗黄宝石",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += core.values.redGem * core.status.thisMap.ratio * 20;\ncore.status.hero.def += core.values.blueGem * core.status.thisMap.ratio * 20;\ncore.status.hero.mdef += core.values.greenGem * core.status.thisMap.ratio * 20;\ncore.status.hero.hp += core.values.yellowPotion * core.status.thisMap.ratio * 20;",
-		"itemEffectTip": "，全属性提升",
-		"text": "直接增加20倍于普通黄宝石的全属性。"
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I643": {
 		"cls": "items",
-		"name": "传说红宝石",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += core.values.redGem * core.status.thisMap.ratio * 50",
-		"itemEffectTip": "，攻击+${core.formatBigNumber(core.values.redGem * core.status.thisMap.ratio*50)}",
-		"text": "普通人一生难得一见的红色晶体，能够使身体如有神助，神力盖世。\n直接增加50倍于普通红宝石的攻击力。"
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I644": {
 		"cls": "items",
-		"name": "传说蓝宝石",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.def += core.values.blueGem * core.status.thisMap.ratio * 50",
-		"itemEffectTip": "，防御+${core.formatBigNumber(core.values.blueGem * core.status.thisMap.ratio*50)}"
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I645": {
 		"cls": "items",
-		"name": "传说绿宝石",
-		"canUseItemEffect": "true",
-		"text": "世间罕有的绿色晶体，其蓬勃的生命力足以滋养一方小世界。\n直接增加50倍于普通绿宝石的护盾。",
-		"itemEffect": "core.status.hero.mdef += core.values.greenGem * core.status.thisMap.ratio * 50",
-		"itemEffectTip": "，护盾+${core.formatBigNumber(core.values.greenGem * core.status.thisMap.ratio*50)}"
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I646": {
 		"cls": "items",
-		"name": "传说黄宝石",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += core.values.redGem * core.status.thisMap.ratio * 50;\ncore.status.hero.def += core.values.blueGem * core.status.thisMap.ratio * 50;\ncore.status.hero.mdef += core.values.greenGem * core.status.thisMap.ratio * 50;\ncore.status.hero.hp += core.values.yellowPotion * core.status.thisMap.ratio * 100;",
-		"itemEffectTip": "，全属性提升",
-		"text": "其出世时，世人为之的震撼足以载入史册的黄色晶体。\n直接增加50倍于普通黄宝石的全属性。"
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I647": {
 		"cls": "items",
@@ -1143,24 +1401,18 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 	},
 	"I653": {
 		"cls": "items",
-		"name": "潺水剑",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += 4000",
-		"itemEffectTip": "，攻击+4000"
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I654": {
 		"cls": "items",
-		"name": "力量结晶",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += 20000",
-		"itemEffectTip": "，攻击+20000"
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I655": {
 		"cls": "items",
-		"name": "炙热果实",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += 9000",
-		"itemEffectTip": "，攻击+9000"
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I656": {
 		"cls": "items",
@@ -1169,10 +1421,8 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 	},
 	"I657": {
 		"cls": "items",
-		"name": "将军的荣耀",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += 5000e8",
-		"itemEffectTip": "，攻击+5000亿"
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I658": {
 		"cls": "tools",
@@ -1182,379 +1432,91 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 		"hideInToolbox": true
 	},
 	"I729": {
-		"cls": "constants",
-		"name": "妄无之印",
-		"canUseItemEffect": "true",
-		"text": "红海领悟。仿佛是万物皆归于沉寂，唯有那印记散发着淡淡的光泽。\n每回合以自身80%攻击力与20%防御力的和，作为攻击力并连续发动两次攻击。"
+		"cls": "tools",
+		"name": "维度提升",
+		"canUseItemEffect": false,
+		"text": "记录你当前维度提升的次数。"
 	},
 	"I730": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
+		"cls": "tools",
+		"name": "伤害减免",
+		"canUseItemEffect": "true",
+		"hideInToolbox": true
 	},
 	"I731": {
-		"cls": "constants",
-		"name": "繁花血景",
+		"cls": "tools",
+		"name": "能力效力",
 		"canUseItemEffect": "true",
-		"text": "红海领悟。传说中是两位幻神强者联手缔造的攻坚技，一人为血，一人为花。\n在接下来的战斗中爆发出3倍生命力、1.5倍攻防。（本区面对头目时使用）"
+		"text": "红海领悟。传说中是两位幻神强者联手缔造的攻坚技，一人为血，一人为花。\n在接下来的战斗中爆发出3倍生命力、1.5倍攻防。（本区面对头目时使用）",
+		"hideInToolbox": true
 	},
 	"I732": {
-		"cls": "tools",
-		"name": "磁吸石",
-		"canUseItemEffect": "(function () {\n\t//if (core.flags.flyNearStair && !core.nearStair()) return false;\n\treturn !core.hasEnemyLeft('E1500');\n})();",
-		"useItemEffect": "\t\tfor (var i = 1; i <= 13; i++) {\n\t\t\tvar x1 = core.clamp(core.nextX(i), 0, 12),\n\t\t\t\ty1 = core.clamp(core.nextY(i), 0, 12);\n\t\t\t// 判断格子内的事件是否为道具\n\t\t\tif (core.getBlockCls(x1, y1) == \"items\") {\n\t\t\t\tvar id = core.getBlockId(x1, y1);\n\n\t\t\t\tcore.getItem(id, 1, x1, y1);\n\t\t\t}\n\n\t\t}",
-		"useItemEvent": [
-			{
-				"type": "animate",
-				"name": "light1",
-				"loc": "hero"
-			}
-		],
-		"text": "远程拾取面对方向的所有物品。"
+		"cls": "items",
+		"name": "世界等级叠乘",
+		"canUseItemEffect": "true"
 	},
 	"I733": {
 		"cls": "tools",
-		"name": "换位标靶",
-		"canUseItemEffect": "(function () {\n\t//if (core.flags.flyNearStair && !core.nearStair()) return false;\n\treturn !core.hasEnemyLeft('E1500');\n})();",
-		"useItemEvent": [
-			{
-				"type": "if",
-				"condition": "Object.values(core.utils.scan).some(v => {\n    const x = core.status.hero.loc.x + v.x * 1;\n    const y = core.status.hero.loc.y + v.y * 1;\n    return !!core.floors[core.status.floorId].changeFloor[`${x},${y}`];\n})",
-				"true": [
-					{
-						"type": "animate",
-						"name": "wuyu",
-						"loc": "hero"
-					},
-					{
-						"type": "setValue",
-						"name": "item:I733",
-						"operator": "+=",
-						"value": "1"
-					}
-				],
-				"false": [
-					{
-						"type": "if",
-						"condition": "Object.values(core.utils.scan).some(v => {\n    const x = core.status.hero.loc.x + v.x * 2;\n    const y = core.status.hero.loc.y + v.y * 2;\n    return !!core.floors[core.status.floorId].changeFloor[`${x},${y}`];\n})\n",
-						"true": [
-							{
-								"type": "animate",
-								"name": "wuyu",
-								"loc": "hero"
-							},
-							{
-								"type": "setValue",
-								"name": "item:I733",
-								"operator": "+=",
-								"value": "1"
-							}
-						],
-						"false": [
-							{
-								"type": "animate",
-								"name": "buff",
-								"loc": "hero"
-							},
-							{
-								"type": "if",
-								"condition": "((core.nextX(1)===core.getHeroLoc().x)&&(core.nextY(1)===core.getHeroLoc().y -1))",
-								"true": [
-									{
-										"type": "move",
-										"loc": [
-											"core.getHeroLoc().x",
-											"core.getHeroLoc().y -1"
-										],
-										"time": 150,
-										"keep": true,
-										"async": true,
-										"steps": [
-											"up:1"
-										]
-									},
-									{
-										"type": "move",
-										"loc": [
-											"core.getHeroLoc().x",
-											"core.getHeroLoc().y -2"
-										],
-										"time": 150,
-										"keep": true,
-										"steps": [
-											"down:1"
-										]
-									},
-									{
-										"type": "move",
-										"loc": [
-											"core.getHeroLoc().x",
-											"core.getHeroLoc().y +1"
-										],
-										"time": 150,
-										"keep": true,
-										"async": true,
-										"steps": [
-											"down:1"
-										]
-									},
-									{
-										"type": "move",
-										"loc": [
-											"core.getHeroLoc().x",
-											"core.getHeroLoc().y +2"
-										],
-										"time": 150,
-										"keep": true,
-										"steps": [
-											"up:1"
-										]
-									},
-									{
-										"type": "waitAsync"
-									}
-								]
-							},
-							{
-								"type": "if",
-								"condition": "((core.nextX(1)===core.getHeroLoc().x+1)&&(core.nextY(1)===core.getHeroLoc().y ))",
-								"true": [
-									{
-										"type": "move",
-										"loc": [
-											"core.getHeroLoc().x-1",
-											"core.getHeroLoc().y"
-										],
-										"time": 150,
-										"keep": true,
-										"async": true,
-										"steps": [
-											"left:1"
-										]
-									},
-									{
-										"type": "move",
-										"loc": [
-											"core.getHeroLoc().x-2",
-											"core.getHeroLoc().y"
-										],
-										"time": 150,
-										"keep": true,
-										"steps": [
-											"right:1"
-										]
-									},
-									{
-										"type": "move",
-										"loc": [
-											"core.getHeroLoc().x+1",
-											"core.getHeroLoc().y "
-										],
-										"time": 150,
-										"keep": true,
-										"async": true,
-										"steps": [
-											"right:1"
-										]
-									},
-									{
-										"type": "move",
-										"loc": [
-											"core.getHeroLoc().x+2",
-											"core.getHeroLoc().y "
-										],
-										"time": 150,
-										"keep": true,
-										"steps": [
-											"left:1"
-										]
-									},
-									{
-										"type": "waitAsync"
-									}
-								]
-							},
-							{
-								"type": "if",
-								"condition": "((core.nextX(1)===core.getHeroLoc().x)&&(core.nextY(1)===core.getHeroLoc().y +1))",
-								"true": [
-									{
-										"type": "move",
-										"loc": [
-											"core.getHeroLoc().x",
-											"core.getHeroLoc().y -1"
-										],
-										"time": 150,
-										"keep": true,
-										"async": true,
-										"steps": [
-											"up:1"
-										]
-									},
-									{
-										"type": "move",
-										"loc": [
-											"core.getHeroLoc().x",
-											"core.getHeroLoc().y -2"
-										],
-										"time": 150,
-										"keep": true,
-										"steps": [
-											"down:1"
-										]
-									},
-									{
-										"type": "move",
-										"loc": [
-											"core.getHeroLoc().x",
-											"core.getHeroLoc().y +1"
-										],
-										"time": 150,
-										"keep": true,
-										"async": true,
-										"steps": [
-											"down:1"
-										]
-									},
-									{
-										"type": "move",
-										"loc": [
-											"core.getHeroLoc().x",
-											"core.getHeroLoc().y +2"
-										],
-										"time": 150,
-										"keep": true,
-										"steps": [
-											"up:1"
-										]
-									},
-									{
-										"type": "waitAsync"
-									}
-								]
-							},
-							{
-								"type": "if",
-								"condition": "((core.nextX(1)===core.getHeroLoc().x-1)&&(core.nextY(1)===core.getHeroLoc().y))",
-								"true": [
-									{
-										"type": "move",
-										"loc": [
-											"core.getHeroLoc().x-1",
-											"core.getHeroLoc().y"
-										],
-										"time": 150,
-										"keep": true,
-										"async": true,
-										"steps": [
-											"left:1"
-										]
-									},
-									{
-										"type": "move",
-										"loc": [
-											"core.getHeroLoc().x-2",
-											"core.getHeroLoc().y"
-										],
-										"time": 150,
-										"keep": true,
-										"steps": [
-											"right:1"
-										]
-									},
-									{
-										"type": "move",
-										"loc": [
-											"core.getHeroLoc().x+1",
-											"core.getHeroLoc().y "
-										],
-										"time": 150,
-										"keep": true,
-										"async": true,
-										"steps": [
-											"right:1"
-										]
-									},
-									{
-										"type": "move",
-										"loc": [
-											"core.getHeroLoc().x+2",
-											"core.getHeroLoc().y "
-										],
-										"time": 150,
-										"keep": true,
-										"steps": [
-											"left:1"
-										]
-									},
-									{
-										"type": "waitAsync"
-									}
-								]
-							}
-						]
-					}
-				]
-			}
-		],
-		"text": "同时交换角色面向两格、背向两格事件的位置（距楼梯1-2格十字范围无效）。",
-		"useItemEffect": "null"
+		"name": "维度提升系数1",
+		"canUseItemEffect": "true",
+		"hideInToolbox": true
 	},
 	"I734": {
-		"cls": "items",
-		"name": "初等进化结晶",
+		"cls": "tools",
+		"name": "世界等级叠乘",
 		"canUseItemEffect": "true",
-		"text": "天地间充沛的能量滋养诞生的晶体，\n接触后能够化作海量的经验为人所用。\n角色增加200万经验。",
-		"itemEffect": "core.status.hero.exp += 2000000",
-		"itemEffectTip": "，经验+200万"
+		"text": "天地间充沛的能量滋养诞生的晶体，\n接触后能够化作海量的领悟为人所用。\n角色增加100领悟。",
+		"itemEffect": "core.status.hero.money += 100",
+		"itemEffectTip": "，领悟+100",
+		"hideInToolbox": true
 	},
 	"I735": {
 		"cls": "items",
-		"name": "高等进化结晶",
+		"name": "高等领悟结晶",
 		"canUseItemEffect": "true",
-		"text": "天地间充沛的能量滋养诞生的晶体，\n接触后能够化作海量的经验为人所用。\n角色增加50亿经验。",
-		"itemEffect": "core.status.hero.exp += 50e8",
-		"itemEffectTip": "，经验+50亿"
+		"text": "天地间充沛的能量滋养诞生的晶体，\n接触后能够化作海量的领悟为人所用。\n角色增加1000领悟。",
+		"itemEffect": null,
+		"itemEffectTip": null
 	},
 	"I736": {
 		"cls": "items",
-		"name": "极品进化结晶",
+		"name": "极品领悟结晶",
 		"canUseItemEffect": "true",
-		"text": "天地间充沛的能量滋养诞生的晶体，\n接触后能够化作海量的经验为人所用。\n角色增加1000亿经验。",
-		"itemEffect": "core.status.hero.exp += 1000e8",
-		"itemEffectTip": "，经验+1000亿"
+		"text": "天地间充沛的能量滋养诞生的晶体，\n接触后能够化作海量的领悟为人所用。\n角色增加10000领悟。",
+		"itemEffect": "core.status.hero.money += 10000",
+		"itemEffectTip": "，领悟+10000"
 	},
 	"I737": {
 		"cls": "items",
-		"name": "史诗的进化结晶",
+		"name": "史诗的领悟结晶",
 		"canUseItemEffect": "true",
-		"text": "天地间充沛的能量滋养诞生的晶体，\n接触后能够化作海量的领悟为人所用。\n角色增加3兆经验。",
-		"itemEffect": "core.status.hero.exp += 3e12",
-		"itemEffectTip": "，经验+3兆"
+		"text": "天地间充沛的能量滋养诞生的晶体，\n接触后能够化作海量的领悟为人所用。\n角色增加100000领悟。",
+		"itemEffect": "core.status.hero.money += 100000",
+		"itemEffectTip": "，领悟+100000"
 	},
 	"I738": {
-		"cls": "items",
-		"name": "传说的进化结晶",
+		"cls": "constants",
+		"name": "无限图腾",
 		"canUseItemEffect": "true",
-		"text": "天地间充沛的能量滋养诞生的晶体，\n接触后能够化作海量的领悟为人所用。\n角色增加100万领悟。",
-		"itemEffect": "core.status.hero.exp += 100e12",
-		"itemEffectTip": "，经验+100兆"
+		"text": "【∞】\n9223372036854775807",
+		"itemEffect": null,
+		"itemEffectTip": null
 	},
 	"I739": {
 		"cls": "items",
-		"name": "神话的进化结晶",
+		"name": "传说的领悟结晶Ⅱ",
 		"canUseItemEffect": "true",
 		"text": "天地间充沛的能量滋养诞生的晶体，\n接触后能够化作海量的领悟为人所用。\n角色增加1000万领悟。",
-		"itemEffect": "core.status.hero.exp += 5000e12",
-		"itemEffectTip": "，经验+5000兆"
+		"itemEffect": "core.status.hero.money += 1000000000",
+		"itemEffectTip": "，领悟+10亿"
 	},
 	"I740": {
 		"cls": "items",
-		"name": "不朽的进化结晶",
+		"name": "神话的领悟结晶",
 		"canUseItemEffect": "true",
 		"text": "天地间充沛的能量滋养诞生的晶体，\n接触后能够化作海量的领悟为人所用。\n角色增加1亿领悟。",
-		"itemEffect": "core.status.hero.exp += 10e16",
-		"itemEffectTip": "，经验+10京"
+		"itemEffect": "core.status.hero.money += 100000000000",
+		"itemEffectTip": "，领悟+1000亿"
 	},
 	"I743": {
 		"cls": "constants",
@@ -1648,14 +1610,14 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 	},
 	"I772": {
 		"cls": "items",
-		"name": "轻质战盾（二阶）",
+		"name": "激流盾",
 		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.def += 20",
-		"itemEffectTip": "，防御+20"
+		"itemEffect": "core.status.hero.def += 1000",
+		"itemEffectTip": "，防御+1000"
 	},
 	"I773": {
 		"cls": "items",
-		"name": "轻质战盾",
+		"name": "绿原盾",
 		"canUseItemEffect": "true",
 		"text": "晒干的干草编织成的盾牌。\n防御+3000。",
 		"equip": {
@@ -1665,22 +1627,20 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 			},
 			"percentage": {}
 		},
-		"itemEffect": "core.status.hero.def += 8",
-		"itemEffectTip": "，防御+8"
-	},
-	"I774": {
-		"cls": "items",
-		"name": "轻质战盾（三阶）",
-		"canUseItemEffect": "true",
 		"itemEffect": "core.status.hero.def += 100",
 		"itemEffectTip": "，防御+100"
 	},
+	"I774": {
+		"cls": "items",
+		"name": "磐石盾",
+		"canUseItemEffect": "true",
+		"itemEffect": "core.status.hero.def += 3000",
+		"itemEffectTip": "，防御+3000"
+	},
 	"I775": {
 		"cls": "items",
-		"name": "合金甲",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.def += 35000",
-		"itemEffectTip": "，防御+35000"
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I776": {
 		"cls": "items",
@@ -1723,35 +1683,29 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 	},
 	"I783": {
 		"cls": "items",
-		"name": "灵妖盾",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.def += 4000",
-		"itemEffectTip": "，防御+4000"
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I784": {
 		"cls": "items",
-		"name": "冰寒果实",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.def += 9000",
-		"itemEffectTip": "，防御+9000"
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I785": {
 		"cls": "items",
-		"name": "灵巧结晶",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.def += 20000",
-		"itemEffectTip": "，防御+20000"
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I786": {
 		"cls": "items",
-		"name": "荒兽盾",
+		"name": "天网盾",
 		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.def += 1500",
-		"itemEffectTip": "，防御+1500"
+		"itemEffect": "core.status.hero.def += 3000000",
+		"itemEffectTip": "，防御+3000000"
 	},
 	"I787": {
 		"cls": "items",
-		"name": "鲜血盾",
+		"name": "精血盾",
 		"canUseItemEffect": "true",
 		"text": "经由红海异兽的精血淬炼的盾牌。\n防御+72000。",
 		"equip": {
@@ -1761,15 +1715,15 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 			},
 			"percentage": {}
 		},
-		"itemEffect": "core.status.hero.def += 200",
-		"itemEffectTip": "，防御+200"
+		"itemEffect": "core.status.hero.def += 300000",
+		"itemEffectTip": "，防御+300000"
 	},
 	"I788": {
 		"cls": "items",
 		"name": "金痕盾",
 		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.def += 500",
-		"itemEffectTip": "，防御+500"
+		"itemEffect": "core.status.hero.def += 900000",
+		"itemEffectTip": "，防御+900000"
 	},
 	"I789": {
 		"cls": "items",
@@ -1788,20 +1742,13 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 	},
 	"I792": {
 		"cls": "items",
-		"name": "伊芙",
-		"canUseItemEffect": "true",
-		"itemEffectTip": "，防御+30亿",
-		"itemEffect": "core.status.hero.def += 30e8",
-		"useItemEvent": [
-			"获得了纳家灵宝\r[purple]【伊芙】。\r\n基础防御增加了30亿。"
-		]
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I793": {
 		"cls": "items",
-		"name": "异端的葬歌",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.def += 5000e8",
-		"itemEffectTip": "，防御+5000亿"
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I794": {
 		"cls": "items",
@@ -1829,10 +1776,8 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 	},
 	"I798": {
 		"cls": "items",
-		"name": "极夜之盾",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.def += 2000e8",
-		"itemEffectTip": "，防御+2000亿"
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I799": {
 		"cls": "items",
@@ -1860,11 +1805,10 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 		"canUseItemEffect": "true"
 	},
 	"I804": {
-		"cls": "equips",
+		"cls": "tools",
 		"name": "能力加成",
 		"canUseItemEffect": "true",
-		"text": "你曾经所经历的一切，都将化为此后前行的助力。\n每个该道具为角色提供相当于基础属性10%的三围属性。",
-		"hideInToolbox": false
+		"text": "你曾经所经历的一切，都将化为此后前行的助力。\n每个该道具为角色提供相当于基础属性10%的三围属性。"
 	},
 	"I805": {
 		"cls": "equips",
@@ -1915,9 +1859,10 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 	},
 	"I827": {
 		"cls": "constants",
-		"name": "坎水Ⅱ",
+		"name": "蓝钥匙加成2",
 		"canUseItemEffect": "true",
-		"text": "水魔法师的拿手技能，控水魔法相对于火更为简单，因为空气中富含水元素。\n携带的每把蓝钥匙都能提供3点水元素能量，每1点水元素能量可提供0.24%防御力，水元素能量上限为90点。"
+		"text": "水魔法师的拿手技能，控水魔法相对于火更为简单，因为空气中富含水元素。\n携带的每把蓝钥匙都能提供3点水元素能量，每1点水元素能量可提供0.24%防御力，水元素能量上限为90点。",
+		"hideInToolbox": true
 	},
 	"I828": {
 		"cls": "constants",
@@ -2040,10 +1985,11 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 		"text": "流萤，幽火。一花一界，一叶一舟。\n每回合以50%的伤害发动三次攻击，并使对方每回合损失最大生命的千分之2.4，生命损失持续100回合。"
 	},
 	"I848": {
-		"cls": "constants",
-		"name": "唤雨雷暴Ⅲ",
-		"canUseItemEffect": "true",
-		"text": "技艺纯熟的魔导士的领悟，能影响一定范围内的天气。\n每回合以50%的伤害发动三次攻击（不受超越影响），并使对方每回合损失最大生命的千分之2.8，生命损失持续100回合。"
+		"cls": "tools",
+		"name": "草场",
+		"canUseItemEffect": false,
+		"text": "完全由反物质组成的星系。",
+		"hideInToolbox": true
 	},
 	"I849": {
 		"cls": "constants",
@@ -2071,845 +2017,680 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 		"itemEffectTip": "，禀赋+0.05x"
 	},
 	"I890": {
-		"cls": "items",
-		"name": "潮汐之水",
+		"cls": "tools",
+		"name": "星系储存器",
 		"canUseItemEffect": "true",
-		"itemEffect": "core.addItem('I821', 0.05)",
-		"itemEffectTip": "，能力加成+0.05x"
+		"itemEffect": null,
+		"itemEffectTip": null,
+		"hideInToolbox": true
 	},
-	"I893": {
-		"cls": "equips",
-		"name": "兽神残卷（基础）",
-		"canUseItemEffect": "true",
-		"text": "天生兽神留下来的残卷，蕴含着无穷尽的伟力，带领血洛大陆的荒兽族群走向强盛与繁荣。攻击+1，角色全属性+10%，战斗伤害-40%。",
-		"equip": {
-			"type": 0,
-			"value": {
-				"atk": 1
-			},
-			"percentage": {
-				"mdef": 10,
-				"def": 10,
-				"atk": 10
-			}
-		}
-	},
-	"I894": {
-		"cls": "equips",
-		"name": "融血术",
-		"canUseItemEffect": "true",
-		"text": "最普遍的血洛术式。角色全属性+10%。",
-		"equip": {
-			"type": 0,
-			"value": {},
-			"percentage": {
-				"mdef": 10,
-				"def": 10,
-				"atk": 10
-			}
-		}
-	},
-	"I895": {
-		"cls": "equips",
-		"name": "三月断宵",
-		"canUseItemEffect": "true",
-		"text": "一位云霄级强者观想天地创出的剑法。角色全属性+25%。",
-		"equip": {
-			"type": 0,
-			"value": {},
-			"percentage": {
-				"mdef": 25,
-				"def": 25,
-				"atk": 25
-			}
-		}
-	},
-	"I896": {
-		"cls": "equips",
-		"name": "兽神残卷（一阶初成）",
-		"canUseItemEffect": "true",
-		"text": "天生兽神留下来的残卷，蕴含着无穷尽的伟力，带领血洛大陆的荒兽族群走向强盛与繁荣。角色全属性+25%，战斗伤害-40%。",
-		"equip": {
-			"type": 0,
-			"value": {},
-			"percentage": {
-				"mdef": 25,
-				"def": 25,
-				"atk": 25
-			}
-		}
-	},
-	"I897": {
-		"cls": "equips",
-		"name": "兽神残卷（一阶大成）",
-		"canUseItemEffect": "true",
-		"text": "天生兽神留下来的残卷，蕴含着无穷尽的伟力，带领血洛大陆的荒兽族群走向强盛与繁荣。角色全属性+45%，战斗伤害-40%。",
-		"equip": {
-			"type": 0,
-			"value": {},
-			"percentage": {
-				"mdef": 45,
-				"def": 45,
-				"atk": 45
-			}
-		}
-	},
-	"I898": {
-		"cls": "equips",
-		"name": "水无心",
-		"canUseItemEffect": "true",
-		"equip": {
-			"type": 0,
-			"value": {},
-			"percentage": {
-				"mdef": 45,
-				"def": 45,
-				"atk": 45
-			}
-		},
-		"text": "无心之水，赐予万物以生命，却不求有功，只求无过。角色全属性+45%。"
-	},
-	"I899": {
-		"cls": "equips",
-		"name": "兽神残卷（二阶初成）",
-		"canUseItemEffect": "true",
-		"text": "天生兽神留下来的残卷，蕴含着无穷尽的伟力，带领血洛大陆的荒兽族群走向强盛与繁荣。角色全属性+64%，战斗伤害-40%。",
-		"equip": {
-			"type": 0,
-			"value": {},
-			"percentage": {
-				"mdef": 64,
-				"def": 64,
-				"atk": 64
-			}
-		}
-	},
-	"I900": {
-		"cls": "equips",
-		"name": "星解之术",
-		"canUseItemEffect": "true",
-		"equip": {
-			"type": 0,
-			"value": {},
-			"percentage": {
-				"mdef": 64,
-				"def": 64,
-				"atk": 64
-			}
-		},
-		"text": "释放身体蕴含的基因原力，融解星宙间那颗颗璀璨的星辰。角色全属性+64%。"
-	},
-	"I901": {
-		"cls": "equips",
-		"name": "映星花",
-		"canUseItemEffect": "true",
-		"equip": {
-			"type": 0,
-			"value": {},
-			"percentage": {
-				"mdef": 80,
-				"def": 80,
-				"atk": 80
-			}
-		},
-		"text": "绚烂得让人目不暇接的招式，奇异的波动流转，映出彗星尾巴般的光晕，似要将整个星河染上瑰丽的色彩。角色全属性+80%。"
-	},
-	"I902": {
-		"cls": "items",
-		"name": "绿钥匙串（四把）",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.addItem('greenKey', 4)",
-		"itemEffectTip": ",绿钥匙+4"
-	},
-	"I920": {
-		"cls": "equips",
-		"name": "兽神残卷（二阶大成）",
-		"canUseItemEffect": "true",
-		"equip": {
-			"type": 0,
-			"value": {},
-			"percentage": {
-				"mdef": 80,
-				"def": 80,
-				"atk": 80
-			}
-		},
-		"text": "天生兽神留下来的残卷，蕴含着无穷尽的伟力，带领血洛大陆的荒兽族群走向强盛与繁荣。角色全属性+80%，战斗伤害-40%。"
-	},
-	"I921": {
-		"cls": "equips",
-		"name": "兽神残卷（二阶圆满）",
-		"canUseItemEffect": "true",
-		"text": "天生兽神留下来的残卷，蕴含着无穷尽的伟力，带领血洛大陆的荒兽族群走向强盛与繁荣。角色全属性+100%，战斗伤害-40%。",
-		"equip": {
-			"type": 0,
-			"value": {},
-			"percentage": {
-				"mdef": 100,
-				"def": 100,
-				"atk": 100
-			}
-		}
-	},
-	"I922": {
-		"cls": "equips",
-		"name": "映星紫华",
-		"canUseItemEffect": "true",
-		"equip": {
-			"type": 0,
-			"value": {},
-			"percentage": {
-				"mdef": 100,
-				"def": 100,
-				"atk": 100
-			}
-		},
-		"text": "神秘令人难以捉摸的进阶术式，于内敛的紫色光华之中，蕴含着令人心惊胆颤的力量。角色全属性+100%。"
-	},
-	"I923": {
-		"cls": "equips",
-		"name": "映星天彩",
-		"canUseItemEffect": "true",
-		"equip": {
-			"type": 0,
-			"value": {},
-			"percentage": {
-				"mdef": 140,
-				"def": 140,
-				"atk": 140
-			}
-		},
-		"text": "仿若启明星映照着深邃的深渊，划破了那一方神秘的黑暗。符号和魔法阵交织变幻，无穷尽的力量似乎正由沉睡中被唤醒。角色全属性+140%。"
-	},
-	"I924": {
-		"cls": "equips",
-		"name": "兽神残卷（三阶初成）",
-		"canUseItemEffect": "true",
-		"text": "天生兽神留下来的残卷，蕴含着无穷尽的伟力，带领血洛大陆的荒兽族群走向强盛与繁荣。角色全属性+140%，战斗伤害-40%。",
-		"equip": {
-			"type": 0,
-			"value": {},
-			"percentage": {
-				"mdef": 140,
-				"def": 140,
-				"atk": 140
-			}
-		}
-	},
-	"I925": {
-		"cls": "equips",
-		"name": "兽神残卷碎片（二阶圆满）",
-		"canUseItemEffect": "true",
-		"text": "残卷碎片，上面印着一行小字：出色的游戏理解！可惜真正的残卷已经被我换走了，想要完整的就交出绿来！角色全属性+100%，战斗伤害-10%。",
-		"equip": {
-			"type": 0,
-			"value": {},
-			"percentage": {
-				"mdef": 100,
-				"def": 100,
-				"atk": 100
-			}
-		}
-	},
-	"I926": {
-		"cls": "equips",
-		"name": "白尘贯天",
-		"canUseItemEffect": "true",
-		"text": "与天地之间尘埃的律动产生共鸣，精神念力沟通天地能量，借由其中奥秘，衍化为自身势不可挡的念力领域。角色全属性+165%。",
-		"equip": {
-			"type": 0,
-			"value": {},
-			"percentage": {
-				"mdef": 165,
-				"def": 165,
-				"atk": 165
-			}
-		}
-	},
-	"I927": {
-		"cls": "equips",
-		"name": "虚空之塔（三层）",
-		"canUseItemEffect": "true",
-		"text": "陨墨星一脉顶级防御秘法，以强大坚韧的灵魂力量构造出精密的灵魂之塔，保护本源命核以渡过各种极端恶劣的困局。角色全属性+200%。",
-		"equip": {
-			"type": 0,
-			"value": {},
-			"percentage": {
-				"mdef": 200,
-				"def": 200,
-				"atk": 200
-			}
-		}
-	},
-	"I928": {
-		"cls": "equips",
-		"name": "微火",
-		"canUseItemEffect": "true",
-		"equip": {
-			"type": 3,
-			"value": {
-				"def": 1000,
-				"atk": 1000
-			},
-			"percentage": {
-				"mdef": 20
-			}
-		},
-		"text": "利用简单的精神念力点燃火焰的领悟。\n攻击、防御+1000，护盾+20%。"
-	},
-	"I929": {
-		"cls": "equips",
-		"name": "燃灼术",
-		"canUseItemEffect": "true",
-		"text": "念力火焰灼灼燃烧，仿佛要将这片空间点燃。\n攻击、防御+30000，同时+5%，护盾+20%。",
-		"equip": {
-			"type": 3,
-			"value": {
-				"def": 30000,
-				"atk": 30000
-			},
-			"percentage": {
-				"mdef": 20,
-				"atk": 5,
-				"def": 5
-			}
-		}
-	},
-	"I930": {
-		"cls": "equips",
-		"name": "焰海霜天【领域二重】",
-		"canUseItemEffect": "true",
-		"equip": {
-			"type": 3,
-			"value": {
-				"def": 7290000,
-				"atk": 7290000
-			},
-			"percentage": {
-				"mdef": 30,
-				"def": 12,
-				"atk": 12
-			}
-		},
-		"text": "相互冲突的两种元素调和形成的奇异领域。冰火两重天之下，寒冷与炙热施以双重折磨，生灵勿近。\n攻击、防御+729万，同时+12%，护盾+30%。"
-	},
-	"I931": {
-		"cls": "equips",
-		"name": "焰海霜天【领域三重】",
-		"canUseItemEffect": "true",
-		"text": "相互冲突的两种元素调和形成的奇异领域。冰火两重天之下，寒冷与炙热施以双重折磨，生灵勿近。\n攻击、防御+2916万，同时+20%，护盾+35%。",
-		"equip": {
-			"type": 3,
-			"value": {
-				"def": 29160000,
-				"atk": 29160000
-			},
-			"percentage": {
-				"mdef": 35,
-				"def": 20,
-				"atk": 20
-			}
-		}
-	},
-	"I932": {
-		"cls": "equips",
-		"name": "火灵幻海【领域一重】",
-		"canUseItemEffect": "true",
-		"text": "通体红色的火焰小兽在空中游曳，周身散发的火元素波动汇集成海。\n攻击、防御+30万，同时+8%，护盾+30%。",
-		"equip": {
-			"type": 3,
-			"value": {
-				"def": 300000,
-				"atk": 300000
-			},
-			"percentage": {
-				"mdef": 30,
-				"def": 8,
-				"atk": 8
-			}
-		}
-	},
-	"I933": {
-		"cls": "equips",
-		"name": "出云落月【领域四重】",
-		"canUseItemEffect": "true",
-		"equip": {
-			"type": 3,
-			"value": {
-				"def": 409600000,
-				"atk": 409600000
-			},
-			"percentage": {
-				"mdef": 50,
-				"def": 30,
-				"atk": 30
-			}
-		},
-		"text": "水火元素纵横交错而成的领域。水帘之间，一袭布裙如同仙子临凡，出云之姿风华绝代；火焰灼烧，暗藏杀机凌厉，剑锋所向，斩断天际，月落星沉！\n攻击、防御+4.096亿，同时+30%，护盾+50%。"
-	},
-	"I934": {
-		"cls": "equips",
-		"name": "闭月炎泉【领域九重】",
-		"canUseItemEffect": "true",
-		"text": "水火元素纵横，形成交织的流炎之泉。水帘垂落而下，治愈的灵巧协奏着水之温和，心醉神迷；周遭炎火流转跳动，炽烈的力量燃烧起火之战意，无往不利。\n攻击、防御+10.89兆，同时+105%，护盾+210%。",
-		"equip": {
-			"type": 3,
-			"value": {
-				"def": 10890000000000,
-				"atk": 10890000000000
-			},
-			"percentage": {
-				"mdef": 210,
-				"def": 105,
-				"atk": 105
-			}
-		}
-	},
-	"I935": {
-		"cls": "equips",
-		"name": "闭月炎泉【领域七重】",
-		"canUseItemEffect": "true",
-		"text": "水火元素纵横，形成交织的流炎之泉。水帘垂落而下，治愈的灵巧协奏着水之温和，心醉神迷；周遭炎火流转跳动，炽烈的力量燃烧起火之战意，无往不利。\n攻击、防御+7200亿，同时+75%，护盾+150%。",
-		"equip": {
-			"type": 3,
-			"value": {
-				"def": 720000000000,
-				"atk": 720000000000
-			},
-			"percentage": {
-				"mdef": 150,
-				"def": 75,
-				"atk": 75
-			}
-		}
-	},
-	"I936": {
-		"cls": "equips",
-		"name": "闭月炎泉【领域八重】",
-		"canUseItemEffect": "true",
-		"text": "水火元素纵横，形成交织的流炎之泉。水帘垂落而下，治愈的灵巧协奏着水之温和，心醉神迷；周遭炎火流转跳动，炽烈的力量燃烧起火之战意，无往不利。\n攻击、防御+4.41兆，同时+90%，护盾+180%。",
-		"equip": {
-			"type": 3,
-			"value": {
-				"def": 4410000000000,
-				"atk": 4410000000000
-			},
-			"percentage": {
-				"mdef": 180,
-				"def": 90,
-				"atk": 90
-			}
-		}
-	},
-	"I937": {
-		"cls": "equips",
-		"name": "天封火牢【初窥法则·一阶】",
+	"I913": {
+		"cls": "constants",
+		"name": "无限维度",
 		"canUseItemEffect": "true"
 	},
-	"I938": {
-		"cls": "equips",
-		"name": "出云落月【领域五重】",
-		"canUseItemEffect": "true",
-		"text": "水火元素纵横交错而成的领域。水帘之间，一袭布裙如同仙子临凡，出云之姿风华绝代；火焰灼烧，暗藏杀机凌厉，剑锋所向，斩断天际，月落星沉！\n攻击、防御+60.84亿，同时+45%，护盾+75%。",
-		"equip": {
-			"type": 3,
-			"value": {
-				"def": 6084000000,
-				"atk": 6084000000
-			},
-			"percentage": {
-				"mdef": 75,
-				"def": 45,
-				"atk": 45
-			}
-		}
-	},
-	"I939": {
-		"cls": "equips",
-		"name": "出云落月【领域六重】",
-		"canUseItemEffect": "true",
-		"text": "水火元素纵横交错而成的领域。水帘之间，一袭布裙如同仙子临凡，出云之姿风华绝代；火焰灼烧，暗藏杀机凌厉，剑锋所向，斩断天际，月落星沉！\n攻击、防御+1296亿，同时+60%，护盾+100%。",
-		"equip": {
-			"type": 3,
-			"value": {
-				"def": 129600000000,
-				"atk": 129600000000
-			},
-			"percentage": {
-				"mdef": 100,
-				"def": 60,
-				"atk": 60
-			}
-		}
-	},
-	"I940": {
-		"cls": "equips",
-		"name": "莲落水华【粗通法则】",
-		"canUseItemEffect": "true",
-		"text": "【法则二层】绮梦交织，焰舞水裳。些许水之法则织锦的碧波之上，一朵微小的火之法则莲花含苞待放。水元素的灵动拥抱着火元素的力量。以水之柔克刚，以火之烈破敌，超脱凡俗而又和谐共生。\n攻击、防御+12京，同时+200%，护盾*5。",
-		"equip": {
-			"type": 3,
-			"value": {
-				"def": 120000000000000000,
-				"atk": 120000000000000000
-			},
-			"percentage": {
-				"mdef": 400,
-				"def": 200,
-				"atk": 200
-			}
-		}
-	},
-	"I941": {
-		"cls": "equips",
-		"name": "莲落水华【法则种子】",
-		"canUseItemEffect": "true",
-		"text": "【法则三层】绮梦交织，焰舞水裳。些许水之法则织锦的碧波之上，一朵微小的火之法则莲花含苞待放。水元素的灵动拥抱着火元素的力量。以水之柔克刚，以火之烈破敌，超脱凡俗而又和谐共生。\n"
-	},
-	"I942": {
-		"cls": "equips",
-		"name": "莲落水华【法则萌芽】",
-		"canUseItemEffect": "true",
-		"text": "【法则四层】绮梦交织，焰舞水裳。充盈的水之法则织锦的碧波之上，空灵绝美的火之法则莲花悠然飘荡。水元素的灵动拥抱着火元素的力量。以水之柔克刚，以火之烈破敌，超脱凡俗而又和谐共生。\n"
-	},
-	"I943": {
-		"cls": "equips",
-		"name": "莲落水华【初窥法则】",
-		"canUseItemEffect": "true",
-		"text": "【法则一层】绮梦交织，焰舞水裳。一丝水之法则织锦的碧波之上，一片蕴含火之法则的花瓣悠然飘荡。水元素的灵动拥抱着火元素的力量。以水之柔克刚，以火之烈破敌，超脱凡俗而又和谐共生。\n攻击、防御+5000兆，同时+160%，护盾+350%。",
-		"equip": {
-			"type": 3,
-			"value": {
-				"def": 5000000000000000,
-				"atk": 5000000000000000
-			},
-			"percentage": {
-				"mdef": 350,
-				"def": 160,
-				"atk": 160
-			}
-		}
-	},
-	"I944": {
-		"cls": "equips",
-		"name": "莲落水华【法则之花】",
-		"canUseItemEffect": "true",
-		"text": "【法则五层】绮梦交织，焰舞水裳。充盈的水之法则织锦的碧波之上，空灵绝美的火之法则莲花悠然飘荡。水元素的灵动拥抱着火元素的力量。以水之柔克刚，以火之烈破敌，超脱凡俗而又和谐共生。\n"
-	},
-	"I945": {
+	"I914": {
 		"cls": "constants",
-		"name": "散灵之环",
+		"name": "自动清怪开关",
 		"canUseItemEffect": "true",
-		"text": "祥瑞御免，家宅平安。\n使用后能够驱散身上的所有Buff效果。（快捷键F）",
+		"text": "和之前不太一样的奇怪标识，好像…可以转动？",
 		"useItemEvent": [
 			{
-				"type": "animate",
-				"name": "water",
-				"loc": "hero"
+				"type": "choices",
+				"text": "这里是自动清怪开关！\n为了更流畅的体验，\n建议只在少数情况下关闭它。",
+				"choices": [
+					{
+						"text": "开启自动清怪",
+						"color": [
+							144,
+							191,
+							234,
+							1
+						],
+						"action": [
+							"自动清怪已开启！",
+							{
+								"type": "setValue",
+								"name": "flag:autoBattle",
+								"value": "true"
+							}
+						]
+					},
+					{
+						"text": "关闭自动清怪",
+						"color": [
+							237,
+							185,
+							243,
+							1
+						],
+						"action": [
+							"自动清怪已关闭！",
+							{
+								"type": "setValue",
+								"name": "flag:autoBattle",
+								"value": "false"
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"I915": {
+		"cls": "constants",
+		"name": "离开无限世界",
+		"canUseItemEffect": "true",
+		"useItemEvent": [
+			{
+				"type": "choices",
+				"text": "当你离开世界时，你剩余的反物质将按1:1转化为正物质。\n正物质可以购置你需要的各种资源，\n以让你在下一次重返世界时走得更远。\n你在这个世界中获得的加成也不复存在。\n当然，你也可以选择在此记录成绩。\n当前环绕的星系数量：\n【∞】光暗：${flag:w1}\n【∞】时空：${flag:w2}\n【∞】正邪：${flag:w3}",
+				"choices": [
+					{
+						"text": "离开世界",
+						"action": [
+							{
+								"type": "if",
+								"condition": "(flag:wxworld01==0)",
+								"true": [
+									"你选择了离开世界。\n检测到这是你在无限疆域的第一次探险——\n如果你已经完成了第六次维度提升，那么非常厉害！",
+									{
+										"type": "if",
+										"condition": "(item:I729>=6)",
+										"true": [
+											"你将得到一次特别的初心者奖励：\n\r[gray]本局游戏正物质翻倍。\r\n加油，天赋异禀的、未来的\r[#EA4444]无限之神\r。",
+											{
+												"type": "setValue",
+												"name": "status:money",
+												"operator": "*=",
+												"value": "2"
+											}
+										],
+										"false": [
+											"如果你做到了这一点，\n你将得到一次特别的初心者奖励：\n\r[gray]本局游戏正物质翻倍。\r",
+											"当然，做不到并不会影响大局。\n请尽可能使用更少的绿钥匙来继续无限吧！"
+										]
+									},
+									{
+										"type": "setValue",
+										"name": "flag:wxworld01",
+										"value": "1"
+									}
+								],
+								"false": []
+							},
+							{
+								"type": "insert",
+								"loc": [
+									1,
+									0
+								],
+								"floorId": "sample2"
+							}
+						]
+					},
+					{
+						"text": "记录成绩",
+						"action": [
+							"计分方式为：\n当前维度提升*1e16+当前永恒之匙数量*1e11+当前生命/x。\n1、2、3无限世界，x为1。\n（由于浮点数计算偏差，当前生命较少时，将无法计入）\n若除后生命>9223372036（92.23亿），则超出的部分不计入成绩。",
+							{
+								"type": "switch",
+								"condition": "flag:world",
+								"caseList": [
+									{
+										"case": "1",
+										"action": [
+											{
+												"type": "setValue",
+												"name": "status:hp",
+												"operator": "/=",
+												"value": "1"
+											},
+											{
+												"type": "if",
+												"condition": "(status:hp>=9223372036)",
+												"true": [
+													{
+														"type": "setValue",
+														"name": "status:hp",
+														"value": "9223372036"
+													}
+												],
+												"false": []
+											},
+											{
+												"type": "setValue",
+												"name": "status:hp",
+												"operator": "+=",
+												"value": "item:I729*1e16+item:greenKey*1e11"
+											},
+											{
+												"type": "win",
+												"reason": "【∞】光暗",
+												"noexit": 1
+											}
+										]
+									},
+									{
+										"case": "2",
+										"action": [
+											{
+												"type": "setValue",
+												"name": "status:hp",
+												"operator": "/=",
+												"value": "1"
+											},
+											{
+												"type": "if",
+												"condition": "(status:hp>=9223372036)",
+												"true": [
+													{
+														"type": "setValue",
+														"name": "status:hp",
+														"value": "9223372036"
+													}
+												],
+												"false": []
+											},
+											{
+												"type": "setValue",
+												"name": "status:hp",
+												"operator": "+=",
+												"value": "item:I729*1e16+item:greenKey*1e11"
+											},
+											{
+												"type": "win",
+												"reason": "【∞】时空",
+												"noexit": 1
+											}
+										]
+									},
+									{
+										"case": "3",
+										"action": [
+											{
+												"type": "setValue",
+												"name": "status:hp",
+												"operator": "/=",
+												"value": "1"
+											},
+											{
+												"type": "if",
+												"condition": "(status:hp>=9223372036)",
+												"true": [
+													{
+														"type": "setValue",
+														"name": "status:hp",
+														"value": "9223372036"
+													}
+												],
+												"false": []
+											},
+											{
+												"type": "setValue",
+												"name": "status:hp",
+												"operator": "+=",
+												"value": "item:I729*1e16+item:greenKey*1e11"
+											},
+											{
+												"type": "win",
+												"reason": "【∞】正邪",
+												"noexit": 1
+											}
+										]
+									}
+								]
+							},
+							{
+								"type": "insert",
+								"loc": [
+									6,
+									3
+								],
+								"floorId": "sample0"
+							}
+						]
+					},
+					{
+						"text": "继续游戏",
+						"action": []
+					}
+				]
 			}
 		],
-		"useItemEffect": "core.setFlag('s113', 0);\ncore.setFlag('s114', 0);\ncore.setFlag('s120', 0);\ncore.setFlag('s121', 0);\ncore.setFlag('s141', 0);\ncore.setFlag('s142', 0);\ncore.setFlag('s143', 0);\ncore.setFlag('s157', 0);"
+		"text": "当你离开世界时，你剩余的反物质将按你获得的加成比例转化为正物质。\n初始比例为1:1。"
 	},
-	"I946": {
-		"cls": "equips",
+	"I916": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true",
+		"itemEffect": "core.status.hero.hp += 32 * Math.floor(core.values.greenPotion * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I607\") + core.itemCount(\"I608\")))",
+		"itemEffectTip": "，生命+${32 * Math.floor(core.values.greenPotion * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I607\") + core.itemCount(\"I608\")))}"
+	},
+	"I917": {
+		"cls": "items",
+		"name": "超蓝补给品",
+		"canUseItemEffect": "true",
+		"itemEffect": "core.status.hero.hp += 64 * Math.floor(core.values.greenPotion * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I607\") + core.itemCount(\"I608\")))",
+		"itemEffectTip": "，生命+${64 * Math.floor(core.values.greenPotion * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I607\") + core.itemCount(\"I608\")))}"
+	},
+	"I918": {
+		"cls": "items",
+		"name": "超黄补给品",
+		"canUseItemEffect": "true",
+		"itemEffect": "core.status.hero.hp += 128 * Math.floor(core.values.greenPotion * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I607\") + core.itemCount(\"I608\")))",
+		"itemEffectTip": "，生命+${128 * Math.floor(core.values.greenPotion * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I607\") + core.itemCount(\"I608\")))}"
+	},
+	"I919": {
+		"cls": "items",
+		"name": "超绿补给品",
+		"canUseItemEffect": "true",
+		"itemEffect": "core.status.hero.hp += 256 * Math.floor(core.values.greenPotion * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I607\") + core.itemCount(\"I608\")))",
+		"itemEffectTip": "，生命+${256 * Math.floor(core.values.greenPotion * core.status.thisMap.ratio * Math.pow(1.4, (core.itemCount(\"I729\"))) * (1 + core.itemCount(\"I607\") + core.itemCount(\"I608\")))}"
+	},
+	"I920": {
+		"cls": "items",
 		"name": "新物品",
 		"canUseItemEffect": "true"
 	},
-	"I947": {
-		"cls": "equips",
+	"I921": {
+		"cls": "items",
 		"name": "新物品",
 		"canUseItemEffect": "true"
 	},
-	"I948": {
-		"cls": "equips",
+	"I922": {
+		"cls": "items",
 		"name": "新物品",
 		"canUseItemEffect": "true"
 	},
-	"I949": {
-		"cls": "equips",
+	"I923": {
+		"cls": "constants",
+		"name": "基于无限点数的护盾",
+		"canUseItemEffect": "true"
+	},
+	"I924": {
+		"cls": "items",
 		"name": "新物品",
 		"canUseItemEffect": "true"
 	},
-	"I950": {
-		"cls": "equips",
+	"I925": {
+		"cls": "items",
 		"name": "新物品",
 		"canUseItemEffect": "true"
 	},
-	"I951": {
-		"cls": "equips",
+	"I926": {
+		"cls": "items",
 		"name": "新物品",
 		"canUseItemEffect": "true"
 	},
-	"I952": {
-		"cls": "tools",
-		"name": "第二幕",
-		"canUseItemEffect": "true",
-		"hideInToolbox": true
-	},
-	"I953": {
-		"cls": "tools",
-		"name": "第三幕",
-		"canUseItemEffect": "true",
-		"hideInToolbox": true
-	},
-	"I954": {
-		"cls": "tools",
-		"name": "第四幕",
-		"canUseItemEffect": "true",
-		"hideInToolbox": true
-	},
-	"I955": {
-		"cls": "tools",
-		"name": "第五幕",
-		"canUseItemEffect": "true",
-		"hideInToolbox": true
-	},
-	"I956": {
-		"cls": "tools",
-		"name": "第六幕",
-		"canUseItemEffect": "true",
-		"hideInToolbox": true
-	},
-	"I957": {
-		"cls": "tools",
+	"I927": {
+		"cls": "items",
 		"name": "新物品",
-		"canUseItemEffect": "true",
-		"hideInToolbox": true
+		"canUseItemEffect": "true"
 	},
-	"I958": {
-		"cls": "tools",
+	"I928": {
+		"cls": "items",
 		"name": "新物品",
-		"canUseItemEffect": "true",
-		"hideInToolbox": true
+		"canUseItemEffect": "true"
+	},
+	"I929": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I930": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I931": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I932": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I933": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I959": {
-		"cls": "tools",
+		"cls": "items",
 		"name": "新物品",
-		"canUseItemEffect": "true",
-		"hideInToolbox": true
+		"canUseItemEffect": "true"
 	},
 	"I960": {
-		"cls": "tools",
+		"cls": "items",
 		"name": "新物品",
-		"canUseItemEffect": "true",
-		"hideInToolbox": true
+		"canUseItemEffect": "true"
 	},
 	"I961": {
-		"cls": "tools",
+		"cls": "items",
 		"name": "新物品",
-		"canUseItemEffect": "true",
-		"hideInToolbox": true
+		"canUseItemEffect": "true"
 	},
 	"I962": {
-		"cls": "tools",
+		"cls": "items",
 		"name": "新物品",
-		"canUseItemEffect": "true",
-		"hideInToolbox": true
+		"canUseItemEffect": "true"
 	},
 	"I963": {
-		"cls": "tools",
+		"cls": "items",
 		"name": "新物品",
-		"canUseItemEffect": "true",
-		"hideInToolbox": true
+		"canUseItemEffect": "true"
 	},
 	"I964": {
-		"cls": "tools",
+		"cls": "items",
 		"name": "新物品",
-		"canUseItemEffect": "true",
-		"hideInToolbox": true
+		"canUseItemEffect": "true"
+	},
+	"I965": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I966": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I967": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I968": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I969": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I970": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I971": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I972": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I973": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I974": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I975": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I976": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I977": {
-		"cls": "equips",
-		"name": "玻璃大炮",
-		"canUseItemEffect": "true",
-		"text": "攻击性很强却脆弱无比的炮管。\n攻击+20万，防御-5000。",
-		"equip": {
-			"type": 4,
-			"value": {
-				"def": -5000,
-				"atk": 200000
-			},
-			"percentage": {}
-		}
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I978": {
-		"cls": "equips",
-		"name": "十连扭蛋机",
-		"canUseItemEffect": "true",
-		"text": "不来一次十连试试吗？\n攻击、防御+1.5亿，护盾-3亿。",
-		"equip": {
-			"type": 4,
-			"value": {
-				"mdef": -300000000,
-				"def": 150000000,
-				"atk": 150000000
-			},
-			"percentage": {}
-		}
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I979": {
-		"cls": "equips",
+		"cls": "items",
 		"name": "新物品",
 		"canUseItemEffect": "true"
 	},
 	"I980": {
-		"cls": "equips",
+		"cls": "items",
 		"name": "新物品",
 		"canUseItemEffect": "true"
 	},
 	"I981": {
-		"cls": "equips",
-		"name": "魔攻标记",
-		"canUseItemEffect": "true",
-		"hideInToolbox": false
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I982": {
-		"cls": "constants",
+		"cls": "items",
 		"name": "新物品",
 		"canUseItemEffect": "true"
 	},
 	"I983": {
-		"cls": "equips",
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I984": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I985": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I986": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I987": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I988": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I989": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I990": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I991": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I992": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I993": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I994": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I995": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I996": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I997": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I998": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I999": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1000": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1001": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1002": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1003": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1004": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1005": {
+		"cls": "items",
 		"name": "新物品",
 		"canUseItemEffect": "true"
 	},
 	"I1006": {
 		"cls": "items",
-		"name": "黄钥匙串",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.addItem('yellowKey', 3)",
-		"itemEffectTip": ",黄钥匙+3"
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I1007": {
 		"cls": "items",
-		"name": "蓝钥匙串",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.addItem('blueKey', 3)",
-		"itemEffectTip": ",蓝钥匙+3"
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I1008": {
 		"cls": "items",
-		"name": "红钥匙串",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.addItem('redKey', 3)",
-		"itemEffectTip": ",红钥匙+3",
-		"text": "挂有3把红钥匙的钥匙串。"
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I1009": {
-		"cls": "items",
-		"name": "圣红补给品",
-		"itemEffect": "core.status.hero.hp += core.values.greenPotion * 1024 * core.status.thisMap.ratio",
-		"itemEffectTip": "，生命+${core.formatBigNumber(core.values.greenPotion * core.status.thisMap.ratio * 1024)}",
-		"useItemEffect": "core.status.hero.hp += core.values.greenPotion * 1024",
-		"text": "极为精纯的活泼能量，甚至有起死回生的功用。\n增加相当于8192倍红血瓶的生命。"
+		"cls": "tools",
+		"name": "维度提升系数5",
+		"canUseItemEffect": "true",
+		"hideInToolbox": true
 	},
 	"I1010": {
-		"cls": "items",
-		"name": "圣蓝补给品",
-		"itemEffect": "core.status.hero.hp += core.values.greenPotion * 4096 * core.status.thisMap.ratio",
-		"itemEffectTip": "，生命+${core.formatBigNumber(core.values.greenPotion * core.status.thisMap.ratio * 4096)}",
-		"useItemEffect": "core.status.hero.hp += core.values.greenPotion * 4096",
-		"text": "极为精纯的活泼能量，甚至有起死回生的功用。\n增加相当于16384倍蓝血瓶的生命。"
+		"cls": "tools",
+		"name": "维度提升系数2",
+		"canUseItemEffect": "true",
+		"hideInToolbox": true
 	},
 	"I1011": {
-		"cls": "items",
-		"name": "圣黄补给品",
-		"itemEffect": "core.status.hero.hp += core.values.greenPotion * 16384 * core.status.thisMap.ratio",
-		"itemEffectTip": "，生命+${core.formatBigNumber(core.values.greenPotion * core.status.thisMap.ratio * 16384)}",
-		"useItemEffect": "core.status.hero.hp += core.values.greenPotion * 16384",
-		"text": "极为精纯的活泼能量，甚至有起死回生的功用。\n增加相当于32768倍黄血瓶的生命。"
+		"cls": "tools",
+		"name": "维度提升系数3",
+		"canUseItemEffect": "true",
+		"hideInToolbox": true
 	},
 	"I1012": {
-		"cls": "items",
-		"name": "圣绿补给品",
-		"itemEffect": "core.status.hero.hp += core.values.greenPotion * 65536 * core.status.thisMap.ratio",
-		"itemEffectTip": "，生命+${core.formatBigNumber(core.values.greenPotion * core.status.thisMap.ratio * 65536)}",
-		"useItemEffect": "core.status.hero.hp += core.values.greenPotion * 65536",
-		"text": "极为精纯的活泼能量，甚至有起死回生的功用。\n增加相当于65536倍绿血瓶的生命。"
+		"cls": "tools",
+		"name": "维度提升系数4",
+		"canUseItemEffect": "true",
+		"hideInToolbox": true
 	},
 	"I1013": {
 		"cls": "items",
-		"name": "神话红宝石",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += core.values.redGem * core.status.thisMap.ratio * 100",
-		"itemEffectTip": "，攻击+${core.formatBigNumber(core.values.redGem * core.status.thisMap.ratio*100)}"
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I1014": {
 		"cls": "items",
-		"name": "神话蓝宝石",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.def += core.values.blueGem * core.status.thisMap.ratio * 100",
-		"itemEffectTip": "，防御+${core.formatBigNumber(core.values.blueGem * core.status.thisMap.ratio*100)}"
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I1015": {
 		"cls": "items",
-		"name": "神话绿宝石",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.mdef += core.values.greenGem * core.status.thisMap.ratio * 100",
-		"itemEffectTip": "，护盾+${core.formatBigNumber(core.values.greenGem * core.status.thisMap.ratio*100)}"
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I1016": {
 		"cls": "items",
-		"name": "神话黄宝石",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += core.values.redGem * core.status.thisMap.ratio * 100;\ncore.status.hero.def += core.values.blueGem * core.status.thisMap.ratio * 100;\ncore.status.hero.mdef += core.values.greenGem * core.status.thisMap.ratio * 100;\ncore.status.hero.hp += core.values.yellowPotion * core.status.thisMap.ratio * 400;",
-		"itemEffectTip": "，全属性提升"
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I1017": {
 		"cls": "items",
-		"name": "不朽红宝石",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += core.values.redGem * core.status.thisMap.ratio * 200",
-		"itemEffectTip": "，攻击+${core.formatBigNumber(core.values.redGem * core.status.thisMap.ratio*200)}"
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I1018": {
 		"cls": "items",
-		"name": "不朽蓝宝石",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.def += core.values.blueGem * core.status.thisMap.ratio * 200",
-		"itemEffectTip": "，防御+${core.formatBigNumber(core.values.blueGem * core.status.thisMap.ratio*200)}"
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I1019": {
 		"cls": "items",
-		"name": "不朽绿宝石",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.mdef += core.values.greenGem * core.status.thisMap.ratio * 200",
-		"itemEffectTip": "，护盾+${core.formatBigNumber(core.values.greenGem * core.status.thisMap.ratio*200)}"
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I1020": {
 		"cls": "items",
-		"name": "不朽黄宝石",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += core.values.redGem * core.status.thisMap.ratio * 200;\ncore.status.hero.def += core.values.blueGem * core.status.thisMap.ratio * 200;\ncore.status.hero.mdef += core.values.greenGem * core.status.thisMap.ratio * 200;\ncore.status.hero.hp += core.values.yellowPotion * core.status.thisMap.ratio * 1600;",
-		"itemEffectTip": "，全属性提升"
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I1021": {
 		"cls": "items",
-		"name": "造化红宝石",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += core.values.redGem * core.status.thisMap.ratio * 500",
-		"itemEffectTip": "，攻击+${core.formatBigNumber(core.values.redGem * core.status.thisMap.ratio*500)}"
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I1022": {
 		"cls": "items",
-		"name": "造化蓝宝石",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.def += core.values.blueGem * core.status.thisMap.ratio * 500",
-		"itemEffectTip": "，防御+${core.formatBigNumber(core.values.blueGem * core.status.thisMap.ratio*500)}"
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I1023": {
 		"cls": "items",
-		"name": "造化绿宝石",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.mdef += core.values.greenGem * core.status.thisMap.ratio * 500",
-		"itemEffectTip": "，护盾+${core.formatBigNumber(core.values.greenGem * core.status.thisMap.ratio*500)}"
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I1024": {
 		"cls": "items",
-		"name": "造化黄宝石",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += core.values.redGem * core.status.thisMap.ratio * 500;\ncore.status.hero.def += core.values.blueGem * core.status.thisMap.ratio * 500;\ncore.status.hero.mdef += core.values.greenGem * core.status.thisMap.ratio * 500;\ncore.status.hero.hp += core.values.yellowPotion * core.status.thisMap.ratio * 16000;",
-		"itemEffectTip": "，全属性提升"
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I1025": {
 		"cls": "items",
@@ -2917,16 +2698,14 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 		"canUseItemEffect": "true"
 	},
 	"I1026": {
-		"cls": "constants",
-		"name": "幸运数字 - 1",
-		"canUseItemEffect": "true",
-		"text": "幸运数字 - 1"
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I1027": {
-		"cls": "constants",
-		"name": "幸运数字 - 2",
-		"canUseItemEffect": "true",
-		"text": "幸运数字 - 2"
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I1028": {
 		"cls": "items",
@@ -2934,53 +2713,24 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 		"canUseItemEffect": "true"
 	},
 	"I1029": {
-		"cls": "constants",
-		"name": "幸运数字 - 4",
-		"canUseItemEffect": "true",
-		"text": "幸运数字 - 4"
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I1030": {
-		"cls": "constants",
-		"name": "幸运数字 - 5",
-		"canUseItemEffect": "true",
-		"text": "幸运数字 - 5"
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I1031": {
-		"cls": "constants",
-		"name": "幸运数字 - 6",
-		"canUseItemEffect": "false",
-		"text": "幸运数字 - 6"
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I1032": {
-		"cls": "constants",
-		"name": "幸运数字 - 7",
-		"canUseItemEffect": "true",
-		"text": "幸运数字 - 7（点击补充道具）",
-		"useItemEvent": [
-			{
-				"type": "if",
-				"condition": "(flag:lucky7==0)",
-				"true": [
-					"嗯嗯，眼力不错！我们注意到，\n这堵墙的边缘轮廓似乎淡了一点。\n而实际上这里没有墙，只有这个数字……",
-					"补充了一个磁吸石。",
-					{
-						"type": "setValue",
-						"name": "item:I732",
-						"operator": "+=",
-						"value": "1"
-					},
-					{
-						"type": "setValue",
-						"name": "flag:lucky7",
-						"operator": "+=",
-						"value": "1"
-					}
-				],
-				"false": [
-					"幸运数字没有反应了诶，怎么回事呢。"
-				]
-			}
-		]
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
 	},
 	"I1033": {
 		"cls": "items",
@@ -2988,2361 +2738,319 @@ var items_296f5d02_12fd_4166_a7c1_b5e830c9ee3a =
 		"canUseItemEffect": "true"
 	},
 	"I1034": {
-		"cls": "constants",
-		"name": "幸运数字 - 9",
-		"canUseItemEffect": "true",
-		"text": "幸运数字 - 9"
-	},
-	"I1114": {
-		"cls": "items",
-		"name": "荒兽角",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += 1e6",
-		"itemEffectTip": "，攻击+100万"
-	},
-	"I1115": {
-		"cls": "items",
-		"name": "荒兽筋",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.def += 1e6",
-		"itemEffectTip": "，防御+100万"
-	},
-	"I1116": {
-		"cls": "items",
-		"name": "黑爪枝丫",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += 2e6",
-		"itemEffectTip": "，攻击+200万"
-	},
-	"I1117": {
-		"cls": "items",
-		"name": "白雾枝丫",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.def += 2e6",
-		"itemEffectTip": "，防御+200万"
-	},
-	"I1118": {
-		"cls": "items",
-		"name": "万年赤铁石",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += 1e7",
-		"itemEffectTip": "，攻击+1000万"
-	},
-	"I1119": {
-		"cls": "items",
-		"name": "万年冰山玉",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.def += 1e7",
-		"itemEffectTip": "，防御+1000万"
-	},
-	"I1120": {
-		"cls": "items",
-		"name": "珍海圣珠",
-		"canUseItemEffect": "true",
-		"text": "",
-		"itemEffectTip": "，命盾攻防+160京/320兆/9兆/9兆",
-		"itemEffect": "core.status.hero.hp += 160e16;\ncore.status.hero.mdef += 320e12;\ncore.status.hero.atk += 9e12;\ncore.status.hero.def += 9e12;"
-	},
-	"I1121": {
-		"cls": "items",
-		"name": "血杀剑",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += 1e8",
-		"itemEffectTip": "，攻击+1亿"
-	},
-	"I1122": {
-		"cls": "items",
-		"name": "圣灵结晶",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.def += 2e8",
-		"itemEffectTip": "，防御+2亿"
-	},
-	"I1123": {
-		"cls": "items",
-		"name": "世界树之枝丫",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += 2e8;\ncore.status.hero.def += 2e8",
-		"itemEffectTip": "，攻击、防御+2亿"
-	},
-	"I1124": {
-		"cls": "equips",
-		"name": "银霜月轮（一重）",
-		"canUseItemEffect": "true",
-		"text": "由216颗白水晶组合而成的念力兵器，晶莹的色泽仿佛天使之翼流落于世间，亮丽的外表下是无坚不摧的威势。攻击+520万，同时+18%。",
-		"equip": {
-			"type": 1,
-			"value": {
-				"atk": 5200000
-			},
-			"percentage": {
-				"atk": 18
-			}
-		}
-	},
-	"I1125": {
-		"cls": "equips",
-		"name": "银霜月轮（二重）",
-		"canUseItemEffect": "true",
-		"text": "由216颗白水晶组合而成的念力兵器，晶莹的色泽仿佛天使之翼流落于世间，亮丽的外表下是无坚不摧的威势。攻击+3650万，同时+32%。",
-		"equip": {
-			"type": 1,
-			"value": {
-				"atk": 36500000
-			},
-			"percentage": {
-				"atk": 32
-			}
-		}
-	},
-	"I1126": {
-		"cls": "equips",
-		"name": "银霜月轮（三重）",
-		"canUseItemEffect": "true",
-		"text": "由216颗白水晶组合而成的念力兵器，晶莹的色泽仿佛天使之翼流落于世间，亮丽的外表下是无坚不摧的威势。攻击+2560亿，同时+50%。",
-		"equip": {
-			"type": 1,
-			"value": {
-				"atk": 256000000000
-			},
-			"percentage": {
-				"atk": 50
-			},
-			"equipEvent": [
-				{
-					"type": "if",
-					"condition": "(flag:injc==0)",
-					"true": [
-						{
-							"type": "if",
-							"condition": "(flag:moon4==0)",
-							"true": [
-								{
-									"type": "setValue",
-									"name": "flag:moon4",
-									"value": "1"
-								},
-								"一段剧情。"
-							],
-							"false": []
-						}
-					],
-					"false": []
-				}
-			]
-		}
-	},
-	"I1127": {
-		"cls": "equips",
-		"name": "银霜月轮（四重）",
-		"canUseItemEffect": "true",
-		"text": "由216颗白水晶组合而成的念力兵器，晶莹的色泽仿佛天使之翼流落于世间，亮丽的外表下是无坚不摧的威势。攻击+7.29兆，同时+63%。",
-		"equip": {
-			"type": 1,
-			"value": {
-				"atk": 7290000000000
-			},
-			"percentage": {
-				"atk": 63
-			}
-		}
-	},
-	"I1128": {
-		"cls": "constants",
-		"name": "幸运数字 - A",
-		"canUseItemEffect": "true",
-		"text": "幸运数字 - A（点击补充道具）",
-		"useItemEvent": [
-			{
-				"type": "if",
-				"condition": "(flag:luckyA==0)",
-				"true": [
-					"简直是万里长征呀！\n这一次绝对是史无前例的探索难度！\n怎么样，还要不要继续收集啦？",
-					"补充了五个换位标靶、\n三个破墙镐、\n一个飞行器。",
-					{
-						"type": "setValue",
-						"name": "item:I733",
-						"operator": "+=",
-						"value": "5"
-					},
-					{
-						"type": "setValue",
-						"name": "item:pickaxe",
-						"operator": "+=",
-						"value": "3"
-					},
-					{
-						"type": "setValue",
-						"name": "item:centerFly",
-						"operator": "+=",
-						"value": "1"
-					},
-					{
-						"type": "setValue",
-						"name": "flag:luckyA",
-						"operator": "+=",
-						"value": "1"
-					}
-				],
-				"false": [
-					"幸运数字没有反应了诶，怎么回事呢。"
-				]
-			}
-		]
-	},
-	"I1129": {
-		"cls": "constants",
-		"name": "幸运数字 - B",
-		"canUseItemEffect": "true",
-		"text": "幸运数字 - B（点击补充道具）",
-		"useItemEvent": [
-			{
-				"type": "if",
-				"condition": "(flag:luckyB==0)",
-				"true": [
-					"这样都能被找到嘛！\n到底是什么神奇回路才在拿到新道具之后，\n跑到前面两百多层来操作一下哇！",
-					"补充了一个磁吸石。",
-					{
-						"type": "setValue",
-						"name": "item:I732",
-						"operator": "+=",
-						"value": "1"
-					},
-					{
-						"type": "setValue",
-						"name": "flag:luckyB",
-						"operator": "+=",
-						"value": "1"
-					}
-				],
-				"false": [
-					"幸运数字没有反应了诶，怎么回事呢。"
-				]
-			}
-		]
-	},
-	"I1130": {
-		"cls": "constants",
-		"name": "幸运数字 - C",
-		"canUseItemEffect": "true",
-		"text": "幸运数字 - C"
-	},
-	"I1131": {
-		"cls": "constants",
-		"name": "幸运数字 - D",
-		"canUseItemEffect": "true",
-		"text": "幸运数字 - D"
-	},
-	"I1132": {
-		"cls": "constants",
-		"name": "幸运数字 - E",
-		"canUseItemEffect": "true",
-		"text": "幸运数字 - E"
-	},
-	"I1133": {
-		"cls": "items",
-		"name": "",
-		"canUseItemEffect": "true",
-		"text": ""
-	},
-	"I1134": {
-		"cls": "constants",
-		"name": "幸运字符 - ！",
-		"canUseItemEffect": "true",
-		"text": "幸运字符 - ！"
-	},
-	"I1135": {
-		"cls": "constants",
-		"name": "幸运字符 - ？",
-		"canUseItemEffect": "true",
-		"text": "幸运字符 - ？"
-	},
-	"I1136": {
 		"cls": "items",
 		"name": "新物品",
 		"canUseItemEffect": "true"
 	},
-	"I1137": {
-		"cls": "constants",
-		"name": "幸运字符 - +",
-		"canUseItemEffect": "true",
-		"text": "幸运字符 - +"
-	},
-	"I1138": {
+	"I1035": {
 		"cls": "items",
 		"name": "新物品",
 		"canUseItemEffect": "true"
 	},
-	"I1139": {
+	"I1036": {
 		"cls": "items",
 		"name": "新物品",
 		"canUseItemEffect": "true"
 	},
-	"I1140": {
+	"I1037": {
 		"cls": "items",
 		"name": "新物品",
 		"canUseItemEffect": "true"
 	},
-	"I1141": {
+	"I1038": {
 		"cls": "items",
 		"name": "新物品",
 		"canUseItemEffect": "true"
 	},
-	"I1142": {
+	"I1039": {
 		"cls": "items",
 		"name": "新物品",
 		"canUseItemEffect": "true"
 	},
-	"I1143": {
-		"cls": "constants",
-		"name": "幸运字符 - %",
-		"canUseItemEffect": "true",
-		"text": "幸运字符 - %"
+	"I1040": {
+		"cls": "items",
+		"name": "维度提升系数6",
+		"canUseItemEffect": "true"
 	},
-	"I1144": {
+	"I1041": {
+		"cls": "items",
+		"name": "维度提升系数7",
+		"canUseItemEffect": "true"
+	},
+	"I1042": {
 		"cls": "items",
 		"name": "新物品",
 		"canUseItemEffect": "true"
 	},
-	"I1145": {
-		"cls": "constants",
-		"name": "幸运字符 - @",
-		"canUseItemEffect": "true",
-		"text": "幸运字符 - @"
-	},
-	"I1146": {
+	"I1043": {
 		"cls": "items",
-		"name": "残破神石·红",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += core.values.redGem * core.status.thisMap.ratio * 5000",
-		"itemEffectTip": "，攻击+${core.formatBigNumber(core.values.redGem * core.status.thisMap.ratio*5000)}"
-	},
-	"I1147": {
-		"cls": "items",
-		"name": "残破神石·蓝",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.def += core.values.blueGem * core.status.thisMap.ratio * 5000",
-		"itemEffectTip": "，防御+${core.formatBigNumber(core.values.blueGem * core.status.thisMap.ratio*5000)}"
-	},
-	"I1148": {
-		"cls": "items",
-		"name": "残破神石·绿",
+		"name": "新物品",
 		"canUseItemEffect": "true"
 	},
-	"I1149": {
+	"I1044": {
 		"cls": "items",
-		"name": "残破神石·黄",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += core.values.redGem * core.status.thisMap.ratio * 2000;\ncore.status.hero.def += core.values.blueGem * core.status.thisMap.ratio * 2000;\ncore.status.hero.mdef += core.values.greenGem * core.status.thisMap.ratio * 2000;\ncore.status.hero.hp += core.values.yellowPotion * core.status.thisMap.ratio * 1024000;"
-	},
-	"I1150": {
-		"cls": "items",
-		"name": "混沌神石·红",
+		"name": "新物品",
 		"canUseItemEffect": "true"
 	},
-	"I1151": {
+	"I1045": {
 		"cls": "items",
-		"name": "混沌神石·蓝",
+		"name": "新物品",
 		"canUseItemEffect": "true"
 	},
-	"I1152": {
+	"I1046": {
 		"cls": "items",
-		"name": "混沌神石·黄",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += core.values.redGem * core.status.thisMap.ratio * 5000;\ncore.status.hero.def += core.values.blueGem * core.status.thisMap.ratio * 5000;\ncore.status.hero.mdef += core.values.greenGem * core.status.thisMap.ratio * 5000;\ncore.status.hero.hp += core.values.yellowPotion * core.status.thisMap.ratio * 16384000;"
-	},
-	"I1153": {
-		"cls": "items",
-		"name": "混沌神石·绿",
+		"name": "新物品",
 		"canUseItemEffect": "true"
 	},
-	"I1154": {
+	"I1047": {
 		"cls": "items",
-		"name": "神灵天水",
+		"name": "新物品",
 		"canUseItemEffect": "true"
 	},
-	"I1155": {
+	"I1048": {
 		"cls": "items",
-		"name": "神圣天水",
+		"name": "新物品",
 		"canUseItemEffect": "true"
 	},
-	"I1156": {
+	"I1049": {
 		"cls": "items",
-		"name": "法则灵水",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1050": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1051": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1052": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1053": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1054": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1055": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1056": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1057": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1058": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1059": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1060": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1061": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1062": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1063": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1064": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1065": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1066": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1067": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1068": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1069": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1070": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1071": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1072": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1073": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1074": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1075": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1076": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1077": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1078": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1079": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1080": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1081": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1082": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1083": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1084": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1085": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1086": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1087": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1088": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1089": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1090": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1091": {
+		"cls": "items",
+		"name": "新物品",
+		"canUseItemEffect": "true"
+	},
+	"I1092": {
+		"cls": "items",
+		"name": "新物品",
 		"canUseItemEffect": "true"
 	},
 	"I1157": {
-		"cls": "items",
-		"name": "法则圣水",
-		"canUseItemEffect": "true"
-	},
-	"I1158": {
-		"cls": "items",
-		"name": "神眷·红",
-		"canUseItemEffect": null,
-		"useItemEffect": "core.status.hero.hp += core.values.greenPotion * 67108864",
-		"itemEffectTip": "，生命+${core.formatBigNumber(core.values.greenPotion * core.status.thisMap.ratio * 67108864)}",
-		"itemEffect": "core.status.hero.hp += core.values.greenPotion * 67108864 * core.status.thisMap.ratio"
-	},
-	"I1159": {
-		"cls": "items",
-		"name": "神眷·蓝",
-		"canUseItemEffect": null,
-		"useItemEffect": "core.status.hero.hp += core.values.greenPotion * 268435456",
-		"itemEffectTip": "，生命+${core.formatBigNumber(core.values.greenPotion * core.status.thisMap.ratio * 268435456)}",
-		"itemEffect": "core.status.hero.hp += core.values.greenPotion * 268435456 * core.status.thisMap.ratio"
-	},
-	"I1160": {
-		"cls": "items",
-		"name": "神眷·黄",
-		"canUseItemEffect": null,
-		"useItemEffect": "core.status.hero.hp += core.values.greenPotion * 1073741824",
-		"itemEffectTip": "，生命+${core.formatBigNumber(core.values.greenPotion * core.status.thisMap.ratio * 1073741824)}",
-		"itemEffect": "core.status.hero.hp += core.values.greenPotion * 1073741824 * core.status.thisMap.ratio"
-	},
-	"I1161": {
-		"cls": "items",
-		"name": "神眷·绿",
-		"canUseItemEffect": null,
-		"useItemEffect": "core.status.hero.hp += core.values.greenPotion * 4294967296",
-		"itemEffectTip": "，生命+${core.formatBigNumber(core.values.greenPotion * core.status.thisMap.ratio * 4294967296)}",
-		"itemEffect": "core.status.hero.hp += core.values.greenPotion * 4294967296 * core.status.thisMap.ratio"
-	},
-	"I1162": {
-		"cls": "items",
-		"name": "永恒神石·红",
-		"canUseItemEffect": "true"
-	},
-	"I1163": {
-		"cls": "items",
-		"name": "永恒神石·蓝",
-		"canUseItemEffect": "true"
-	},
-	"I1164": {
-		"cls": "items",
-		"name": "永恒神石·黄",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += core.values.redGem * core.status.thisMap.ratio * 10000;\ncore.status.hero.def += core.values.blueGem * core.status.thisMap.ratio * 10000;\ncore.status.hero.mdef += core.values.greenGem * core.status.thisMap.ratio * 10000;\ncore.status.hero.hp += core.values.yellowPotion * core.status.thisMap.ratio * 2621440000;"
-	},
-	"I1165": {
-		"cls": "items",
-		"name": "永恒神石·绿",
-		"canUseItemEffect": "true"
-	},
-	"I1166": {
-		"cls": "items",
-		"name": "神乞·红",
-		"canUseItemEffect": null,
-		"useItemEffect": "core.status.hero.hp += core.values.greenPotion * 17179869184",
-		"itemEffectTip": "，生命+${core.formatBigNumber(core.values.greenPotion * core.status.thisMap.ratio * 17179869184)}",
-		"itemEffect": "core.status.hero.hp += core.values.greenPotion * 17179869184 * core.status.thisMap.ratio"
-	},
-	"I1167": {
-		"cls": "items",
-		"name": "神乞·蓝",
-		"canUseItemEffect": null,
-		"useItemEffect": "core.status.hero.hp += core.values.greenPotion * 68719476736",
-		"itemEffectTip": "，生命+${core.formatBigNumber(core.values.greenPotion * core.status.thisMap.ratio * 68719476736)}",
-		"itemEffect": "core.status.hero.hp += core.values.greenPotion * 68719476736 * core.status.thisMap.ratio"
-	},
-	"I1168": {
-		"cls": "items",
-		"name": "神乞·黄",
-		"canUseItemEffect": null,
-		"useItemEffect": "core.status.hero.hp += core.values.greenPotion * 274877906944",
-		"itemEffectTip": "，生命+${core.formatBigNumber(core.values.greenPotion * core.status.thisMap.ratio * 274877906944)}",
-		"itemEffect": "core.status.hero.hp += core.values.greenPotion * 274877906944 * core.status.thisMap.ratio"
-	},
-	"I1169": {
-		"cls": "items",
-		"name": "神乞·绿",
-		"canUseItemEffect": null,
-		"useItemEffect": "core.status.hero.hp += core.values.greenPotion * 1099511627776",
-		"itemEffectTip": "，生命+${core.formatBigNumber(core.values.greenPotion * core.status.thisMap.ratio * 1099511627776)}",
-		"itemEffect": "core.status.hero.hp += core.values.greenPotion * 1099511627776 * core.status.thisMap.ratio"
-	},
-	"I1170": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1171": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1172": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1173": {
-		"cls": "items",
-		"name": "清音凤羽",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += 4e11;\ncore.status.hero.def += 4e11",
-		"itemEffectTip": "，攻击、防御+4000亿"
-	},
-	"I1174": {
-		"cls": "items",
-		"name": "魈的赏赐",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.hp += 4e16;\ncore.status.hero.mdef += 40e12;\ncore.status.hero.atk += 2e11;\ncore.status.hero.def += 2e11;",
-		"itemEffectTip": "，生命+4京、护盾+40兆、攻防+2000亿"
-	},
-	"I1175": {
-		"cls": "equips",
-		"name": "银褐星石残片",
-		"canUseItemEffect": "true",
-		"text": "造价昂贵的E9级飞船“大智者级”报废肢解后得到的破片，其铸造材料为下位F级金属“银褐星石”，即使一小块也让界主强者趋之若鹜。\n攻击、防御+80兆。",
-		"equip": {
-			"type": 4,
-			"value": {
-				"def": 80000000000000,
-				"atk": 80000000000000
-			},
-			"percentage": {}
-		}
-	},
-	"I1176": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1177": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1178": {
-		"cls": "equips",
-		"name": "陨墨九诀（小成）",
-		"canUseItemEffect": "true",
-		"text": "陨墨星一脉精神念力修炼方法。凝、韧、散、锐、柔、刚、舞、幻、融，九诀小成后，精神念力凝练至无比坚韧，无懈可击。攻击、防御+2兆，护盾*5。",
-		"equip": {
-			"type": 5,
-			"value": {
-				"def": 2000000000000,
-				"atk": 2000000000000
-			},
-			"percentage": {
-				"mdef": 400
-			}
-		}
-	},
-	"I1179": {
-		"cls": "tools",
-		"name": "驭龙泉",
-		"canUseItemEffect": "false",
-		"text": "深藏于远古龙脉之底，为万纪元前驭使古龙的不朽神灵陨落时所留的气息所滋养，蕴含至纯至净的驭龙之力的奇异泉水。\n每个可抵御【古龙奥利维尔】1%的伤害。"
-	},
-	"I1180": {
-		"cls": "items",
-		"name": "零之翼",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += 7e11;\ncore.status.hero.def += 1.4e12",
-		"itemEffectTip": "，攻击+7000亿、防御+1.4兆"
-	},
-	"I1181": {
-		"cls": "equips",
-		"name": "绮晶",
-		"canUseItemEffect": "true",
-		"text": "诞生于天地秘境之中的神异D级金属，蕴含一丝空间元素，通过扭曲空间以吸收来袭的力量，足以化解域主之下绝大多数的攻势。防御+4096亿，同时+20%；魔防+30兆，同时+40%。",
-		"equip": {
-			"type": 2,
-			"value": {
-				"mdef": 30000000000000,
-				"def": 409600000000
-			},
-			"percentage": {
-				"mdef": 40,
-				"def": 20
-			}
-		}
-	},
-	"I1182": {
 		"cls": "constants",
-		"name": "标志物：心境",
+		"name": "查看总增益",
 		"canUseItemEffect": "true",
-		"text": "诶……你正在进行心境挑战呢。加油！"
-	},
-	"I1183": {
-		"cls": "items",
-		"name": "灰魇庭花",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += 1.5e12;\ncore.status.hero.def += 1.5e12",
-		"itemEffectTip": "，攻击+1.5兆、防御+1.5兆"
-	},
-	"I1184": {
-		"cls": "items",
-		"name": "黄钥匙盒",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.addItem('yellowKey', 9)",
-		"itemEffectTip": ",黄钥匙+9",
-		"text": "装有9把黄钥匙的小盒子。"
-	},
-	"I1185": {
-		"cls": "items",
-		"name": "蓝钥匙盒",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.addItem('blueKey', 9)",
-		"itemEffectTip": ",蓝钥匙+9",
-		"text": "装有9把蓝钥匙的小盒子。"
-	},
-	"I1186": {
-		"cls": "items",
-		"name": "红钥匙盒",
-		"canUseItemEffect": "true",
-		"text": "装有9把红钥匙的小盒子。",
-		"itemEffect": "core.addItem('redKey', 9)",
-		"itemEffectTip": ",红钥匙+9"
-	},
-	"I1187": {
-		"cls": "tools",
-		"name": "心境之石",
-		"canUseItemEffect": "true",
+		"text": "点击查看各项资源的增益",
 		"useItemEvent": [
-			{
-				"type": "function",
-				"function": "function(){\ncore.addItem('I1187', 1);\n}"
-			},
-			{
-				"type": "choices",
-				"text": "确定要使用心境之石吗？",
-				"choices": [
-					{
-						"text": "已经无法再继续了，我需要使用。",
-						"color": [
-							64,
-							179,
-							233,
-							1
-						],
-						"action": [
-							{
-								"type": "setValue",
-								"name": "item:I1187",
-								"operator": "-=",
-								"value": "1"
-							},
-							{
-								"type": "animate",
-								"name": "jidi",
-								"loc": "hero"
-							},
-							{
-								"type": "setValue",
-								"name": "status:hp",
-								"operator": "*=",
-								"value": "1.5"
-							},
-							{
-								"type": "setValue",
-								"name": "status:atk",
-								"operator": "*=",
-								"value": "1.1"
-							},
-							{
-								"type": "setValue",
-								"name": "status:def",
-								"operator": "*=",
-								"value": "1.1"
-							},
-							{
-								"type": "setValue",
-								"name": "status:mdef",
-								"operator": "*=",
-								"value": "1.1"
-							},
-							"使用成功！\n你的生命增加了一半，\n三围属性增加了10%。\n同时，作为代价，你的分数变为之前的1%。",
-							{
-								"type": "if",
-								"condition": "(flag:xun==0)",
-								"true": [
-									"检测到当前为首次使用心境之石，\n你将获得最大程度的难度降幅，\n因此付出的分数代价为十倍。",
-									{
-										"type": "setValue",
-										"name": "flag:xun",
-										"value": "1000"
-									}
-								],
-								"false": [
-									{
-										"type": "setValue",
-										"name": "flag:xun",
-										"operator": "*=",
-										"value": "100"
-									}
-								]
-							},
-							{
-								"type": "if",
-								"condition": "(item:I1187==0)",
-								"true": [
-									"你居然用掉了所有的心境之石！\n恭喜触发特殊的奖励，请查看背包。",
-									{
-										"type": "setValue",
-										"name": "item:I1418",
-										"operator": "+=",
-										"value": "1"
-									}
-								],
-								"false": []
-							}
-						]
-					},
-					{
-						"text": "还可以……坚持一下。",
-						"color": [
-							239,
-							219,
-							111,
-							1
-						],
-						"action": []
-					}
-				]
-			}
-		],
-		"text": "看起来只是一块不太普通的石头。\n使用后生命+50%，三围属性+10%，分数变为1%。（首次使用代价十倍）"
-	},
-	"I1418": {
-		"cls": "constants",
-		"name": "标志物：咸",
-		"canUseItemEffect": "true",
-		"text": "你的心境之石用得太多了！\n现在游戏变成走路模拟器了。"
-	},
-	"I1419": {
-		"cls": "items",
-		"name": "创世神石·红",
-		"canUseItemEffect": "true"
-	},
-	"I1420": {
-		"cls": "items",
-		"name": "创世神石·蓝",
-		"canUseItemEffect": "true"
-	},
-	"I1421": {
-		"cls": "items",
-		"name": "创世神石·黄",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += core.values.redGem * core.status.thisMap.ratio * 20000;\ncore.status.hero.def += core.values.blueGem * core.status.thisMap.ratio * 20000;\ncore.status.hero.mdef += core.values.greenGem * core.status.thisMap.ratio * 20000;\ncore.status.hero.hp += core.values.yellowPotion * core.status.thisMap.ratio * 41943040000;"
-	},
-	"I1422": {
-		"cls": "items",
-		"name": "创世神石·绿",
-		"canUseItemEffect": "true"
-	},
-	"I1423": {
-		"cls": "items",
-		"name": "奇迹红宝石",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += core.values.redGem * core.status.thisMap.ratio * 1000",
-		"itemEffectTip": "，攻击+${core.formatBigNumber(core.values.redGem * core.status.thisMap.ratio*1000)}"
-	},
-	"I1424": {
-		"cls": "items",
-		"name": "奇迹蓝宝石",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.def += core.values.blueGem * core.status.thisMap.ratio * 1000",
-		"itemEffectTip": "，防御+${core.formatBigNumber(core.values.blueGem * core.status.thisMap.ratio*1000)}"
-	},
-	"I1425": {
-		"cls": "items",
-		"name": "奇迹绿宝石",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.mdef += core.values.greenGem * core.status.thisMap.ratio * 1000",
-		"itemEffectTip": "，护盾+${core.formatBigNumber(core.values.greenGem * core.status.thisMap.ratio*1000)}"
-	},
-	"I1426": {
-		"cls": "items",
-		"name": "奇迹黄宝石",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += core.values.redGem * core.status.thisMap.ratio * 1000;\ncore.status.hero.def += core.values.blueGem * core.status.thisMap.ratio * 1000;\ncore.status.hero.mdef += core.values.greenGem * core.status.thisMap.ratio * 1000;\ncore.status.hero.hp += core.values.yellowPotion * core.status.thisMap.ratio * 128000;"
-	},
-	"I1427": {
-		"cls": "items",
-		"name": null,
-		"canUseItemEffect": "true",
-		"text": null
-	},
-	"I1428": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1429": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1430": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1431": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1432": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1433": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1434": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1435": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1436": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1437": {
-		"cls": "items",
-		"name": "次级领悟之灵",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.money += 100",
-		"itemEffectTip": "，领悟+100",
-		"text": "天地间充沛的能量滋养诞生的光球，\n接触后能够化作海量的领悟为人所用。\n角色增加100领悟。"
-	},
-	"I1438": {
-		"cls": "items",
-		"name": "初级领悟之灵",
-		"canUseItemEffect": "true",
-		"text": "天地间充沛的能量滋养诞生的光球，\n接触后能够化作海量的领悟为人所用。\n角色增加1000领悟。",
-		"itemEffect": "core.status.hero.money += 1000",
-		"itemEffectTip": "，领悟+1000"
-	},
-	"I1439": {
-		"cls": "items",
-		"name": "中级领悟之灵",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.money += 10000",
-		"itemEffectTip": "，领悟+10000",
-		"text": "天地间充沛的能量滋养诞生的光球，\n接触后能够化作海量的领悟为人所用。\n角色增加10000领悟。"
-	},
-	"I1440": {
-		"cls": "items",
-		"name": "高级领悟之灵",
-		"canUseItemEffect": "true"
-	},
-	"I1441": {
-		"cls": "items",
-		"name": "绽放的领悟之灵",
-		"canUseItemEffect": "true"
-	},
-	"I1442": {
-		"cls": "items",
-		"name": "闪耀的领悟之灵",
-		"canUseItemEffect": "true"
-	},
-	"I1443": {
-		"cls": "items",
-		"name": "圣洁的领悟之灵",
-		"canUseItemEffect": "true"
-	},
-	"I1444": {
-		"cls": "items",
-		"name": "史诗的领悟之灵",
-		"canUseItemEffect": "true"
-	},
-	"I1445": {
-		"cls": "items",
-		"name": "传说的领悟之灵",
-		"canUseItemEffect": "true"
-	},
-	"I1446": {
-		"cls": "items",
-		"name": "神话的领悟之灵",
-		"canUseItemEffect": "true"
-	},
-	"I1447": {
-		"cls": "items",
-		"name": "不朽的领悟之灵",
-		"canUseItemEffect": "true"
-	},
-	"I1448": {
-		"cls": "items",
-		"name": "奇迹的领悟之灵",
-		"canUseItemEffect": "true"
-	},
-	"I1449": {
-		"cls": "equips",
-		"name": "天织套装",
-		"canUseItemEffect": "true",
-		"text": "采用E级金属打造，附着得自植物生命天织花的绸缎材料，柔韧而坚劲，融合十种基础元素护罩，可根据战斗需要进行灵活调整。\n防御+9.6兆，同时+48%。",
-		"equip": {
-			"type": 2,
-			"value": {
-				"def": 9600000000000
-			},
-			"percentage": {
-				"def": 48
-			}
-		}
-	},
-	"I1450": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1451": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1452": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1453": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1454": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1455": {
-		"cls": "items",
-		"name": "行道者的通行证",
-		"canUseItemEffect": "true",
-		"itemEffectTip": "，生命+600京，攻击、防御+20兆",
-		"itemEffect": "core.status.hero.hp += 600e16;\ncore.status.hero.atk += 20e12;\ncore.status.hero.def += 20e12;"
-	},
-	"I1456": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1457": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1458": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1459": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1460": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1461": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1462": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1463": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1464": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1465": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1466": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1467": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1468": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1469": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1470": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1471": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1472": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1473": {
-		"cls": "constants",
-		"name": "驱散之戒（假）",
-		"canUseItemEffect": "true"
-	},
-	"I1474": {
-		"cls": "items",
-		"name": "高阶道具黑箱",
-		"canUseItemEffect": "true",
-		"text": "带有珍贵物品标志箱子，里面装了大量道具。\n打开后获得红、破、飞、吸、换各四。",
-		"itemEffect": "core.addItem('redKey', 4)\ncore.addItem('pickaxe', 4)\ncore.addItem('centerFly', 4)\ncore.addItem('I732', 4)\ncore.addItem('I733', 4)",
-		"itemEffectTip": ",全道具+4"
-	},
-	"I1475": {
-		"cls": "items",
-		"name": "道具黑箱",
-		"canUseItemEffect": "true",
-		"text": "不明金属所制的箱子，里面装了一整套道具。\n打开后获得红、破、飞、吸、换各一。",
-		"itemEffect": "core.addItem('redKey', 1)\ncore.addItem('pickaxe', 1)\ncore.addItem('centerFly', 1)\ncore.addItem('I732', 1)\ncore.addItem('I733', 1)",
-		"itemEffectTip": ",全道具+1"
-	},
-	"I1476": {
-		"cls": "equips",
-		"name": "星震卷轴",
-		"canUseItemEffect": "true",
-		"text": "威力庞大而造型奇特的卷轴状物，蕴含足以引发一颗生命星球物种大灭绝的能量。\n攻击+5.6兆，防御+4兆。",
-		"equip": {
-			"type": 4,
-			"value": {
-				"def": 4000000000000,
-				"atk": 5600000000000
-			},
-			"percentage": {}
-		}
-	},
-	"I1477": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true",
-		"useItemEvent": [
-			{
-				"type": "autoSave"
-			},
-			{
-				"type": "playSound",
-				"name": "heart.mp3"
-			},
-			{
-				"type": "animate",
-				"name": "buff",
-				"loc": [
-					8,
-					7
-				],
-				"async": true
-			},
-			{
-				"type": "function",
-				"function": "function(){\ncore.replaceBlock(81, 83);\n}"
-			},
-			{
-				"type": "function",
-				"function": "function(){\ncore.replaceBlock(82, 83);\n}"
-			},
-			{
-				"type": "function",
-				"function": "function(){\ncore.replaceBlock(85, 454);\n}"
-			},
-			{
-				"type": "function",
-				"function": "function(){\ncore.replaceBlock(86, 109);\n}"
-			},
-			{
-				"type": "function",
-				"function": "function(){\ncore.replaceBlock(28, 27);\n}"
-			},
-			{
-				"type": "function",
-				"function": "function(){\ncore.replaceBlock(21,23);\n}"
-			},
-			{
-				"type": "function",
-				"function": "function(){\ncore.replaceBlock(22, 23);\n}"
-			},
-			{
-				"type": "function",
-				"function": "function(){\ncore.replaceBlock(32, 31);\n}"
-			},
-			{
-				"type": "function",
-				"function": "function(){\ncore.replaceBlock(1, 110);\n}"
-			},
-			{
-				"type": "function",
-				"function": "function(){\ncore.replaceBlock(4, 111);\n}"
-			},
-			{
-				"type": "setFloor",
-				"name": "defaultGround",
-				"value": "grass"
-			},
-			{
-				"type": "function",
-				"function": "function(){\ncore.drawMap()\n}"
-			},
-			{
-				"type": "waitAsync"
-			}
+			"草:${core.formatBigNumber(flag:zczy)}x 经验:${core.formatBigNumber(flag:zjyzy)}x 白金:${core.formatBigNumber(flag:zbjzy)}x\n层点:${core.formatBigNumber(flag:zjczy)}x  充能:${core.formatBigNumber(flag:zcnzy)}x \n阶层效果:经验获取x${core.formatBigNumber(flag:jceff)}\n声望:${core.formatBigNumber(flag:zpzy)} 水晶:${core.formatBigNumber(flag:zsjzy)} 钢铁:${core.formatBigNumber(flag:zgtzy)}\n反草:${core.formatBigNumber(flag:zfczy)}x 反经验:${core.formatBigNumber(flag:zfjyzy)}x"
 		]
 	},
-	"I1478": {
+	"I1160": {
 		"cls": "constants",
-		"name": "幸运箭头 - ↑",
+		"name": "显示资源",
 		"canUseItemEffect": "true",
-		"text": "幸运箭头 - ↑"
-	},
-	"I1479": {
-		"cls": "constants",
-		"name": "幸运箭头 - ↓",
-		"canUseItemEffect": "true",
-		"text": "幸运箭头 - ↓"
-	},
-	"I1480": {
-		"cls": "constants",
-		"name": "幸运箭头 - ←",
-		"canUseItemEffect": "true",
-		"text": "幸运箭头 - ←"
-	},
-	"I1481": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1482": {
-		"cls": "constants",
-		"name": "幸运箭头 - ∧",
-		"canUseItemEffect": "true",
-		"text": "幸运箭头 - ∧"
-	},
-	"I1483": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1484": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1485": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1486": {
-		"cls": "items",
-		"name": "仙红补给品",
-		"canUseItemEffect": null,
-		"itemEffect": "core.status.hero.hp += core.values.greenPotion * 262144 * core.status.thisMap.ratio",
-		"itemEffectTip": "，生命+${core.formatBigNumber(core.values.greenPotion * core.status.thisMap.ratio * 262144)}",
-		"useItemEffect": "core.status.hero.hp += core.values.greenPotion * 262144"
-	},
-	"I1487": {
-		"cls": "items",
-		"name": "仙蓝补给品",
-		"canUseItemEffect": null,
-		"itemEffect": "core.status.hero.hp += core.values.greenPotion * 1048576 * core.status.thisMap.ratio",
-		"itemEffectTip": "，生命+${core.formatBigNumber(core.values.greenPotion * core.status.thisMap.ratio * 1048576)}",
-		"useItemEffect": "core.status.hero.hp += core.values.greenPotion * 1048576"
-	},
-	"I1488": {
-		"cls": "items",
-		"name": "仙黄补给品",
-		"useItemEffect": "core.status.hero.hp += core.values.greenPotion * 4194304",
-		"itemEffectTip": "，生命+${core.formatBigNumber(core.values.greenPotion * core.status.thisMap.ratio * 4194304)}",
-		"itemEffect": "core.status.hero.hp += core.values.greenPotion * 4194304 * core.status.thisMap.ratio"
-	},
-	"I1489": {
-		"cls": "items",
-		"name": "仙绿补给品",
-		"canUseItemEffect": null,
-		"useItemEffect": "core.status.hero.hp += core.values.greenPotion * 16777216",
-		"itemEffectTip": "，生命+${core.formatBigNumber(core.values.greenPotion * core.status.thisMap.ratio * 16777216)}",
-		"itemEffect": "core.status.hero.hp += core.values.greenPotion * 16777216 * core.status.thisMap.ratio"
-	},
-	"I1490": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1491": {
-		"cls": "constants",
-		"name": "一丝水火法则感悟",
-		"canUseItemEffect": "true",
-		"text": "一丝水火法则感悟。\n将护盾的千分之三加在攻防上。"
-	},
-	"I1492": {
-		"cls": "constants",
-		"name": "迈入水火法则门槛",
-		"canUseItemEffect": "true",
-		"text": "迈入水火法则门槛。\n将护盾的千分之六加在攻防上。"
-	},
-	"I1493": {
-		"cls": "constants",
-		"name": "初成水火法则感悟",
-		"canUseItemEffect": "true",
-		"text": "水火法则感悟已经初成。（领悟后，“迈入水火法则门槛”将消失）\n将护盾的百分之一加在攻防上，且每次攻击附带千分之一的魔攻。",
-		"useItemEvent": null
-	},
-	"I1494": {
-		"cls": "equips",
-		"name": "时光殿（未知）",
-		"canUseItemEffect": "true",
-		"text": "？？？",
-		"equip": {
-			"type": 5,
-			"value": {},
-			"percentage": {}
-		}
-	},
-	"I1495": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1697": {
-		"cls": "equips",
-		"name": "银霜月轮（圆满）",
-		"canUseItemEffect": "true",
-		"text": "由216颗白水晶组合而成的念力兵器，晶莹的色泽仿佛天使之翼流落于世间，亮丽的外表下是无坚不摧的威势。攻击+52.9兆，同时+80%。",
-		"equip": {
-			"type": 1,
-			"value": {
-				"atk": 52900000000000
-			},
-			"percentage": {
-				"atk": 80
+		"text": "点击在页面上显示已解锁的资源",
+		"useItemEvent": [
+			{
+				"type": "insert",
+				"name": "显示资源"
 			}
-		}
-	},
-	"I1698": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1699": {
-		"cls": "equips",
-		"name": "九线流",
-		"canUseItemEffect": "true",
-		"text": "精神念师飞行秘法《万线流》第二层，似乎在天外族群的不朽神灵之中流传很广的秘术，蕴含空间的道与理，足以对照感悟空间本源法则。身法大成，可现万千幻身，臻至瞬移之境。角色全属性+255%。",
-		"equip": {
-			"type": 0,
-			"value": {},
-			"percentage": {
-				"mdef": 255,
-				"def": 255,
-				"atk": 255
-			}
-		}
-	},
-	"I1700": {
-		"cls": "equips",
-		"name": "兽神残卷（三阶小成）",
-		"canUseItemEffect": "true",
-		"equip": {
-			"type": 0,
-			"value": {},
-			"percentage": {
-				"mdef": 165,
-				"def": 165,
-				"atk": 165
-			}
-		},
-		"text": "天生兽神留下来的残卷，蕴含着无穷尽的伟力，带领血洛大陆的荒兽族群走向强盛与繁荣。角色全属性+165%，战斗伤害-40%。"
-	},
-	"I1701": {
-		"cls": "equips",
-		"name": "兽神残卷（三阶大成）",
-		"canUseItemEffect": "true",
-		"equip": {
-			"type": 0,
-			"value": {},
-			"percentage": {
-				"mdef": 200,
-				"def": 200,
-				"atk": 200
-			}
-		},
-		"text": "天生兽神留下来的残卷，蕴含着无穷尽的伟力，带领血洛大陆的荒兽族群走向强盛与繁荣。角色全属性+200%，战斗伤害-40%。"
-	},
-	"I1702": {
-		"cls": "equips",
-		"name": "兽神残卷（三阶圆满）",
-		"canUseItemEffect": "true",
-		"equip": {
-			"type": 0,
-			"value": {},
-			"percentage": {
-				"mdef": 255,
-				"def": 255,
-				"atk": 255
-			}
-		},
-		"text": "天生兽神留下来的残卷，蕴含着无穷尽的伟力，带领血洛大陆的荒兽族群走向强盛与繁荣。角色全属性+255%，战斗伤害-40%。"
-	},
-	"I1703": {
-		"cls": "equips",
-		"name": "兽神残卷（四阶初成）",
-		"canUseItemEffect": "true",
-		"equip": {
-			"type": 0,
-			"value": {},
-			"percentage": {
-				"mdef": 320,
-				"def": 320,
-				"atk": 320
-			}
-		},
-		"text": "天生兽神留下来的残卷，蕴含着无穷尽的伟力，带领血洛大陆的荒兽族群走向强盛与繁荣。角色全属性+320%，战斗伤害-40%。"
-	},
-	"I1704": {
-		"cls": "equips",
-		"name": "兽神残卷（四阶小成）",
-		"canUseItemEffect": "true",
-		"equip": {
-			"type": 0,
-			"value": {},
-			"percentage": {
-				"mdef": 400,
-				"def": 400,
-				"atk": 400
-			}
-		},
-		"text": "天生兽神留下来的残卷，蕴含着无穷尽的伟力，带领血洛大陆的荒兽族群走向强盛与繁荣。角色全属性*5，战斗伤害-40%。"
-	},
-	"I1705": {
-		"cls": "equips",
-		"name": "兽神残卷（四阶大成）",
-		"canUseItemEffect": "true",
-		"equip": {
-			"type": 0,
-			"value": {},
-			"percentage": {
-				"mdef": 500,
-				"def": 500,
-				"atk": 500
-			}
-		},
-		"text": "天生兽神留下来的残卷，蕴含着无穷尽的伟力，带领血洛大陆的荒兽族群走向强盛与繁荣。角色全属性*6，战斗伤害-40%。"
-	},
-	"I1706": {
-		"cls": "equips",
-		"name": "兽神残卷（四阶圆满）",
-		"canUseItemEffect": "true",
-		"text": "天生兽神留下来的残卷，蕴含着无穷尽的伟力，带领血洛大陆的荒兽族群走向强盛与繁荣。角色全属性*7.5，战斗伤害-40%。",
-		"equip": {
-			"type": 0,
-			"value": {},
-			"percentage": {
-				"mdef": 650,
-				"def": 650,
-				"atk": 650
-			}
-		}
-	},
-	"I1707": {
-		"cls": "equips",
-		"name": "兽神残卷（四阶极致）",
-		"canUseItemEffect": "true",
-		"text": "天生兽神留下来的残卷，蕴含着无穷尽的伟力，带领血洛大陆的荒兽族群走向强盛与繁荣。角色全属性*9，战斗伤害-40%。",
-		"equip": {
-			"type": 0,
-			"value": {},
-			"percentage": {
-				"mdef": 800,
-				"def": 800,
-				"atk": 800
-			}
-		}
-	},
-	"I1708": {
-		"cls": "equips",
-		"name": "二色灵诀",
-		"canUseItemEffect": "true",
-		"text": "由巅峰强者“灵淼仙子”所创造的一门心诀，以水、火感悟为基，将两种法则的平衡与调和臻至极致，直指本源，形成神异独特的“二色灵力”，万物化生，演化出千变万化的术式。角色全属性*5。",
-		"equip": {
-			"type": 0,
-			"value": {},
-			"percentage": {
-				"mdef": 400,
-				"def": 400,
-				"atk": 400
-			}
-		}
-	},
-	"I1709": {
-		"cls": "equips",
-		"name": "虚空之塔（四层）",
-		"canUseItemEffect": "true",
-		"text": "陨墨星一脉顶级防御秘法，以强大坚韧的灵魂力量构造出精密的灵魂之塔，保护本源命核以渡过各种极端恶劣的困局。角色全属性+320%。",
-		"equip": {
-			"type": 0,
-			"value": {},
-			"percentage": {
-				"mdef": 320,
-				"def": 320,
-				"atk": 320
-			}
-		}
-	},
-	"I1710": {
-		"cls": "equips",
-		"name": "虚空之塔（五层）",
-		"canUseItemEffect": "true"
-	},
-	"I1711": {
-		"cls": "equips",
-		"name": "百线流",
-		"canUseItemEffect": "true",
-		"text": "精神念师飞行秘法《万线流》第三层，似乎在天外族群的不朽神灵之中流传很广的秘术，蕴含空间的道与理，足以对照感悟空间本源法则。身法大成，可现万千幻身，臻至瞬移之境。角色全属性*6。",
-		"equip": {
-			"type": 0,
-			"value": {},
-			"percentage": {
-				"mdef": 500,
-				"def": 500,
-				"atk": 500
-			}
-		}
-	},
-	"I1712": {
-		"cls": "equips",
-		"name": "洛神九变",
-		"canUseItemEffect": "true"
-	},
-	"I1713": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1714": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1715": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1716": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1717": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1718": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1719": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1720": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1721": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1722": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1723": {
-		"cls": "equips",
-		"name": "闭月炎泉【领域极致】",
-		"canUseItemEffect": "true",
-		"text": "水火元素纵横，形成交织的流炎之泉。水帘垂落而下，治愈的灵巧协奏着水之温和，心醉神迷；周遭炎火流转跳动，炽烈的力量燃烧起火之战意，无往不利。\n攻击、防御+77.44兆，同时+120%，护盾+240%。",
-		"equip": {
-			"type": 3,
-			"value": {
-				"def": 77440000000000,
-				"atk": 77440000000000
-			},
-			"percentage": {
-				"mdef": 240,
-				"def": 120,
-				"atk": 120
-			}
-		}
-	},
-	"I1724": {
-		"cls": "items",
-		"name": "莲落水华【法则果实】",
-		"canUseItemEffect": "true"
-	},
-	"I1725": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1726": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1727": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1728": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1729": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1730": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1731": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1732": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1733": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1734": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1735": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1736": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1737": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1738": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1739": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1740": {
-		"cls": "equips",
-		"name": "时光殿（未启）",
-		"canUseItemEffect": "true",
-		"text": "？？？\n角色全属性+50%。",
-		"equip": {
-			"type": 5,
-			"value": {},
-			"percentage": {
-				"mdef": 50,
-				"def": 50,
-				"atk": 50
-			}
-		}
-	},
-	"I1741": {
-		"cls": "items",
-		"name": "原始神石·红",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += core.values.redGem * core.status.thisMap.ratio * 10000",
-		"itemEffectTip": "，攻击+${core.formatBigNumber(core.values.redGem * core.status.thisMap.ratio*10000)}"
-	},
-	"I1742": {
-		"cls": "items",
-		"name": "原始神石·蓝",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.def += core.values.blueGem * core.status.thisMap.ratio * 10000",
-		"itemEffectTip": "，防御+${core.formatBigNumber(core.values.blueGem * core.status.thisMap.ratio*10000)}"
-	},
-	"I1743": {
-		"cls": "items",
-		"name": "原始神石·绿",
-		"canUseItemEffect": "true"
-	},
-	"I1744": {
-		"cls": "items",
-		"name": "原始神石·黄",
-		"canUseItemEffect": "true"
-	},
-	"I1745": {
-		"cls": "items",
-		"name": "上位神石·红",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += core.values.redGem * core.status.thisMap.ratio * 20000",
-		"itemEffectTip": "，攻击+${core.formatBigNumber(core.values.redGem * core.status.thisMap.ratio*20000}"
-	},
-	"I1746": {
-		"cls": "items",
-		"name": "上位神石·蓝",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.def += core.values.blueGem * core.status.thisMap.ratio * 20000",
-		"itemEffectTip": "，防御+${core.formatBigNumber(core.values.blueGem * core.status.thisMap.ratio*20000}"
-	},
-	"I1747": {
-		"cls": "items",
-		"name": "上位神石·绿",
-		"canUseItemEffect": "true"
-	},
-	"I1748": {
-		"cls": "items",
-		"name": "上位神石·黄",
-		"canUseItemEffect": "true"
-	},
-	"I1749": {
-		"cls": "items",
-		"name": "冒险者的补给",
-		"canUseItemEffect": "true",
-		"itemEffectTip": "，生命+5000京、护盾+2京",
-		"itemEffect": "core.status.hero.hp += 5000e16;\ncore.status.hero.mdef += 2e16;"
-	},
-	"I1750": {
-		"cls": "items",
-		"name": "红桦叶",
-		"canUseItemEffect": "true",
-		"itemEffectTip": "，攻击、防御+100兆",
-		"itemEffect": "core.status.hero.atk += 100e12;\ncore.status.hero.def += 100e12;"
-	},
-	"I1751": {
-		"cls": "items",
-		"name": "红色血魔凝晶",
-		"canUseItemEffect": "true",
-		"itemEffectTip": "，攻击+500兆",
-		"itemEffect": "core.status.hero.atk += 500e12;"
-	},
-	"I1752": {
-		"cls": "items",
-		"name": "蓝色血魔凝晶",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.def += 500e12;",
-		"itemEffectTip": "，防御+500兆"
-	},
-	"I1753": {
-		"cls": "items",
-		"name": "燃尽荆棘之刺",
-		"canUseItemEffect": "true",
-		"itemEffectTip": "，攻击+900兆、防御+300兆",
-		"itemEffect": "core.status.hero.atk += 900e12;\ncore.status.hero.def += 300e12;"
-	},
-	"I1754": {
-		"cls": "items",
-		"name": "燃尽火海之星",
-		"canUseItemEffect": "true",
-		"itemEffectTip": "，攻击+300兆、防御+900兆",
-		"itemEffect": "core.status.hero.atk += 300e12;\ncore.status.hero.def += 900e12;"
-	},
-	"I1755": {
-		"cls": "items",
-		"name": "葬地万年寒果",
-		"canUseItemEffect": "true",
-		"itemEffectTip": "，攻击、防御+1320兆、护盾+10京",
-		"itemEffect": "core.status.hero.atk += 1320e12;\ncore.status.hero.def += 1320e12;\ncore.status.hero.mdef += 10e16;"
-	},
-	"I1756": {
-		"cls": "items",
-		"name": "古神的颂歌·红",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.hp += core.values.greenPotion * 1099511627776 * core.status.thisMap.ratio"
-	},
-	"I1757": {
-		"cls": "items",
-		"name": "古神的颂歌·蓝",
-		"canUseItemEffect": "true"
-	},
-	"I1758": {
-		"cls": "items",
-		"name": "古神的颂歌·黄",
-		"canUseItemEffect": "true"
-	},
-	"I1759": {
-		"cls": "items",
-		"name": "古神的颂歌·绿",
-		"canUseItemEffect": "true"
-	},
-	"I1760": {
-		"cls": "items",
-		"name": "『冗律』铁剑",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += 5000e12;",
-		"itemEffectTip": "，攻击+5000兆"
-	},
-	"I1761": {
-		"cls": "items",
-		"name": "『冗律』银剑",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += 1e16;",
-		"itemEffectTip": "，攻击+1京"
-	},
-	"I1762": {
-		"cls": "items",
-		"name": "『冗律』圣剑",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += 2e16;",
-		"itemEffectTip": "，攻击+2京"
-	},
-	"I1763": {
-		"cls": "items",
-		"name": "『冗律』铁盾",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.def += 5000e12;",
-		"itemEffectTip": "，防御+5000兆"
-	},
-	"I1764": {
-		"cls": "items",
-		"name": "『冗律』银盾",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.def += 1e16;",
-		"itemEffectTip": "，防御+1京"
-	},
-	"I1765": {
-		"cls": "items",
-		"name": "『冗律』圣盾",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.def += 2e16;",
-		"itemEffectTip": "，防御+2京"
-	},
-	"I1766": {
-		"cls": "items",
-		"name": "缥缈音魂",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.hp += 400e20;",
-		"itemEffectTip": "，生命+400垓"
-	},
-	"I1767": {
-		"cls": "items",
-		"name": "啸啸风叶",
-		"canUseItemEffect": "true",
-		"itemEffectTip": "，攻击+5000兆",
-		"itemEffect": "core.status.hero.atk += 5000e12;"
-	},
-	"I1768": {
-		"cls": "items",
-		"name": "幻心镜",
-		"canUseItemEffect": "true",
-		"itemEffectTip": "，防御+5000兆",
-		"itemEffect": "core.status.hero.def += 5000e12;"
-	},
-	"I1769": {
-		"cls": "items",
-		"name": "纯白八音盒",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.def += 4e16;",
-		"itemEffectTip": "，防御+4京"
-	},
-	"I1770": {
-		"cls": "items",
-		"name": "燃翼长琴",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += 4e16;",
-		"itemEffectTip": "，攻击+4京"
-	},
-	"I1771": {
-		"cls": "items",
-		"name": "天使之翼徽",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += 10e16;",
-		"itemEffectTip": "，攻击+10京"
-	},
-	"I1772": {
-		"cls": "items",
-		"name": "调和弦六角章",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.def += 10e16;",
-		"itemEffectTip": "，防御+10京"
-	},
-	"I1773": {
-		"cls": "equips",
-		"name": "洛神兵·惊鸿",
-		"canUseItemEffect": "true",
-		"text": "掌控者九大神兵之一，由10081枚银、玉二色的重水结晶构成的弓形神兵。尾族巅峰存在“澪一”于绝地【洛水】的一次异象中，捕捉到自然协和之水，与原始空寂之空间协奏的微妙韵律，诞生的智慧结晶，堪称水、空法则的巅峰之作。当前为第一重。（武器）\n攻击+5京，同时+135%。",
-		"equip": {
-			"type": 1,
-			"value": {
-				"atk": 50000000000000000
-			},
-			"percentage": {
-				"atk": 135
-			}
-		}
-	},
-	"I1774": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1775": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1776": {
-		"cls": "equips",
-		"name": "遁影烛",
-		"canUseItemEffect": "true",
-		"text": "由机缘巧合下诞生的某种珍奇灵材炼制而成，外表似蜡烛，表面散发着淡淡的蕴含空间本源法则的荧光，可令持有者身形无影无踪，非神灵不可寻踪迹。（特殊）\n角色全属性+80%，战斗伤害*0.9。",
-		"equip": {
-			"type": 5,
-			"value": {},
-			"percentage": {
-				"mdef": 80,
-				"def": 80,
-				"atk": 80
-			}
-		}
-	},
-	"I1777": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1778": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1779": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1780": {
-		"cls": "items",
-		"name": "岩灵巨力果",
-		"canUseItemEffect": "true",
-		"text": "生长于致密岩石行星的内核之中，火、空元素最为浓郁之处，表面覆盖着粗糙而坚硬的石质外壳，带有淡淡的土壤、矿石与果香混合的气息，服用可以提升火空法则的亲和度。\n立即增加12.5京基础攻击、防御。",
-		"itemEffectTip": "，攻击、防御+12.5京",
-		"itemEffect": "core.status.hero.atk += 125e15;\ncore.status.hero.def += 125e15;"
-	},
-	"I1781": {
-		"cls": "equips",
-		"name": "起源之章",
-		"canUseItemEffect": "true",
-		"text": "某位伟大炼器师使用F级金属制成的纹章，雕刻着蕴含宇宙间八大法则最原始、纯粹的符文与图案。通过对其研读与感悟，曾有强者一路问鼎，打遍不朽之下无敌手，所向披靡。（器械）\n基础攻击、防御+32京，同时+30%，基础护盾-144京。",
-		"equip": {
-			"type": 4,
-			"value": {
-				"mdef": -1440000000000000000,
-				"def": 320000000000000000,
-				"atk": 320000000000000000
-			},
-			"percentage": {
-				"def": 30,
-				"atk": 30
-			}
-		}
-	},
-	"I1782": {
-		"cls": "equips",
-		"name": "芊缈叶·域初",
-		"canUseItemEffect": "true",
-		"text": "享有盛誉而又非常稀有的植物生命，以“生态恢复”的能力而著称，能够汲取环境中的负面能量与有害物质，转化为滋养自身的生命精华，并释放出净化光环，为宿主生命提供庇护。当前培养阶段为领域级初期，进化标志在于其叶片脉络与纹理的复杂度。（防具）防御+90%，护盾+150%。",
-		"equip": {
-			"type": 2,
-			"value": {},
-			"percentage": {
-				"mdef": 150,
-				"def": 90
-			}
-		}
-	},
-	"I1783": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1784": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1785": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1786": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1787": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I1788": {
-		"cls": "tools",
-		"name": "一倍领悟获取速度",
-		"canUseItemEffect": "true",
-		"hideInToolbox": true,
-		"text": "这枚彩色的、画着古怪笑脸的金币……似乎代表着每次战斗中领悟法则的速度。"
-	},
-	"I1789": {
-		"cls": "equips",
-		"name": "洛神兵·游龙",
-		"canUseItemEffect": "true",
-		"text": "掌控者九大神兵之一，由10081枚银、玉二色的重水结晶构成的弓形神兵。尾族巅峰存在“澪一”于绝地【洛水】的一次异象中，捕捉到自然协和之水，与原始空寂之空间协奏的微妙韵律，诞生的智慧结晶，堪称水、空法则的巅峰之作。当前为第二重。（武器）\n攻击+49京，同时+180%。",
-		"equip": {
-			"type": 1,
-			"value": {
-				"atk": 490000000000000000
-			},
-			"percentage": {
-				"atk": 180
-			}
-		}
-	},
-	"I1790": {
-		"cls": "equips",
-		"name": "洛神兵·轻云",
-		"canUseItemEffect": "true"
-	},
-	"I1791": {
-		"cls": "equips",
-		"name": "洛神兵·蔽月",
-		"canUseItemEffect": "true"
-	},
-	"I1792": {
-		"cls": "equips",
-		"name": "洛神兵·流风",
-		"canUseItemEffect": "true"
-	},
-	"I1793": {
-		"cls": "equips",
-		"name": "洛神兵·回雪",
-		"canUseItemEffect": "true"
-	},
-	"I1794": {
-		"cls": "equips",
-		"name": "洛神兵·凌波步",
-		"canUseItemEffect": "true"
-	},
-	"I1795": {
-		"cls": "equips",
-		"name": "洛神兵·若幽兰",
-		"canUseItemEffect": "true"
-	},
-	"I1796": {
-		"cls": "equips",
-		"name": "洛神兵·怅神宵",
-		"canUseItemEffect": "true"
-	},
-	"I1797": {
-		"cls": "equips",
-		"name": "陨墨九诀（大成）",
-		"canUseItemEffect": "true",
-		"text": "陨墨星一脉精神念力修炼方法。凝、韧、散、锐、柔、刚、舞、幻、融，九诀大成，精神念力变化无穷，各种复杂的攻坚手段信手拈来，甚至能够洞察到同阶对手的情绪与意图，从而在战斗中占据先机。攻击、防御+9000兆，护盾*8。",
-		"equip": {
-			"type": 5,
-			"value": {
-				"def": 9000000000000000,
-				"atk": 9000000000000000
-			},
-			"percentage": {
-				"mdef": 700
-			}
-		}
-	},
-	"I2070": {
-		"cls": "items",
-		"name": "流窜的亡灵",
-		"canUseItemEffect": "true",
-		"itemEffectTip": "，塔中亡灵+5",
-		"itemEffect": "core.addFlag('wl', 5)"
-	},
-	"I2071": {
-		"cls": "items",
-		"name": "聚集的亡灵",
-		"canUseItemEffect": "true",
-		"itemEffectTip": "，塔中亡灵+25",
-		"itemEffect": "core.addFlag('wl', 25)"
-	},
-	"I2072": {
-		"cls": "items",
-		"name": "凝华的亡灵",
-		"canUseItemEffect": "true",
-		"itemEffectTip": "，塔中亡灵+150",
-		"itemEffect": "core.addFlag('wl', 150)"
-	},
-	"I2073": {
-		"cls": "items",
-		"name": "幻神之石·红",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.atk += core.values.redGem * core.status.thisMap.ratio * 2000",
-		"itemEffectTip": "，攻击+${core.formatBigNumber(core.values.redGem * core.status.thisMap.ratio*2000)}"
-	},
-	"I2074": {
-		"cls": "items",
-		"name": "幻神之石·蓝",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.def += core.values.blueGem * core.status.thisMap.ratio * 2000",
-		"itemEffectTip": "，防御+${core.formatBigNumber(core.values.blueGem * core.status.thisMap.ratio*2000)}"
-	},
-	"I2075": {
-		"cls": "items",
-		"name": "幻神之石·绿",
-		"canUseItemEffect": "true"
-	},
-	"I2076": {
-		"cls": "items",
-		"name": "幻神之石·黄",
-		"canUseItemEffect": "true"
-	},
-	"I2077": {
-		"cls": "items",
-		"name": "神赐·红",
-		"canUseItemEffect": "true"
-	},
-	"I2078": {
-		"cls": "items",
-		"name": "神赐·蓝",
-		"canUseItemEffect": "true"
-	},
-	"I2079": {
-		"cls": "items",
-		"name": "神赐·黄",
-		"canUseItemEffect": "true"
-	},
-	"I2080": {
-		"cls": "items",
-		"name": "神赐·绿",
-		"canUseItemEffect": "true"
-	},
-	"I2081": {
-		"cls": "items",
-		"name": "古神·遗泽[红]",
-		"canUseItemEffect": "true"
-	},
-	"I2082": {
-		"cls": "items",
-		"name": "古神·遗泽[蓝]",
-		"canUseItemEffect": "true"
-	},
-	"I2083": {
-		"cls": "items",
-		"name": "古神·遗泽[绿]",
-		"canUseItemEffect": "true"
-	},
-	"I2084": {
-		"cls": "items",
-		"name": "古神·遗泽[黄]",
-		"canUseItemEffect": "true"
-	},
-	"I2085": {
-		"cls": "items",
-		"name": "古神·轮回[红]",
-		"canUseItemEffect": "true"
-	},
-	"I2086": {
-		"cls": "items",
-		"name": "古神·轮回[蓝]",
-		"canUseItemEffect": "true"
-	},
-	"I2087": {
-		"cls": "items",
-		"name": "古神·轮回[绿]",
-		"canUseItemEffect": "true"
-	},
-	"I2088": {
-		"cls": "items",
-		"name": "古神·轮回[黄]",
-		"canUseItemEffect": "true"
-	},
-	"I2089": {
-		"cls": "items",
-		"name": "生命？",
-		"canUseItemEffect": "true"
-	},
-	"I2090": {
-		"cls": "items",
-		"name": "黯淡的进化结晶",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.exp += 100000",
-		"itemEffectTip": "，经验+10万"
-	},
-	"I2091": {
-		"cls": "items",
-		"name": "黯淡的高等结晶",
-		"canUseItemEffect": "true",
-		"itemEffect": "core.status.hero.exp += 5e7",
-		"itemEffectTip": "，经验+5000万"
-	},
-	"I2092": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2093": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2094": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2095": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2096": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2097": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2098": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2099": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2100": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2101": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2102": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2103": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2104": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2105": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2106": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2107": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2108": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2109": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2110": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2111": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2112": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2113": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2114": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2115": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2116": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2117": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2118": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2119": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2120": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2121": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2122": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2123": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2124": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2125": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2126": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2127": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2128": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2129": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2130": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2131": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2132": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
-	},
-	"I2133": {
-		"cls": "items",
-		"name": "新物品",
-		"canUseItemEffect": "true"
+		]
 	}
 }
