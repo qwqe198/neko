@@ -1,17 +1,17 @@
 main.floors.Start=
 {
     "floorId": "Start",
-    "title": "地面",
-    "name": "地面",
+    "title": "O 层",
+    "name": "O 层",
     "width": 13,
     "height": 13,
     "canFlyTo": true,
     "canFlyFrom": true,
-    "canUseQuickShop": false,
+    "canUseQuickShop": true,
     "cannotViewMap": false,
     "images": [],
     "ratio": 1,
-    "defaultGround": 80016,
+    "defaultGround": "ground",
     "firstArrive": [
         {
             "type": "showStatusBar"
@@ -32,4889 +32,1517 @@ main.floors.Start=
             "value": "1"
         },
         {
-            "type": "setValue",
-            "name": "flag:gcjg",
-            "value": "1000"
-        },
-        {
-            "type": "setValue",
-            "name": "flag:gu1c",
-            "value": "1"
-        },
-        {
-            "type": "setValue",
-            "name": "flag:gu2c",
-            "value": "5"
-        },
-        {
-            "type": "setValue",
-            "name": "flag:gu3c",
-            "value": "5"
-        },
-        {
-            "type": "setValue",
-            "name": "flag:gu4c",
-            "value": "100"
-        },
-        {
-            "type": "setValue",
-            "name": "flag:gczy",
-            "value": "1"
-        },
-        {
-            "type": "setValue",
-            "name": "flag:pczy",
-            "value": "1"
-        },
-        {
-            "type": "setValue",
-            "name": "flag:gjyzy",
-            "value": "1"
-        },
-        {
-            "type": "setValue",
-            "name": "flag:pjyzy",
-            "value": "1"
-        },
-        {
-            "type": "setValue",
-            "name": "flag:gcfw",
-            "value": "1"
-        },
-        {
-            "type": "setValue",
-            "name": "flag:lvzs",
-            "value": "0.44"
-        },
-        {
-            "type": "setValue",
-            "name": "flag:zczy",
-            "value": "1"
-        },
-        {
-            "type": "setValue",
-            "name": "flag:zjyzy",
-            "value": "1"
-        },
-        {
             "type": "setText",
             "align": "left",
+            "background": "winskin.png",
             "lineHeight": 22
         }
     ],
     "eachArrive": [],
     "parallelDo": "",
     "events": {
-        "8,0": [
+        "6,0": [
             {
                 "type": "choices",
-                "text": "\t[草升级]本页面加成\n草：${flag:gczy}x\n经验：${flag:gjyzy}x\n层点：${flag:gjczy}x\n割草间隔：${flag:gcjg}ms\n割草范围：${flag:gcfw}x${flag:gcfw}",
                 "choices": [
                     {
-                        "text": "割草间隔(${flag:gu1c})",
+                        "text": "开始游戏",
                         "color": [
-                            0,
-                            255,
-                            34,
+                            221,
+                            201,
+                            93,
                             1
                         ],
-                        "condition": "flag:gcjgdj<10",
                         "action": [
+                            "太初之时，诞有一方大陆名为血洛。\n血洛大陆能量充盈，孕育出诸多种族与生命。\n万族共生，弱肉强食。",
+                            "历经亿亿载岁月，万族以兽神为首，\n建立起绵延悠久的，混乱与稳定并存的秩序。\n可惜，万事万物，有生，就有灭。",
+                            "在血洛大陆步入文明时期的二百七十万亿年之后，\n强横恐怖的天外族群降临，\n欲要与血洛万族争夺生存空间。",
+                            "为了延续种族血脉，\n兽神带领着血洛大陆的土著神明，\n与天外族群进行了三百万年惨烈的战争。",
+                            "天地大劫，诸神黄昏。\n最终，伟大的兽神及诸多神明以生命为代价，\n打退了天外族群，挽救血洛大陆于水火之中。",
+                            "大劫过后，仅存的神灵们建立起不朽神殿，\n缔造了新的秩序。\n直至今日。",
+                            "血洛万族仍铭记着神灵的教诲，\n他们以力量为尊，崇尚强者之道。\n在这方大陆，强者，可以肆意将无数弱者踩在脚下！",
+                            "血洛修炼者们根据实力强弱，\n将力量层次划分为微尘、万物、潮汐、大地等级别。",
+                            "微尘级，最弱势的群体，体质虚弱。\n万物级，力壮如牛，胆气如虎。\n潮汐级，感应元素，神力千钧……",
+                            "万族生灵之中，\n为走上强者之路而勤奋刻苦，且具有天资者，\n在成长阶段，便足以跨越前三个层次！",
+                            "在这之上——\r[#75E97E]大地级\r，\n则为公认的修炼者第一个大门槛。\n越过这个门槛，方可仗剑行走大陆，再无温饱之忧。",
+                            "纳可，燕岗城纳家一个平平无奇的小丫头。\n纳家虽然只是一个世代从商的家族，\n但毕竟生活在崇尚武力的世界，也有数位强者坐镇。",
+                            "这一天，当纳可刚结束了早上的修行，\n却发现和自己一同长大的姐姐纳娜米不见了。",
+                            "纳娜米从小就喜欢纳可跟在她身边，不管去哪里都会带着她。\n纳可很担忧姐姐的安全，便四处寻找起来。",
+                            "当从家族中得知，纳娜米昨天外出历练，至今未回时，纳可已经顾不上思考。\n她决然地独自一人离开家族，寻找纳娜米的踪迹。",
+                            "我们的故事，就从这里开始…",
                             {
-                                "type": "if",
-                                "condition": "(status:money>=flag:gu1c)",
-                                "true": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:money",
-                                        "operator": "-=",
-                                        "value": "flag:gu1c"
-                                    },
-                                    {
-                                        "type": "if",
-                                        "condition": "(flag:gcjg<=200)",
-                                        "true": [
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:gcjg",
-                                                "operator": "-=",
-                                                "value": "25"
-                                            }
-                                        ],
-                                        "false": [
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:gcjg",
-                                                "operator": "-=",
-                                                "value": "200"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:gcjgdj",
-                                        "operator": "+=",
-                                        "value": "1"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:gu1c",
-                                        "value": "(Math.ceil((flag:gu1c*2)))"
-                                    },
-                                    {
-                                        "type": "insert",
-                                        "loc": [
-                                            8,
-                                            0
-                                        ]
-                                    }
+                                "type": "openDoor",
+                                "loc": [
+                                    6,
+                                    10
                                 ]
                             }
                         ]
                     },
                     {
-                        "text": "草增益(${core.formatBigNumber(flag:gu2c)}) ",
+                        "text": "回放录像",
                         "color": [
-                            0,
-                            255,
-                            34,
+                            211,
+                            103,
+                            139,
                             1
                         ],
+                        "_collapsed": true,
                         "action": [
                             {
+                                "type": "function",
+                                "function": "function(){\ncore.control.checkBgm()\n}"
+                            },
+                            {
                                 "type": "if",
-                                "condition": "(status:money>=flag:gu2c)",
+                                "condition": "(!core.isReplaying())",
                                 "true": [
                                     {
-                                        "type": "setValue",
-                                        "name": "status:money",
-                                        "operator": "-=",
-                                        "value": "flag:gu2c"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:gczy",
-                                        "operator": "+=",
-                                        "value": "1"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:gu2c",
-                                        "value": "(Math.ceil((flag:gu2c*1.2)))"
-                                    },
-                                    {
-                                        "type": "insert",
-                                        "loc": [
-                                            8,
-                                            0
-                                        ]
+                                        "type": "function",
+                                        "function": "function(){\ncore.chooseReplayFile()\n}"
                                     }
-                                ]
+                                ],
+                                "false": []
                             }
                         ]
                     },
                     {
-                        "text": "经验增益(${core.formatBigNumber(flag:gu3c)}) ",
+                        "text": "纳可的心境",
                         "color": [
-                            0,
-                            255,
-                            34,
+                            155,
+                            235,
+                            227,
                             1
                         ],
-                        "action": [
-                            {
-                                "type": "if",
-                                "condition": "(status:money>=flag:gu3c)",
-                                "true": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:money",
-                                        "operator": "-=",
-                                        "value": "flag:gu3c"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:gjyzy",
-                                        "operator": "+=",
-                                        "value": "1"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:gu3c",
-                                        "value": "(Math.ceil((flag:gu3c*1.2)))"
-                                    },
-                                    {
-                                        "type": "insert",
-                                        "loc": [
-                                            8,
-                                            0
-                                        ]
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "text": "割草范围(${core.formatBigNumber(flag:gu4c)}) ",
-                        "color": [
-                            0,
-                            255,
-                            34,
-                            1
-                        ],
-                        "action": [
-                            {
-                                "type": "if",
-                                "condition": "(status:money>=flag:gu4c)",
-                                "true": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:money",
-                                        "operator": "-=",
-                                        "value": "flag:gu4c"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:gcfw",
-                                        "operator": "+=",
-                                        "value": "1"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:gu4c",
-                                        "value": "(Math.ceil((flag:gu4c*2.5)))"
-                                    },
-                                    {
-                                        "type": "insert",
-                                        "loc": [
-                                            8,
-                                            0
-                                        ]
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "text": "层点增益(${core.formatBigNumber(flag:gu5c)}) ",
-                        "color": [
-                            0,
-                            255,
-                            34,
-                            1
-                        ],
-                        "condition": "flag:jd>=2",
-                        "action": [
-                            {
-                                "type": "if",
-                                "condition": "(status:money>=flag:gu5c)",
-                                "true": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:money",
-                                        "operator": "-=",
-                                        "value": "flag:gu5c"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:gjczy",
-                                        "operator": "+=",
-                                        "value": "1"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:gu5c",
-                                        "value": "(Math.ceil((flag:gu5c*2.1)))"
-                                    },
-                                    {
-                                        "type": "insert",
-                                        "loc": [
-                                            8,
-                                            0
-                                        ]
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "text": "返回",
-                        "color": [
-                            255,
-                            255,
-                            255,
-                            1
-                        ],
-                        "action": []
-                    }
-                ]
-            }
-        ],
-        "5,0": [
-            {
-                "type": "if",
-                "condition": "((flag:auto>=2)&&(flag:zd2<7))",
-                "true": [
-                    {
-                        "type": "choices",
-                        "text": "\t[自动化2]消耗白金",
-                        "choices": [
-                            {
-                                "text": "自动购买第一个声望升级(2500)",
-                                "need": "status:mana>=2500",
-                                "condition": "flag:zdpu1==0",
-                                "action": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mana",
-                                        "operator": "-=",
-                                        "value": "2500"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:zdpu1",
-                                        "value": "1"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:zd2",
-                                        "operator": "+=",
-                                        "value": "1"
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "自动购买第二个声望升级(2500)",
-                                "need": "status:mana>=2500",
-                                "condition": "flag:zdpu2==0",
-                                "action": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mana",
-                                        "operator": "-=",
-                                        "value": "2500"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:zdpu2",
-                                        "value": "1"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:zd2",
-                                        "operator": "+=",
-                                        "value": "1"
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "自动购买第三个声望升级(2500)",
-                                "need": "status:mana>=2500",
-                                "condition": "flag:zdpu3==0",
-                                "action": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mana",
-                                        "operator": "-=",
-                                        "value": "2500"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:zdpu3",
-                                        "value": "1"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:zd2",
-                                        "operator": "+=",
-                                        "value": "1"
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "自动购买第四个声望升级(2500)",
-                                "need": "status:mana>=2500",
-                                "condition": "flag:zdpu4==0",
-                                "action": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mana",
-                                        "operator": "-=",
-                                        "value": "2500"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:zdpu4",
-                                        "value": "1"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:zd2",
-                                        "operator": "+=",
-                                        "value": "1"
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "自动购买第五个声望升级(2500)",
-                                "need": "status:mana>=2500",
-                                "condition": "flag:zdpu5==0",
-                                "action": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mana",
-                                        "operator": "-=",
-                                        "value": "2500"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:zdpu5",
-                                        "value": "1"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:zd2",
-                                        "operator": "+=",
-                                        "value": "1"
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "自动购买第五个草升级(2500)",
-                                "need": "status:mana>=2500",
-                                "condition": "flag:zdgu5==0",
-                                "action": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mana",
-                                        "operator": "-=",
-                                        "value": "2500"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:zdgu5",
-                                        "value": "1"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:zd2",
-                                        "operator": "+=",
-                                        "value": "1"
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "每秒自动获得100%的声望(2e4)",
-                                "need": "status:mana>=20000",
-                                "condition": "flag:pp==0",
-                                "action": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mana",
-                                        "operator": "-=",
-                                        "value": "20000"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:pp",
-                                        "value": "1"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:zd2",
-                                        "operator": "+=",
-                                        "value": "1"
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "返回",
-                                "action": []
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "type": "if",
-                "condition": "((flag:auto>=1)&&(flag:zd1<6))",
-                "true": [
-                    {
-                        "type": "choices",
-                        "text": "\t[自动化1]消耗白金",
-                        "choices": [
-                            {
-                                "text": "初始保留50ms割草间隔(50)",
-                                "need": "status:mana>=50",
-                                "condition": "flag:blgcjg==0",
-                                "action": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mana",
-                                        "operator": "-=",
-                                        "value": "50"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:blgcjg",
-                                        "value": "1"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:zd1",
-                                        "operator": "+=",
-                                        "value": "1"
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "自动购买第二个草升级(25)",
-                                "need": "status:mana>=25",
-                                "condition": "flag:zdgu2==0",
-                                "action": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mana",
-                                        "operator": "-=",
-                                        "value": "25"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:zdgu2",
-                                        "value": "1"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:zd1",
-                                        "operator": "+=",
-                                        "value": "1"
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "自动购买第三个草升级(25)",
-                                "need": "status:mana>=25",
-                                "condition": "flag:zdgu3==0",
-                                "action": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mana",
-                                        "operator": "-=",
-                                        "value": "25"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:zdgu3",
-                                        "value": "1"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:zd1",
-                                        "operator": "+=",
-                                        "value": "1"
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "自动购买第四个草升级(25)",
-                                "need": "status:mana>=25",
-                                "condition": "flag:zdgu4==0",
-                                "action": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mana",
-                                        "operator": "-=",
-                                        "value": "25"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:zdgu4",
-                                        "value": "1"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:zd1",
-                                        "operator": "+=",
-                                        "value": "1"
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "每秒自动获得2000%的草(200)",
-                                "need": "status:mana>=200",
-                                "condition": "flag:gp==0",
-                                "action": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mana",
-                                        "operator": "-=",
-                                        "value": "200"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:gp",
-                                        "value": "1"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:zd1",
-                                        "operator": "+=",
-                                        "value": "1"
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "每秒自动获得2000%的经验(200)",
-                                "need": "status:mana>=200",
-                                "condition": "flag:expp==0",
-                                "action": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mana",
-                                        "operator": "-=",
-                                        "value": "200"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:expp",
-                                        "value": "1"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:zd1",
-                                        "operator": "+=",
-                                        "value": "1"
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "返回",
-                                "action": []
-                            }
-                        ]
-                    }
-                ]
-            }
-        ],
-        "1,1": [
-            {
-                "type": "if",
-                "condition": "(flag:auto>=1)",
-                "true": [
-                    {
-                        "type": "choices",
-                        "text": "\t[白金升级1]所有升级消耗1白金\n白金加成\n草：${(Math.floor((flag:bjczy)*100)/100)}x\n经验：${(Math.floor((flag:bjjyzy)*100)/100)}x\n声望：${(Math.floor((flag:bjpzy)*100)/100)}x",
-                        "choices": [
-                            {
-                                "text": "草增益增加5%",
-                                "need": "status:mana>=1",
-                                "condition": "flag:bjczy<5",
-                                "action": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mana",
-                                        "operator": "-=",
-                                        "value": "1"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:bjczy",
-                                        "operator": "+=",
-                                        "value": "0.05"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:bjczy",
-                                        "value": "(Math.min(flag:bjczy,5))"
-                                    },
-                                    {
-                                        "type": "insert",
-                                        "loc": [
-                                            1,
-                                            1
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "经验增益增加5%",
-                                "need": "status:mana>=1",
-                                "condition": "flag:bjjyzy<5",
-                                "action": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mana",
-                                        "operator": "-=",
-                                        "value": "1"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:bjjyzy",
-                                        "operator": "+=",
-                                        "value": "0.05"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:bjjyzy",
-                                        "value": "(Math.min(flag:bjjyzy,5))"
-                                    },
-                                    {
-                                        "type": "insert",
-                                        "loc": [
-                                            1,
-                                            1
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "声望增益增加5%",
-                                "need": "status:mana>=1",
-                                "condition": "flag:bjpzy<5",
-                                "action": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mana",
-                                        "operator": "-=",
-                                        "value": "1"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:bjpzy",
-                                        "operator": "+=",
-                                        "value": "0.05"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:bjpzy",
-                                        "value": "(Math.min(flag:bjpzy,5))"
-                                    },
-                                    {
-                                        "type": "insert",
-                                        "loc": [
-                                            1,
-                                            1
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "返回",
-                                "action": []
-                            }
-                        ]
-                    }
-                ]
-            }
-        ],
-        "3,1": [
-            {
-                "type": "if",
-                "condition": "(flag:gcjd>=5)",
-                "true": [
-                    "解锁隐匿后开启\n隐匿会重置反草，反经验，反草升级\n隐匿基础获取:(反等级-29)^${core.getFlag('fpexp',1)}\n当前:${Math.max(core.getFlag('flv',1)-29,0)}^${core.getFlag('fpexp',1)}\n至少需要30反等级\n(声望基础获取:(等级-29)^${core.getFlag('pexp',1)}\n当前:${Math.max(status:hp-29,0)}^${core.getFlag('pexp',1)})"
-                ],
-                "false": [
-                    "解锁声望后开启\n声望会重置草，经验，草升级\n基础获取:(等级-29)^${core.getFlag('pexp',1)}\n当前:${Math.max(status:hp-29,0)}^${core.getFlag('pexp',1)}\n至少需要30等级"
-                ]
-            }
-        ],
-        "9,1": [
-            "解锁水晶后开启\n水晶进行1次声望重置\n加上重置声望，声望升级\n基础获取:{[(等级-97)/3]*[log2(声望/5000)]}^${core.getFlag('sjexp',0.5)}\n当前:(${Math.floor(core.getFlag('lvsjzy',0)*10000)/10000}*${Math.floor(core.getFlag('pzsjzy',0)*10000)/10000})^${core.getFlag('sjexp',0.5)}\n至少要100等级和1e4声望"
-        ],
-        "6,7": [
-            "打开背包查看"
-        ],
-        "10,1": [
-            {
-                "type": "choices",
-                "text": "\t[声望升级]基础获取：${core.formatBigNumber(Math.floor(Math.pow(flag:lvsjzy*flag:pzsjzy,flag:sjexp)*10000)/10000)}(基于等级,声望）\n本页面加成\n草和经验：${flag:sjczy}x 声望：${flag:sjpzy}x\n水晶：${flag:sjsjzy}x 白金：${flag:sjbjzy}x\n层点：${flag:sjjczy}x",
-                "choices": [
-                    {
-                        "text": "重置(+${core.formatBigNumber(flag:zsjzy)})",
-                        "color": [
-                            141,
-                            0,
-                            255,
-                            1
-                        ],
-                        "need": "status:hp>=100&&status:def>=10000",
+                        "condition": "item:I954==0",
                         "action": [
                             {
                                 "type": "insert",
-                                "name": "水晶重置"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "status:mdef",
-                                "operator": "+=",
-                                "value": "flag:zsjzy"
-                            }
-                        ]
-                    },
-                    {
-                        "text": "草和经验增益(${core.formatBigNumber(flag:sju1c)}) ",
-                        "color": [
-                            141,
-                            0,
-                            255,
-                            1
-                        ],
-                        "action": [
-                            {
-                                "type": "if",
-                                "condition": "(status:mdef>=flag:sju1c)",
-                                "true": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mdef",
-                                        "operator": "-=",
-                                        "value": "flag:sju1c"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:sjczy",
-                                        "operator": "+=",
-                                        "value": "1"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:sjjyzy",
-                                        "operator": "+=",
-                                        "value": "1"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:sju1c",
-                                        "value": "(Math.ceil((flag:sju1c*1.4)))"
-                                    },
-                                    {
-                                        "type": "insert",
-                                        "loc": [
-                                            10,
-                                            1
-                                        ]
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "text": "层点增益(${core.formatBigNumber(flag:sju2c)}) ",
-                        "color": [
-                            141,
-                            0,
-                            255,
-                            1
-                        ],
-                        "action": [
-                            {
-                                "type": "if",
-                                "condition": "(status:mdef>=flag:sju2c)",
-                                "true": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mdef",
-                                        "operator": "-=",
-                                        "value": "flag:sju2c"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:sjjczy",
-                                        "operator": "+=",
-                                        "value": "1"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:sju2c",
-                                        "value": "(Math.ceil((flag:sju2c*1.4)))"
-                                    },
-                                    {
-                                        "type": "insert",
-                                        "loc": [
-                                            10,
-                                            1
-                                        ]
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "text": "声望增益(${core.formatBigNumber(flag:sju3c)}) ",
-                        "color": [
-                            141,
-                            0,
-                            255,
-                            1
-                        ],
-                        "action": [
-                            {
-                                "type": "if",
-                                "condition": "(status:mdef>=flag:sju3c)",
-                                "true": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mdef",
-                                        "operator": "-=",
-                                        "value": "flag:sju3c"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:sjpzy",
-                                        "operator": "+=",
-                                        "value": "1"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:sju3c",
-                                        "value": "(Math.ceil((flag:sju3c*1.8)))"
-                                    },
-                                    {
-                                        "type": "insert",
-                                        "loc": [
-                                            10,
-                                            1
-                                        ]
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "text": "白金增益(${core.formatBigNumber(flag:sju4c)}) ",
-                        "color": [
-                            141,
-                            0,
-                            255,
-                            1
-                        ],
-                        "action": [
-                            {
-                                "type": "if",
-                                "condition": "(status:mdef>=flag:sju4c)",
-                                "true": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mdef",
-                                        "operator": "-=",
-                                        "value": "flag:sju4c"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:sjbjzy",
-                                        "operator": "+=",
-                                        "value": "1"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:sju4c",
-                                        "value": "(Math.ceil((flag:sju4c*1.8)))"
-                                    },
-                                    {
-                                        "type": "insert",
-                                        "loc": [
-                                            10,
-                                            1
-                                        ]
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "text": "水晶增益(${core.formatBigNumber(flag:sju5c)}) ",
-                        "color": [
-                            141,
-                            0,
-                            255,
-                            1
-                        ],
-                        "action": [
-                            {
-                                "type": "if",
-                                "condition": "(status:mdef>=flag:sju5c)",
-                                "true": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mdef",
-                                        "operator": "-=",
-                                        "value": "flag:sju5c"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:sjsjzy",
-                                        "operator": "+=",
-                                        "value": "1"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:sju5c",
-                                        "value": "(Math.ceil((flag:sju5c*2)))"
-                                    },
-                                    {
-                                        "type": "insert",
-                                        "loc": [
-                                            10,
-                                            1
-                                        ]
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "text": "解锁新的东西（100）",
-                        "color": [
-                            141,
-                            0,
-                            255,
-                            1
-                        ],
-                        "condition": "flag:auto<2",
-                        "action": [
-                            {
-                                "type": "if",
-                                "condition": "(status:mdef>=100)",
-                                "true": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mdef",
-                                        "operator": "-=",
-                                        "value": "100"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:auto",
-                                        "operator": "+=",
-                                        "value": "1"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:bjsjzy",
-                                        "value": "1"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:bjjczy",
-                                        "value": "1"
-                                    },
-                                    {
-                                        "type": "setBlock",
-                                        "number": "N1121",
-                                        "loc": [
-                                            [
-                                                11,
-                                                1
-                                            ]
-                                        ]
-                                    },
-                                    {
-                                        "type": "setBlock",
-                                        "number": "N1125",
-                                        "loc": [
-                                            [
-                                                12,
-                                                1
-                                            ]
-                                        ]
-                                    },
-                                    "解锁了新的自动化和白金升级，水晶挑战",
-                                    {
-                                        "type": "insert",
-                                        "loc": [
-                                            10,
-                                            1
-                                        ]
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "text": "阶层的效果变得更好（1e4，永久保留）",
-                        "color": [
-                            141,
-                            0,
-                            255,
-                            1
-                        ],
-                        "condition": "flag:auto>=2&&flag:jcgh==0",
-                        "action": [
-                            {
-                                "type": "if",
-                                "condition": "(status:mdef>=10000)",
-                                "true": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mdef",
-                                        "operator": "-=",
-                                        "value": "10000"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:jcgh",
-                                        "operator": "+=",
-                                        "value": "1"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:jceffexp",
-                                        "value": "1.75"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "text": "返回",
-                        "color": [
-                            255,
-                            255,
-                            255,
-                            1
-                        ],
-                        "action": []
-                    }
-                ]
-            }
-        ],
-        "4,0": [
-            {
-                "type": "choices",
-                "text": "游戏阶段指示",
-                "choices": [
-                    {
-                        "text": "查看当前阶段",
-                        "action": [
-                            {
-                                "type": "switch",
-                                "condition": "flag:jd",
-                                "caseList": [
-                                    {
-                                        "case": "5",
-                                        "action": [
-                                            "阶段6：减速器\n减速会减慢时间并显著降低产量，你可以基于普通草和经验的数量获得反草和反经验，初始解锁反草升级，所有的反升级也会影响的正常的产量（例如反草升级的反草增益也加成草，但是其他地方的反草增益不会）"
-                                        ]
-                                    },
-                                    {
-                                        "case": "4",
-                                        "action": [
-                                            "阶段5：钢铁\n钢铁会进行与草场相当的重置，在这里会解锁工厂，可以购买建筑物，每个建筑物会有新的东西\n解锁减速器进入第三部分"
-                                        ]
-                                    },
-                                    {
-                                        "case": "3",
-                                        "action": [
-                                            "阶段4：草场\n草场是一个大重置，会解锁草场里程碑，极大加成之前资源的获取\n从现在开始每次割草都会获取小部分白金(总和比之前高）\n你可以将资源显示在屏幕中间了\n到10草场进入第二部分"
-                                        ]
-                                    },
-                                    {
-                                        "case": "2",
-                                        "action": [
-                                            "阶段3：水晶&挑战\n水晶会重置之前的所有，在第一次重置之后解锁阶层（需要层点，割草获取），它能增加经验获取，且在本层级不会被重置\n进入挑战会获得限制并重置该层，但是完成后也能获得奖励"
-                                        ]
-                                    },
-                                    {
-                                        "case": "1",
-                                        "action": [
-                                            "阶段2：首次重置\n声望是第一个重置，它会重置你之前的所有东西，根据等级获得声望\n从现在开始，你每次割草将有1%的概率获得白金\n还可以解锁自动化，帮助你解放双手"
-                                        ]
-                                    },
-                                    {
-                                        "case": "0",
-                                        "action": [
-                                            "阶段1：旅程的开始  \n你可以割草获取草和经验，草生长需要一段时间，升级以解锁更多内容\n当前割草范围只加成草，层点是后面的内容"
-                                        ]
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "text": "解锁声望（30等级）",
-                        "color": [
-                            0,
-                            179,
-                            255,
-                            1
-                        ],
-                        "need": "status:hp>=30",
-                        "condition": "flag:jd==0",
-                        "_collapsed": true,
-                        "action": [
-                            {
-                                "type": "setValue",
-                                "name": "flag:jd",
-                                "operator": "+=",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:ppzy",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:pexp",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:pbjzy",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:pu1c",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:pu2c",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:pu3c",
-                                "value": "3"
-                            },
-                            "解锁了声望区域",
-                            "阶段2：首次重置\n声望是第一个重置，它会重置你之前的所有东西，根据等级获得声望\n从现在开始，你每次割草将有1%的概率获得白金\n还可以解锁自动化，帮助你解放双手",
-                            {
-                                "type": "hide",
                                 "loc": [
-                                    [
-                                        3,
-                                        2
-                                    ]
+                                    6,
+                                    5
                                 ],
-                                "remove": true
+                                "floorId": "sample0"
                             }
                         ]
                     },
                     {
-                        "text": "解锁水晶（100等级）",
+                        "text": "跳关选项",
                         "color": [
-                            188,
-                            0,
-                            255,
+                            223,
+                            235,
+                            155,
                             1
                         ],
-                        "need": "status:hp>=100",
-                        "condition": "flag:jd==1",
-                        "_collapsed": true,
+                        "condition": "item:I954==0",
                         "action": [
                             {
-                                "type": "setValue",
-                                "name": "flag:jc",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:jceff",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:jceffexp",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:jcjy",
-                                "value": "10"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:jczs",
-                                "value": "0.8"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:jd",
-                                "operator": "+=",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:sjexp",
-                                "value": "0.5"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:sju1c",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:sju2c",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:sju3c",
-                                "value": "2"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:sju4c",
-                                "value": "3"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:sju5c",
-                                "value": "5"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:gu5c",
-                                "value": "1e+10"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:pu5c",
-                                "value": "1000"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:gjczy",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:pjczy",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:sjjczy",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:zjczy",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:sjczy",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:sjpzy",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:sjsjzy",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:sjbjzy",
-                                "value": "1"
-                            },
-                            "解锁了水晶区域",
-                            "阶段3：水晶&挑战\n水晶会重置之前的所有，在第一次重置之后解锁阶层（需要层点，割草获取），它能增加经验获取，且在本层级不会被重置\n进入挑战会获得限制并重置该层，但是完成后也能获得奖励",
-                            {
-                                "type": "hide",
+                                "type": "insert",
                                 "loc": [
-                                    [
-                                        9,
-                                        2
-                                    ]
+                                    6,
+                                    4
                                 ],
-                                "remove": true
+                                "floorId": "sample0"
                             }
                         ]
                     },
                     {
-                        "text": "解锁草场（300等级）",
+                        "text": "幸运计分",
                         "color": [
-                            236,
-                            208,
-                            246,
+                            121,
+                            219,
+                            168,
                             1
                         ],
-                        "need": "status:hp>=300",
-                        "condition": "flag:jd==2",
+                        "condition": "item:I954==0",
                         "action": [
-                            {
-                                "type": "setValue",
-                                "name": "flag:jd",
-                                "operator": "+=",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:nextcc",
-                                "value": "300"
-                            },
-                            "解锁了草场区域",
-                            "阶段4：草场\n草场是一个大重置，会解锁草场里程碑，极大加成之前资源的获取\n从现在开始每次割草都会获取小部分白金(总和比之前高）\n你可以将资源显示在屏幕中间了\n到10草场进入第二部分",
-                            {
-                                "type": "hide",
-                                "loc": [
-                                    [
-                                        3,
-                                        6
-                                    ]
-                                ],
-                                "remove": true
-                            }
-                        ]
-                    },
-                    {
-                        "text": "解锁钢铁（400等级&10草场）",
-                        "color": [
-                            236,
-                            208,
-                            246,
-                            1
-                        ],
-                        "need": "status:hp>=400&&item:I848>=10",
-                        "condition": "flag:jd==3",
-                        "action": [
-                            {
-                                "type": "setValue",
-                                "name": "flag:jd",
-                                "operator": "+=",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:ggtzy",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:pgtzy",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:sjgtzy",
-                                "value": "1"
-                            },
-                            "解锁了钢铁区域",
-                            "阶段5：钢铁\n钢铁会进行与草场相当的重置，在这里会解锁工厂，可以购买建筑物，每个建筑物会有新的东西\n解锁减速器进入第三部分",
-                            {
-                                "type": "hide",
-                                "loc": [
-                                    [
-                                        9,
-                                        6
-                                    ]
-                                ],
-                                "remove": true
-                            },
-                            {
-                                "type": "setBlock",
-                                "number": "N1113",
-                                "loc": [
-                                    [
-                                        2,
-                                        5
-                                    ]
-                                ]
-                            },
-                            "还解锁了前2个草场挑战",
-                            "你可以把一些子资源显示在屏幕的中间了（点击背包查看）",
-                            {
-                                "type": "setValue",
-                                "name": "item:I1160",
-                                "value": "1"
-                            }
-                        ]
-                    }
-                ]
-            }
-        ],
-        "11,1": [
-            {
-                "type": "if",
-                "condition": "(flag:auto>=2)",
-                "true": [
-                    {
-                        "type": "choices",
-                        "text": "\t[白金升级2]所有升级消耗100白金\n白金加成\n草：${(Math.floor((flag:bjczy)*100)/100)}x\n经验：${(Math.floor((flag:bjjyzy)*100)/100)}x\n层点：${(Math.floor((flag:bjjczy)*100)/100)}x\n声望：${(Math.floor((flag:bjpzy)*100)/100)}x\n水晶：${(Math.floor((flag:bjsjzy)*100)/100)}x",
-                        "choices": [
-                            {
-                                "text": "草增益增加50%",
-                                "need": "status:mana>=100",
-                                "condition": "flag:bjczy<50",
-                                "action": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mana",
-                                        "operator": "-=",
-                                        "value": "100"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:bjczy",
-                                        "operator": "+=",
-                                        "value": "0.5"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:bjczy",
-                                        "value": "(Math.min(flag:bjczy,50))"
-                                    },
-                                    {
-                                        "type": "insert",
-                                        "loc": [
-                                            11,
-                                            1
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "经验增益增加50%",
-                                "need": "status:mana>=100",
-                                "condition": "flag:bjjyzy<50",
-                                "action": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mana",
-                                        "operator": "-=",
-                                        "value": "100"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:bjjyzy",
-                                        "operator": "+=",
-                                        "value": "0.5"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:bjjyzy",
-                                        "value": "(Math.min(flag:bjjyzy,50))"
-                                    },
-                                    {
-                                        "type": "insert",
-                                        "loc": [
-                                            11,
-                                            1
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "层点增益增加5%",
-                                "need": "status:mana>=100",
-                                "condition": "flag:bjjczy<5",
-                                "action": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mana",
-                                        "operator": "-=",
-                                        "value": "100"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:bjjczy",
-                                        "operator": "+=",
-                                        "value": "0.05"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:bjjczy",
-                                        "value": "(Math.min(flag:bjjczy,5))"
-                                    },
-                                    {
-                                        "type": "insert",
-                                        "loc": [
-                                            11,
-                                            1
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "声望增益增加50%",
-                                "need": "status:mana>=100",
-                                "condition": "flag:bjpzy<50",
-                                "action": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mana",
-                                        "operator": "-=",
-                                        "value": "100"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:bjpzy",
-                                        "operator": "+=",
-                                        "value": "0.5"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:bjpzy",
-                                        "value": "(Math.min(flag:bjpzy,50))"
-                                    },
-                                    {
-                                        "type": "insert",
-                                        "loc": [
-                                            11,
-                                            1
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "水晶增益增加5%",
-                                "need": "status:mana>=100",
-                                "condition": "flag:bjsjzy<5",
-                                "action": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mana",
-                                        "operator": "-=",
-                                        "value": "100"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:bjsjzy",
-                                        "operator": "+=",
-                                        "value": "0.05"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:bjsjzy",
-                                        "value": "(Math.min(flag:bjsjzy,5))"
-                                    },
-                                    {
-                                        "type": "insert",
-                                        "loc": [
-                                            11,
-                                            1
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "返回",
-                                "action": []
-                            }
-                        ]
-                    }
-                ]
-            }
-        ],
-        "12,1": [
-            {
-                "type": "if",
-                "condition": "(flag:auto>=2)",
-                "true": [
-                    {
-                        "type": "if",
-                        "condition": "(((flag:jrcctz1===1)||(flag:jrcctz2===1))||(flag:jrcctz3===1))",
-                        "true": [
-                            "您当前处于草场挑战中"
-                        ],
-                        "false": [
+                            "计分方式为你当前拥有的幸运字符数量！\n当本塔完结时，如果你集齐了全部的幸运字符，\n有机会解锁一些额外的独立关卡……？",
                             {
                                 "type": "if",
-                                "condition": "((flag:jrsjtz1===1)||((flag:jrsjtz2===1)||(flag:jrsjtz3===1)))",
+                                "condition": "(item:I1025+item:I1026+item:I1027+item:I1028+item:I1029+item:I1030+item:I1031+item:I1032+item:I1033+item:I1034+item:I1128+item:I1129+item:I1130+item:I1131+item:I1132+item:I1133+item:I1134+item:I1135+item:I1136+item:I1137+item:I1138+item:I1139+item:I1140+item:I1141+item:I1142+item:I1143+item:I1144+item:I1145+item:I1427+item:I1428+item:I1429+item:I1430+item:I1478+item:I1479+item:I1480+item:I1481+item:I1482+item:I1483+item:I1484+item:I1485==0)",
                                 "true": [
                                     {
-                                        "type": "choices",
-                                        "text": "\t[水晶挑战]进入后进行水晶重置\n目标：(100+完成次数*15)等级\n挑战1：等级要求更昂贵\n挑战2：草,经验增益^0.8\n挑战3：你无法获得声望\n奖励：经验获取x${flag:sjtz1+1}\n草获取x${flag:sjtz2+1}\n声望获取指数+${flag:sjtz3/10}",
-                                        "choices": [
-                                            {
-                                                "text": "级别折算(${flag:sjtz1}/5)",
-                                                "color": [
-                                                    160,
-                                                    0,
-                                                    255,
-                                                    1
-                                                ],
-                                                "action": [
-                                                    {
-                                                        "type": "insert",
-                                                        "name": "水晶重置"
-                                                    },
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:jrsjtz1",
-                                                        "value": "1"
-                                                    },
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:lvzs",
-                                                        "value": "0.48"
-                                                    },
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:sjtzmb",
-                                                        "value": "(100+(flag:sjtz1*15))"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "text": "资源减少(${flag:sjtz2}/5)",
-                                                "color": [
-                                                    160,
-                                                    0,
-                                                    255,
-                                                    1
-                                                ],
-                                                "action": [
-                                                    {
-                                                        "type": "insert",
-                                                        "name": "水晶重置"
-                                                    },
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:jrsjtz2",
-                                                        "value": "1"
-                                                    },
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:sjtzmb",
-                                                        "value": "(100+(flag:sjtz2*15))"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "text": "重置禁制(${flag:sjtz3}/5)",
-                                                "color": [
-                                                    160,
-                                                    0,
-                                                    255,
-                                                    1
-                                                ],
-                                                "action": [
-                                                    {
-                                                        "type": "insert",
-                                                        "name": "水晶重置"
-                                                    },
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:jrsjtz3",
-                                                        "value": "1"
-                                                    },
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:sjtzmb",
-                                                        "value": "(100+(flag:sjtz3*15))"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "text": "完成挑战",
-                                                "color": [
-                                                    160,
-                                                    0,
-                                                    255,
-                                                    1
-                                                ],
-                                                "condition": "(status:hp>=flag:sjtzmb)&&(flag:jrsjtz1==1||flag:jrsjtz2==1||flag:jrsjtz3==1)",
-                                                "action": [
-                                                    {
-                                                        "type": "if",
-                                                        "condition": "((flag:jrsjtz1===1)&&(status:hp>=flag:sjtzmb))",
-                                                        "true": [
-                                                            {
-                                                                "type": "setValue",
-                                                                "name": "flag:sjtz1",
-                                                                "operator": "+=",
-                                                                "value": "1"
-                                                            },
-                                                            {
-                                                                "type": "setValue",
-                                                                "name": "flag:sjtz1",
-                                                                "operator": "min=",
-                                                                "value": "5"
-                                                            }
-                                                        ]
-                                                    },
-                                                    {
-                                                        "type": "if",
-                                                        "condition": "((flag:jrsjtz2===1)&&(status:hp>=flag:sjtzmb))",
-                                                        "true": [
-                                                            {
-                                                                "type": "setValue",
-                                                                "name": "flag:sjtz2",
-                                                                "operator": "+=",
-                                                                "value": "1"
-                                                            },
-                                                            {
-                                                                "type": "setValue",
-                                                                "name": "flag:sjtz2",
-                                                                "operator": "min=",
-                                                                "value": "5"
-                                                            }
-                                                        ]
-                                                    },
-                                                    {
-                                                        "type": "if",
-                                                        "condition": "((flag:jrsjtz3===1)&&(status:hp>=flag:sjtzmb))",
-                                                        "true": [
-                                                            {
-                                                                "type": "setValue",
-                                                                "name": "flag:sjtz3",
-                                                                "operator": "+=",
-                                                                "value": "1"
-                                                            },
-                                                            {
-                                                                "type": "setValue",
-                                                                "name": "flag:sjtz3",
-                                                                "operator": "min=",
-                                                                "value": "5"
-                                                            },
-                                                            {
-                                                                "type": "setValue",
-                                                                "name": "flag:pexp",
-                                                                "value": "(1+(flag:sjtz3*0.1))"
-                                                            },
-                                                            {
-                                                                "type": "setValue",
-                                                                "name": "flag:pexp",
-                                                                "value": "((Math.floor((flag:pexp*10)))/10)"
-                                                            },
-                                                            {
-                                                                "type": "setValue",
-                                                                "name": "flag:pexp",
-                                                                "operator": "min=",
-                                                                "value": "1.5"
-                                                            }
-                                                        ]
-                                                    },
-                                                    {
-                                                        "type": "if",
-                                                        "condition": "(flag:jrsjtz1===1)",
-                                                        "true": [
-                                                            {
-                                                                "type": "setValue",
-                                                                "name": "flag:lvzs",
-                                                                "value": "0.45"
-                                                            }
-                                                        ]
-                                                    },
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:jrsjtz1",
-                                                        "value": "0"
-                                                    },
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:jrsjtz2",
-                                                        "value": "0"
-                                                    },
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:jrsjtz3",
-                                                        "value": "0"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "text": "退出挑战(目标:${flag:sjtzmb}等级)",
-                                                "color": [
-                                                    160,
-                                                    0,
-                                                    255,
-                                                    1
-                                                ],
-                                                "condition": "flag:jrsjtz1==1||flag:jrsjtz2==1||flag:jrsjtz3==1",
-                                                "action": [
-                                                    {
-                                                        "type": "if",
-                                                        "condition": "(flag:jrsjtz1===1)",
-                                                        "true": [
-                                                            {
-                                                                "type": "setValue",
-                                                                "name": "flag:lvzs",
-                                                                "value": "0.45"
-                                                            }
-                                                        ]
-                                                    },
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:jrsjtz1",
-                                                        "value": "0"
-                                                    },
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:jrsjtz2",
-                                                        "value": "0"
-                                                    },
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:jrsjtz3",
-                                                        "value": "0"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "text": "返回",
-                                                "color": [
-                                                    233,
-                                                    227,
-                                                    237,
-                                                    1
-                                                ],
-                                                "action": []
-                                            }
-                                        ]
+                                        "type": "setValue",
+                                        "name": "status:hp",
+                                        "operator": "/=",
+                                        "value": "status:hp*2"
                                     }
                                 ],
                                 "false": [
                                     {
-                                        "type": "choices",
-                                        "text": "\t[水晶挑战]进入后进行水晶重置\n目标：(100+完成次数*15)等级\n挑战1：等级要求更昂贵\n挑战2：草,经验增益^0.8\n挑战3：你无法获得声望\n奖励：经验获取x${flag:sjtz1+1}\n草获取x${flag:sjtz2+1}\n声望获取指数+${flag:sjtz3/10}",
-                                        "choices": [
+                                        "type": "setValue",
+                                        "name": "status:hp",
+                                        "value": "item:I1025+item:I1026+item:I1027+item:I1028+item:I1029+item:I1030+item:I1031+item:I1032+item:I1033+item:I1034+item:I1128+item:I1129+item:I1130+item:I1131+item:I1132+item:I1133+item:I1134+item:I1135+item:I1136+item:I1137+item:I1138+item:I1139+item:I1140+item:I1141+item:I1142+item:I1143+item:I1144+item:I1145+item:I1427+item:I1428+item:I1429+item:I1430+item:I1478+item:I1479+item:I1480+item:I1481+item:I1482+item:I1483+item:I1484+item:I1485"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "win",
+                                "reason": "天选之人"
+                            }
+                        ]
+                    },
+                    {
+                        "text": "CG展览馆",
+                        "color": [
+                            121,
+                            167,
+                            219,
+                            1
+                        ],
+                        "_collapsed": true,
+                        "action": [
+                            {
+                                "type": "choices",
+                                "text": "这里是CG展览馆，\n展示了游戏中的部分场景。\n请选择角色！",
+                                "choices": [
+                                    {
+                                        "text": "纳可",
+                                        "color": [
+                                            238,
+                                            231,
+                                            128,
+                                            1
+                                        ],
+                                        "action": [
                                             {
-                                                "text": "级别折算(${flag:sjtz1}/5)",
-                                                "color": [
-                                                    160,
-                                                    0,
-                                                    255,
-                                                    1
-                                                ],
-                                                "action": [
+                                                "type": "choices",
+                                                "text": "请选择要看的CG。",
+                                                "choices": [
                                                     {
-                                                        "type": "insert",
-                                                        "name": "水晶重置"
-                                                    },
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:jrsjtz1",
-                                                        "value": "1"
-                                                    },
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:lvzs",
-                                                        "value": "0.48"
-                                                    },
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:sjtzmb",
-                                                        "value": "(100+(flag:sjtz1*15))"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "text": "资源减少(${flag:sjtz2}/5)",
-                                                "color": [
-                                                    160,
-                                                    0,
-                                                    255,
-                                                    1
-                                                ],
-                                                "action": [
-                                                    {
-                                                        "type": "insert",
-                                                        "name": "水晶重置"
-                                                    },
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:jrsjtz2",
-                                                        "value": "1"
-                                                    },
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:sjtzmb",
-                                                        "value": "(100+(flag:sjtz2*15))"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "text": "重置禁制(${flag:sjtz3}/5)",
-                                                "color": [
-                                                    160,
-                                                    0,
-                                                    255,
-                                                    1
-                                                ],
-                                                "action": [
-                                                    {
-                                                        "type": "insert",
-                                                        "name": "水晶重置"
-                                                    },
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:jrsjtz3",
-                                                        "value": "1"
-                                                    },
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:sjtzmb",
-                                                        "value": "(100+(flag:sjtz3*15))"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "text": "完成挑战",
-                                                "color": [
-                                                    160,
-                                                    0,
-                                                    255,
-                                                    1
-                                                ],
-                                                "condition": "(status:hp>=flag:sjtzmb)&&(flag:jrsjtz1==1||flag:jrsjtz2==1||flag:jrsjtz3==1)",
-                                                "action": [
-                                                    {
-                                                        "type": "if",
-                                                        "condition": "((flag:jrsjtz1===1)&&(status:hp>=flag:sjtzmb))",
-                                                        "true": [
+                                                        "text": "纳可（初始）",
+                                                        "color": [
+                                                            238,
+                                                            231,
+                                                            128,
+                                                            1
+                                                        ],
+                                                        "action": [
                                                             {
-                                                                "type": "setValue",
-                                                                "name": "flag:sjtz1",
-                                                                "operator": "+=",
-                                                                "value": "1"
+                                                                "type": "showImage",
+                                                                "code": 1,
+                                                                "image": "nake1.jpg",
+                                                                "sloc": [
+                                                                    0,
+                                                                    0,
+                                                                    null
+                                                                ],
+                                                                "loc": [
+                                                                    0,
+                                                                    -60,
+                                                                    416,
+                                                                    600
+                                                                ],
+                                                                "opacity": 1,
+                                                                "time": 1000
                                                             },
                                                             {
-                                                                "type": "setValue",
-                                                                "name": "flag:sjtz1",
-                                                                "operator": "min=",
-                                                                "value": "5"
+                                                                "type": "wait",
+                                                                "forceChild": true,
+                                                                "_collapsed": true,
+                                                                "data": [
+                                                                    {
+                                                                        "case": "keyboard",
+                                                                        "keycode": "13,32",
+                                                                        "action": [
+                                                                            {
+                                                                                "type": "hideImage",
+                                                                                "code": 1,
+                                                                                "time": 1000
+                                                                            },
+                                                                            {
+                                                                                "type": "comment",
+                                                                                "text": "当按下回车(keycode=13)或空格(keycode=32)时执行此事件\n超时剩余时间会写入flag:timeout"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "case": "mouse",
+                                                                        "px": [
+                                                                            0,
+                                                                            416
+                                                                        ],
+                                                                        "py": [
+                                                                            0,
+                                                                            416
+                                                                        ],
+                                                                        "action": [
+                                                                            {
+                                                                                "type": "hideImage",
+                                                                                "code": 1,
+                                                                                "time": 1000
+                                                                            },
+                                                                            {
+                                                                                "type": "comment",
+                                                                                "text": "当点击地图左上角时执行此事件\n超时剩余时间会写入flag:timeout"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
                                                             }
                                                         ]
                                                     },
                                                     {
-                                                        "type": "if",
-                                                        "condition": "((flag:jrsjtz2===1)&&(status:hp>=flag:sjtzmb))",
-                                                        "true": [
+                                                        "text": "纳可（JS）",
+                                                        "color": [
+                                                            238,
+                                                            231,
+                                                            128,
+                                                            1
+                                                        ],
+                                                        "action": [
                                                             {
-                                                                "type": "setValue",
-                                                                "name": "flag:sjtz2",
-                                                                "operator": "+=",
-                                                                "value": "1"
+                                                                "type": "showImage",
+                                                                "code": 1,
+                                                                "image": "nake2.png",
+                                                                "sloc": [
+                                                                    0,
+                                                                    0,
+                                                                    null
+                                                                ],
+                                                                "loc": [
+                                                                    0,
+                                                                    0,
+                                                                    416,
+                                                                    470
+                                                                ],
+                                                                "opacity": 1,
+                                                                "time": 1000
                                                             },
                                                             {
-                                                                "type": "setValue",
-                                                                "name": "flag:sjtz2",
-                                                                "operator": "min=",
-                                                                "value": "5"
+                                                                "type": "wait",
+                                                                "forceChild": true,
+                                                                "_collapsed": true,
+                                                                "data": [
+                                                                    {
+                                                                        "case": "keyboard",
+                                                                        "keycode": "13,32",
+                                                                        "action": [
+                                                                            {
+                                                                                "type": "hideImage",
+                                                                                "code": 1,
+                                                                                "time": 1000
+                                                                            },
+                                                                            {
+                                                                                "type": "comment",
+                                                                                "text": "当按下回车(keycode=13)或空格(keycode=32)时执行此事件\n超时剩余时间会写入flag:timeout"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "case": "mouse",
+                                                                        "px": [
+                                                                            0,
+                                                                            416
+                                                                        ],
+                                                                        "py": [
+                                                                            0,
+                                                                            416
+                                                                        ],
+                                                                        "action": [
+                                                                            {
+                                                                                "type": "hideImage",
+                                                                                "code": 1,
+                                                                                "time": 1000
+                                                                            },
+                                                                            {
+                                                                                "type": "comment",
+                                                                                "text": "当点击地图左上角时执行此事件\n超时剩余时间会写入flag:timeout"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
                                                             }
                                                         ]
                                                     },
                                                     {
-                                                        "type": "if",
-                                                        "condition": "((flag:jrsjtz3===1)&&(status:hp>=flag:sjtzmb))",
-                                                        "true": [
+                                                        "text": "纳可（雌小鬼）",
+                                                        "color": [
+                                                            238,
+                                                            231,
+                                                            128,
+                                                            1
+                                                        ],
+                                                        "action": [
                                                             {
-                                                                "type": "setValue",
-                                                                "name": "flag:sjtz3",
-                                                                "operator": "+=",
-                                                                "value": "1"
+                                                                "type": "showImage",
+                                                                "code": 1,
+                                                                "image": "nake3.png",
+                                                                "sloc": [
+                                                                    0,
+                                                                    0,
+                                                                    null
+                                                                ],
+                                                                "loc": [
+                                                                    0,
+                                                                    -50,
+                                                                    416,
+                                                                    470
+                                                                ],
+                                                                "opacity": 1,
+                                                                "time": 1000
                                                             },
                                                             {
-                                                                "type": "setValue",
-                                                                "name": "flag:sjtz3",
-                                                                "operator": "min=",
-                                                                "value": "5"
-                                                            },
-                                                            {
-                                                                "type": "setValue",
-                                                                "name": "flag:pexp",
-                                                                "value": "(1+(flag:sjtz3*0.1))"
-                                                            },
-                                                            {
-                                                                "type": "setValue",
-                                                                "name": "flag:pexp",
-                                                                "value": "((Math.floor((flag:pexp*10)))/10)"
-                                                            },
-                                                            {
-                                                                "type": "setValue",
-                                                                "name": "flag:pexp",
-                                                                "operator": "min=",
-                                                                "value": "1.5"
+                                                                "type": "wait",
+                                                                "forceChild": true,
+                                                                "_collapsed": true,
+                                                                "data": [
+                                                                    {
+                                                                        "case": "keyboard",
+                                                                        "keycode": "13,32",
+                                                                        "action": [
+                                                                            {
+                                                                                "type": "hideImage",
+                                                                                "code": 1,
+                                                                                "time": 1000
+                                                                            },
+                                                                            {
+                                                                                "type": "comment",
+                                                                                "text": "当按下回车(keycode=13)或空格(keycode=32)时执行此事件\n超时剩余时间会写入flag:timeout"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "case": "mouse",
+                                                                        "px": [
+                                                                            0,
+                                                                            416
+                                                                        ],
+                                                                        "py": [
+                                                                            0,
+                                                                            416
+                                                                        ],
+                                                                        "action": [
+                                                                            {
+                                                                                "type": "hideImage",
+                                                                                "code": 1,
+                                                                                "time": 1000
+                                                                            },
+                                                                            {
+                                                                                "type": "comment",
+                                                                                "text": "当点击地图左上角时执行此事件\n超时剩余时间会写入flag:timeout"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
                                                             }
                                                         ]
                                                     },
                                                     {
-                                                        "type": "if",
-                                                        "condition": "(flag:jrsjtz1===1)",
-                                                        "true": [
+                                                        "text": "纳可（火焰领域）",
+                                                        "color": [
+                                                            238,
+                                                            231,
+                                                            128,
+                                                            1
+                                                        ],
+                                                        "action": [
                                                             {
-                                                                "type": "setValue",
-                                                                "name": "flag:lvzs",
-                                                                "value": "0.45"
+                                                                "type": "showImage",
+                                                                "code": 1,
+                                                                "image": "nake4.png",
+                                                                "sloc": [
+                                                                    0,
+                                                                    0,
+                                                                    null
+                                                                ],
+                                                                "loc": [
+                                                                    -100,
+                                                                    0,
+                                                                    600,
+                                                                    416
+                                                                ],
+                                                                "opacity": 1,
+                                                                "time": 1000
+                                                            },
+                                                            {
+                                                                "type": "wait",
+                                                                "forceChild": true,
+                                                                "_collapsed": true,
+                                                                "data": [
+                                                                    {
+                                                                        "case": "keyboard",
+                                                                        "keycode": "13,32",
+                                                                        "action": [
+                                                                            {
+                                                                                "type": "hideImage",
+                                                                                "code": 1,
+                                                                                "time": 1000
+                                                                            },
+                                                                            {
+                                                                                "type": "comment",
+                                                                                "text": "当按下回车(keycode=13)或空格(keycode=32)时执行此事件\n超时剩余时间会写入flag:timeout"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "case": "mouse",
+                                                                        "px": [
+                                                                            0,
+                                                                            416
+                                                                        ],
+                                                                        "py": [
+                                                                            0,
+                                                                            416
+                                                                        ],
+                                                                        "action": [
+                                                                            {
+                                                                                "type": "hideImage",
+                                                                                "code": 1,
+                                                                                "time": 1000
+                                                                            },
+                                                                            {
+                                                                                "type": "comment",
+                                                                                "text": "当点击地图左上角时执行此事件\n超时剩余时间会写入flag:timeout"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
                                                             }
                                                         ]
                                                     },
                                                     {
-                                                        "type": "setValue",
-                                                        "name": "flag:jrsjtz1",
-                                                        "value": "0"
+                                                        "text": "纳可（雪原）",
+                                                        "color": [
+                                                            238,
+                                                            231,
+                                                            128,
+                                                            1
+                                                        ],
+                                                        "action": [
+                                                            {
+                                                                "type": "showImage",
+                                                                "code": 1,
+                                                                "image": "nake5.png",
+                                                                "sloc": [
+                                                                    0,
+                                                                    0,
+                                                                    null
+                                                                ],
+                                                                "loc": [
+                                                                    -100,
+                                                                    0,
+                                                                    600,
+                                                                    416
+                                                                ],
+                                                                "opacity": 1,
+                                                                "time": 1000
+                                                            },
+                                                            {
+                                                                "type": "wait",
+                                                                "forceChild": true,
+                                                                "_collapsed": true,
+                                                                "data": [
+                                                                    {
+                                                                        "case": "keyboard",
+                                                                        "keycode": "13,32",
+                                                                        "action": [
+                                                                            {
+                                                                                "type": "hideImage",
+                                                                                "code": 1,
+                                                                                "time": 1000
+                                                                            },
+                                                                            {
+                                                                                "type": "comment",
+                                                                                "text": "当按下回车(keycode=13)或空格(keycode=32)时执行此事件\n超时剩余时间会写入flag:timeout"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "case": "mouse",
+                                                                        "px": [
+                                                                            0,
+                                                                            416
+                                                                        ],
+                                                                        "py": [
+                                                                            0,
+                                                                            416
+                                                                        ],
+                                                                        "action": [
+                                                                            {
+                                                                                "type": "hideImage",
+                                                                                "code": 1,
+                                                                                "time": 1000
+                                                                            },
+                                                                            {
+                                                                                "type": "comment",
+                                                                                "text": "当点击地图左上角时执行此事件\n超时剩余时间会写入flag:timeout"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
                                                     },
                                                     {
-                                                        "type": "setValue",
-                                                        "name": "flag:jrsjtz2",
-                                                        "value": "0"
-                                                    },
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:jrsjtz3",
-                                                        "value": "0"
+                                                        "text": "纳可（幻境）",
+                                                        "color": [
+                                                            238,
+                                                            231,
+                                                            128,
+                                                            1
+                                                        ],
+                                                        "action": [
+                                                            {
+                                                                "type": "showImage",
+                                                                "code": 1,
+                                                                "image": "nake6.png",
+                                                                "sloc": [
+                                                                    0,
+                                                                    0,
+                                                                    null
+                                                                ],
+                                                                "loc": [
+                                                                    -25,
+                                                                    0,
+                                                                    450,
+                                                                    416
+                                                                ],
+                                                                "opacity": 1,
+                                                                "time": 1000
+                                                            },
+                                                            {
+                                                                "type": "wait",
+                                                                "forceChild": true,
+                                                                "_collapsed": true,
+                                                                "data": [
+                                                                    {
+                                                                        "case": "keyboard",
+                                                                        "keycode": "13,32",
+                                                                        "action": [
+                                                                            {
+                                                                                "type": "hideImage",
+                                                                                "code": 1,
+                                                                                "time": 1000
+                                                                            },
+                                                                            {
+                                                                                "type": "comment",
+                                                                                "text": "当按下回车(keycode=13)或空格(keycode=32)时执行此事件\n超时剩余时间会写入flag:timeout"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "case": "mouse",
+                                                                        "px": [
+                                                                            0,
+                                                                            416
+                                                                        ],
+                                                                        "py": [
+                                                                            0,
+                                                                            416
+                                                                        ],
+                                                                        "action": [
+                                                                            {
+                                                                                "type": "hideImage",
+                                                                                "code": 1,
+                                                                                "time": 1000
+                                                                            },
+                                                                            {
+                                                                                "type": "comment",
+                                                                                "text": "当点击地图左上角时执行此事件\n超时剩余时间会写入flag:timeout"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
                                                     }
                                                 ]
                                             },
                                             {
-                                                "text": "退出挑战",
-                                                "color": [
-                                                    160,
-                                                    0,
-                                                    255,
-                                                    1
-                                                ],
-                                                "condition": "flag:jrsjtz1==1||flag:jrsjtz2==1||flag:jrsjtz3==1",
-                                                "action": [
+                                                "type": "insert",
+                                                "loc": [
+                                                    6,
+                                                    0
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "text": "纳娜米",
+                                        "color": [
+                                            194,
+                                            121,
+                                            226,
+                                            1
+                                        ],
+                                        "action": [
+                                            {
+                                                "type": "choices",
+                                                "text": "请选择要看的CG。",
+                                                "choices": [
                                                     {
-                                                        "type": "if",
-                                                        "condition": "(flag:jrsjtz1===1)",
-                                                        "true": [
+                                                        "text": "纳娜米（初始）",
+                                                        "color": [
+                                                            194,
+                                                            121,
+                                                            226,
+                                                            1
+                                                        ],
+                                                        "action": [
                                                             {
-                                                                "type": "setValue",
-                                                                "name": "flag:lvzs",
-                                                                "value": "0.45"
+                                                                "type": "showImage",
+                                                                "code": 1,
+                                                                "image": "nanami1.jpg",
+                                                                "sloc": [
+                                                                    0,
+                                                                    0,
+                                                                    null
+                                                                ],
+                                                                "loc": [
+                                                                    -50,
+                                                                    0,
+                                                                    480,
+                                                                    480
+                                                                ],
+                                                                "opacity": 1,
+                                                                "time": 1000
+                                                            },
+                                                            {
+                                                                "type": "wait",
+                                                                "forceChild": true,
+                                                                "_collapsed": true,
+                                                                "data": [
+                                                                    {
+                                                                        "case": "keyboard",
+                                                                        "keycode": "13,32",
+                                                                        "action": [
+                                                                            {
+                                                                                "type": "hideImage",
+                                                                                "code": 1,
+                                                                                "time": 1000
+                                                                            },
+                                                                            {
+                                                                                "type": "comment",
+                                                                                "text": "当按下回车(keycode=13)或空格(keycode=32)时执行此事件\n超时剩余时间会写入flag:timeout"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "case": "mouse",
+                                                                        "px": [
+                                                                            0,
+                                                                            416
+                                                                        ],
+                                                                        "py": [
+                                                                            0,
+                                                                            416
+                                                                        ],
+                                                                        "action": [
+                                                                            {
+                                                                                "type": "hideImage",
+                                                                                "code": 1,
+                                                                                "time": 1000
+                                                                            },
+                                                                            {
+                                                                                "type": "comment",
+                                                                                "text": "当点击地图左上角时执行此事件\n超时剩余时间会写入flag:timeout"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
                                                             }
                                                         ]
                                                     },
                                                     {
-                                                        "type": "setValue",
-                                                        "name": "flag:jrsjtz1",
-                                                        "value": "0"
+                                                        "text": "纳娜米（圣诞前夜）",
+                                                        "color": [
+                                                            194,
+                                                            121,
+                                                            226,
+                                                            1
+                                                        ],
+                                                        "action": [
+                                                            {
+                                                                "type": "showImage",
+                                                                "code": 1,
+                                                                "image": "nanami2.jpg",
+                                                                "sloc": [
+                                                                    0,
+                                                                    0,
+                                                                    null
+                                                                ],
+                                                                "loc": [
+                                                                    0,
+                                                                    0,
+                                                                    480,
+                                                                    450
+                                                                ],
+                                                                "opacity": 1,
+                                                                "time": 1000
+                                                            },
+                                                            {
+                                                                "type": "wait",
+                                                                "forceChild": true,
+                                                                "_collapsed": true,
+                                                                "data": [
+                                                                    {
+                                                                        "case": "keyboard",
+                                                                        "keycode": "13,32",
+                                                                        "action": [
+                                                                            {
+                                                                                "type": "hideImage",
+                                                                                "code": 1,
+                                                                                "time": 1000
+                                                                            },
+                                                                            {
+                                                                                "type": "comment",
+                                                                                "text": "当按下回车(keycode=13)或空格(keycode=32)时执行此事件\n超时剩余时间会写入flag:timeout"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "case": "mouse",
+                                                                        "px": [
+                                                                            0,
+                                                                            416
+                                                                        ],
+                                                                        "py": [
+                                                                            0,
+                                                                            416
+                                                                        ],
+                                                                        "action": [
+                                                                            {
+                                                                                "type": "hideImage",
+                                                                                "code": 1,
+                                                                                "time": 1000
+                                                                            },
+                                                                            {
+                                                                                "type": "comment",
+                                                                                "text": "当点击地图左上角时执行此事件\n超时剩余时间会写入flag:timeout"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
                                                     },
                                                     {
-                                                        "type": "setValue",
-                                                        "name": "flag:jrsjtz2",
-                                                        "value": "0"
+                                                        "text": "纳娜米（短发）",
+                                                        "color": [
+                                                            194,
+                                                            121,
+                                                            226,
+                                                            1
+                                                        ],
+                                                        "action": [
+                                                            {
+                                                                "type": "showImage",
+                                                                "code": 1,
+                                                                "image": "nanami3.png",
+                                                                "sloc": [
+                                                                    0,
+                                                                    0,
+                                                                    null
+                                                                ],
+                                                                "loc": [
+                                                                    0,
+                                                                    -50,
+                                                                    430,
+                                                                    470
+                                                                ],
+                                                                "opacity": 1,
+                                                                "time": 1000
+                                                            },
+                                                            {
+                                                                "type": "wait",
+                                                                "forceChild": true,
+                                                                "_collapsed": true,
+                                                                "data": [
+                                                                    {
+                                                                        "case": "keyboard",
+                                                                        "keycode": "13,32",
+                                                                        "action": [
+                                                                            {
+                                                                                "type": "hideImage",
+                                                                                "code": 1,
+                                                                                "time": 1000
+                                                                            },
+                                                                            {
+                                                                                "type": "comment",
+                                                                                "text": "当按下回车(keycode=13)或空格(keycode=32)时执行此事件\n超时剩余时间会写入flag:timeout"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "case": "mouse",
+                                                                        "px": [
+                                                                            0,
+                                                                            416
+                                                                        ],
+                                                                        "py": [
+                                                                            0,
+                                                                            416
+                                                                        ],
+                                                                        "action": [
+                                                                            {
+                                                                                "type": "hideImage",
+                                                                                "code": 1,
+                                                                                "time": 1000
+                                                                            },
+                                                                            {
+                                                                                "type": "comment",
+                                                                                "text": "当点击地图左上角时执行此事件\n超时剩余时间会写入flag:timeout"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
                                                     },
                                                     {
-                                                        "type": "setValue",
-                                                        "name": "flag:jrsjtz3",
-                                                        "value": "0"
+                                                        "text": "纳娜米（女仆）",
+                                                        "color": [
+                                                            194,
+                                                            121,
+                                                            226,
+                                                            1
+                                                        ],
+                                                        "action": [
+                                                            {
+                                                                "type": "showImage",
+                                                                "code": 1,
+                                                                "image": "nanami4.png",
+                                                                "sloc": [
+                                                                    0,
+                                                                    0,
+                                                                    null
+                                                                ],
+                                                                "loc": [
+                                                                    0,
+                                                                    0,
+                                                                    416,
+                                                                    440
+                                                                ],
+                                                                "opacity": 1,
+                                                                "time": 1000
+                                                            },
+                                                            {
+                                                                "type": "wait",
+                                                                "forceChild": true,
+                                                                "_collapsed": true,
+                                                                "data": [
+                                                                    {
+                                                                        "case": "keyboard",
+                                                                        "keycode": "13,32",
+                                                                        "action": [
+                                                                            {
+                                                                                "type": "hideImage",
+                                                                                "code": 1,
+                                                                                "time": 1000
+                                                                            },
+                                                                            {
+                                                                                "type": "comment",
+                                                                                "text": "当按下回车(keycode=13)或空格(keycode=32)时执行此事件\n超时剩余时间会写入flag:timeout"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "case": "mouse",
+                                                                        "px": [
+                                                                            0,
+                                                                            416
+                                                                        ],
+                                                                        "py": [
+                                                                            0,
+                                                                            416
+                                                                        ],
+                                                                        "action": [
+                                                                            {
+                                                                                "type": "hideImage",
+                                                                                "code": 1,
+                                                                                "time": 1000
+                                                                            },
+                                                                            {
+                                                                                "type": "comment",
+                                                                                "text": "当点击地图左上角时执行此事件\n超时剩余时间会写入flag:timeout"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "text": "纳娜米（魔女）",
+                                                        "color": [
+                                                            194,
+                                                            121,
+                                                            226,
+                                                            1
+                                                        ],
+                                                        "action": [
+                                                            {
+                                                                "type": "showImage",
+                                                                "code": 1,
+                                                                "image": "nanami5.png",
+                                                                "sloc": [
+                                                                    0,
+                                                                    0,
+                                                                    null
+                                                                ],
+                                                                "loc": [
+                                                                    -100,
+                                                                    0,
+                                                                    640,
+                                                                    470
+                                                                ],
+                                                                "opacity": 1,
+                                                                "time": 1000
+                                                            },
+                                                            {
+                                                                "type": "wait",
+                                                                "forceChild": true,
+                                                                "_collapsed": true,
+                                                                "data": [
+                                                                    {
+                                                                        "case": "keyboard",
+                                                                        "keycode": "13,32",
+                                                                        "action": [
+                                                                            {
+                                                                                "type": "hideImage",
+                                                                                "code": 1,
+                                                                                "time": 1000
+                                                                            },
+                                                                            {
+                                                                                "type": "comment",
+                                                                                "text": "当按下回车(keycode=13)或空格(keycode=32)时执行此事件\n超时剩余时间会写入flag:timeout"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "case": "mouse",
+                                                                        "px": [
+                                                                            0,
+                                                                            416
+                                                                        ],
+                                                                        "py": [
+                                                                            0,
+                                                                            416
+                                                                        ],
+                                                                        "action": [
+                                                                            {
+                                                                                "type": "hideImage",
+                                                                                "code": 1,
+                                                                                "time": 1000
+                                                                            },
+                                                                            {
+                                                                                "type": "comment",
+                                                                                "text": "当点击地图左上角时执行此事件\n超时剩余时间会写入flag:timeout"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
                                                     }
                                                 ]
                                             },
                                             {
-                                                "text": "返回",
-                                                "color": [
-                                                    233,
-                                                    227,
-                                                    237,
-                                                    1
-                                                ],
-                                                "action": []
+                                                "type": "insert",
+                                                "loc": [
+                                                    6,
+                                                    0
+                                                ]
                                             }
                                         ]
                                     }
                                 ]
                             }
                         ]
+                    },
+                    {
+                        "text": "退出选择",
+                        "action": []
                     }
                 ]
             }
         ],
-        "0,1": [
+        "4,9": [
             {
                 "type": "choices",
-                "text": "\t[声望升级]基础获取：${core.formatBigNumber(Math.floor(flag:lvpzy*10000)/10000)}(基于等级）\n本页面加成\n草：${flag:pczy}x\n经验：${flag:pjyzy}x\n声望：${flag:ppzy}x\n白金：${flag:pbjzy}x",
+                "text": "\t[千夜,E716]如果你喜欢本作，\n可以关注我的B站账号：\r[yellow]幼年猫妖\r，以第一时间获取更新信息。\n也可以加入讨论群\r[yellow]947190984\r，与作者和其他玩家交流讨论。\n每一份这样的支持都可以为作者提供更多的精神动力。",
                 "choices": [
                     {
-                        "text": "重置(+${core.formatBigNumber(flag:zpzy)})",
-                        "color": [
-                            0,
-                            243,
-                            255,
-                            1
-                        ],
-                        "need": "status:hp>=30",
+                        "text": "作者的个人主页",
                         "action": [
                             {
-                                "type": "insert",
-                                "name": "声望重置"
+                                "type": "function",
+                                "function": "function(){\nwindow.open(\"https://space.bilibili.com/13853635?spm_id_from=333.1007.0.0\")\n}"
+                            }
+                        ]
+                    },
+                    {
+                        "text": "作者的更多作品",
+                        "action": [
+                            {
+                                "type": "choices",
+                                "text": "\t[千夜,E716]B站账号：\r[yellow]幼年猫妖\r\n讨论群：\r[yellow]947190984\r",
+                                "choices": [
+                                    {
+                                        "text": "星之葬",
+                                        "action": [
+                                            {
+                                                "type": "function",
+                                                "function": "function(){\nwindow.open(\"https://h5mota.com/games/Star/\")\n}"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "text": "花之伤",
+                                        "action": [
+                                            {
+                                                "type": "function",
+                                                "function": "function(){\nwindow.open(\"https://h5mota.com/games/Flower/\")\n}"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "text": "时盘乐园",
+                                        "action": [
+                                            {
+                                                "type": "function",
+                                                "function": "function(){\nwindow.open(\"https://h5mota.com/games/Time/\")\n}"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "text": "完美生命",
+                                        "action": [
+                                            {
+                                                "type": "function",
+                                                "function": "function(){\nwindow.open(\"https://h5mota.com/games/Perfect/\")\n}"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "text": "殉道者",
+                                        "action": [
+                                            {
+                                                "type": "function",
+                                                "function": "function(){\nwindow.open(\"https://h5mota.com/games/Martyr/\")\n}"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "text": "空白",
+                                        "action": [
+                                            {
+                                                "type": "function",
+                                                "function": "function(){\nwindow.open(\"https://h5mota.com/games/Blank/\")\n}"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "text": "纯黑",
+                                        "action": [
+                                            {
+                                                "type": "function",
+                                                "function": "function(){\nwindow.open(\"https://h5mota.com/games/Black/\")\n}"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "text": "纸船效应",
+                                        "action": [
+                                            {
+                                                "type": "function",
+                                                "function": "function(){\nwindow.open(\"https://h5mota.com/games/Boat/\")\n}"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "text": "下一页",
+                                        "action": [
+                                            {
+                                                "type": "choices",
+                                                "text": "\t[千夜,E716]B站账号：\r[yellow]幼年猫妖\r\n讨论群：\r[yellow]947190984\r",
+                                                "choices": [
+                                                    {
+                                                        "text": "夜花吟",
+                                                        "action": [
+                                                            {
+                                                                "type": "function",
+                                                                "function": "function(){\nwindow.open(\"https://h5mota.com/games/Night/\")\n}"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "text": "潮汐之囚",
+                                                        "action": [
+                                                            {
+                                                                "type": "function",
+                                                                "function": "function(){\nwindow.open(\"https://h5mota.com/games/Sea/\")\n}"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "text": "光风霁月 ~ 晴之章",
+                                                        "action": [
+                                                            {
+                                                                "type": "function",
+                                                                "function": "function(){\nwindow.open(\"https://h5mota.com/games/ToWish/\")\n}"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "text": "花与泪的瞬间",
+                                                        "action": [
+                                                            {
+                                                                "type": "function",
+                                                                "function": "function(){\nwindow.open(\"https://h5mota.com/games/Forever/\")\n}"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "text": "萤之盲",
+                                                        "action": [
+                                                            {
+                                                                "type": "function",
+                                                                "function": "function(){\nwindow.open(\"https://h5mota.com/games/Blind/\")\n}"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "text": "夕之降",
+                                                        "action": [
+                                                            {
+                                                                "type": "function",
+                                                                "function": "function(){\nwindow.open(\"https://h5mota.com/games/Decline/\")\n}"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "text": "吃小雨",
+                                                        "action": [
+                                                            {
+                                                                "type": "function",
+                                                                "function": "function(){\nwindow.open(\"https://h5mota.com/games/xiaoyu/\")\n}"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "text": "返回上一页",
+                                                        "action": [
+                                                            {
+                                                                "type": "insert",
+                                                                "loc": [
+                                                                    4,
+                                                                    9
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "text": "退出选项",
+                                                        "action": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "text": "退出选项",
+                        "action": []
+                    }
+                ]
+            }
+        ],
+        "8,9": [
+            {
+                "type": "choices",
+                "text": "游戏介绍。",
+                "choices": [
+                    {
+                        "text": "故事背景",
+                        "action": [
+                            {
+                                "type": "playSound",
+                                "name": "打开界面"
                             },
-                            {
-                                "type": "setValue",
-                                "name": "status:def",
-                                "operator": "+=",
-                                "value": "flag:zpzy"
-                            }
+                            "\\i[I1178]背景取材自\\i[I1176]\r[orange]《吞噬星空》血洛世界\r部分。\n你将与可爱的少女\\i[E1650]\r[yellow]纳可\r同行，\n领略血洛大陆的繁华、壮阔，\n见识血洛修行者们的强大、凶残与狡诈。\n\n\\i[I1176]\r[yellow]《纳可物语》\r为原作小说《吞噬星空》的\r[lime]同人塔\r。\n故事剧情除开\r[#66CCFF]与原作接轨的部分\r之外，\n其他故事情节，系塔作者原创，\n绝大多数情节\r[lime]并未在原作小说中出现过\r。\n\n且\r[#66CCFF]根据魔塔游戏的需要，存在与原作不同的改动\r。\n如有与原作冲突之处，请\r[yellow]以原作为准\r，\n或将其当作\r[lime]平行世界\r来看待。\n话不多说，就让我们开始体验游戏吧。"
                         ]
                     },
                     {
-                        "text": "草增益(${core.formatBigNumber(flag:pu1c)}) ",
-                        "color": [
-                            0,
-                            255,
-                            203,
-                            1
-                        ],
+                        "text": "绿钥匙",
                         "action": [
+                            "\\i[greenKey]一种具备神奇力量的钥匙，\n能够\r[lime]打开绿色的门\\i[greenDoor]\r。\n注意：绿钥匙\r[lime]仅提供给游戏外的玩家，故事中的角色是看不到它的\r。\n你在每个区域的开头，都将\r[#66CCFF]得到一定数量的绿钥匙，并为你提供有一定数量的绿门\r。\n比如现在，你已经拿到\r[aqua]4把绿钥匙\r了吧？\n\n\\i[I902]游戏难度与绿钥匙使用数量成\r[gold]反比\r。\n你可以利用它来\r[#66CCFF]自由调控游戏的难度\r，\n使用的绿钥匙\r[#76dead]越多\r，游戏往往也就变得\r[#76dead]越简单\r。\n\n\\i[I596]以研究为目的的玩家，\n请以\r[gold]保留尽可能多的绿钥匙\r为目标努力吧。\n\n当然，\r[#7edb4f]不同的计分点有不同的要求，\n部分计分点的高分路线，与绿钥匙关联不大，但也有同样的研究价值！\r"
+                        ]
+                    },
+                    {
+                        "text": "第几幕",
+                        "action": [
+                            "\\i[I602]记录着你当前的\r[yellow]剧情进程\r。\n你每通过游戏的一幕，\n\r[#66CCFF]故事发生的场景\r都会有一定变化。\n你将\r[yellow]与不同的好友一起行动，共同探险，或是面对不同的敌人\r。\n\n\\i[fly]每一幕结束之后，都将提供三个计分点，\n即：\n\r[#66CCFF]天之门（绿钥匙）\r\\i[I570]、\n\r[lime]生之门（生命）\r\\i[I1169]、\n\r[gold]匙之门（道具）\r\\i[I1471]。\n在\r[pink]第五幕\r之后，\n第四个计分点\r[#e1a0e8]灵之门（领悟）\\i[I1448]\r将会出现。",
+                            "在\r[#66CCFF]【天之门】\r中，一把绿钥匙计为\r[#8ab5f2]100兆\r分数，\n因此\r[#8ab5f2]成绩的排头数字将代表你的绿钥匙数量\r。\n你保留下的\\i[I902]\r[lime]绿钥匙\r越多，对于分数就越有利。\n\n\r[lime]【生之门】\r与你当前生命\r[lime]正相关\r。\n\r[gold]【匙之门】\r则只看持有的\r[gold]道具数量\r。\n权值为：\r[yellow]\\i[yellowKey]黄钥匙1、\\i[blueKey]蓝钥匙3、\n\\i[redKey]红钥匙/\\i[pickaxe]破墙镐/\\i[centerFly]飞行器10、\n\\i[I732]磁吸石/\\i[I733]换位标靶20、\\i[greenKey]绿钥匙25\r。\n\n\r[#e1a0e8]【灵之门】\r同时牵涉到领悟与绿钥匙，\n将计为\r[#dbb6ed]所余领悟点数与绿钥匙数量的\r[pink]乘积\r\r。\n\n\r[#b6d9bf]每幕结束时，建议在计分点提交成绩，再继续游戏。\n已登录的用户，可在个人中心下载自己提交的录像，防止超长的游戏流程导致存档丢失。"
+                        ]
+                    },
+                    {
+                        "text": "纳可心境",
+                        "action": [
+                            "你对\r[#f2a7b7]\\i[I837]高难度的挑战\r感兴趣吗？\n啊，不必紧张，不管回答是或否，\n喵都会向你推荐游玩\r[lime]【纳可的心境】\r。\n\n\\i[I1182]它包含了很多个\r[#88c4de]独立于游戏外的挑战副本\r，\n服务于\r[#f5d358]不满足原作难度，希望挑战自我的玩家\r。\n进入每一个心境后，角色\r[yellow]状态重置为特定值\r。\n你将在心境中完成一个个\r[#f2a7b7]流程较短，\n但难度极高\r的挑战。\n\n\\i[I1418]这\r[aqua]并非代表一般玩家无法尝试\r。\n在\r[#e3d5b8]第二心境及之后的心境\r，当你遇到困难时，\n你可以\r[#66CCFF]使用背包中的\\i[I1187]心境之石求援\r——\n\r[lime]使用你的分数\r来换取过关资源！",
+                            "\\i[I1135]第一次使用\\i[I1187]心境之石，分数变为\r[gold]1/1000\r。\n此后每次使用，都变为前一次的\r[gold]1/100\r。\n\n\\i[I1176]当新的游戏篇章更新后，对应的心境将会同步开启。\n心境中取得的成绩将\r[lime]单独记录榜单，\n与你通关所剩的生命正相关\r。\n\n\r[#f2a7b7]\\i[I1455]当你决定不使用任何一颗心境之石\r时，\n你将直面心境最深处的恐惧，此时通关的门槛，\n\r[yellow]足以将绝大多数玩家拦截在外\r！\n\n\r[gold]——也许你是一个例外呢？\n前进吧，勇士！\r"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "7,11": [
+            "【额外模式】\n暂未开放。"
+        ],
+        "5,11": [
+            {
+                "type": "if",
+                "condition": "(item:I954==0)",
+                "true": [
+                    {
+                        "type": "choices",
+                        "text": "『新手教程』——\n服务于刚刚接触魔塔的新人，\n或对游戏隐藏机制尚存有信息盲区的玩家。\n请注意，进入新手教程之后不可返回，\n可留下存档之后再进入。",
+                        "choices": [
                             {
-                                "type": "if",
-                                "condition": "(status:def>=flag:pu1c)",
-                                "true": [
+                                "text": "基础教程",
+                                "color": [
+                                    159,
+                                    243,
+                                    182,
+                                    1
+                                ],
+                                "action": [
                                     {
-                                        "type": "setValue",
-                                        "name": "status:def",
-                                        "operator": "-=",
-                                        "value": "flag:pu1c"
+                                        "type": "insert",
+                                        "name": "清空状态"
                                     },
                                     {
                                         "type": "setValue",
-                                        "name": "flag:pczy",
-                                        "operator": "+=",
+                                        "name": "status:exp",
+                                        "value": "0"
+                                    },
+                                    {
+                                        "type": "setValue",
+                                        "name": "status:lv",
                                         "value": "1"
                                     },
                                     {
                                         "type": "setValue",
-                                        "name": "flag:pu1c",
-                                        "value": "(Math.ceil((flag:pu1c*1.25)))"
-                                    },
-                                    {
-                                        "type": "insert",
-                                        "loc": [
-                                            0,
-                                            1
-                                        ]
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "text": "经验增益(${core.formatBigNumber(flag:pu2c)}) ",
-                        "color": [
-                            0,
-                            255,
-                            203,
-                            1
-                        ],
-                        "action": [
-                            {
-                                "type": "if",
-                                "condition": "(status:def>=flag:pu2c)",
-                                "true": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:def",
-                                        "operator": "-=",
-                                        "value": "flag:pu2c"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:pjyzy",
-                                        "operator": "+=",
-                                        "value": "1"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:pu2c",
-                                        "value": "(Math.ceil((flag:pu2c*1.25)))"
-                                    },
-                                    {
-                                        "type": "insert",
-                                        "loc": [
-                                            0,
-                                            1
-                                        ]
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "text": "声望增益(${core.formatBigNumber(flag:pu3c)}) ",
-                        "color": [
-                            0,
-                            255,
-                            203,
-                            1
-                        ],
-                        "action": [
-                            {
-                                "type": "if",
-                                "condition": "(status:def>=flag:pu3c)",
-                                "true": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:def",
-                                        "operator": "-=",
-                                        "value": "flag:pu3c"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:ppzy",
-                                        "operator": "+=",
-                                        "value": "1"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:pu3c",
-                                        "value": "(Math.ceil((flag:pu3c*1.5)))"
-                                    },
-                                    {
-                                        "type": "insert",
-                                        "loc": [
-                                            0,
-                                            1
-                                        ]
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "text": "白金增益(${core.formatBigNumber(flag:pu4c)}) ",
-                        "color": [
-                            0,
-                            255,
-                            203,
-                            1
-                        ],
-                        "condition": "flag:auto>=1",
-                        "action": [
-                            {
-                                "type": "if",
-                                "condition": "(status:def>=flag:pu4c)",
-                                "true": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:def",
-                                        "operator": "-=",
-                                        "value": "flag:pu4c"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:pbjzy",
-                                        "operator": "+=",
-                                        "value": "1"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:pu4c",
-                                        "value": "(Math.ceil((flag:pu4c*2)))"
-                                    },
-                                    {
-                                        "type": "insert",
-                                        "loc": [
-                                            0,
-                                            1
-                                        ]
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "text": "层点增益(${core.formatBigNumber(flag:pu5c)}) ",
-                        "color": [
-                            0,
-                            255,
-                            203,
-                            1
-                        ],
-                        "condition": "flag:jd>=2",
-                        "action": [
-                            {
-                                "type": "if",
-                                "condition": "(status:def>=flag:pu5c)",
-                                "true": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:def",
-                                        "operator": "-=",
-                                        "value": "flag:pu5c"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:pjczy",
-                                        "operator": "+=",
-                                        "value": "1"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:pu5c",
-                                        "value": "(Math.ceil((flag:pu5c*1.3)))"
-                                    },
-                                    {
-                                        "type": "insert",
-                                        "loc": [
-                                            0,
-                                            1
-                                        ]
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "text": "解锁自动化和白金升级（100）",
-                        "color": [
-                            0,
-                            255,
-                            203,
-                            1
-                        ],
-                        "condition": "flag:auto<1",
-                        "action": [
-                            {
-                                "type": "if",
-                                "condition": "(status:def>=100)",
-                                "true": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:def",
-                                        "operator": "-=",
+                                        "name": "status:hp",
                                         "value": "100"
                                     },
                                     {
                                         "type": "setValue",
-                                        "name": "flag:auto",
-                                        "operator": "+=",
+                                        "name": "status:atk",
                                         "value": "1"
                                     },
                                     {
                                         "type": "setValue",
-                                        "name": "flag:pu4c",
-                                        "value": "100"
+                                        "name": "status:def",
+                                        "value": "0"
                                     },
                                     {
                                         "type": "setValue",
-                                        "name": "flag:bjczy",
-                                        "value": "1"
+                                        "name": "status:mdef",
+                                        "value": "0"
                                     },
                                     {
                                         "type": "setValue",
-                                        "name": "flag:bjjyzy",
-                                        "value": "1"
+                                        "name": "item:yellowKey",
+                                        "value": "0"
                                     },
                                     {
                                         "type": "setValue",
-                                        "name": "flag:bjpzy",
+                                        "name": "item:blueKey",
+                                        "value": "0"
+                                    },
+                                    {
+                                        "type": "setValue",
+                                        "name": "item:redKey",
+                                        "value": "0"
+                                    },
+                                    {
+                                        "type": "setValue",
+                                        "name": "item:greenKey",
+                                        "value": "0"
+                                    },
+                                    {
+                                        "type": "setValue",
+                                        "name": "item:pickaxe",
+                                        "value": "0"
+                                    },
+                                    {
+                                        "type": "setValue",
+                                        "name": "item:centerFly",
+                                        "value": "0"
+                                    },
+                                    {
+                                        "type": "setValue",
+                                        "name": "item:bomb",
+                                        "value": "0"
+                                    },
+                                    {
+                                        "type": "setValue",
+                                        "name": "item:I1182",
                                         "value": "1"
                                     },
                                     {
-                                        "type": "setBlock",
-                                        "number": "N659",
+                                        "type": "changeFloor",
+                                        "floorId": "JC1",
                                         "loc": [
-                                            [
-                                                5,
-                                                0
-                                            ]
-                                        ]
-                                    },
-                                    {
-                                        "type": "setBlock",
-                                        "number": "N707",
-                                        "loc": [
-                                            [
-                                                1,
-                                                1
-                                            ]
-                                        ]
-                                    },
-                                    {
-                                        "type": "insert",
-                                        "loc": [
-                                            0,
-                                            1
-                                        ]
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "text": "返回",
-                        "color": [
-                            255,
-                            255,
-                            255,
-                            1
-                        ],
-                        "action": []
-                    }
-                ]
-            }
-        ],
-        "3,5": [
-            "解锁草场后开启\n草场会重置水晶，水晶升级，水晶挑战，前2组自动化和白金升级\n以及进行一次水晶重置\n下一个草场需要${core.getFlag('nextcc',300)}等级\n草场之前资源包括草，经验，层点，声望，水晶"
-        ],
-        "0,5": [
-            {
-                "type": "choices",
-                "text": "\t[草场页面]下一个草场需要${core.getFlag('nextcc',300)}等级\n里程碑需要达到对应草场才能生效",
-                "choices": [
-                    {
-                        "text": "获得草场",
-                        "need": "status:hp>=flag:nextcc",
-                        "action": [
-                            {
-                                "type": "setValue",
-                                "name": "item:I848",
-                                "operator": "+=",
-                                "value": "1"
-                            },
-                            {
-                                "type": "insert",
-                                "name": "草场重置"
-                            },
-                            {
-                                "type": "if",
-                                "condition": "(item:I848===1)",
-                                "true": [
-                                    {
-                                        "type": "setBlock",
-                                        "number": "N1093",
-                                        "loc": [
-                                            [
-                                                1,
-                                                5
-                                            ]
+                                            6,
+                                            11
                                         ],
-                                        "floorId": "Start"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:ccauto",
-                                        "operator": "+=",
-                                        "value": "1"
+                                        "direction": "up"
                                     }
                                 ]
                             },
                             {
-                                "type": "if",
-                                "condition": "(item:I848===14)",
-                                "true": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:fdju3c",
-                                        "value": "1e+11"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:fdju4c",
-                                        "value": "1e+7"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "text": "查看里程碑",
-                        "color": [
-                            0,
-                            255,
-                            203,
-                            1
-                        ],
-                        "action": [
-                            "1 获得${core.itemCount(\"I848\")*4+1}x更多的草,解锁更多自动化\n2 获得${core.itemCount(\"I848\")*4+1}x更多的经验 \n3 获得${core.itemCount(\"I848\")*4+1}x更多的层点\n4 白金价值+${Math.max(core.itemCount(\"I848\")-2,0)}(从3草场开始),解锁更多自动化\n5 在草场上保留水晶挑战 \n6 白金几率x2\n7 阶层效果+^0.25\n10 你可以在进度处解锁钢铁,草场不重置白金升级\n14 解锁2个发电机升级\n15 充能增益x${Math.max(core.itemCount(\"I848\")-13,1)}(从14草场开始) \n18 充能奖励变得更好\n20 充能奖励变得更好\n24 充能奖励基于草场变得更好"
-                        ]
-                    },
-                    {
-                        "text": "返回",
-                        "action": []
-                    }
-                ]
-            }
-        ],
-        "1,5": [
-            {
-                "type": "if",
-                "condition": "(flag:ccauto>=1)",
-                "true": [
-                    {
-                        "type": "choices",
-                        "text": "\t[草场自动化]消耗白金",
-                        "choices": [
-                            {
-                                "text": "返回",
-                                "action": []
-                            },
-                            {
-                                "text": "自动购买第一个水晶升级(2e4)",
+                                "text": "进阶教程",
                                 "color": [
-                                    254,
-                                    0,
-                                    255,
-                                    1
-                                ],
-                                "need": "status:mana>=20000",
-                                "condition": "flag:zdsju1==0",
-                                "action": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mana",
-                                        "operator": "-=",
-                                        "value": "20000"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:zdsju1",
-                                        "value": "1"
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "自动购买第二个水晶升级(2e4)",
-                                "color": [
-                                    254,
-                                    0,
-                                    255,
-                                    1
-                                ],
-                                "need": "status:mana>=20000",
-                                "condition": "flag:zdsju2==0",
-                                "action": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mana",
-                                        "operator": "-=",
-                                        "value": "20000"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:zdsju2",
-                                        "value": "1"
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "自动购买第三个水晶升级(2e4)",
-                                "color": [
-                                    254,
-                                    0,
-                                    255,
-                                    1
-                                ],
-                                "need": "status:mana>=20000",
-                                "condition": "flag:zdsju3==0",
-                                "action": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mana",
-                                        "operator": "-=",
-                                        "value": "20000"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:zdsju3",
-                                        "value": "1"
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "自动购买第四个水晶升级(2e4)",
-                                "color": [
-                                    254,
-                                    0,
-                                    255,
-                                    1
-                                ],
-                                "need": "status:mana>=20000",
-                                "condition": "flag:zdsju4==0",
-                                "action": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mana",
-                                        "operator": "-=",
-                                        "value": "20000"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:zdsju4",
-                                        "value": "1"
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "自动购买第五个水晶升级(2e4)",
-                                "color": [
-                                    254,
-                                    0,
-                                    255,
-                                    1
-                                ],
-                                "need": "status:mana>=20000",
-                                "condition": "flag:zdsju5==0",
-                                "action": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mana",
-                                        "operator": "-=",
-                                        "value": "20000"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:zdsju5",
-                                        "value": "1"
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "草场重置时保留自动化1(5e4)",
-                                "need": "status:mana>=50000",
-                                "condition": "flag:blzd1==0",
-                                "action": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mana",
-                                        "operator": "-=",
-                                        "value": "50000"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:blzd1",
-                                        "value": "1"
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "草场重置时保留自动化2(1e5)",
-                                "need": "status:mana>=100000",
-                                "condition": "flag:blzd2==0&&flag:blzd1==1",
-                                "action": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mana",
-                                        "operator": "-=",
-                                        "value": "100000"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:blzd2",
-                                        "value": "1"
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "每秒自动获得100%的水晶(5e5)",
-                                "need": "status:mana>=500000",
-                                "condition": "flag:sjpp==0&&item:I848>=4",
-                                "action": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mana",
-                                        "operator": "-=",
-                                        "value": "500000"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:sjpp",
-                                        "value": "1"
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "每秒自动获得2000%的层点(5e5)",
-                                "need": "status:mana>=500000",
-                                "condition": "flag:jcpp==0&&item:I848>=4",
-                                "action": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mana",
-                                        "operator": "-=",
-                                        "value": "500000"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:jcpp",
-                                        "value": "1"
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "每秒自动获得2000%的白金(0)",
-                                "condition": "flag:bjpp==0&&item:I848>=4",
-                                "action": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:bjpp",
-                                        "value": "1"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            }
-        ],
-        "9,5": [
-            "解锁钢铁后开启\n钢铁会进行1次草场重置\n基础获取:(草^0.3*水晶^0.65)/1e10\n当前:${core.formatBigNumber(Math.pow(core.getRealStatus('money'),0.3))}*${core.formatBigNumber(Math.pow(core.getRealStatus('mdef'),0.65))}/1e10=${core.formatBigNumber(Math.pow(core.getRealStatus('money'),0.3))*core.formatBigNumber(Math.pow(core.getRealStatus('mdef'),0.65))/1e10}\n至少要400等级"
-        ],
-        "10,5": [
-            {
-                "type": "choices",
-                "text": "\t[工厂]你拥有:${core.formatBigNumber(Math.floor(flag:gt))}钢铁\n基础获取：${core.formatBigNumber(Math.floor(flag:ggtzy*flag:sjgtzy*10000)/1e+14)}(基于草，水晶）",
-                "choices": [
-                    {
-                        "text": "重置(+${core.formatBigNumber(flag:zgtzy)})",
-                        "color": [
-                            195,
-                            228,
-                            230,
-                            1
-                        ],
-                        "need": "status:hp>=400",
-                        "_collapsed": true,
-                        "action": [
-                            {
-                                "type": "insert",
-                                "name": "草场重置"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:gt",
-                                "operator": "+=",
-                                "value": "flag:zgtzy"
-                            }
-                        ]
-                    },
-                    {
-                        "text": "铸造厂（1）",
-                        "color": [
-                            195,
-                            228,
-                            230,
-                            1
-                        ],
-                        "need": "flag:gt>=1",
-                        "condition": "flag:gcjd==0",
-                        "_collapsed": true,
-                        "action": [
-                            {
-                                "type": "setValue",
-                                "name": "flag:gt",
-                                "operator": "-=",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:ggtzy1",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:pgtzy",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:gtgtzy",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:zzcu1c",
-                                "value": "1e+17"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:zzcu2c",
-                                "value": "1e+11"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:zzcu3c",
-                                "value": "5"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:gcjd",
-                                "operator": "+=",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setBlock",
-                                "number": "N1158",
-                                "loc": [
-                                    [
-                                        11,
-                                        5
-                                    ]
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "text": "发电机（25）",
-                        "color": [
-                            195,
-                            228,
-                            230,
-                            1
-                        ],
-                        "need": "flag:gt>=25",
-                        "condition": "flag:gcjd==1",
-                        "action": [
-                            {
-                                "type": "setValue",
-                                "name": "flag:gcjd",
-                                "operator": "+=",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:gt",
-                                "operator": "-=",
-                                "value": "25"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:fdju1c",
-                                "value": "5"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:fdju2c",
-                                "value": "5"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:fdju3c",
-                                "value": "1e+11"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:fdju3c",
-                                "value": "1e+7"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:gtpzy",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:gtsjzy",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:pcnzy",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:sjcnzy",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setBlock",
-                                "number": "N1159",
-                                "loc": [
-                                    [
-                                        12,
-                                        5
-                                    ]
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "text": "充能塔（500）",
-                        "color": [
-                            195,
-                            228,
-                            230,
-                            1
-                        ],
-                        "need": "flag:gt>=500",
-                        "condition": "flag:gcjd==2",
-                        "action": [
-                            {
-                                "type": "setValue",
-                                "name": "flag:gt",
-                                "operator": "-=",
-                                "value": "500"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:gcjd",
-                                "operator": "+=",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:cnll",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:cn",
-                                "value": "0"
-                            },
-                            {
-                                "type": "setBlock",
-                                "number": "N1148",
-                                "loc": [
-                                    [
-                                        10,
-                                        7
-                                    ]
-                                ]
-                            },
-                            "你还解锁了草场挑战3"
-                        ]
-                    },
-                    {
-                        "text": "汇编器（1e4）",
-                        "color": [
-                            195,
-                            228,
-                            230,
-                            1
-                        ],
-                        "need": "flag:gt>=10000",
-                        "condition": "flag:gcjd==3",
-                        "action": [
-                            {
-                                "type": "setValue",
-                                "name": "flag:gt",
-                                "operator": "-=",
-                                "value": "10000"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:gcjd",
-                                "operator": "+=",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:hbqu1c",
-                                "value": "344"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:hbqu2c",
-                                "value": "353"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:hbqu3c",
-                                "value": "321"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:hbqu4c",
-                                "value": "308"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:hbqu5c",
-                                "value": "113"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:hbqu6c",
-                                "value": "104"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:hbqczy",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:hbqjczy",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:hbqpzy",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:hbqsjzy",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:hbqgtzy",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:hbqcnzy",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setBlock",
-                                "number": "N1144",
-                                "loc": [
-                                    [
-                                        11,
-                                        7
-                                    ]
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "text": "减速器（1e7）",
-                        "color": [
-                            195,
-                            228,
-                            230,
-                            1
-                        ],
-                        "need": "flag:gt>=10000000",
-                        "condition": "flag:gcjd==4",
-                        "action": [
-                            {
-                                "type": "setValue",
-                                "name": "flag:gt",
-                                "operator": "-=",
-                                "value": "10000000"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:flvjy",
-                                "value": "10"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:flv",
-                                "value": "0"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:gcjd",
-                                "operator": "+=",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:jd",
-                                "operator": "+=",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:fcczy",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:flvzs",
-                                "value": "0.5"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:fcjyzy",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:fcgtzy",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:fccnzy",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:bjgtzy",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:bjcnzy",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:bjfczy",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:bjfjyzy",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:fcu1c",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:fcu2c",
-                                "value": "3"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:fcu3c",
-                                "value": "20"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:fcu4c",
-                                "value": "20"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:fpexp",
-                                "value": "1"
-                            },
-                            {
-                                "type": "setValue",
-                                "name": "flag:fsjexp",
-                                "value": "0.5"
-                            },
-                            {
-                                "type": "setBlock",
-                                "number": "N1109",
-                                "loc": [
-                                    [
-                                        7,
-                                        0
-                                    ]
-                                ]
-                            },
-                            "阶段6：减速器\n减速会减慢时间并显著降低产量，你可以基于普通草和经验的数量获得反草和反经验，初始解锁反草升级，所有的反升级也会影响的正常的产量（例如反草升级的反草增益也加成草，但是其他地方的反草增益不会）",
-                            "现在可以打开背包，资源显示解锁了新内容",
-                            "还解锁了新的白金升级",
-                            {
-                                "type": "setBlock",
-                                "number": "N764",
-                                "loc": [
-                                    [
-                                        12,
-                                        7
-                                    ]
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "text": "返回",
-                        "color": [
-                            253,
-                            255,
-                            255,
-                            1
-                        ],
-                        "action": []
-                    }
-                ]
-            }
-        ],
-        "2,5": [
-            {
-                "type": "if",
-                "condition": "(flag:jd>=4)",
-                "true": [
-                    {
-                        "type": "if",
-                        "condition": "(((flag:jrcctz1===1)||(flag:jrcctz2===1))||(flag:jrcctz3===1))",
-                        "true": [
-                            {
-                                "type": "choices",
-                                "text": "\t[草场挑战]进入后进行草场重置\n目标：(300+完成次数*25)等级\n挑战1：你无法获得水晶\n挑战2：草场之前资源增益^0.8\n挑战3：同时进行所有水晶挑战\n奖励：水晶获取x${flag:cctz1+1}\n钢铁获取x${flag:cctz2+1}\n充能获取x${flag:cctz3+1}\n挑战1/2/3最高等级:${flag:cctz1mlv}/${flag:cctz2mlv}/${flag:cctz3mlv}\n(在退出/完成挑战时刷新)",
-                                "choices": [
-                                    {
-                                        "text": "水晶枯竭(${flag:cctz1}/10)",
-                                        "color": [
-                                            186,
-                                            149,
-                                            208,
-                                            1
-                                        ],
-                                        "action": [
-                                            {
-                                                "type": "insert",
-                                                "name": "草场重置"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:jrcctz1",
-                                                "value": "1"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:cctzmb",
-                                                "value": "(300+(flag:cctz1 * 25))"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "text": "资源减少Ⅱ(${flag:cctz2}/10)",
-                                        "color": [
-                                            186,
-                                            149,
-                                            208,
-                                            1
-                                        ],
-                                        "action": [
-                                            {
-                                                "type": "insert",
-                                                "name": "草场重置"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:jrcctz2",
-                                                "value": "1"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:cctzmb",
-                                                "value": "(300+(flag:cctz2 * 25))"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "text": "挑战者主义(${flag:cctz3}/10)",
-                                        "color": [
-                                            186,
-                                            149,
-                                            208,
-                                            1
-                                        ],
-                                        "condition": "flag:gcjd>=3",
-                                        "action": [
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:jrcctz3",
-                                                "value": "1"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:lvzs",
-                                                "value": "0.48"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:cctzmb",
-                                                "value": "(300+(flag:cctz3 * 25))"
-                                            },
-                                            {
-                                                "type": "insert",
-                                                "name": "草场重置"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "text": "完成挑战",
-                                        "color": [
-                                            186,
-                                            149,
-                                            208,
-                                            1
-                                        ],
-                                        "condition": "(status:hp>=flag:cctzmb)&&(flag:jrcctz1==1||flag:jrcctz2==1||flag:jrcctz3==1)",
-                                        "action": [
-                                            {
-                                                "type": "if",
-                                                "condition": "((flag:jrcctz1===1)&&(status:hp>=flag:cctzmb))",
-                                                "true": [
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:cctz1",
-                                                        "operator": "+=",
-                                                        "value": "1"
-                                                    },
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:cctz1",
-                                                        "operator": "min=",
-                                                        "value": "10"
-                                                    },
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:cctz1mlv",
-                                                        "value": "(Math.max(flag:cctz1mlv,status:hp))"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "type": "if",
-                                                "condition": "((flag:jrcctz2===1)&&(status:hp>=flag:cctzmb))",
-                                                "true": [
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:cctz2",
-                                                        "operator": "+=",
-                                                        "value": "1"
-                                                    },
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:cctz2",
-                                                        "operator": "min=",
-                                                        "value": "10"
-                                                    },
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:cctz2mlv",
-                                                        "value": "(Math.max(flag:cctz2mlv,status:hp))"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "type": "if",
-                                                "condition": "((flag:jrcctz3===1)&&(status:hp>=flag:cctzmb))",
-                                                "true": [
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:cctz3",
-                                                        "operator": "+=",
-                                                        "value": "1"
-                                                    },
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:cctz3",
-                                                        "operator": "min=",
-                                                        "value": "10"
-                                                    },
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:cctz3mlv",
-                                                        "value": "(Math.max(flag:cctz3mlv,status:hp))"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "type": "if",
-                                                "condition": "(flag:jrcctz1===1)",
-                                                "true": [
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:lvzs",
-                                                        "value": "0.45"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:jrcctz1",
-                                                "value": "0"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:jrcctz2",
-                                                "value": "0"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:jrcctz3",
-                                                "value": "0"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "text": "退出挑战(目标:${flag:cctzmb}等级)",
-                                        "color": [
-                                            186,
-                                            149,
-                                            208,
-                                            1
-                                        ],
-                                        "condition": "flag:jrcctz1==1||flag:jrcctz2==1||flag:jrcctz3==1",
-                                        "action": [
-                                            {
-                                                "type": "if",
-                                                "condition": "(flag:jrcctz1===1)",
-                                                "true": [
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:cctz1mlv",
-                                                        "value": "(Math.max(flag:cctz1mlv,status:hp))"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "type": "if",
-                                                "condition": "(flag:jrcctz2===1)",
-                                                "true": [
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:cctz2mlv",
-                                                        "value": "(Math.max(flag:cctz2mlv,status:hp))"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "type": "if",
-                                                "condition": "(flag:jrcctz3===1)",
-                                                "true": [
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:lvzs",
-                                                        "value": "0.45"
-                                                    },
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:cctz3mlv",
-                                                        "value": "(Math.max(flag:cctz3mlv,status:hp))"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:jrcctz1",
-                                                "value": "0"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:jrcctz2",
-                                                "value": "0"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:jrcctz3",
-                                                "value": "0"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "text": "返回",
-                                        "color": [
-                                            233,
-                                            227,
-                                            237,
-                                            1
-                                        ],
-                                        "action": []
-                                    }
-                                ]
-                            }
-                        ],
-                        "false": [
-                            {
-                                "type": "choices",
-                                "text": "\t[草场挑战]进入后进行草场重置\n目标：(300+完成次数*25)等级\n挑战1：你无法获得水晶\n挑战2：草场之前资源增益^0.8\n挑战3：同时进行所有水晶挑战\n奖励：水晶获取x${flag:cctz1+1}\n钢铁获取x${flag:cctz2+1}\n充能获取x${flag:cctz3+1}\n挑战1/2/3最高等级:${flag:cctz1mlv}/${flag:cctz2mlv}/${flag:cctz3mlv}\n(在退出/完成挑战时刷新)",
-                                "choices": [
-                                    {
-                                        "text": "水晶枯竭(${flag:cctz1}/10)",
-                                        "color": [
-                                            186,
-                                            149,
-                                            208,
-                                            1
-                                        ],
-                                        "action": [
-                                            {
-                                                "type": "insert",
-                                                "name": "草场重置"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:jrcctz1",
-                                                "value": "1"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:cctzmb",
-                                                "value": "(300+(flag:cctz1 * 25))"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "text": "资源减少Ⅱ(${flag:cctz2}/10)",
-                                        "color": [
-                                            186,
-                                            149,
-                                            208,
-                                            1
-                                        ],
-                                        "action": [
-                                            {
-                                                "type": "insert",
-                                                "name": "草场重置"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:jrcctz2",
-                                                "value": "1"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:cctzmb",
-                                                "value": "(300+(flag:cctz2 * 25))"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "text": "挑战者主义(${flag:cctz3}/10)",
-                                        "color": [
-                                            186,
-                                            149,
-                                            208,
-                                            1
-                                        ],
-                                        "condition": "flag:gcjd>=3",
-                                        "action": [
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:lvzs",
-                                                "value": "0.48"
-                                            },
-                                            {
-                                                "type": "insert",
-                                                "name": "草场重置"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:jrcctz3",
-                                                "value": "1"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:cctzmb",
-                                                "value": "(300+(flag:cctz3 * 25))"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "text": "完成挑战",
-                                        "color": [
-                                            160,
-                                            0,
-                                            255,
-                                            1
-                                        ],
-                                        "condition": "(status:hp>=flag:cctzmb)&&(flag:jrcctz1==1||flag:jrcctz2==1||flag:jrcctz3==1)",
-                                        "action": [
-                                            {
-                                                "type": "if",
-                                                "condition": "((flag:jrcctz1===1)&&(status:hp>=flag:cctzmb))",
-                                                "true": [
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:cctz1",
-                                                        "operator": "+=",
-                                                        "value": "1"
-                                                    },
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:cctz1",
-                                                        "operator": "min=",
-                                                        "value": "10"
-                                                    },
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:cctz1mlv",
-                                                        "value": "(Math.max(flag:cctz1mlv,status:hp))"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "type": "if",
-                                                "condition": "((flag:jrcctz2===1)&&(status:hp>=flag:cctzmb))",
-                                                "true": [
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:cctz2",
-                                                        "operator": "+=",
-                                                        "value": "1"
-                                                    },
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:cctz2",
-                                                        "operator": "min=",
-                                                        "value": "10"
-                                                    },
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:cctz2mlv",
-                                                        "value": "(Math.max(flag:cctz2mlv,status:hp))"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "type": "if",
-                                                "condition": "((flag:jrcctz3===1)&&(status:hp>=flag:cctzmb))",
-                                                "true": [
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:cctz3",
-                                                        "operator": "+=",
-                                                        "value": "1"
-                                                    },
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:cctz3",
-                                                        "operator": "min=",
-                                                        "value": "10"
-                                                    },
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:cctz3mlv",
-                                                        "value": "(Math.max(flag:cctz3mlv,status:hp))"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "type": "if",
-                                                "condition": "(flag:jrcctz1===1)",
-                                                "true": [
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:lvzs",
-                                                        "value": "0.45"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:jrcctz1",
-                                                "value": "0"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:jrcctz2",
-                                                "value": "0"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:jrcctz3",
-                                                "value": "0"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "text": "退出挑战",
-                                        "color": [
-                                            160,
-                                            0,
-                                            255,
-                                            1
-                                        ],
-                                        "condition": "flag:jrcctz1==1||flag:jrcctz2==1||flag:jrcctz3==1",
-                                        "action": [
-                                            {
-                                                "type": "if",
-                                                "condition": "(flag:jrcctz1===1)",
-                                                "true": [
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:cctz1mlv",
-                                                        "value": "(Math.max(flag:cctz1mlv,status:hp))"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "type": "if",
-                                                "condition": "(flag:jrcctz2===1)",
-                                                "true": [
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:cctz2mlv",
-                                                        "value": "(Math.max(flag:cctz2mlv,status:hp))"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "type": "if",
-                                                "condition": "(flag:jrcctz3===1)",
-                                                "true": [
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:lvzs",
-                                                        "value": "0.45"
-                                                    },
-                                                    {
-                                                        "type": "setValue",
-                                                        "name": "flag:cctz3mlv",
-                                                        "value": "(Math.max(flag:cctz3mlv,status:hp))"
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:jrcctz1",
-                                                "value": "0"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:jrcctz2",
-                                                "value": "0"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:jrcctz3",
-                                                "value": "0"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "text": "返回",
-                                        "color": [
-                                            233,
-                                            227,
-                                            237,
-                                            1
-                                        ],
-                                        "action": []
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            }
-        ],
-        "11,5": [
-            {
-                "type": "if",
-                "condition": "(flag:gcjd>=1)",
-                "true": [
-                    {
-                        "type": "choices",
-                        "text": "\t[铸造厂]你拥有:${core.formatBigNumber(Math.floor(flag:gt))}钢铁\n本页面加成:\n钢铁x${(Math.floor((flag:ggtzy1)*100)/100)}\n钢铁x${(Math.floor((flag:pgtzy)*100)/100)}\n钢铁x${(Math.floor((flag:gtgtzy)*100)/100)}\n基于下面3个的等级，分别消耗草，声望，钢铁",
-                        "choices": [
-                            {
-                                "text": "钢铁增益增加25%(${core.formatBigNumber(flag:zzcu1c)})",
-                                "color": [
-                                    0,
-                                    255,
-                                    6,
-                                    1
-                                ],
-                                "condition": "flag:ggtzy1<25",
-                                "action": [
-                                    {
-                                        "type": "if",
-                                        "condition": "(status:money>=flag:zzcu1c)",
-                                        "true": [
-                                            {
-                                                "type": "setValue",
-                                                "name": "status:money",
-                                                "operator": "-=",
-                                                "value": "flag:zzcu1c"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:ggtzy1",
-                                                "operator": "+=",
-                                                "value": "0.25"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:ggtzy1",
-                                                "value": "(Math.min(flag:ggtzy1,25))"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:zzcu1c",
-                                                "value": "(Math.ceil((flag:zzcu1c*1.35)))"
-                                            },
-                                            {
-                                                "type": "insert",
-                                                "loc": [
-                                                    11,
-                                                    5
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "钢铁增益增加25%(${core.formatBigNumber(flag:zzcu2c)})",
-                                "color": [
-                                    0,
-                                    216,
-                                    255,
-                                    1
-                                ],
-                                "condition": "flag:pgtzy<25",
-                                "action": [
-                                    {
-                                        "type": "if",
-                                        "condition": "(status:def>=flag:zzcu2c)",
-                                        "true": [
-                                            {
-                                                "type": "setValue",
-                                                "name": "status:def",
-                                                "operator": "-=",
-                                                "value": "flag:zzcu2c"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:pgtzy",
-                                                "operator": "+=",
-                                                "value": "0.25"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:pgtzy",
-                                                "value": "(Math.min(flag:pgtzy,25))"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:zzcu2c",
-                                                "value": "(Math.ceil((flag:zzcu2c*1.25)))"
-                                            },
-                                            {
-                                                "type": "insert",
-                                                "loc": [
-                                                    11,
-                                                    5
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "钢铁增益增加25%(${core.formatBigNumber(flag:zzcu3c)})",
-                                "condition": "flag:gtgtzy<25",
-                                "action": [
-                                    {
-                                        "type": "if",
-                                        "condition": "(flag:gt>=flag:zzcu3c)",
-                                        "true": [
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:gt",
-                                                "operator": "-=",
-                                                "value": "flag:zzcu3c"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:gtgtzy",
-                                                "operator": "+=",
-                                                "value": "0.25"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:gtgtzy",
-                                                "value": "(Math.min(flag:gtgtzy,25))"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:zzcu3c",
-                                                "value": "(Math.ceil((flag:zzcu3c*1.15)))"
-                                            },
-                                            {
-                                                "type": "insert",
-                                                "loc": [
-                                                    11,
-                                                    5
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "返回",
-                                "action": []
-                            }
-                        ]
-                    }
-                ]
-            }
-        ],
-        "12,5": [
-            {
-                "type": "if",
-                "condition": "(flag:gcjd>=2)",
-                "true": [
-                    {
-                        "type": "choices",
-                        "text": "\t[发电机]你拥有:${core.formatBigNumber(Math.floor(flag:gt))}钢铁\n本页面加成:\n声望x${(Math.floor((flag:gtpzy)*100)/100)}\n水晶x${(Math.floor((flag:gtsjzy)*100)/100)}\n充能x${(Math.floor((flag:pcnzy)*100)/100)}\n充能x${(Math.floor((flag:sjcnzy)*100)/100)}\n分别消耗钢铁，钢铁，声望，水晶",
-                        "choices": [
-                            {
-                                "text": "声望增益增加25%(${core.formatBigNumber(flag:fdju1c)})",
-                                "color": [
-                                    0,
-                                    216,
-                                    255,
-                                    1
-                                ],
-                                "condition": "flag:gtpzy<25",
-                                "action": [
-                                    {
-                                        "type": "if",
-                                        "condition": "(flag:gt>=flag:fdju1c)",
-                                        "true": [
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:gt",
-                                                "operator": "-=",
-                                                "value": "flag:fdju1c"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:gtpzy",
-                                                "operator": "+=",
-                                                "value": "0.25"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:gtpzy",
-                                                "value": "(Math.min(flag:gtpzy,25))"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:fdju1c",
-                                                "value": "(Math.ceil((flag:fdju1c*1.2)))"
-                                            },
-                                            {
-                                                "type": "insert",
-                                                "loc": [
-                                                    12,
-                                                    5
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "水晶增益增加25%(${core.formatBigNumber(flag:fdju2c)})",
-                                "color": [
-                                    189,
-                                    0,
-                                    255,
-                                    1
-                                ],
-                                "condition": "flag:gtsjzy<25",
-                                "action": [
-                                    {
-                                        "type": "if",
-                                        "condition": "(flag:gt>=flag:fdju2c)",
-                                        "true": [
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:gt",
-                                                "operator": "-=",
-                                                "value": "flag:fdju2c"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:gtsjzy",
-                                                "operator": "+=",
-                                                "value": "0.25"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:gtsjzy",
-                                                "value": "(Math.min(flag:gtsjzy,25))"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:fdju2c",
-                                                "value": "(Math.ceil((flag:fdju2c*1.2)))"
-                                            },
-                                            {
-                                                "type": "insert",
-                                                "loc": [
-                                                    12,
-                                                    5
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "充能增益增加25%(${core.formatBigNumber(flag:fdju3c)})",
-                                "color": [
-                                    237,
-                                    215,
-                                    98,
-                                    1
-                                ],
-                                "condition": "flag:pcnzy<25&&item:I848>=14",
-                                "action": [
-                                    {
-                                        "type": "if",
-                                        "condition": "(status:def>=flag:fdju3c)",
-                                        "true": [
-                                            {
-                                                "type": "setValue",
-                                                "name": "status:def",
-                                                "operator": "-=",
-                                                "value": "flag:fdju3c"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:pcnzy",
-                                                "operator": "+=",
-                                                "value": "0.25"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:pcnzy",
-                                                "value": "(Math.min(flag:pcnzy,25))"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:fdju3c",
-                                                "value": "(Math.ceil((flag:fdju3c*1.2)))"
-                                            },
-                                            {
-                                                "type": "insert",
-                                                "loc": [
-                                                    12,
-                                                    5
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "充能增益增加25%(${core.formatBigNumber(flag:fdju4c)})",
-                                "color": [
-                                    237,
-                                    215,
-                                    98,
-                                    1
-                                ],
-                                "condition": "flag:sjcnzy<25&&item:I848>=14",
-                                "action": [
-                                    {
-                                        "type": "if",
-                                        "condition": "(status:mdef>=flag:fdju4c)",
-                                        "true": [
-                                            {
-                                                "type": "setValue",
-                                                "name": "status:mdef",
-                                                "operator": "-=",
-                                                "value": "flag:fdju4c"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:sjcnzy",
-                                                "operator": "+=",
-                                                "value": "0.25"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:sjcnzy",
-                                                "value": "(Math.min(flag:sjcnzy,25))"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:fdju4c",
-                                                "value": "(Math.ceil((flag:fdju4c*1.15)))"
-                                            },
-                                            {
-                                                "type": "insert",
-                                                "loc": [
-                                                    12,
-                                                    5
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "返回",
-                                "action": []
-                            }
-                        ]
-                    }
-                ]
-            }
-        ],
-        "10,7": [
-            {
-                "type": "if",
-                "condition": "(flag:gcjd>=3)",
-                "true": [
-                    {
-                        "type": "choices",
-                        "text": "\t[充能塔]充能里程碑，同样需要对应充能生效\n当前充能:${core.formatBigNumber(Math.floor(flag:cn))}\n充能力量:${(Math.floor((flag:cnll)*10000)/100)}%\n1 钢铁增益x${Math.floor(Math.pow(Math.log10(flag:cn+10),flag:cnll)*100)/100} e2 经验增益x${Math.floor(Math.pow(Math.log10(flag:cn+10),flag:cnll)*100)/100} e4 等级折算/${Math.floor(Math.pow(Math.log10(flag:cn+10)/500+1,flag:cnll)*100)/100}\ne5 层点增益x${Math.floor(Math.pow(Math.log10(flag:cn+10),flag:cnll)*100)/100} e6 草增益x${Math.floor(Math.pow(Math.log10(flag:cn+10),flag:cnll)*100)/100} e7 阶层效果+^${Math.floor(Math.log10(flag:cn+10)/100*flag:cnll*100)/100}\ne8 声望增益x${Math.floor(Math.pow(Math.log10(flag:cn+10),flag:cnll)*100)/100} e9 水晶增益x${Math.floor(Math.pow(Math.log10(flag:cn+10),flag:cnll)*100)/100} ",
-                        "choices": [
-                            {
-                                "text": "返回",
-                                "action": []
-                            }
-                        ]
-                    }
-                ]
-            }
-        ],
-        "6,1": [
-            {
-                "type": "choices",
-                "text": "真实割草之塔v0.24\n作者：咸绿菜猫\n当前残局 30反等级\n点击地图上的人物查看功能",
-                "choices": [
-                    {
-                        "text": "作者的github主页",
-                        "color": [
-                            0,
-                            86,
-                            255,
-                            1
-                        ],
-                        "action": [
-                            {
-                                "type": "function",
-                                "function": "function(){\nwindow.open(\"https://github.com/qwqe198/\")\n}"
-                            }
-                        ]
-                    },
-                    {
-                        "text": "作者的爱发电主页",
-                        "color": [
-                            0,
-                            86,
-                            255,
-                            1
-                        ],
-                        "action": [
-                            {
-                                "type": "function",
-                                "function": "function(){\nwindow.open(\"https://ifdian.net/a/qwqe198/\")\n}"
-                            }
-                        ]
-                    },
-                    {
-                        "text": "资源计分",
-                        "color": [
-                            0,
-                            255,
-                            30,
-                            1
-                        ],
-                        "action": [
-                            {
-                                "type": "insert",
-                                "name": "计分"
-                            }
-                        ]
-                    },
-                    {
-                        "text": "返回",
-                        "color": [
-                            255,
-                            255,
-                            255,
-                            1
-                        ],
-                        "action": []
-                    }
-                ]
-            }
-        ],
-        "11,7": [
-            {
-                "type": "if",
-                "condition": "(flag:gcjd>=4)",
-                "true": [
-                    {
-                        "type": "choices",
-                        "text": "\t[汇编器]1，2/3，4/5，6需要草场挑战1/2/3最大等级(不扣除)\n挑战1/2/3最高等级:${flag:cctz1mlv}/${flag:cctz2mlv}/${flag:cctz3mlv}  本页面加成:\n草:${flag:hbqczy}x 层点:${flag:hbqjczy}x 声望:${flag:hbqpzy}x\n水晶:${flag:hbqsjzy}x 钢铁:${flag:hbqgtzy}x 充能:${flag:hbqcnzy}x",
-                        "choices": [
-                            {
-                                "text": "草增益(${core.formatBigNumber(flag:hbqu1c)})",
-                                "color": [
-                                    0,
-                                    255,
-                                    6,
-                                    1
-                                ],
-                                "action": [
-                                    {
-                                        "type": "if",
-                                        "condition": "(flag:cctz1mlv>=flag:hbqu1c)",
-                                        "true": [
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:hbqczy",
-                                                "operator": "+=",
-                                                "value": "1"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:hbqu1c",
-                                                "operator": "+=",
-                                                "value": "12"
-                                            },
-                                            {
-                                                "type": "insert",
-                                                "loc": [
-                                                    11,
-                                                    7
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "层点增益(${core.formatBigNumber(flag:hbqu2c)})",
-                                "color": [
-                                    185,
-                                    195,
-                                    39,
-                                    1
-                                ],
-                                "action": [
-                                    {
-                                        "type": "if",
-                                        "condition": "(flag:cctz1mlv>=flag:hbqu2c)",
-                                        "true": [
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:hbqjczy",
-                                                "operator": "+=",
-                                                "value": "1"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:hbqu2c",
-                                                "operator": "+=",
-                                                "value": "11"
-                                            },
-                                            {
-                                                "type": "insert",
-                                                "loc": [
-                                                    11,
-                                                    7
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "声望增益(${core.formatBigNumber(flag:hbqu3c)})",
-                                "color": [
-                                    0,
-                                    196,
-                                    255,
-                                    1
-                                ],
-                                "action": [
-                                    {
-                                        "type": "if",
-                                        "condition": "(flag:cctz2mlv>=flag:hbqu3c)",
-                                        "true": [
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:hbqpzy",
-                                                "operator": "+=",
-                                                "value": "1"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:hbqu3c",
-                                                "operator": "+=",
-                                                "value": "9"
-                                            },
-                                            {
-                                                "type": "insert",
-                                                "loc": [
-                                                    11,
-                                                    7
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "水晶增益(${core.formatBigNumber(flag:hbqu4c)})",
-                                "color": [
-                                    238,
-                                    0,
-                                    255,
-                                    1
-                                ],
-                                "action": [
-                                    {
-                                        "type": "if",
-                                        "condition": "(flag:cctz2mlv>=flag:hbqu4c)",
-                                        "true": [
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:hbqsjzy",
-                                                "operator": "+=",
-                                                "value": "1"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:hbqu4c",
-                                                "operator": "+=",
-                                                "value": "13"
-                                            },
-                                            {
-                                                "type": "insert",
-                                                "loc": [
-                                                    11,
-                                                    7
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "钢铁增益(${core.formatBigNumber(flag:hbqu5c)})",
-                                "color": [
+                                    236,
+                                    201,
                                     168,
-                                    204,
-                                    194,
                                     1
                                 ],
                                 "action": [
                                     {
-                                        "type": "if",
-                                        "condition": "(flag:cctz3mlv>=flag:hbqu5c)",
-                                        "true": [
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:hbqgtzy",
-                                                "operator": "+=",
-                                                "value": "1"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:hbqu5c",
-                                                "operator": "+=",
-                                                "value": "8"
-                                            },
-                                            {
-                                                "type": "insert",
-                                                "loc": [
-                                                    11,
-                                                    7
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "充能增益(${core.formatBigNumber(flag:hbqu6c)})",
-                                "color": [
-                                    255,
-                                    240,
-                                    0,
-                                    1
-                                ],
-                                "action": [
+                                        "type": "insert",
+                                        "name": "清空状态"
+                                    },
                                     {
-                                        "type": "if",
-                                        "condition": "(flag:cctz3mlv>=flag:hbqu6c)",
-                                        "true": [
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:hbqcnzy",
-                                                "operator": "+=",
-                                                "value": "1"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:hbqu6c",
-                                                "operator": "+=",
-                                                "value": "7"
-                                            },
-                                            {
-                                                "type": "insert",
-                                                "loc": [
-                                                    11,
-                                                    7
-                                                ]
-                                            }
-                                        ]
+                                        "type": "setValue",
+                                        "name": "status:exp",
+                                        "value": "0"
+                                    },
+                                    {
+                                        "type": "setValue",
+                                        "name": "status:lv",
+                                        "value": "12"
+                                    },
+                                    {
+                                        "type": "setValue",
+                                        "name": "status:hp",
+                                        "value": "6000000"
+                                    },
+                                    {
+                                        "type": "setValue",
+                                        "name": "status:atk",
+                                        "value": "48000"
+                                    },
+                                    {
+                                        "type": "setValue",
+                                        "name": "status:def",
+                                        "value": "48000"
+                                    },
+                                    {
+                                        "type": "setValue",
+                                        "name": "status:mdef",
+                                        "value": "330000"
+                                    },
+                                    {
+                                        "type": "setValue",
+                                        "name": "item:yellowKey",
+                                        "value": "6"
+                                    },
+                                    {
+                                        "type": "setValue",
+                                        "name": "item:blueKey",
+                                        "value": "3"
+                                    },
+                                    {
+                                        "type": "setValue",
+                                        "name": "item:redKey",
+                                        "value": "1"
+                                    },
+                                    {
+                                        "type": "setValue",
+                                        "name": "item:pickaxe",
+                                        "value": "1"
+                                    },
+                                    {
+                                        "type": "setValue",
+                                        "name": "item:centerFly",
+                                        "value": "1"
+                                    },
+                                    {
+                                        "type": "setValue",
+                                        "name": "item:bomb",
+                                        "value": "0"
+                                    },
+                                    {
+                                        "type": "changeFloor",
+                                        "floorId": "B1",
+                                        "loc": [
+                                            6,
+                                            6
+                                        ],
+                                        "direction": "down"
+                                    },
+                                    {
+                                        "type": "setValue",
+                                        "name": "item:I898",
+                                        "value": "1"
+                                    },
+                                    {
+                                        "type": "setValue",
+                                        "name": "item:I928",
+                                        "value": "1"
+                                    },
+                                    {
+                                        "type": "loadEquip",
+                                        "id": "I898"
+                                    },
+                                    {
+                                        "type": "loadEquip",
+                                        "id": "I928"
                                     }
                                 ]
                             },
                             {
-                                "text": "返回",
+                                "text": "离去…",
                                 "action": []
                             }
                         ]
                     }
+                ],
+                "false": [
+                    "为什么都玩到这么靠后的位置了，\n又回来打教程！\n还是重开一个存档打叭。"
                 ]
             }
-        ],
-        "7,0": [
-            {
-                "type": "if",
-                "condition": "(flag:gcjd>=5)",
-                "true": [
-                    {
-                        "type": "choices",
-                        "text": "\t[反草升级]反草/经验基础获得：草或经验^0.5后/1e8\n本页面加成\n草：${flag:fcczy}x\n经验：${flag:fcjyzy}x\n钢铁：${flag:fcgtzy}x\n充能：${flag:fccnzy}x",
-                        "choices": [
-                            {
-                                "text": "反草增益(${core.formatBigNumber(flag:fcu1c)}) ",
-                                "color": [
-                                    122,
-                                    219,
-                                    85,
-                                    1
-                                ],
-                                "action": [
-                                    {
-                                        "type": "if",
-                                        "condition": "(flag:fc>=flag:fcu1c)",
-                                        "true": [
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:fc",
-                                                "operator": "-=",
-                                                "value": "flag:fcu1c"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:fcczy",
-                                                "operator": "+=",
-                                                "value": "1"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:fcu1c",
-                                                "value": "(Math.ceil((flag:fcu1c*1.35)))"
-                                            },
-                                            {
-                                                "type": "insert",
-                                                "loc": [
-                                                    7,
-                                                    0
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "反经验增益(${core.formatBigNumber(flag:fcu2c)}) ",
-                                "color": [
-                                    122,
-                                    219,
-                                    85,
-                                    1
-                                ],
-                                "action": [
-                                    {
-                                        "type": "if",
-                                        "condition": "(flag:fc>=flag:fcu2c)",
-                                        "true": [
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:fc",
-                                                "operator": "-=",
-                                                "value": "flag:fcu2c"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:fcjyzy",
-                                                "operator": "+=",
-                                                "value": "1"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:fcu2c",
-                                                "value": "(Math.ceil((flag:fcu2c*1.45)))"
-                                            },
-                                            {
-                                                "type": "insert",
-                                                "loc": [
-                                                    7,
-                                                    0
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "钢铁增益(${core.formatBigNumber(flag:fcu3c)}) ",
-                                "color": [
-                                    122,
-                                    219,
-                                    85,
-                                    1
-                                ],
-                                "action": [
-                                    {
-                                        "type": "if",
-                                        "condition": "(flag:fc>=flag:fcu3c)",
-                                        "true": [
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:fc",
-                                                "operator": "-=",
-                                                "value": "flag:fcu3c"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:fcgtzy",
-                                                "operator": "+=",
-                                                "value": "1"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:fcu3c",
-                                                "value": "(Math.ceil((flag:fcu3c*1.8)))"
-                                            },
-                                            {
-                                                "type": "insert",
-                                                "loc": [
-                                                    7,
-                                                    0
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "充能增益(${core.formatBigNumber(flag:fcu4c)}) ",
-                                "color": [
-                                    122,
-                                    219,
-                                    85,
-                                    1
-                                ],
-                                "action": [
-                                    {
-                                        "type": "if",
-                                        "condition": "(flag:fc>=flag:fcu4c)",
-                                        "true": [
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:fc",
-                                                "operator": "-=",
-                                                "value": "flag:fcu4c"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:fccnzy",
-                                                "operator": "+=",
-                                                "value": "1"
-                                            },
-                                            {
-                                                "type": "setValue",
-                                                "name": "flag:fcu4c",
-                                                "value": "(Math.ceil((flag:fcu4c*1.9)))"
-                                            },
-                                            {
-                                                "type": "insert",
-                                                "loc": [
-                                                    7,
-                                                    0
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "返回",
-                                "color": [
-                                    255,
-                                    255,
-                                    255,
-                                    1
-                                ],
-                                "action": []
-                            }
-                        ]
-                    }
-                ]
-            }
-        ],
-        "12,7": [
-            {
-                "type": "if",
-                "condition": "(flag:jd>=5)",
-                "true": [
-                    {
-                        "type": "choices",
-                        "text": "\t[白金升级3]所有升级消耗1e5白金\n本页面加成\n钢铁：${(Math.floor((flag:bjgtzy)*100)/100)}x 充能：${(Math.floor((flag:bjcnzy)*100)/100)}x\n反草：${(Math.floor((flag:bjfczy)*100)/100)}x 反经验：${(Math.floor((flag:bjfjyzy)*100)/100)}x",
-                        "choices": [
-                            {
-                                "text": "钢铁增益增加5%",
-                                "need": "status:mana>=100000",
-                                "condition": "flag:bjgtzy<5",
-                                "action": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mana",
-                                        "operator": "-=",
-                                        "value": "100000"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:bjgtzy",
-                                        "operator": "+=",
-                                        "value": "0.05"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:bjgtzy",
-                                        "value": "(Math.min(flag:bjgtzy,5))"
-                                    },
-                                    {
-                                        "type": "insert",
-                                        "loc": [
-                                            12,
-                                            7
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "充能增益增加5%",
-                                "need": "status:mana>=100000",
-                                "condition": "flag:bjcnzy<5",
-                                "action": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mana",
-                                        "operator": "-=",
-                                        "value": "100000"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:bjcnzy",
-                                        "operator": "+=",
-                                        "value": "0.05"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:bjcnzy",
-                                        "value": "(Math.min(flag:bjcnzy,5))"
-                                    },
-                                    {
-                                        "type": "insert",
-                                        "loc": [
-                                            12,
-                                            7
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "反草增益增加5%",
-                                "need": "status:mana>=100000",
-                                "condition": "flag:bjfczy<5",
-                                "action": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mana",
-                                        "operator": "-=",
-                                        "value": "100000"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:bjfczy",
-                                        "operator": "+=",
-                                        "value": "0.05"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:bjfczy",
-                                        "value": "(Math.min(flag:bjfczy,5))"
-                                    },
-                                    {
-                                        "type": "insert",
-                                        "loc": [
-                                            12,
-                                            7
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "反经验增益增加5%",
-                                "need": "status:mana>=100000",
-                                "condition": "flag:bjfjyzy<5",
-                                "action": [
-                                    {
-                                        "type": "setValue",
-                                        "name": "status:mana",
-                                        "operator": "-=",
-                                        "value": "100000"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:bjfjyzy",
-                                        "operator": "+=",
-                                        "value": "0.05"
-                                    },
-                                    {
-                                        "type": "setValue",
-                                        "name": "flag:bjfjyzy",
-                                        "value": "(Math.min(flag:bjfjyzy,5))"
-                                    },
-                                    {
-                                        "type": "insert",
-                                        "loc": [
-                                            12,
-                                            7
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "text": "返回",
-                                "action": []
-                            }
-                        ]
-                    }
-                ]
-            }
-        ],
-        "6,5": [
-            "打开背包查看"
         ]
     },
-    "changeFloor": {},
+    "changeFloor": {
+        "6,12": {
+            "floorId": ":next",
+            "stair": "downFloor"
+        }
+    },
     "beforeBattle": {},
-    "afterBattle": {
-        "6,12": [
-            {
-                "type": "insert",
-                "name": "割草事件"
-            }
-        ]
-    },
+    "afterBattle": {},
     "afterGetItem": {},
     "afterOpenDoor": {},
     "autoEvent": {},
     "cannotMove": {},
     "cannotMoveIn": {},
     "map": [
-    [159,159,159,159,884,159,159,159,761,159,159,159,159],
-    [133,  0,  0,129,  0,  0,102,  0,  0,129,1117,  0,  0],
-    [  0,  0,  0, 85,  0,  0,  0,  0,  0, 85,  0,  0,  0],
-    [  0,  0,  0,159,  0,  0,  0,  0,  0,159,  0,  0,  0],
-    [159,159,159,159,  0,  0,  0,  0,  0,159,159,159,159],
-    [1156,  0,  0,129,  0,  0,1160,  0,  0,129,1097,  0,  0],
-    [  0,  0,  0, 85,  0,  0,  0,  0,  0, 85,  0,  0,  0],
-    [  0,  0,  0,159,  0,  0,1157,  0,  0,159,  0,  0,  0],
-    [159,159,159,159,  0,  0,  0,  0,  0,159,159,159,159],
-    [  0,  0,  0,159,  0,  0,  0,  0,  0,159,  0,  0,  0],
-    [  0,  0,  0, 85,  0,  0,  0,  0,  0, 85,  0,  0,  0],
-    [  0,  0,  0,159,  0,  0,  0,  0,  0,159,  0,  0,  0],
-    [159,159,159,159,159,159,201,159,159,159,159,159,159]
+    [  1,  1,  1,  1,  1,  1,102,  1,  1,  1,  1,  1,  1],
+    [  1,  1,  1,  1,  1,  1,  0,  1,  1,  1,  1,  1,  1],
+    [  1, 33,586, 27, 28, 84,  0, 84, 23, 31, 32, 34,  1],
+    [  1,  1,  1,  1,  1,  1,600,  1,  1,  1,  1,  1,  1],
+    [  1,  1,  1,  1,  1,  1,  0,  1,  1,  1,  1,  1,  1],
+    [  1,893, 84, 84, 84, 84, 24, 84, 84, 30, 34, 30,  1],
+    [  1,  1,  1,  1,  1,  1, 24,  1,  1,  1,  1,  1,  1],
+    [10186,  1,10187,  1,  1,  1, 24,  1,  1,  1, 17,  1, 17],
+    [ 31,  1, 32,  1,  0, 86, 24, 86,  0,  1, 27,  1, 28],
+    [  1,  1,  1,  1,891,  1,  0,  1,80169,  1,  1,  1,  1],
+    [10189,  1,10196,  1,  1,  1, 85,  1,  1,  1, 17,  1,10248],
+    [ 34,  1, 33,  1,  1,102,  0,102,  1,  1, 29,  1, 30],
+    [  1,  1,  1,  1,  1,  1, 87,  1,  1,  1,  1,  1,  1]
 ],
     "bgmap": [
-    [305,305,305,305,305,305,305,305,305,305,305,305,305],
-    [ 15, 15, 15,305,175,175,175,175,175,305,  5,  5,  5],
-    [ 15, 15, 15,305,175,175,175,175,175,305,  5,  5,  5],
-    [ 15, 15, 15,305,175,175,175,175,175,305,  5,  5,  5],
-    [305,305,305,305,902,902,902,902,902,305,305,305,305],
-    [167,167,167,305,902,902,902,902,902,305,900,900,900],
-    [167,167,167,305,902,902,902,902,902,305,900,900,900],
-    [167,167,167,305,175,175,175,175,175,305,900,900,900],
-    [305,305,305,305,175,175,175,175,175,305,305,305,305],
-    [305,305,305,305,175,175,175,175,175,305,305,305,305],
-    [305,305,305,305,175,175,175,175,175,305,305,305,305],
-    [305,305,305,305,175,175,175,175,175,305,305,305,305],
-    [305,305,305,305,305,305,305,305,305,305,305,305,305]
+
 ],
     "fgmap": [
-    [  0,  0,  0,  0,  0,  0,101,  0,  0,  0,  0,  0,  0],
     [  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
     [  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
     [  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
@@ -4925,14 +1553,28 @@ main.floors.Start=
     [  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
     [  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
     [  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
+    [  0,  0,  0,  0,  0,101,  0,101,  0,  0,  0,  0,  0],
     [  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
     [  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0]
 ],
     "bg2map": [
-
+    [  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
+    [  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
+    [  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
+    [  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
+    [  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
+    [  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
+    [  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
+    [  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,629,  0,793],
+    [  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
+    [  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
+    [  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,803,  0,  0],
+    [  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
+    [  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0]
 ],
     "fg2map": [
 
 ],
-    "bgm": "bgm.mp3"
+    "bgm": null,
+    "weather": null
 }
